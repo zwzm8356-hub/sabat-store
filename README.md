@@ -1,0 +1,4590 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="dark" data-lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#000000">
+<meta name="description" content="Sabat Store - متجر الآيفون المتجدد الأول في مصر | Premium Refurbished iPhones in Egypt">
+<meta name="keywords" content="iPhone, مستعمل, مجدد, مصر, ايفون, سبات ستور">
+<meta property="og:title" content="Sabat Store | سبات ستور">
+<meta property="og:description" content="أفضل آيفون مستعمل ومجدد في مصر">
+<meta property="og:type" content="website">
+<link rel="manifest" href="#" id="pwa-manifest">
+<script>var supabase=function(e){function t(e,t){var r={};for(var s in e)Object.prototype.hasOwnProperty.call(e,s)&&t.indexOf(s)<0&&(r[s]=e[s]);if(null!=e&&"function"==typeof Object.getOwnPropertySymbols){var i=0;for(s=Object.getOwnPropertySymbols(e);i<s.length;i++)t.indexOf(s[i])<0&&Object.prototype.propertyIsEnumerable.call(e,s[i])&&(r[s[i]]=e[s[i]])}return r}function r(e,t,r,s){function i(e){return e instanceof r?e:new r(function(t){t(e)})}return new(r||=Promise)(function(r,a){function n(e){try{l(s.next(e))}catch(e){a(e)}}function o(e){try{l(s.throw(e))}catch(e){a(e)}}function l(e){e.done?r(e.value):i(e.value).then(n,o)}l((s=s.apply(e,t||[])).next())})}var s,i=class extends Error{constructor(e,t="FunctionsError",r){super(e),this.name=t,this.context=r}toJSON(){return{name:this.name,message:this.message,context:this.context}}},a=class extends i{constructor(e){super("Failed to send a request to the Edge Function","FunctionsFetchError",e)}},n=class extends i{constructor(e){super("Relay Error invoking the Edge Function","FunctionsRelayError",e)}},o=class extends i{constructor(e){super("Edge Function returned a non-2xx status code","FunctionsHttpError",e)}};!function(e){e.Any="any",e.ApNortheast1="ap-northeast-1",e.ApNortheast2="ap-northeast-2",e.ApSouth1="ap-south-1",e.ApSoutheast1="ap-southeast-1",e.ApSoutheast2="ap-southeast-2",e.CaCentral1="ca-central-1",e.EuCentral1="eu-central-1",e.EuWest1="eu-west-1",e.EuWest2="eu-west-2",e.EuWest3="eu-west-3",e.SaEast1="sa-east-1",e.UsEast1="us-east-1",e.UsWest1="us-west-1",e.UsWest2="us-west-2"}(s||={});var l=class{constructor(e,{headers:t={},customFetch:r,region:i=s.Any}={}){this.url=e,this.headers=t,this.region=i,this.fetch=(e=>e?(...t)=>e(...t):(...e)=>fetch(...e))(r)}setAuth(e){this.headers.Authorization=`Bearer ${e}`}invoke(e){return r(this,arguments,void 0,function*(e,t={}){let r,s;try{let{headers:i,method:l,body:h,signal:c,timeout:u}=t,d={},{region:p}=t;p||=this.region;let f,g=new URL(`${this.url}/${e}`);p&&"any"!==p&&(d["x-region"]=p,g.searchParams.set("forceFunctionRegion",p)),h&&(i&&!Object.prototype.hasOwnProperty.call(i,"Content-Type")||!i)?typeof Blob<"u"&&h instanceof Blob||h instanceof ArrayBuffer?(d["Content-Type"]="application/octet-stream",f=h):"string"==typeof h?(d["Content-Type"]="text/plain",f=h):typeof FormData<"u"&&h instanceof FormData?f=h:(d["Content-Type"]="application/json",f=JSON.stringify(h)):f=!h||"string"==typeof h||typeof Blob<"u"&&h instanceof Blob||h instanceof ArrayBuffer||typeof FormData<"u"&&h instanceof FormData?h:JSON.stringify(h);let m=c;u&&(s=new AbortController,r=setTimeout(()=>s.abort(),u),c?(m=s.signal,c.addEventListener("abort",()=>s.abort())):m=s.signal);let y=yield this.fetch(g.toString(),{method:l||"POST",headers:Object.assign(Object.assign(Object.assign({},d),this.headers),i),body:f,signal:m}).catch(e=>{throw new a(e)}),w=y.headers.get("x-relay-error");if(w&&"true"===w)throw new n(y);if(!y.ok)throw new o(y);let b,_=(y.headers.get("Content-Type")??"text/plain").split(";")[0].trim();return b="application/json"===_?yield y.json():"application/octet-stream"===_||"application/pdf"===_?yield y.blob():"text/event-stream"===_?y:"multipart/form-data"===_?yield y.formData():yield y.text(),{data:b,error:null,response:y}}catch(e){return{data:null,error:e,response:e instanceof o||e instanceof n?e.context:void 0}}finally{r&&clearTimeout(r)}})}};let h=e=>Math.min(1e3*2**e,3e4),c=[520,503],u=["GET","HEAD","OPTIONS"];var d=class extends Error{constructor(e){super(e.message),this.name="PostgrestError",this.details=e.details,this.hint=e.hint,this.code=e.code}toJSON(){return{name:this.name,message:this.message,details:this.details,hint:this.hint,code:this.code}}};function p(e,t){return new Promise(r=>{if(t?.aborted)return void r();let s=setTimeout(()=>{t?.removeEventListener("abort",i),r()},e);function i(){clearTimeout(s),r()}t?.addEventListener("abort",i)})}function f(e,t,r,s){return!(!s||r>=3||!u.includes(e)||!c.includes(t))}var g=class{constructor(e){this.shouldThrowOnError=!1,this.retryEnabled=!0,this.method=e.method,this.url=e.url,this.headers=new Headers(e.headers),this.schema=e.schema,this.body=e.body,this.shouldThrowOnError=e.shouldThrowOnError??!1,this.signal=e.signal,this.isMaybeSingle=e.isMaybeSingle??!1,this.shouldStripNulls=e.shouldStripNulls??!1,this.urlLengthLimit=e.urlLengthLimit??8e3,this.retryEnabled=e.retry??!0,e.fetch?this.fetch=e.fetch:this.fetch=fetch}throwOnError(){return this.shouldThrowOnError=!0,this}stripNulls(){if("text/csv"===this.headers.get("Accept"))throw Error("stripNulls() cannot be used with csv()");return this.shouldStripNulls=!0,this}setHeader(e,t){return this.headers=new Headers(this.headers),this.headers.set(e,t),this}retry(e){return this.retryEnabled=e,this}then(e,t){var r=this;if(void 0===this.schema||(["GET","HEAD"].includes(this.method)?this.headers.set("Accept-Profile",this.schema):this.headers.set("Content-Profile",this.schema)),"GET"!==this.method&&"HEAD"!==this.method&&this.headers.set("Content-Type","application/json"),this.shouldStripNulls){let e=this.headers.get("Accept");"application/vnd.pgrst.object+json"===e?this.headers.set("Accept","application/vnd.pgrst.object+json;nulls=stripped"):(!e||"application/json"===e)&&this.headers.set("Accept","application/vnd.pgrst.array+json;nulls=stripped")}let s=this.fetch,i=(async()=>{let e=0;for(;;){let t,i={};r.headers.forEach((e,t)=>{i[t]=e}),e>0&&(i["X-Retry-Count"]=String(e));try{t=await s(r.url.toString(),{method:r.method,headers:i,body:JSON.stringify(r.body,(e,t)=>"bigint"==typeof t?t.toString():t),signal:r.signal})}catch(t){if("AbortError"===t?.name||"ABORT_ERR"===t?.code||!u.includes(r.method))throw t;if(r.retryEnabled&&e<3){let t=h(e);e++,await p(t,r.signal);continue}throw t}if(f(r.method,t.status,e,r.retryEnabled)){let s=t.headers?.get("Retry-After")??null,i=null===s?h(e):1e3*Math.max(0,parseInt(s,10)||0);await t.text(),e++,await p(i,r.signal);continue}return await r.processResponse(t)}})();return this.shouldThrowOnError||(i=i.catch(e=>{let t="",r="",s="",i=e?.cause;if(i){let r=i?.message??"",s=i?.code??"";t=`${e?.name??"FetchError"}: ${e?.message}`,t+=`\n\nCaused by: ${i?.name??"Error"}: ${r}`,s&&(t+=` (${s})`),i?.stack&&(t+=`\n${i.stack}`)}else t=e?.stack??"";let a=this.url.toString().length;return"AbortError"===e?.name||"ABORT_ERR"===e?.code?(s="",r="Request was aborted (timeout or manual cancellation)",a>this.urlLengthLimit&&(r+=`. Note: Your request URL is ${a} characters, which may exceed server limits. If selecting many fields, consider using views. If filtering with large arrays (e.g., .in('id', [many IDs])), consider using an RPC function to pass values server-side.`)):("HeadersOverflowError"===i?.name||"UND_ERR_HEADERS_OVERFLOW"===i?.code)&&(s="",r="HTTP headers exceeded server limits (typically 16KB)",a>this.urlLengthLimit&&(r+=`. Your request URL is ${a} characters. If selecting many fields, consider using views. If filtering with large arrays (e.g., .in('id', [200+ IDs])), consider using an RPC function instead.`)),{success:!1,error:{message:`${e?.name??"FetchError"}: ${e?.message}`,details:t,hint:r,code:s},data:null,count:null,status:0,statusText:""}})),i.then(e,t)}async processResponse(e){var t=this;let r=null,s=null,i=null,a=e.status,n=e.statusText;if(e.ok){if("HEAD"!==t.method){let i=await e.text();if(""!==i)if("text/csv"===t.headers.get("Accept"))s=i;else if(t.headers.get("Accept")&&t.headers.get("Accept")?.includes("application/vnd.pgrst.plan+text"))s=i;else try{s=JSON.parse(i)}catch{if(r={message:i},s=null,t.shouldThrowOnError)throw new d({message:i,details:"",hint:"",code:""})}}let o=t.headers.get("Prefer")?.match(/count=(exact|planned|estimated)/),l=e.headers.get("content-range")?.split("/");o&&l&&l.length>1&&(i=parseInt(l[1])),t.isMaybeSingle&&Array.isArray(s)&&(s.length>1?(r={code:"PGRST116",details:`Results contain ${s.length} rows, application/vnd.pgrst.object+json requires 1 row`,hint:null,message:"JSON object requested, multiple (or no) rows returned"},s=null,i=null,a=406,n="Not Acceptable"):s=1===s.length?s[0]:null)}else{let i=await e.text();try{r=JSON.parse(i),Array.isArray(r)&&404===e.status&&(s=[],r=null,a=200,n="OK")}catch{404===e.status&&""===i?(a=204,n="No Content"):r={message:i}}if(r&&t.shouldThrowOnError)throw new d(r)}return{success:null===r,error:r,data:s,count:i,status:a,statusText:n}}returns(){return this}overrideTypes(){return this}},m=class extends g{throwOnError(){return super.throwOnError()}select(e){let t=!1,r=(e??"*").split("").map(e=>/\s/.test(e)&&!t?"":('"'===e&&(t=!t),e)).join("");return this.url.searchParams.set("select",r),this.headers.append("Prefer","return=representation"),this}order(e,{ascending:t=!0,nullsFirst:r,foreignTable:s,referencedTable:i=s}={}){let a=i?`${i}.order`:"order",n=this.url.searchParams.get(a);return this.url.searchParams.set(a,`${n?`${n},`:""}${e}.${t?"asc":"desc"}${void 0===r?"":r?".nullsfirst":".nullslast"}`),this}limit(e,{foreignTable:t,referencedTable:r=t}={}){let s=void 0===r?"limit":`${r}.limit`;return this.url.searchParams.set(s,`${e}`),this}range(e,t,{foreignTable:r,referencedTable:s=r}={}){let i=void 0===s?"offset":`${s}.offset`,a=void 0===s?"limit":`${s}.limit`;return this.url.searchParams.set(i,`${e}`),this.url.searchParams.set(a,""+(t-e+1)),this}abortSignal(e){return this.signal=e,this}single(){return this.headers.set("Accept","application/vnd.pgrst.object+json"),this}maybeSingle(){return this.isMaybeSingle=!0,this}csv(){return this.headers.set("Accept","text/csv"),this}geojson(){return this.headers.set("Accept","application/geo+json"),this}explain({analyze:e=!1,verbose:t=!1,settings:r=!1,buffers:s=!1,wal:i=!1,format:a="text"}={}){let n=[e?"analyze":null,t?"verbose":null,r?"settings":null,s?"buffers":null,i?"wal":null].filter(Boolean).join("|"),o=this.headers.get("Accept")??"application/json";return this.headers.set("Accept",`application/vnd.pgrst.plan+${a}; for="${o}"; options=${n};`),this}rollback(){return this.headers.append("Prefer","tx=rollback"),this}returns(){return this}maxAffected(e){return this.headers.append("Prefer","handling=strict"),this.headers.append("Prefer",`max-affected=${e}`),this}};let y=RegExp("[,()]");var w=class extends m{throwOnError(){return super.throwOnError()}eq(e,t){return this.url.searchParams.append(e,`eq.${t}`),this}neq(e,t){return this.url.searchParams.append(e,`neq.${t}`),this}gt(e,t){return this.url.searchParams.append(e,`gt.${t}`),this}gte(e,t){return this.url.searchParams.append(e,`gte.${t}`),this}lt(e,t){return this.url.searchParams.append(e,`lt.${t}`),this}lte(e,t){return this.url.searchParams.append(e,`lte.${t}`),this}like(e,t){return this.url.searchParams.append(e,`like.${t}`),this}likeAllOf(e,t){return this.url.searchParams.append(e,`like(all).{${t.join(",")}}`),this}likeAnyOf(e,t){return this.url.searchParams.append(e,`like(any).{${t.join(",")}}`),this}ilike(e,t){return this.url.searchParams.append(e,`ilike.${t}`),this}ilikeAllOf(e,t){return this.url.searchParams.append(e,`ilike(all).{${t.join(",")}}`),this}ilikeAnyOf(e,t){return this.url.searchParams.append(e,`ilike(any).{${t.join(",")}}`),this}regexMatch(e,t){return this.url.searchParams.append(e,`match.${t}`),this}regexIMatch(e,t){return this.url.searchParams.append(e,`imatch.${t}`),this}is(e,t){return this.url.searchParams.append(e,`is.${t}`),this}isDistinct(e,t){return this.url.searchParams.append(e,`isdistinct.${t}`),this}in(e,t){let r=Array.from(new Set(t)).map(e=>"string"==typeof e&&y.test(e)?`"${e}"`:`${e}`).join(",");return this.url.searchParams.append(e,`in.(${r})`),this}notIn(e,t){let r=Array.from(new Set(t)).map(e=>"string"==typeof e&&y.test(e)?`"${e}"`:`${e}`).join(",");return this.url.searchParams.append(e,`not.in.(${r})`),this}contains(e,t){return"string"==typeof t?this.url.searchParams.append(e,`cs.${t}`):Array.isArray(t)?this.url.searchParams.append(e,`cs.{${t.join(",")}}`):this.url.searchParams.append(e,`cs.${JSON.stringify(t)}`),this}containedBy(e,t){return"string"==typeof t?this.url.searchParams.append(e,`cd.${t}`):Array.isArray(t)?this.url.searchParams.append(e,`cd.{${t.join(",")}}`):this.url.searchParams.append(e,`cd.${JSON.stringify(t)}`),this}rangeGt(e,t){return this.url.searchParams.append(e,`sr.${t}`),this}rangeGte(e,t){return this.url.searchParams.append(e,`nxl.${t}`),this}rangeLt(e,t){return this.url.searchParams.append(e,`sl.${t}`),this}rangeLte(e,t){return this.url.searchParams.append(e,`nxr.${t}`),this}rangeAdjacent(e,t){return this.url.searchParams.append(e,`adj.${t}`),this}overlaps(e,t){return"string"==typeof t?this.url.searchParams.append(e,`ov.${t}`):this.url.searchParams.append(e,`ov.{${t.join(",")}}`),this}textSearch(e,t,{config:r,type:s}={}){let i="";"plain"===s?i="pl":"phrase"===s?i="ph":"websearch"===s&&(i="w");let a=void 0===r?"":`(${r})`;return this.url.searchParams.append(e,`${i}fts${a}.${t}`),this}match(e){return Object.entries(e).filter(([e,t])=>void 0!==t).forEach(([e,t])=>{this.url.searchParams.append(e,`eq.${t}`)}),this}not(e,t,r){return this.url.searchParams.append(e,`not.${t}.${r}`),this}or(e,{foreignTable:t,referencedTable:r=t}={}){let s=r?`${r}.or`:"or";return this.url.searchParams.append(s,`(${e})`),this}filter(e,t,r){return this.url.searchParams.append(e,`${t}.${r}`),this}},b=class{constructor(e,{headers:t={},schema:r,fetch:s,urlLengthLimit:i=8e3,retry:a}){this.url=e,this.headers=new Headers(t),this.schema=r,this.fetch=s,this.urlLengthLimit=i,this.retry=a}cloneRequestState(){return{url:new URL(this.url.toString()),headers:new Headers(this.headers)}}select(e,t){let{head:r=!1,count:s}=t??{},i=r?"HEAD":"GET",a=!1,n=(e??"*").split("").map(e=>/\s/.test(e)&&!a?"":('"'===e&&(a=!a),e)).join(""),{url:o,headers:l}=this.cloneRequestState();return o.searchParams.set("select",n),s&&l.append("Prefer",`count=${s}`),new w({method:i,url:o,headers:l,schema:this.schema,fetch:this.fetch,urlLengthLimit:this.urlLengthLimit,retry:this.retry})}insert(e,{count:t,defaultToNull:r=!0}={}){let{url:s,headers:i}=this.cloneRequestState();if(t&&i.append("Prefer",`count=${t}`),r||i.append("Prefer","missing=default"),Array.isArray(e)){let t=e.reduce((e,t)=>e.concat(Object.keys(t)),[]);if(t.length>0){let e=[...new Set(t)].map(e=>`"${e}"`);s.searchParams.set("columns",e.join(","))}}return new w({method:"POST",url:s,headers:i,schema:this.schema,body:e,fetch:this.fetch??fetch,urlLengthLimit:this.urlLengthLimit,retry:this.retry})}upsert(e,{onConflict:t,ignoreDuplicates:r=!1,count:s,defaultToNull:i=!0}={}){let{url:a,headers:n}=this.cloneRequestState();if(n.append("Prefer",`resolution=${r?"ignore":"merge"}-duplicates`),void 0!==t&&a.searchParams.set("on_conflict",t),s&&n.append("Prefer",`count=${s}`),i||n.append("Prefer","missing=default"),Array.isArray(e)){let t=e.reduce((e,t)=>e.concat(Object.keys(t)),[]);if(t.length>0){let e=[...new Set(t)].map(e=>`"${e}"`);a.searchParams.set("columns",e.join(","))}}return new w({method:"POST",url:a,headers:n,schema:this.schema,body:e,fetch:this.fetch??fetch,urlLengthLimit:this.urlLengthLimit,retry:this.retry})}update(e,{count:t}={}){let{url:r,headers:s}=this.cloneRequestState();return t&&s.append("Prefer",`count=${t}`),new w({method:"PATCH",url:r,headers:s,schema:this.schema,body:e,fetch:this.fetch??fetch,urlLengthLimit:this.urlLengthLimit,retry:this.retry})}delete({count:e}={}){let{url:t,headers:r}=this.cloneRequestState();return e&&r.append("Prefer",`count=${e}`),new w({method:"DELETE",url:t,headers:r,schema:this.schema,fetch:this.fetch??fetch,urlLengthLimit:this.urlLengthLimit,retry:this.retry})}};function _(e){return _="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},_(e)}function k(e,t,r){return(t=function(e){var t=function(e){if("object"!=_(e)||!e)return e;var t=e[Symbol.toPrimitive];if(void 0!==t){var r=t.call(e,"string");if("object"!=_(r))return r;throw TypeError("@@toPrimitive must return a primitive value.")}return String(e)}(e);return"symbol"==_(t)?t:t+""}(t))in e?Object.defineProperty(e,t,{value:r,enumerable:!0,configurable:!0,writable:!0}):e[t]=r,e}function v(e,t){var r=Object.keys(e);if(Object.getOwnPropertySymbols){var s=Object.getOwnPropertySymbols(e);t&&(s=s.filter(function(t){return Object.getOwnPropertyDescriptor(e,t).enumerable})),r.push.apply(r,s)}return r}function S(e){for(var t=1;t<arguments.length;t++){var r=null==arguments[t]?{}:arguments[t];t%2?v(Object(r),!0).forEach(function(t){k(e,t,r[t])}):Object.getOwnPropertyDescriptors?Object.defineProperties(e,Object.getOwnPropertyDescriptors(r)):v(Object(r)).forEach(function(t){Object.defineProperty(e,t,Object.getOwnPropertyDescriptor(r,t))})}return e}var E=class e{constructor(e,{headers:t={},schema:r,fetch:s,timeout:i,urlLengthLimit:a=8e3,retry:n}={}){this.url=e,this.headers=new Headers(t),this.schemaName=r,this.urlLengthLimit=a;let o=s??globalThis.fetch;this.fetch=void 0!==i&&i>0?(e,t)=>{let r=new AbortController,s=setTimeout(()=>r.abort(),i),a=t?.signal;if(a){if(a.aborted)return clearTimeout(s),o(e,t);let i=()=>{clearTimeout(s),r.abort()};return a.addEventListener("abort",i,{once:!0}),o(e,S(S({},t),{},{signal:r.signal})).finally(()=>{clearTimeout(s),a.removeEventListener("abort",i)})}return o(e,S(S({},t),{},{signal:r.signal})).finally(()=>clearTimeout(s))}:o,this.retry=n}from(e){if(!e||"string"!=typeof e||""===e.trim())throw Error("Invalid relation name: relation must be a non-empty string.");return new b(new URL(`${this.url}/${e}`),{headers:new Headers(this.headers),schema:this.schemaName,fetch:this.fetch,urlLengthLimit:this.urlLengthLimit,retry:this.retry})}schema(t){return new e(this.url,{headers:this.headers,schema:t,fetch:this.fetch,urlLengthLimit:this.urlLengthLimit,retry:this.retry})}rpc(e,t={},{head:r=!1,get:s=!1,count:i}={}){let a,n,o=new URL(`${this.url}/rpc/${e}`),l=e=>"object"==typeof e&&!!e&&(!Array.isArray(e)||e.some(l)),h=r&&Object.values(t).some(l);h?(a="POST",n=t):r||s?(a=r?"HEAD":"GET",Object.entries(t).filter(([e,t])=>void 0!==t).map(([e,t])=>[e,Array.isArray(t)?`{${t.join(",")}}`:`${t}`]).forEach(([e,t])=>{o.searchParams.append(e,t)})):(a="POST",n=t);let c=new Headers(this.headers);return h?c.set("Prefer",i?`count=${i},return=minimal`:"return=minimal"):i&&c.set("Prefer",`count=${i}`),new w({method:a,url:o,headers:c,schema:this.schemaName,body:n,fetch:this.fetch??fetch,urlLengthLimit:this.urlLengthLimit,retry:this.retry})}},T=class{constructor(){}static detectEnvironment(){if(typeof WebSocket<"u")return{type:"native",wsConstructor:WebSocket};let e=globalThis;if(typeof globalThis<"u"&&void 0!==e.WebSocket)return{type:"native",wsConstructor:e.WebSocket};let t=typeof global<"u"?global:void 0;if(t&&void 0!==t.WebSocket)return{type:"native",wsConstructor:t.WebSocket};if(typeof globalThis<"u"&&void 0!==e.WebSocketPair&&void 0===globalThis.WebSocket)return{type:"cloudflare",error:"Cloudflare Workers detected. WebSocket clients are not supported in Cloudflare Workers.",workaround:"Use Cloudflare Workers WebSocket API for server-side WebSocket handling, or deploy to a different runtime."};if(typeof globalThis<"u"&&e.EdgeRuntime||typeof navigator<"u"&&navigator.userAgent?.includes("Vercel-Edge"))return{type:"unsupported",error:"Edge runtime detected (Vercel Edge/Netlify Edge). WebSockets are not supported in edge functions.",workaround:"Use serverless functions or a different deployment target for WebSocket functionality."};let r=globalThis.process;if(r){let e=r.versions;if(e&&e.node){let t=e.node,r=parseInt(t.replace(/^v/,"").split(".")[0]);return r>=22?void 0===globalThis.WebSocket?{type:"unsupported",error:`Node.js ${r} detected but native WebSocket not found.`,workaround:"Provide a WebSocket implementation via the transport option."}:{type:"native",wsConstructor:globalThis.WebSocket}:{type:"unsupported",error:`Node.js ${r} detected without native WebSocket support.`,workaround:'For Node.js < 22, install "ws" package and provide it via the transport option:\nimport ws from "ws"\nnew RealtimeClient(url, { transport: ws })'}}}return{type:"unsupported",error:"Unknown JavaScript runtime without WebSocket support.",workaround:"Ensure you're running in a supported environment (browser, Node.js, Deno) or provide a custom WebSocket implementation."}}static getWebSocketConstructor(){let e=this.detectEnvironment();if(e.wsConstructor)return e.wsConstructor;let t=e.error||"WebSocket not supported in this environment.";throw e.workaround&&(t+=`\n\nSuggested solution: ${e.workaround}`),Error(t)}static isWebSocketSupported(){try{let e=this.detectEnvironment();return"native"===e.type||"ws"===e.type}catch{return!1}}};let R={closed:"closed",errored:"errored",joined:"joined",joining:"joining",leaving:"leaving"},A={close:"phx_close",error:"phx_error",join:"phx_join",reply:"phx_reply",leave:"phx_leave",access_token:"access_token"};var O,P=class{constructor(e){this.HEADER_LENGTH=1,this.USER_BROADCAST_PUSH_META_LENGTH=6,this.KINDS={userBroadcastPush:3,userBroadcast:4},this.BINARY_ENCODING=0,this.JSON_ENCODING=1,this.BROADCAST_EVENT="broadcast",this.allowedMetadataKeys=[],this.allowedMetadataKeys=e??[]}encode(e,t){if(e.event===this.BROADCAST_EVENT&&!(e.payload instanceof ArrayBuffer)&&"string"==typeof e.payload.event)return t(this._binaryEncodeUserBroadcastPush(e));let r=[e.join_ref,e.ref,e.topic,e.event,e.payload];return t(JSON.stringify(r))}_binaryEncodeUserBroadcastPush(e){return this._isArrayBuffer(e.payload?.payload)?this._encodeBinaryUserBroadcastPush(e):this._encodeJsonUserBroadcastPush(e)}_encodeBinaryUserBroadcastPush(e){let t=e.payload?.payload??new ArrayBuffer(0);return this._encodeUserBroadcastPush(e,this.BINARY_ENCODING,t)}_encodeJsonUserBroadcastPush(e){let t=e.payload?.payload??{},r=(new TextEncoder).encode(JSON.stringify(t)).buffer;return this._encodeUserBroadcastPush(e,this.JSON_ENCODING,r)}_encodeUserBroadcastPush(e,t,r){let s=e.topic,i=e.ref??"",a=e.join_ref??"",n=e.payload.event,o=this.allowedMetadataKeys?this._pick(e.payload,this.allowedMetadataKeys):{},l=0===Object.keys(o).length?"":JSON.stringify(o);if(a.length>255)throw Error(`joinRef length ${a.length} exceeds maximum of 255`);if(i.length>255)throw Error(`ref length ${i.length} exceeds maximum of 255`);if(s.length>255)throw Error(`topic length ${s.length} exceeds maximum of 255`);if(n.length>255)throw Error(`userEvent length ${n.length} exceeds maximum of 255`);if(l.length>255)throw Error(`metadata length ${l.length} exceeds maximum of 255`);let h=this.USER_BROADCAST_PUSH_META_LENGTH+a.length+i.length+s.length+n.length+l.length,c=new ArrayBuffer(this.HEADER_LENGTH+h),u=new DataView(c),d=0;u.setUint8(d++,this.KINDS.userBroadcastPush),u.setUint8(d++,a.length),u.setUint8(d++,i.length),u.setUint8(d++,s.length),u.setUint8(d++,n.length),u.setUint8(d++,l.length),u.setUint8(d++,t),Array.from(a,e=>u.setUint8(d++,e.charCodeAt(0))),Array.from(i,e=>u.setUint8(d++,e.charCodeAt(0))),Array.from(s,e=>u.setUint8(d++,e.charCodeAt(0))),Array.from(n,e=>u.setUint8(d++,e.charCodeAt(0))),Array.from(l,e=>u.setUint8(d++,e.charCodeAt(0)));var p=new Uint8Array(c.byteLength+r.byteLength);return p.set(new Uint8Array(c),0),p.set(new Uint8Array(r),c.byteLength),p.buffer}decode(e,t){if(this._isArrayBuffer(e))return t(this._binaryDecode(e));if("string"==typeof e){let[r,s,i,a,n]=JSON.parse(e);return t({join_ref:r,ref:s,topic:i,event:a,payload:n})}return t({})}_binaryDecode(e){let t=new DataView(e),r=t.getUint8(0),s=new TextDecoder;if(r===this.KINDS.userBroadcast)return this._decodeUserBroadcast(e,t,s)}_decodeUserBroadcast(e,t,r){let s=t.getUint8(1),i=t.getUint8(2),a=t.getUint8(3),n=t.getUint8(4),o=this.HEADER_LENGTH+4,l=r.decode(e.slice(o,o+s));o+=s;let h=r.decode(e.slice(o,o+i));o+=i;let c=r.decode(e.slice(o,o+a));o+=a;let u=e.slice(o,e.byteLength),d=n===this.JSON_ENCODING?JSON.parse(r.decode(u)):u,p={type:this.BROADCAST_EVENT,event:h,payload:d};return a>0&&(p.meta=JSON.parse(c)),{join_ref:null,ref:null,topic:l,event:this.BROADCAST_EVENT,payload:p}}_isArrayBuffer(e){return e instanceof ArrayBuffer||"ArrayBuffer"===e?.constructor?.name}_pick(e,t){return e&&"object"==typeof e?Object.fromEntries(Object.entries(e).filter(([e])=>t.includes(e))):{}}};!function(e){e.abstime="abstime",e.bool="bool",e.date="date",e.daterange="daterange",e.float4="float4",e.float8="float8",e.int2="int2",e.int4="int4",e.int4range="int4range",e.int8="int8",e.int8range="int8range",e.json="json",e.jsonb="jsonb",e.money="money",e.numeric="numeric",e.oid="oid",e.reltime="reltime",e.text="text",e.time="time",e.timestamp="timestamp",e.timestamptz="timestamptz",e.timetz="timetz",e.tsrange="tsrange",e.tstzrange="tstzrange"}(O||={});let C=(e,t,r={})=>{let s=r.skipTypes??[];return t?Object.keys(t).reduce((r,i)=>(r[i]=j(i,e,t,s),r),{}):{}},j=(e,t,r,s)=>{let i=t.find(t=>t.name===e)?.type,a=r[e];return i&&!s.includes(i)?I(i,a):$(a)},I=(e,t)=>{if("_"===e.charAt(0))return U(t,e.slice(1,e.length));switch(e){case O.bool:return x(t);case O.float4:case O.float8:case O.int2:case O.int4:case O.int8:case O.numeric:case O.oid:return N(t);case O.json:case O.jsonb:return L(t);case O.timestamp:return D(t);case O.abstime:case O.date:case O.daterange:case O.int4range:case O.int8range:case O.money:case O.reltime:case O.text:case O.time:case O.timestamptz:case O.timetz:case O.tsrange:case O.tstzrange:default:return $(t)}},$=e=>e,x=e=>{switch(e){case"t":return!0;case"f":return!1;default:return e}},N=e=>{if("string"==typeof e){let t=parseFloat(e);if(!Number.isNaN(t))return t}return e},L=e=>{if("string"==typeof e)try{return JSON.parse(e)}catch{return e}return e},U=(e,t)=>{if("string"!=typeof e)return e;let r=e.length-1,s=e[r];if("{"===e[0]&&"}"===s){let s,i=e.slice(1,r);try{s=JSON.parse("["+i+"]")}catch{s=i?i.split(","):[]}return s.map(e=>I(t,e))}return e},D=e=>"string"==typeof e?e.replace(" ","T"):e,B=e=>{let t=new URL(e);return t.protocol=t.protocol.replace(/^ws/i,"http"),t.pathname=t.pathname.replace(/\/+$/,"").replace(/\/socket\/websocket$/i,"").replace(/\/socket$/i,"").replace(/\/websocket$/i,""),""===t.pathname||"/"===t.pathname?t.pathname="/api/broadcast":t.pathname+="/api/broadcast",t.href};var q,M=e=>"function"==typeof e?e:function(){return e},H=typeof self<"u"?self:null,W=typeof window<"u"?window:null,K=H||W||globalThis,F="closed",J="errored",G="joined",V="joining",z="leaving",Y="phx_close",X="phx_error",Q="phx_reply",Z="phx_leave",ee="websocket",te="base64url.bearer.phx.",re=class{constructor(e,t,r,s){this.channel=e,this.event=t,this.payload=r||function(){return{}},this.receivedResp=null,this.timeout=s,this.timeoutTimer=null,this.recHooks=[],this.sent=!1,this.ref=void 0}resend(e){this.timeout=e,this.reset(),this.send()}send(){this.hasReceived("timeout")||(this.startTimeout(),this.sent=!0,this.channel.socket.push({topic:this.channel.topic,event:this.event,payload:this.payload(),ref:this.ref,join_ref:this.channel.joinRef()}))}receive(e,t){return this.hasReceived(e)&&t(this.receivedResp.response),this.recHooks.push({status:e,callback:t}),this}reset(){this.cancelRefEvent(),this.ref=null,this.refEvent=null,this.receivedResp=null,this.sent=!1}destroy(){this.cancelRefEvent(),this.cancelTimeout()}matchReceive({status:e,response:t,_ref:r}){this.recHooks.filter(t=>t.status===e).forEach(e=>e.callback(t))}cancelRefEvent(){this.refEvent&&this.channel.off(this.refEvent)}cancelTimeout(){clearTimeout(this.timeoutTimer),this.timeoutTimer=null}startTimeout(){this.timeoutTimer&&this.cancelTimeout(),this.ref=this.channel.socket.makeRef(),this.refEvent=this.channel.replyEventName(this.ref),this.channel.on(this.refEvent,e=>{this.cancelRefEvent(),this.cancelTimeout(),this.receivedResp=e,this.matchReceive(e)}),this.timeoutTimer=setTimeout(()=>{this.trigger("timeout",{})},this.timeout)}hasReceived(e){return this.receivedResp&&this.receivedResp.status===e}trigger(e,t){this.channel.trigger(this.refEvent,{status:e,response:t})}},se=class{constructor(e,t){this.callback=e,this.timerCalc=t,this.timer=void 0,this.tries=0}reset(){this.tries=0,clearTimeout(this.timer)}scheduleTimeout(){clearTimeout(this.timer),this.timer=setTimeout(()=>{this.tries+=1,this.callback()},this.timerCalc(this.tries+1))}},ie=class{constructor(e,t,r){this.state=F,this.topic=e,this.params=M(t||{}),this.socket=r,this.bindings=[],this.bindingRef=0,this.timeout=this.socket.timeout,this.joinedOnce=!1,this.joinPush=new re(this,"phx_join",this.params,this.timeout),this.pushBuffer=[],this.stateChangeRefs=[],this.rejoinTimer=new se(()=>{this.socket.isConnected()&&this.rejoin()},this.socket.rejoinAfterMs),this.stateChangeRefs.push(this.socket.onError(()=>this.rejoinTimer.reset())),this.stateChangeRefs.push(this.socket.onOpen(()=>{this.rejoinTimer.reset(),this.isErrored()&&this.rejoin()})),this.joinPush.receive("ok",()=>{this.state=G,this.rejoinTimer.reset(),this.pushBuffer.forEach(e=>e.send()),this.pushBuffer=[]}),this.joinPush.receive("error",e=>{this.state=J,this.socket.hasLogger()&&this.socket.log("channel",`error ${this.topic}`,e),this.socket.isConnected()&&this.rejoinTimer.scheduleTimeout()}),this.onClose(()=>{this.rejoinTimer.reset(),this.socket.hasLogger()&&this.socket.log("channel",`close ${this.topic}`),this.state=F,this.socket.remove(this)}),this.onError(e=>{this.socket.hasLogger()&&this.socket.log("channel",`error ${this.topic}`,e),this.isJoining()&&this.joinPush.reset(),this.state=J,this.socket.isConnected()&&this.rejoinTimer.scheduleTimeout()}),this.joinPush.receive("timeout",()=>{this.socket.hasLogger()&&this.socket.log("channel",`timeout ${this.topic}`,this.joinPush.timeout),new re(this,Z,M({}),this.timeout).send(),this.state=J,this.joinPush.reset(),this.socket.isConnected()&&this.rejoinTimer.scheduleTimeout()}),this.on(Q,(e,t)=>{this.trigger(this.replyEventName(t),e)})}join(e=this.timeout){if(this.joinedOnce)throw Error("tried to join multiple times. 'join' can only be called a single time per channel instance");return this.timeout=e,this.joinedOnce=!0,this.rejoin(),this.joinPush}teardown(){this.pushBuffer.forEach(e=>e.destroy()),this.pushBuffer=[],this.rejoinTimer.reset(),this.joinPush.destroy(),this.state=F,this.bindings=[]}onClose(e){this.on(Y,e)}onError(e){return this.on(X,t=>e(t))}on(e,t){let r=this.bindingRef++;return this.bindings.push({event:e,ref:r,callback:t}),r}off(e,t){this.bindings=this.bindings.filter(r=>!(r.event===e&&(void 0===t||t===r.ref)))}canPush(){return this.socket.isConnected()&&this.isJoined()}push(e,t,r=this.timeout){if(t||={},!this.joinedOnce)throw Error(`tried to push '${e}' to '${this.topic}' before joining. Use channel.join() before pushing events`);let s=new re(this,e,function(){return t},r);return this.canPush()?s.send():(s.startTimeout(),this.pushBuffer.push(s)),s}leave(e=this.timeout){this.rejoinTimer.reset(),this.joinPush.cancelTimeout(),this.state=z;let t=()=>{this.socket.hasLogger()&&this.socket.log("channel",`leave ${this.topic}`),this.trigger(Y,"leave")},r=new re(this,Z,M({}),e);return r.receive("ok",()=>t()).receive("timeout",()=>t()),r.send(),this.canPush()||r.trigger("ok",{}),r}onMessage(e,t,r){return t}filterBindings(e,t,r){return!0}isMember(e,t,r,s){return!(this.topic!==e||s&&s!==this.joinRef()&&(this.socket.hasLogger()&&this.socket.log("channel","dropping outdated message",{topic:e,event:t,payload:r,joinRef:s}),1))}joinRef(){return this.joinPush.ref}rejoin(e=this.timeout){this.isLeaving()||(this.socket.leaveOpenTopic(this.topic),this.state=V,this.joinPush.resend(e))}trigger(e,t,r,s){let i=this.onMessage(e,t,r,s);if(t&&!i)throw Error("channel onMessage callbacks must return the payload, modified or unmodified");let a=this.bindings.filter(s=>s.event===e&&this.filterBindings(s,t,r));for(let e=0;e<a.length;e++)a[e].callback(i,r,s||this.joinRef())}replyEventName(e){return`chan_reply_${e}`}isClosed(){return this.state===F}isErrored(){return this.state===J}isJoined(){return this.state===G}isJoining(){return this.state===V}isLeaving(){return this.state===z}},ae=class{static request(e,t,r,s,i,a,n){if(K.XDomainRequest){let r=new K.XDomainRequest;return this.xdomainRequest(r,e,t,s,i,a,n)}if(K.XMLHttpRequest){let o=new K.XMLHttpRequest;return this.xhrRequest(o,e,t,r,s,i,a,n)}if(K.fetch&&K.AbortController)return this.fetchRequest(e,t,r,s,i,a,n);throw Error("No suitable XMLHttpRequest implementation found")}static fetchRequest(e,t,r,s,i,a,n){let o={method:e,headers:r,body:s},l=null;return i&&(l=new AbortController,setTimeout(()=>l.abort(),i),o.signal=l.signal),K.fetch(t,o).then(e=>e.text()).then(e=>this.parseJSON(e)).then(e=>n&&n(e)).catch(e=>{"AbortError"===e.name&&a?a():n&&n(null)}),l}static xdomainRequest(e,t,r,s,i,a,n){return e.timeout=i,e.open(t,r),e.onload=()=>{let t=this.parseJSON(e.responseText);n&&n(t)},a&&(e.ontimeout=a),e.onprogress=()=>{},e.send(s),e}static xhrRequest(e,t,r,s,i,a,n,o){e.open(t,r,!0),e.timeout=a;for(let[t,r]of Object.entries(s))e.setRequestHeader(t,r);return e.onerror=()=>o&&o(null),e.onreadystatechange=()=>{4===e.readyState&&o&&o(this.parseJSON(e.responseText))},n&&(e.ontimeout=n),e.send(i),e}static parseJSON(e){if(!e||""===e)return null;try{return JSON.parse(e)}catch{return console&&console.log("failed to parse JSON response",e),null}}static serialize(e,t){let r=[];for(var s in e){if(!Object.prototype.hasOwnProperty.call(e,s))continue;let i=t?`${t}[${s}]`:s,a=e[s];"object"==typeof a?r.push(this.serialize(a,i)):r.push(encodeURIComponent(i)+"="+encodeURIComponent(a))}return r.join("&")}static appendParams(e,t){return 0===Object.keys(t).length?e:`${e}${e.match(/\?/)?"&":"?"}${this.serialize(t)}`}},ne=class{constructor(e,t){t&&2===t.length&&t[1].startsWith(te)&&(this.authToken=atob(t[1].slice(21))),this.endPoint=null,this.token=null,this.skipHeartbeat=!0,this.reqs=new Set,this.awaitingBatchAck=!1,this.currentBatch=null,this.currentBatchTimer=null,this.batchBuffer=[],this.onopen=function(){},this.onerror=function(){},this.onmessage=function(){},this.onclose=function(){},this.pollEndpoint=this.normalizeEndpoint(e),this.readyState=0,setTimeout(()=>this.poll(),0)}normalizeEndpoint(e){return e.replace("ws://","http://").replace("wss://","https://").replace(RegExp("(.*)/"+ee),"$1/longpoll")}endpointURL(){return ae.appendParams(this.pollEndpoint,{token:this.token})}closeAndRetry(e,t,r){this.close(e,t,r),this.readyState=0}ontimeout(){this.onerror("timeout"),this.closeAndRetry(1005,"timeout",!1)}isActive(){return 1===this.readyState||0===this.readyState}poll(){let e={Accept:"application/json"};this.authToken&&(e["X-Phoenix-AuthToken"]=this.authToken),this.ajax("GET",e,null,()=>this.ontimeout(),e=>{if(e){var{status:t,token:r,messages:s}=e;if(410===t&&null!==this.token)return this.onerror(410),void this.closeAndRetry(3410,"session_gone",!1);this.token=r}else t=0;switch(t){case 200:s.forEach(e=>{setTimeout(()=>this.onmessage({data:e}),0)}),this.poll();break;case 204:this.poll();break;case 410:this.readyState=1,this.onopen({}),this.poll();break;case 403:this.onerror(403),this.close(1008,"forbidden",!1);break;case 0:case 500:this.onerror(500),this.closeAndRetry(1011,"internal server error",500);break;default:throw Error(`unhandled poll status ${t}`)}})}send(e){"string"!=typeof e&&(e=(e=>{let t="",r=new Uint8Array(e),s=r.byteLength;for(let e=0;e<s;e++)t+=String.fromCharCode(r[e]);return btoa(t)})(e)),this.currentBatch?this.currentBatch.push(e):this.awaitingBatchAck?this.batchBuffer.push(e):(this.currentBatch=[e],this.currentBatchTimer=setTimeout(()=>{this.batchSend(this.currentBatch),this.currentBatch=null},0))}batchSend(e){this.awaitingBatchAck=!0,this.ajax("POST",{"Content-Type":"application/x-ndjson"},e.join("\n"),()=>this.onerror("timeout"),e=>{this.awaitingBatchAck=!1,e&&200===e.status?this.batchBuffer.length>0&&(this.batchSend(this.batchBuffer),this.batchBuffer=[]):(this.onerror(e&&e.status),this.closeAndRetry(1011,"internal server error",!1))})}close(e,t,r){for(let e of this.reqs)e.abort();this.readyState=3;let s=Object.assign({code:1e3,reason:void 0,wasClean:!0},{code:e,reason:t,wasClean:r});this.batchBuffer=[],clearTimeout(this.currentBatchTimer),this.currentBatchTimer=null,typeof CloseEvent<"u"?this.onclose(new CloseEvent("close",s)):this.onclose(s)}ajax(e,t,r,s,i){let a;a=ae.request(e,this.endpointURL(),t,r,this.timeout,()=>{this.reqs.delete(a),s()},e=>{this.reqs.delete(a),this.isActive()&&i(e)}),this.reqs.add(a)}},oe=class e{constructor(t,r={}){let s=r.events||{state:"presence_state",diff:"presence_diff"};this.state={},this.pendingDiffs=[],this.channel=t,this.joinRef=null,this.caller={onJoin:function(){},onLeave:function(){},onSync:function(){}},this.channel.on(s.state,t=>{let{onJoin:r,onLeave:s,onSync:i}=this.caller;this.joinRef=this.channel.joinRef(),this.state=e.syncState(this.state,t,r,s),this.pendingDiffs.forEach(t=>{this.state=e.syncDiff(this.state,t,r,s)}),this.pendingDiffs=[],i()}),this.channel.on(s.diff,t=>{let{onJoin:r,onLeave:s,onSync:i}=this.caller;this.inPendingSyncState()?this.pendingDiffs.push(t):(this.state=e.syncDiff(this.state,t,r,s),i())})}onJoin(e){this.caller.onJoin=e}onLeave(e){this.caller.onLeave=e}onSync(e){this.caller.onSync=e}list(t){return e.list(this.state,t)}inPendingSyncState(){return!this.joinRef||this.joinRef!==this.channel.joinRef()}static syncState(e,t,r,s){let i=this.clone(e),a={},n={};return this.map(i,(e,r)=>{t[e]||(n[e]=r)}),this.map(t,(e,t)=>{let r=i[e];if(r){let s=t.metas.map(e=>e.phx_ref),i=r.metas.map(e=>e.phx_ref),o=t.metas.filter(e=>i.indexOf(e.phx_ref)<0),l=r.metas.filter(e=>s.indexOf(e.phx_ref)<0);o.length>0&&(a[e]=t,a[e].metas=o),l.length>0&&(n[e]=this.clone(r),n[e].metas=l)}else a[e]=t}),this.syncDiff(i,{joins:a,leaves:n},r,s)}static syncDiff(e,t,r,s){let{joins:i,leaves:a}=this.clone(t);return r||=function(){},s||=function(){},this.map(i,(t,s)=>{let i=e[t];if(e[t]=this.clone(s),i){let r=e[t].metas.map(e=>e.phx_ref),s=i.metas.filter(e=>r.indexOf(e.phx_ref)<0);e[t].metas.unshift(...s)}r(t,i,s)}),this.map(a,(t,r)=>{let i=e[t];if(!i)return;let a=r.metas.map(e=>e.phx_ref);i.metas=i.metas.filter(e=>a.indexOf(e.phx_ref)<0),s(t,i,r),0===i.metas.length&&delete e[t]}),e}static list(e,t){return t||=function(e,t){return t},this.map(e,(e,r)=>t(e,r))}static map(e,t){return Object.getOwnPropertyNames(e).map(r=>t(r,e[r]))}static clone(e){return JSON.parse(JSON.stringify(e))}},le={HEADER_LENGTH:1,META_LENGTH:4,KINDS:{push:0,reply:1,broadcast:2},encode(e,t){if(e.payload.constructor===ArrayBuffer)return t(this.binaryEncode(e));{let r=[e.join_ref,e.ref,e.topic,e.event,e.payload];return t(JSON.stringify(r))}},decode(e,t){if(e.constructor===ArrayBuffer)return t(this.binaryDecode(e));{let[r,s,i,a,n]=JSON.parse(e);return t({join_ref:r,ref:s,topic:i,event:a,payload:n})}},binaryEncode(e){let{join_ref:t,ref:r,event:s,topic:i,payload:a}=e,n=this.META_LENGTH+t.length+r.length+i.length+s.length,o=new ArrayBuffer(this.HEADER_LENGTH+n),l=new DataView(o),h=0;l.setUint8(h++,this.KINDS.push),l.setUint8(h++,t.length),l.setUint8(h++,r.length),l.setUint8(h++,i.length),l.setUint8(h++,s.length),Array.from(t,e=>l.setUint8(h++,e.charCodeAt(0))),Array.from(r,e=>l.setUint8(h++,e.charCodeAt(0))),Array.from(i,e=>l.setUint8(h++,e.charCodeAt(0))),Array.from(s,e=>l.setUint8(h++,e.charCodeAt(0)));var c=new Uint8Array(o.byteLength+a.byteLength);return c.set(new Uint8Array(o),0),c.set(new Uint8Array(a),o.byteLength),c.buffer},binaryDecode(e){let t=new DataView(e),r=t.getUint8(0),s=new TextDecoder;switch(r){case this.KINDS.push:return this.decodePush(e,t,s);case this.KINDS.reply:return this.decodeReply(e,t,s);case this.KINDS.broadcast:return this.decodeBroadcast(e,t,s)}},decodePush(e,t,r){let s=t.getUint8(1),i=t.getUint8(2),a=t.getUint8(3),n=this.HEADER_LENGTH+this.META_LENGTH-1,o=r.decode(e.slice(n,n+s));n+=s;let l=r.decode(e.slice(n,n+i));n+=i;let h=r.decode(e.slice(n,n+a));return n+=a,{join_ref:o,ref:null,topic:l,event:h,payload:e.slice(n,e.byteLength)}},decodeReply(e,t,r){let s=t.getUint8(1),i=t.getUint8(2),a=t.getUint8(3),n=t.getUint8(4),o=this.HEADER_LENGTH+this.META_LENGTH,l=r.decode(e.slice(o,o+s));o+=s;let h=r.decode(e.slice(o,o+i));o+=i;let c=r.decode(e.slice(o,o+a));o+=a;let u=r.decode(e.slice(o,o+n));o+=n;let d={status:u,response:e.slice(o,e.byteLength)};return{join_ref:l,ref:h,topic:c,event:Q,payload:d}},decodeBroadcast(e,t,r){let s=t.getUint8(1),i=t.getUint8(2),a=this.HEADER_LENGTH+2,n=r.decode(e.slice(a,a+s));a+=s;let o=r.decode(e.slice(a,a+i));return a+=i,{join_ref:null,ref:null,topic:n,event:o,payload:e.slice(a,e.byteLength)}}},he=class{constructor(e,t={}){this.stateChangeCallbacks={open:[],close:[],error:[],message:[]},this.channels=[],this.sendBuffer=[],this.ref=0,this.fallbackRef=null,this.timeout=t.timeout||1e4,this.transport=t.transport||K.WebSocket||ne,this.conn=void 0,this.primaryPassedHealthCheck=!1,this.longPollFallbackMs=t.longPollFallbackMs,this.fallbackTimer=null;let r=null;try{r=K&&K.sessionStorage}catch{}this.sessionStore=t.sessionStorage||r,this.establishedConnections=0,this.defaultEncoder=le.encode.bind(le),this.defaultDecoder=le.decode.bind(le),this.closeWasClean=!0,this.disconnecting=!1,this.binaryType=t.binaryType||"arraybuffer",this.connectClock=1,this.pageHidden=!1,this.encode=void 0,this.decode=void 0,this.transport===ne?(this.encode=this.defaultEncoder,this.decode=this.defaultDecoder):(this.encode=t.encode||this.defaultEncoder,this.decode=t.decode||this.defaultDecoder);let s=null;W&&W.addEventListener&&(W.addEventListener("pagehide",e=>{this.conn&&(this.disconnect(),s=this.connectClock)}),W.addEventListener("pageshow",e=>{s===this.connectClock&&(s=null,this.connect())}),W.addEventListener("visibilitychange",()=>{"hidden"===document.visibilityState?this.pageHidden=!0:(this.pageHidden=!1,!this.isConnected()&&!this.closeWasClean&&this.teardown(()=>this.connect()))})),this.heartbeatIntervalMs=t.heartbeatIntervalMs||3e4,this.autoSendHeartbeat=t.autoSendHeartbeat??!0,this.heartbeatCallback=t.heartbeatCallback??(()=>{}),this.rejoinAfterMs=e=>t.rejoinAfterMs?t.rejoinAfterMs(e):[1e3,2e3,5e3][e-1]||1e4,this.reconnectAfterMs=e=>t.reconnectAfterMs?t.reconnectAfterMs(e):[10,50,100,150,200,250,500,1e3,2e3][e-1]||5e3,this.logger=t.logger||null,!this.logger&&t.debug&&(this.logger=(e,t,r)=>{console.log(`${e}: ${t}`,r)}),this.longpollerTimeout=t.longpollerTimeout||2e4,this.params=M(t.params||{}),this.endPoint=`${e}/${ee}`,this.vsn=t.vsn||"2.0.0",this.heartbeatTimeoutTimer=null,this.heartbeatTimer=null,this.heartbeatSentAt=null,this.pendingHeartbeatRef=null,this.reconnectTimer=new se(()=>{if(this.pageHidden)return this.log("Not reconnecting as page is hidden!"),void this.teardown();this.teardown(async()=>{t.beforeReconnect&&await t.beforeReconnect(),this.connect()})},this.reconnectAfterMs),this.authToken=t.authToken}getLongPollTransport(){return ne}replaceTransport(e){this.connectClock++,this.closeWasClean=!0,clearTimeout(this.fallbackTimer),this.reconnectTimer.reset(),this.conn&&=(this.conn.close(),null),this.transport=e}protocol(){return location.protocol.match(/^https/)?"wss":"ws"}endPointURL(){let e=ae.appendParams(ae.appendParams(this.endPoint,this.params()),{vsn:this.vsn});return"/"===e.charAt(0)?"/"===e.charAt(1)?`${this.protocol()}:${e}`:`${this.protocol()}://${location.host}${e}`:e}disconnect(e,t,r){this.connectClock++,this.disconnecting=!0,this.closeWasClean=!0,clearTimeout(this.fallbackTimer),this.reconnectTimer.reset(),this.teardown(()=>{this.disconnecting=!1,e&&e()},t,r)}connect(e){e&&(console&&console.log("passing params to connect is deprecated. Instead pass :params to the Socket constructor"),this.params=M(e)),(!this.conn||this.disconnecting)&&(this.longPollFallbackMs&&this.transport!==ne?this.connectWithFallback(ne,this.longPollFallbackMs):this.transportConnect())}log(e,t,r){this.logger&&this.logger(e,t,r)}hasLogger(){return null!==this.logger}onOpen(e){let t=this.makeRef();return this.stateChangeCallbacks.open.push([t,e]),t}onClose(e){let t=this.makeRef();return this.stateChangeCallbacks.close.push([t,e]),t}onError(e){let t=this.makeRef();return this.stateChangeCallbacks.error.push([t,e]),t}onMessage(e){let t=this.makeRef();return this.stateChangeCallbacks.message.push([t,e]),t}onHeartbeat(e){this.heartbeatCallback=e}ping(e){if(!this.isConnected())return!1;let t=this.makeRef(),r=Date.now();this.push({topic:"phoenix",event:"heartbeat",payload:{},ref:t});let s=this.onMessage(i=>{i.ref===t&&(this.off([s]),e(Date.now()-r))});return!0}transportName(e){return e===ne?"LongPoll":e.name}transportConnect(){let e;this.connectClock++,this.closeWasClean=!1,this.authToken&&(e=["phoenix",`${te}${btoa(this.authToken).replace(/=/g,"")}`]),this.conn=new this.transport(this.endPointURL(),e),this.conn.binaryType=this.binaryType,this.conn.timeout=this.longpollerTimeout,this.conn.onopen=()=>this.onConnOpen(),this.conn.onerror=e=>this.onConnError(e),this.conn.onmessage=e=>this.onConnMessage(e),this.conn.onclose=e=>this.onConnClose(e)}getSession(e){return this.sessionStore&&this.sessionStore.getItem(e)}storeSession(e,t){this.sessionStore&&this.sessionStore.setItem(e,t)}connectWithFallback(e,t=2500){clearTimeout(this.fallbackTimer);let r,s=!1,i=!0,a=this.transportName(e),n=t=>{this.log("transport",`falling back to ${a}...`,t),this.off([void 0,r]),i=!1,this.replaceTransport(e),this.transportConnect()};if(this.getSession(`phx:fallback:${a}`))return n("memorized");this.fallbackTimer=setTimeout(n,t),r=this.onError(e=>{this.log("transport","error",e),i&&!s&&(clearTimeout(this.fallbackTimer),n(e))}),this.fallbackRef&&this.off([this.fallbackRef]),this.fallbackRef=this.onOpen(()=>{if(s=!0,!i){let t=this.transportName(e);return this.primaryPassedHealthCheck||this.storeSession(`phx:fallback:${t}`,"true"),this.log("transport",`established ${t} fallback`)}clearTimeout(this.fallbackTimer),this.fallbackTimer=setTimeout(n,t),this.ping(e=>{this.log("transport","connected to primary after",e),this.primaryPassedHealthCheck=!0,clearTimeout(this.fallbackTimer)})}),this.transportConnect()}clearHeartbeats(){clearTimeout(this.heartbeatTimer),clearTimeout(this.heartbeatTimeoutTimer)}onConnOpen(){this.hasLogger()&&this.log("transport",`connected to ${this.endPointURL()}`),this.closeWasClean=!1,this.disconnecting=!1,this.establishedConnections++,this.flushSendBuffer(),this.reconnectTimer.reset(),this.autoSendHeartbeat&&this.resetHeartbeat(),this.triggerStateCallbacks("open")}heartbeatTimeout(){if(this.pendingHeartbeatRef){this.pendingHeartbeatRef=null,this.heartbeatSentAt=null,this.hasLogger()&&this.log("transport","heartbeat timeout. Attempting to re-establish connection");try{this.heartbeatCallback("timeout")}catch(e){this.log("error","error in heartbeat callback",e)}this.triggerChanError(Error("heartbeat timeout")),this.closeWasClean=!1,this.teardown(()=>this.reconnectTimer.scheduleTimeout(),1e3,"heartbeat timeout")}}resetHeartbeat(){this.conn&&this.conn.skipHeartbeat||(this.pendingHeartbeatRef=null,this.clearHeartbeats(),this.heartbeatTimer=setTimeout(()=>this.sendHeartbeat(),this.heartbeatIntervalMs))}teardown(e,t,r){if(!this.conn)return e&&e();let s=this.conn;this.waitForBufferDone(s,()=>{t?s.close(t,r||""):s.close(),this.waitForSocketClosed(s,()=>{this.conn===s&&(this.conn.onopen=function(){},this.conn.onerror=function(){},this.conn.onmessage=function(){},this.conn.onclose=function(){},this.conn=null),e&&e()})})}waitForBufferDone(e,t,r=1){5!==r&&e.bufferedAmount?setTimeout(()=>{this.waitForBufferDone(e,t,r+1)},150*r):t()}waitForSocketClosed(e,t,r=1){5!==r&&3!==e.readyState?setTimeout(()=>{this.waitForSocketClosed(e,t,r+1)},150*r):t()}onConnClose(e){this.conn&&(this.conn.onclose=()=>{}),this.hasLogger()&&this.log("transport","close",e),this.triggerChanError(e),this.clearHeartbeats(),this.closeWasClean||this.reconnectTimer.scheduleTimeout(),this.triggerStateCallbacks("close",e)}onConnError(e){this.hasLogger()&&this.log("transport","error",e);let t=this.transport,r=this.establishedConnections;this.triggerStateCallbacks("error",e,t,r),(t===this.transport||r>0)&&this.triggerChanError(e)}triggerChanError(e){this.channels.forEach(t=>{t.isErrored()||t.isLeaving()||t.isClosed()||t.trigger(X,e)})}connectionState(){switch(this.conn&&this.conn.readyState){case 0:return"connecting";case 1:return"open";case 2:return"closing";default:return"closed"}}isConnected(){return"open"===this.connectionState()}remove(e){this.off(e.stateChangeRefs),this.channels=this.channels.filter(t=>t!==e)}off(e){for(let t in this.stateChangeCallbacks)this.stateChangeCallbacks[t]=this.stateChangeCallbacks[t].filter(([t])=>-1===e.indexOf(t))}channel(e,t={}){let r=new ie(e,t,this);return this.channels.push(r),r}push(e){if(this.hasLogger()){let{topic:t,event:r,payload:s,ref:i,join_ref:a}=e;this.log("push",`${t} ${r} (${a}, ${i})`,s)}this.isConnected()?this.encode(e,e=>this.conn.send(e)):this.sendBuffer.push(()=>this.encode(e,e=>this.conn.send(e)))}makeRef(){let e=this.ref+1;return e===this.ref?this.ref=0:this.ref=e,this.ref.toString()}sendHeartbeat(){if(this.isConnected())if(this.pendingHeartbeatRef)this.heartbeatTimeout();else{this.pendingHeartbeatRef=this.makeRef(),this.heartbeatSentAt=Date.now(),this.push({topic:"phoenix",event:"heartbeat",payload:{},ref:this.pendingHeartbeatRef});try{this.heartbeatCallback("sent")}catch(e){this.log("error","error in heartbeat callback",e)}this.heartbeatTimeoutTimer=setTimeout(()=>this.heartbeatTimeout(),this.heartbeatIntervalMs)}else try{this.heartbeatCallback("disconnected")}catch(e){this.log("error","error in heartbeat callback",e)}}flushSendBuffer(){this.isConnected()&&this.sendBuffer.length>0&&(this.sendBuffer.forEach(e=>e()),this.sendBuffer=[])}onConnMessage(e){this.decode(e.data,e=>{let{topic:t,event:r,payload:s,ref:i,join_ref:a}=e;if(i&&i===this.pendingHeartbeatRef){let t=this.heartbeatSentAt?Date.now()-this.heartbeatSentAt:void 0;this.clearHeartbeats();try{this.heartbeatCallback("ok"===s.status?"ok":"error",t)}catch(e){this.log("error","error in heartbeat callback",e)}this.pendingHeartbeatRef=null,this.heartbeatSentAt=null,this.autoSendHeartbeat&&(this.heartbeatTimer=setTimeout(()=>this.sendHeartbeat(),this.heartbeatIntervalMs))}this.hasLogger()&&this.log("receive",`${s.status||""} ${t} ${r} ${i&&"("+i+")"||""}`.trim(),s);for(let e=0;e<this.channels.length;e++){let n=this.channels[e];n.isMember(t,r,s,a)&&n.trigger(r,s,i,a)}this.triggerStateCallbacks("message",e)})}triggerStateCallbacks(e,...t){try{this.stateChangeCallbacks[e].forEach(([r,s])=>{try{s(...t)}catch(t){this.log("error",`error in ${e} callback`,t)}})}catch(t){this.log("error",`error triggering ${e} callbacks`,t)}}leaveOpenTopic(e){let t=this.channels.find(t=>t.topic===e&&(t.isJoined()||t.isJoining()));t&&(this.hasLogger()&&this.log("transport",`leaving duplicate topic "${e}"`),t.leave())}},ce=class e{constructor(t,r){let s=function(e){return e?.events&&{events:e.events}}(r);this.presence=new oe(t.getChannel(),s),this.presence.onJoin((r,s,i)=>{let a=e.onJoinPayload(r,s,i);t.getChannel().trigger("presence",a)}),this.presence.onLeave((r,s,i)=>{let a=e.onLeavePayload(r,s,i);t.getChannel().trigger("presence",a)}),this.presence.onSync(()=>{t.getChannel().trigger("presence",{event:"sync"})})}get state(){return e.transformState(this.presence.state)}static transformState(e){return e=function(e){return JSON.parse(JSON.stringify(e))}(e),Object.getOwnPropertyNames(e).reduce((t,r)=>{let s=e[r];return t[r]=ue(s),t},{})}static onJoinPayload(e,t,r){return{event:"join",key:e,currentPresences:de(t),newPresences:ue(r)}}static onLeavePayload(e,t,r){return{event:"leave",key:e,currentPresences:de(t),leftPresences:ue(r)}}};function ue(e){return e.metas.map(e=>(e.presence_ref=e.phx_ref,delete e.phx_ref,delete e.phx_ref_prev,e))}function de(e){return e?.metas?ue(e):[]}!function(e){e.SYNC="sync",e.JOIN="join",e.LEAVE="leave"}(q||={});var pe,fe,ge,me=class{get state(){return this.presenceAdapter.state}constructor(e,t){this.channel=e,this.presenceAdapter=new ce(this.channel.channelAdapter,t)}},ye=class{constructor(e,t,r){let s=function(e){return{config:Object.assign({broadcast:{ack:!1,self:!1},presence:{key:"",enabled:!1},private:!1},e.config)}}(r);this.channel=e.getSocket().channel(t,s),this.socket=e}get state(){return this.channel.state}set state(e){this.channel.state=e}get joinedOnce(){return this.channel.joinedOnce}get joinPush(){return this.channel.joinPush}get rejoinTimer(){return this.channel.rejoinTimer}on(e,t){return this.channel.on(e,t)}off(e,t){this.channel.off(e,t)}subscribe(e){return this.channel.join(e)}unsubscribe(e){return this.channel.leave(e)}teardown(){this.channel.teardown()}onClose(e){this.channel.onClose(e)}onError(e){return this.channel.onError(e)}push(e,t,r){let s;try{s=this.channel.push(e,t,r)}catch{throw Error(`tried to push '${e}' to '${this.channel.topic}' before joining. Use channel.subscribe() before pushing events`)}if(this.channel.pushBuffer.length>100){let e=this.channel.pushBuffer.shift();e.cancelTimeout(),this.socket.log("channel",`discarded push due to buffer overflow: ${e.event}`,e.payload())}return s}updateJoinPayload(e){let t=this.channel.joinPush.payload();this.channel.joinPush.payload=()=>Object.assign(Object.assign({},t),e)}canPush(){return this.socket.isConnected()&&this.state===R.joined}isJoined(){return this.state===R.joined}isJoining(){return this.state===R.joining}isClosed(){return this.state===R.closed}isLeaving(){return this.state===R.leaving}updateFilterBindings(e){this.channel.filterBindings=e}updatePayloadTransform(e){this.channel.onMessage=e}getChannel(){return this.channel}};!function(e){e.ALL="*",e.INSERT="INSERT",e.UPDATE="UPDATE",e.DELETE="DELETE"}(pe||={}),function(e){e.BROADCAST="broadcast",e.PRESENCE="presence",e.POSTGRES_CHANGES="postgres_changes",e.SYSTEM="system"}(fe||={}),function(e){e.SUBSCRIBED="SUBSCRIBED",e.TIMED_OUT="TIMED_OUT",e.CLOSED="CLOSED",e.CHANNEL_ERROR="CHANNEL_ERROR"}(ge||={});let we=R;var be=class e{get state(){return this.channelAdapter.state}set state(e){this.channelAdapter.state=e}get joinedOnce(){return this.channelAdapter.joinedOnce}get timeout(){return this.socket.timeout}get joinPush(){return this.channelAdapter.joinPush}get rejoinTimer(){return this.channelAdapter.rejoinTimer}constructor(e,t={config:{}},r){if(this.topic=e,this.params=t,this.socket=r,this.bindings={},this.subTopic=e.replace(/^realtime:/i,""),this.params.config=Object.assign({broadcast:{ack:!1,self:!1},presence:{key:"",enabled:!1},private:!1},t.config),this.channelAdapter=new ye(this.socket.socketAdapter,e,this.params),this.presence=new me(this),this._onClose(()=>{this.socket._remove(this)}),this._updateFilterTransform(),this.broadcastEndpointURL=B(this.socket.socketAdapter.endPointURL()),this.private=this.params.config.private||!1,!this.private&&this.params.config?.broadcast?.replay)throw Error(`tried to use replay on public channel '${this.topic}'. It must be a private channel.`)}subscribe(e,t=this.timeout){if(this.socket.isConnected()||this.socket.connect(),this.channelAdapter.isClosed()){let{config:{broadcast:r,presence:s,private:i}}=this.params,a=this.bindings.postgres_changes?.map(e=>e.filter)??[],n=!!this.bindings[fe.PRESENCE]&&this.bindings[fe.PRESENCE].length>0||!0===this.params.config.presence?.enabled,o={},l={broadcast:r,presence:Object.assign(Object.assign({},s),{enabled:n}),postgres_changes:a,private:i};this.socket.accessTokenValue&&(o.access_token=this.socket.accessTokenValue),this._onError(t=>{e?.(ge.CHANNEL_ERROR,function(e){if(e instanceof Error)return e;if("string"==typeof e)return Error(e);if(e&&"object"==typeof e){let t=e;if("number"==typeof t.code){let r="string"==typeof t.reason&&t.reason?` (${t.reason})`:"";return Error(`socket closed: ${t.code}${r}`,{cause:e})}return Error("channel error: transport failure",{cause:e})}return Error("channel error: connection lost")}(t))}),this._onClose(()=>e?.(ge.CLOSED)),this.updateJoinPayload(Object.assign({config:l},o)),this._updateFilterMessage(),this.channelAdapter.subscribe(t).receive("ok",async({postgres_changes:t})=>{this.socket._isManualToken()||this.socket.setAuth(),void 0!==t?this._updatePostgresBindings(t,e):e?.(ge.SUBSCRIBED)}).receive("error",t=>{this.state=R.errored;let r=Object.values(t).join(", ")||"error";e?.(ge.CHANNEL_ERROR,Error(r,{cause:t}))}).receive("timeout",()=>{e?.(ge.TIMED_OUT)})}return this}_updatePostgresBindings(t,r){let s=this.bindings.postgres_changes,i=s?.length??0,a=[];for(let n=0;n<i;n++){let i=s[n],{filter:{event:o,schema:l,table:h,filter:c}}=i,u=t&&t[n];if(!(u&&u.event===o&&e.isFilterValueEqual(u.schema,l)&&e.isFilterValueEqual(u.table,h)&&e.isFilterValueEqual(u.filter,c)))return this.unsubscribe(),this.state=R.errored,void r?.(ge.CHANNEL_ERROR,Error("mismatch between server and client bindings for postgres changes"));a.push(Object.assign(Object.assign({},i),{id:u.id}))}this.bindings.postgres_changes=a,this.state!=R.errored&&r&&r(ge.SUBSCRIBED)}presenceState(){return this.presence.state}async track(e,t={}){return await this.send({type:"presence",event:"track",payload:e},t.timeout||this.timeout)}async untrack(e={}){return await this.send({type:"presence",event:"untrack"},e)}on(e,t,r){let s=this.channelAdapter.isJoined()||this.channelAdapter.isJoining(),i=e===fe.PRESENCE||e===fe.POSTGRES_CHANGES;if(s&&i)throw this.socket.log("channel",`cannot add \`${e}\` callbacks for ${this.topic} after \`subscribe()\`.`),Error(`cannot add \`${e}\` callbacks for ${this.topic} after \`subscribe()\`.`);return this._on(e,t,r)}async httpSend(e,t,r={}){if(null==t)return Promise.reject(Error("Payload is required for httpSend()"));let s=t instanceof ArrayBuffer||ArrayBuffer.isView(t),i={apikey:this.socket.apiKey?this.socket.apiKey:"","Content-Type":s?"application/octet-stream":"application/json"};this.socket.accessTokenValue&&(i.Authorization=`Bearer ${this.socket.accessTokenValue}`);let a=new URL(this.broadcastEndpointURL);a.pathname+=`/${encodeURIComponent(this.subTopic)}/events/${encodeURIComponent(e)}`,this.private&&a.searchParams.set("private","true");let n={method:"POST",headers:i,body:s?t:JSON.stringify(t)},o=await this._fetchWithTimeout(a.toString(),n,r.timeout??this.timeout);if(202===o.status)return{success:!0};if(404===o.status)return Promise.reject(Error("httpSend() requires Realtime server v2.97.0 or newer; the endpoint returned 404. Update your Supabase CLI to a recent version, or upgrade the Realtime server in your self-hosted setup. See https://github.com/supabase/supabase-js/blob/master/packages/core/realtime-js/migrations/httpsend-server-version.md"));let l=o.statusText;try{let e=await o.json();l=e.error||e.message||l}catch{}return Promise.reject(Error(l))}async send(e,t={}){if(this.channelAdapter.canPush()||"broadcast"!==e.type)return new Promise(r=>{let s=this.channelAdapter.push(e.type,e,t.timeout||this.timeout);"broadcast"===e.type&&!this.params?.config?.broadcast?.ack&&r("ok"),s.receive("ok",()=>r("ok")),s.receive("error",()=>r("error")),s.receive("timeout",()=>r("timed out"))});{console.warn("Realtime send() is automatically falling back to REST API. This behavior will be deprecated in the future. Please use httpSend() explicitly for REST delivery.");let{event:r,payload:s}=e,i={apikey:this.socket.apiKey?this.socket.apiKey:"","Content-Type":"application/json"};this.socket.accessTokenValue&&(i.Authorization=`Bearer ${this.socket.accessTokenValue}`);let a={method:"POST",headers:i,body:JSON.stringify({messages:[{topic:this.subTopic,event:r,payload:s,private:this.private}]})};try{let e=await this._fetchWithTimeout(this.broadcastEndpointURL,a,t.timeout??this.timeout);return await(e.body?.cancel()),e.ok?"ok":"error"}catch(e){return e instanceof Error&&"AbortError"===e.name?"timed out":"error"}}}updateJoinPayload(e){this.channelAdapter.updateJoinPayload(e)}async unsubscribe(e=this.timeout){return new Promise(t=>{this.channelAdapter.unsubscribe(e).receive("ok",()=>t("ok")).receive("timeout",()=>t("timed out")).receive("error",()=>t("error"))})}teardown(){this.channelAdapter.teardown()}async _fetchWithTimeout(e,t,r){let s=new AbortController,i=setTimeout(()=>s.abort(),r),a=await this.socket.fetch(e,Object.assign(Object.assign({},t),{signal:s.signal}));return clearTimeout(i),a}_on(e,t,r){let s=e.toLocaleLowerCase(),i={type:s,filter:t,callback:r,ref:this.channelAdapter.on(e,r)};return this.bindings[s]?this.bindings[s].push(i):this.bindings[s]=[i],this._updateFilterMessage(),this}_onClose(e){this.channelAdapter.onClose(e)}_onError(e){this.channelAdapter.onError(e)}_updateFilterMessage(){this.channelAdapter.updateFilterBindings((e,t,r)=>{let s=e.event.toLocaleLowerCase();if(this._notThisChannelEvent(s,r))return!1;let i=this.bindings[s]?.find(t=>t.ref===e.ref);if(!i)return!0;if(["broadcast","presence","postgres_changes"].includes(s)){if("id"in i){let e=i.id,r=i.filter?.event;return e&&t.ids?.includes(e)&&("*"===r||r?.toLocaleLowerCase()===t.data?.type.toLocaleLowerCase())}{let e=(i?.filter?.event)?.toLocaleLowerCase();return"*"===e||e===(t?.event)?.toLocaleLowerCase()}}return i.type.toLocaleLowerCase()===s})}_notThisChannelEvent(e,t){let{close:r,error:s,leave:i,join:a}=A;return t&&[r,s,i,a].includes(e)&&t!==this.joinPush.ref}_updateFilterTransform(){this.channelAdapter.updatePayloadTransform((e,t,r)=>{if("object"==typeof t&&"ids"in t){let e=t.data,{schema:r,table:s,commit_timestamp:i,type:a,errors:n}=e,o={schema:r,table:s,commit_timestamp:i,eventType:a,new:{},old:{},errors:n};return Object.assign(Object.assign({},o),this._getPayloadRecords(e))}return t})}copyBindings(e){if(this.joinedOnce)throw Error("cannot copy bindings into joined channel");for(let t in e.bindings)for(let r of e.bindings[t])this._on(r.type,r.filter,r.callback)}static isFilterValueEqual(e,t){return(e??void 0)===(t??void 0)}_getPayloadRecords(e){let t={new:{},old:{}};return("INSERT"===e.type||"UPDATE"===e.type)&&(t.new=C(e.columns,e.record)),("UPDATE"===e.type||"DELETE"===e.type)&&(t.old=C(e.columns,e.old_record)),t}},_e=class{constructor(e,t){this.socket=new he(e,t)}get timeout(){return this.socket.timeout}get endPoint(){return this.socket.endPoint}get transport(){return this.socket.transport}get heartbeatIntervalMs(){return this.socket.heartbeatIntervalMs}get heartbeatCallback(){return this.socket.heartbeatCallback}set heartbeatCallback(e){this.socket.heartbeatCallback=e}get heartbeatTimer(){return this.socket.heartbeatTimer}get pendingHeartbeatRef(){return this.socket.pendingHeartbeatRef}get reconnectTimer(){return this.socket.reconnectTimer}get vsn(){return this.socket.vsn}get encode(){return this.socket.encode}get decode(){return this.socket.decode}get reconnectAfterMs(){return this.socket.reconnectAfterMs}get sendBuffer(){return this.socket.sendBuffer}get stateChangeCallbacks(){return this.socket.stateChangeCallbacks}connect(){this.socket.connect()}disconnect(e,t,r,s=1e4){return new Promise(i=>{setTimeout(()=>i("timeout"),s),this.socket.disconnect(()=>{e(),i("ok")},t,r)})}push(e){this.socket.push(e)}log(e,t,r){this.socket.log(e,t,r)}makeRef(){return this.socket.makeRef()}onOpen(e){this.socket.onOpen(e)}onClose(e){this.socket.onClose(e)}onError(e){this.socket.onError(e)}onMessage(e){this.socket.onMessage(e)}isConnected(){return this.socket.isConnected()}isConnecting(){return"connecting"==this.socket.connectionState()}isDisconnecting(){return"closing"==this.socket.connectionState()}connectionState(){return this.socket.connectionState()}endPointURL(){return this.socket.endPointURL()}sendHeartbeat(){this.socket.sendHeartbeat()}getSocket(){return this.socket}};let ke=[1e3,2e3,5e3,1e4];var ve=class{get endPoint(){return this.socketAdapter.endPoint}get timeout(){return this.socketAdapter.timeout}get transport(){return this.socketAdapter.transport}get heartbeatCallback(){return this.socketAdapter.heartbeatCallback}get heartbeatIntervalMs(){return this.socketAdapter.heartbeatIntervalMs}get heartbeatTimer(){return this.worker?this._workerHeartbeatTimer:this.socketAdapter.heartbeatTimer}get pendingHeartbeatRef(){return this.worker?this._pendingWorkerHeartbeatRef:this.socketAdapter.pendingHeartbeatRef}get reconnectTimer(){return this.socketAdapter.reconnectTimer}get vsn(){return this.socketAdapter.vsn}get encode(){return this.socketAdapter.encode}get decode(){return this.socketAdapter.decode}get reconnectAfterMs(){return this.socketAdapter.reconnectAfterMs}get sendBuffer(){return this.socketAdapter.sendBuffer}get stateChangeCallbacks(){return this.socketAdapter.stateChangeCallbacks}constructor(e,t){if(this.channels=[],this.accessTokenValue=null,this.accessToken=null,this.apiKey=null,this.httpEndpoint="",this.headers={},this.params={},this.ref=0,this.serializer=new P,this._manuallySetToken=!1,this._authPromise=null,this._workerHeartbeatTimer=void 0,this._pendingWorkerHeartbeatRef=null,this._pendingDisconnectTimer=null,this._disconnectOnEmptyChannelsAfterMs=0,this._resolveFetch=e=>e?(...t)=>e(...t):(...e)=>fetch(...e),!t?.params?.apikey)throw Error("API key is required to connect to Realtime");this.apiKey=t.params.apikey,this.socketAdapter=new _e(e,this._initializeOptions(t)),this.httpEndpoint=B(e),this.fetch=this._resolveFetch(t?.fetch)}connect(){if(!(this.isConnecting()||this.isDisconnecting()||this.isConnected())){this.accessToken&&!this._authPromise&&this._setAuthSafely("connect"),this._setupConnectionHandlers();try{this.socketAdapter.connect()}catch(e){let t=e.message;throw t.includes("Node.js")?Error(`${t}\n\nTo use Realtime in Node.js, you need to provide a WebSocket implementation:\n\nOption 1: Use Node.js 22+ which has native WebSocket support\nOption 2: Install and provide the "ws" package:\n\n  npm install ws\n\n  import ws from "ws"\n  const client = new RealtimeClient(url, {\n    ...options,\n    transport: ws\n  })`):Error(`WebSocket not available: ${t}`)}this._handleNodeJsRaceCondition()}}endpointURL(){return this.socketAdapter.endPointURL()}async disconnect(e,t){return this._cancelPendingDisconnect(),this.isDisconnecting()?"ok":await this.socketAdapter.disconnect(()=>{clearInterval(this._workerHeartbeatTimer),this._terminateWorker()},e,t)}getChannels(){return this.channels}async removeChannel(e){let t=await e.unsubscribe();return"ok"===t&&e.teardown(),t}async removeAllChannels(){let e=this.channels.map(async e=>{let t=await e.unsubscribe();return e.teardown(),t}),t=await Promise.all(e);return await this.disconnect(),t}log(e,t,r){this.socketAdapter.log(e,t,r)}connectionState(){return this.socketAdapter.connectionState()||"closed"}isConnected(){return this.socketAdapter.isConnected()}isConnecting(){return this.socketAdapter.isConnecting()}isDisconnecting(){return this.socketAdapter.isDisconnecting()}channel(e,t={config:{}}){let r=`realtime:${e}`,s=this.getChannels().find(e=>e.topic===r);if(s)return s;{let r=new be(`realtime:${e}`,t,this);return this._cancelPendingDisconnect(),this.channels.push(r),r}}push(e){this.socketAdapter.push(e)}async setAuth(e=null){this._authPromise=this._performAuth(e);try{await this._authPromise}finally{this._authPromise=null}}_isManualToken(){return this._manuallySetToken}async sendHeartbeat(){this.socketAdapter.sendHeartbeat()}onHeartbeat(e){this.socketAdapter.heartbeatCallback=this._wrapHeartbeatCallback(e)}_makeRef(){return this.socketAdapter.makeRef()}_remove(e){this.channels=this.channels.filter(t=>t.topic!==e.topic),0===this.channels.length&&(this.log("transport","no channels remaining, scheduling disconnect"),this._schedulePendingDisconnect())}_schedulePendingDisconnect(){if(this._cancelPendingDisconnect(),0===this._disconnectOnEmptyChannelsAfterMs)return this.log("transport","disconnecting immediately - no channels"),void this.disconnect();this._pendingDisconnectTimer=setTimeout(()=>{this._pendingDisconnectTimer=null,0===this.channels.length&&(this.log("transport","deferred disconnect fired - no channels, disconnecting"),this.disconnect())},this._disconnectOnEmptyChannelsAfterMs),this.log("transport",`deferred disconnect scheduled in ${this._disconnectOnEmptyChannelsAfterMs}ms`)}_cancelPendingDisconnect(){null!==this._pendingDisconnectTimer&&(this.log("transport","pending disconnect cancelled - channel activity detected"),clearTimeout(this._pendingDisconnectTimer),this._pendingDisconnectTimer=null)}async _performAuth(e=null){let t,r=!1;if(e)t=e,r=!0;else if(this.accessToken)try{t=await this.accessToken()}catch(e){this.log("error","Error fetching access token from callback",e),t=this.accessTokenValue}else t=this.accessTokenValue;r?this._manuallySetToken=!0:this.accessToken&&(this._manuallySetToken=!1),this.accessTokenValue!=t&&(this.accessTokenValue=t,this.channels.forEach(e=>{let r={access_token:t,version:"realtime-js/2.108.2"};t&&e.updateJoinPayload(r),e.joinedOnce&&e.channelAdapter.isJoined()&&e.channelAdapter.push(A.access_token,{access_token:t})}))}async _waitForAuthIfNeeded(){this._authPromise&&await this._authPromise}_setAuthSafely(e="general"){this._isManualToken()||this.setAuth().catch(t=>{this.log("error",`Error setting auth in ${e}`,t)})}_setupConnectionHandlers(){this.socketAdapter.onOpen(()=>{(this._authPromise||(this.accessToken&&!this.accessTokenValue?this.setAuth():Promise.resolve())).catch(e=>{this.log("error","error waiting for auth on connect",e)}),this.worker&&!this.workerRef&&this._startWorkerHeartbeat()}),this.socketAdapter.onClose(()=>{this.worker&&this.workerRef&&this._terminateWorker()}),this.socketAdapter.onMessage(e=>{e.ref&&e.ref===this._pendingWorkerHeartbeatRef&&(this._pendingWorkerHeartbeatRef=null)})}_handleNodeJsRaceCondition(){this.socketAdapter.isConnected()&&this.socketAdapter.getSocket().onConnOpen()}_wrapHeartbeatCallback(e){return(t,r)=>{"sent"==t&&this._setAuthSafely(),e&&e(t,r)}}_startWorkerHeartbeat(){this.workerUrl?this.log("worker",`starting worker for from ${this.workerUrl}`):this.log("worker","starting default worker");let e=this._workerObjectUrl(this.workerUrl);this.workerRef=new Worker(e),this.workerRef.onerror=e=>{this.log("worker","worker error",e.message),this._terminateWorker(),this.disconnect()},this.workerRef.onmessage=e=>{"keepAlive"===e.data.event&&this.sendHeartbeat()},this.workerRef.postMessage({event:"start",interval:this.heartbeatIntervalMs})}_terminateWorker(){this.workerRef&&=(this.log("worker","terminating worker"),void this.workerRef.terminate())}_workerObjectUrl(e){let t;if(e)t=e;else{let e=new Blob(['\n  addEventListener("message", (e) => {\n    if (e.data.event === "start") {\n      setInterval(() => postMessage({ event: "keepAlive" }), e.data.interval);\n    }\n  });'],{type:"application/javascript"});t=URL.createObjectURL(e)}return t}_initializeOptions(e){this.worker=e?.worker??!1,this.accessToken=e?.accessToken??null;let t={};t.timeout=e?.timeout??1e4,t.heartbeatIntervalMs=e?.heartbeatIntervalMs??25e3,this._disconnectOnEmptyChannelsAfterMs=e?.disconnectOnEmptyChannelsAfterMs??2*(e?.heartbeatIntervalMs??25e3),t.transport=e?.transport??T.getWebSocketConstructor(),t.params=e?.params,t.logger=e?.logger,t.heartbeatCallback=this._wrapHeartbeatCallback(e?.heartbeatCallback),t.sessionStorage=e?.sessionStorage??function(){try{if(typeof globalThis<"u"&&globalThis.sessionStorage)return globalThis.sessionStorage}catch{}return function(){let e=new Map;return{get length(){return e.size},clear(){e.clear()},getItem:t=>e.has(t)?e.get(t):null,key:t=>Array.from(e.keys())[t]??null,removeItem(t){e.delete(t)},setItem(t,r){e.set(t,String(r))}}}()}(),t.reconnectAfterMs=e?.reconnectAfterMs??(e=>ke[e-1]||1e4);let r,s,i=e?.vsn??"2.0.0";switch(i){case"1.0.0":r=(e,t)=>t(JSON.stringify(e)),s=(e,t)=>t(JSON.parse(e));break;case"2.0.0":r=this.serializer.encode.bind(this.serializer),s=this.serializer.decode.bind(this.serializer);break;default:throw Error(`Unsupported serializer version: ${t.vsn}`)}if(t.vsn=i,t.encode=e?.encode??r,t.decode=e?.decode??s,t.beforeReconnect=this._reconnectAuth.bind(this),(e?.logLevel||e?.log_level)&&(this.logLevel=e.logLevel||e.log_level,t.params=Object.assign(Object.assign({},t.params),{log_level:this.logLevel})),this.worker){if(typeof window<"u"&&!window.Worker)throw Error("Web Worker is not supported");this.workerUrl=e?.workerUrl,t.autoSendHeartbeat=!this.worker}return t}async _reconnectAuth(){await this._waitForAuthIfNeeded(),this.isConnected()||this.connect()}},Se=class extends Error{constructor(e,t){super(e),this.name="IcebergError",this.status=t.status,this.icebergType=t.icebergType,this.icebergCode=t.icebergCode,this.details=t.details,this.isCommitStateUnknown="CommitStateUnknownException"===t.icebergType||[500,502,504].includes(t.status)&&!0===t.icebergType?.includes("CommitState")}isNotFound(){return 404===this.status}isConflict(){return 409===this.status}isAuthenticationTimeout(){return 419===this.status}};function Ee(e){return e.join("")}var Te=class{constructor(e,t=""){this.client=e,this.prefix=t}async listNamespaces(e){let t=e?{parent:Ee(e.namespace)}:void 0;return(await this.client.request({method:"GET",path:`${this.prefix}/namespaces`,query:t})).data.namespaces.map(e=>({namespace:e}))}async createNamespace(e,t){let r={namespace:e.namespace,properties:t?.properties};return(await this.client.request({method:"POST",path:`${this.prefix}/namespaces`,body:r})).data}async dropNamespace(e){await this.client.request({method:"DELETE",path:`${this.prefix}/namespaces/${Ee(e.namespace)}`})}async loadNamespaceMetadata(e){return{properties:(await this.client.request({method:"GET",path:`${this.prefix}/namespaces/${Ee(e.namespace)}`})).data.properties}}async namespaceExists(e){try{return await this.client.request({method:"HEAD",path:`${this.prefix}/namespaces/${Ee(e.namespace)}`}),!0}catch(e){if(e instanceof Se&&404===e.status)return!1;throw e}}async createNamespaceIfNotExists(e,t){try{return await this.createNamespace(e,t)}catch(e){if(e instanceof Se&&409===e.status)return;throw e}}};function Re(e){return e.join("")}var Ae=class{constructor(e,t="",r){this.client=e,this.prefix=t,this.accessDelegation=r}async listTables(e){return(await this.client.request({method:"GET",path:`${this.prefix}/namespaces/${Re(e.namespace)}/tables`})).data.identifiers}async createTable(e,t){let r={};return this.accessDelegation&&(r["X-Iceberg-Access-Delegation"]=this.accessDelegation),(await this.client.request({method:"POST",path:`${this.prefix}/namespaces/${Re(e.namespace)}/tables`,body:t,headers:r})).data.metadata}async updateTable(e,t){let r=await this.client.request({method:"POST",path:`${this.prefix}/namespaces/${Re(e.namespace)}/tables/${e.name}`,body:t});return{"metadata-location":r.data["metadata-location"],metadata:r.data.metadata}}async dropTable(e,t){await this.client.request({method:"DELETE",path:`${this.prefix}/namespaces/${Re(e.namespace)}/tables/${e.name}`,query:{purgeRequested:String(t?.purge??!1)}})}async loadTable(e){let t={};return this.accessDelegation&&(t["X-Iceberg-Access-Delegation"]=this.accessDelegation),(await this.client.request({method:"GET",path:`${this.prefix}/namespaces/${Re(e.namespace)}/tables/${e.name}`,headers:t})).data.metadata}async tableExists(e){let t={};this.accessDelegation&&(t["X-Iceberg-Access-Delegation"]=this.accessDelegation);try{return await this.client.request({method:"HEAD",path:`${this.prefix}/namespaces/${Re(e.namespace)}/tables/${e.name}`,headers:t}),!0}catch(e){if(e instanceof Se&&404===e.status)return!1;throw e}}async createTableIfNotExists(e,t){try{return await this.createTable(e,t)}catch(r){if(r instanceof Se&&409===r.status)return await this.loadTable({namespace:e.namespace,name:t.name});throw r}}},Oe=class{constructor(e){let t="v1";e.catalogName&&(t+=`/${e.catalogName}`),this.client=function(e){let t=e.fetchImpl??globalThis.fetch;return{async request({method:r,path:s,query:i,body:a,headers:n}){let o=function(e,t,r){let s=new URL(t,e);if(r)for(let[e,t]of Object.entries(r))void 0!==t&&s.searchParams.set(e,t);return s.toString()}(e.baseUrl,s,i),l=await async function(e){return e&&"none"!==e.type?"bearer"===e.type?{Authorization:`Bearer ${e.token}`}:"header"===e.type?{[e.name]:e.value}:"custom"===e.type?await e.getHeaders():{}:{}}(e.auth),h=await t(o,{method:r,headers:{...a?{"Content-Type":"application/json"}:{},...l,...n},body:a?JSON.stringify(a):void 0}),c=await h.text(),u=(h.headers.get("content-type")||"").includes("application/json"),d=u&&c?JSON.parse(c):c;if(!h.ok){let e=u?d:void 0,t=e?.error;throw new Se(t?.message??`Request failed with status ${h.status}`,{status:h.status,icebergType:t?.type,icebergCode:t?.code,details:e})}return{status:h.status,headers:h.headers,data:d}}}}({baseUrl:e.baseUrl.endsWith("/")?e.baseUrl:`${e.baseUrl}/`,auth:e.auth,fetchImpl:e.fetch}),this.accessDelegation=e.accessDelegation?.join(","),this.namespaceOps=new Te(this.client,t),this.tableOps=new Ae(this.client,t,this.accessDelegation)}async listNamespaces(e){return this.namespaceOps.listNamespaces(e)}async createNamespace(e,t){return this.namespaceOps.createNamespace(e,t)}async dropNamespace(e){await this.namespaceOps.dropNamespace(e)}async loadNamespaceMetadata(e){return this.namespaceOps.loadNamespaceMetadata(e)}async listTables(e){return this.tableOps.listTables(e)}async createTable(e,t){return this.tableOps.createTable(e,t)}async updateTable(e,t){return this.tableOps.updateTable(e,t)}async dropTable(e,t){await this.tableOps.dropTable(e,t)}async loadTable(e){return this.tableOps.loadTable(e)}async namespaceExists(e){return this.namespaceOps.namespaceExists(e)}async tableExists(e){return this.tableOps.tableExists(e)}async createNamespaceIfNotExists(e,t){return this.namespaceOps.createNamespaceIfNotExists(e,t)}async createTableIfNotExists(e,t){return this.tableOps.createTableIfNotExists(e,t)}};function Pe(e){return Pe="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},Pe(e)}function Ce(e,t,r){return(t=function(e){var t=function(e){if("object"!=Pe(e)||!e)return e;var t=e[Symbol.toPrimitive];if(void 0!==t){var r=t.call(e,"string");if("object"!=Pe(r))return r;throw TypeError("@@toPrimitive must return a primitive value.")}return String(e)}(e);return"symbol"==Pe(t)?t:t+""}(t))in e?Object.defineProperty(e,t,{value:r,enumerable:!0,configurable:!0,writable:!0}):e[t]=r,e}function je(e,t){var r=Object.keys(e);if(Object.getOwnPropertySymbols){var s=Object.getOwnPropertySymbols(e);t&&(s=s.filter(function(t){return Object.getOwnPropertyDescriptor(e,t).enumerable})),r.push.apply(r,s)}return r}function Ie(e){for(var t=1;t<arguments.length;t++){var r=null==arguments[t]?{}:arguments[t];t%2?je(Object(r),!0).forEach(function(t){Ce(e,t,r[t])}):Object.getOwnPropertyDescriptors?Object.defineProperties(e,Object.getOwnPropertyDescriptors(r)):je(Object(r)).forEach(function(t){Object.defineProperty(e,t,Object.getOwnPropertyDescriptor(r,t))})}return e}var $e=class extends Error{constructor(e,t="storage",r,s){super(e),this.__isStorageError=!0,this.namespace=t,this.name="vectors"===t?"StorageVectorsError":"StorageError",this.status=r,this.statusCode=s}toJSON(){return{name:this.name,message:this.message,status:this.status,statusCode:this.statusCode}}};function xe(e){return"object"==typeof e&&!!e&&"__isStorageError"in e}var Ne=class extends $e{constructor(e,t,r,s="storage"){super(e,s,t,r),this.name="vectors"===s?"StorageVectorsApiError":"StorageApiError",this.status=t,this.statusCode=r}toJSON(){return Ie({},super.toJSON())}},Le=class extends $e{constructor(e,t,r="storage"){super(e,r),this.name="vectors"===r?"StorageVectorsUnknownError":"StorageUnknownError",this.originalError=t}};function Ue(e,t,r){let s=Ie({},e),i=t.toLowerCase();for(let e of Object.keys(s))e.toLowerCase()===i&&delete s[e];return s[i]=r,s}let De=e=>{if(Array.isArray(e))return e.map(e=>De(e));if("function"==typeof e||e!==Object(e))return e;let t={};return Object.entries(e).forEach(([e,r])=>{let s=e.replace(/([-_][a-z])/gi,e=>e.toUpperCase().replace(/[-_]/g,""));t[s]=De(r)}),t},Be=e=>{if("object"==typeof e&&e){let t=e;if("string"==typeof t.msg)return t.msg;if("string"==typeof t.message)return t.message;if("string"==typeof t.error_description)return t.error_description;if("string"==typeof t.error)return t.error;if("object"==typeof t.error&&null!==t.error){let e=t.error;if("string"==typeof e.message)return e.message}}return JSON.stringify(e)};async function qe(e,t,r,s,i,a,n){return new Promise((o,l)=>{e(r,((e,t,r,s)=>{let i={method:e,headers:t?.headers||{}};if("GET"===e||"HEAD"===e||!s)return Ie(Ie({},i),r);if((e=>{if("object"!=typeof e||!e)return!1;let t=Object.getPrototypeOf(e);return!(null!==t&&t!==Object.prototype&&null!==Object.getPrototypeOf(t)||Symbol.toStringTag in e||Symbol.iterator in e)})(s)){let e,r=t?.headers||{};for(let[t,s]of Object.entries(r))"content-type"===t.toLowerCase()&&(e=s);i.headers=Ue(r,"Content-Type",e??"application/json"),i.body=JSON.stringify(s)}else i.body=s;return t?.duplex&&(i.duplex=t.duplex),Ie(Ie({},i),r)})(t,s,i,a)).then(e=>{if(!e.ok)throw e;if(s?.noResolveJson)return e;if("vectors"===n){let t=e.headers.get("content-type");if("0"===e.headers.get("content-length")||204===e.status||!t||!t.includes("application/json"))return{}}return e.json()}).then(e=>o(e)).catch(e=>(async(e,t,r,s)=>{if("object"==typeof e&&e&&"json"in e&&"function"==typeof e.json){let r=e,i=parseInt(String(r.status),10);Number.isFinite(i)||(i=500),r.json().then(e=>{let r=e?.statusCode||e?.code||i+"";t(new Ne(Be(e),i,r,s))}).catch(()=>{let e=i+"";t(new Ne(r.statusText||`HTTP ${i} error`,i,e,s))})}else t(new Le(Be(e),e,s))})(e,l,0,n))})}function Me(e="storage"){return{get:async(t,r,s,i)=>qe(t,"GET",r,s,i,void 0,e),post:async(t,r,s,i,a)=>qe(t,"POST",r,i,a,s,e),put:async(t,r,s,i,a)=>qe(t,"PUT",r,i,a,s,e),head:async(t,r,s,i)=>qe(t,"HEAD",r,Ie(Ie({},s),{},{noResolveJson:!0}),i,void 0,e),remove:async(t,r,s,i,a)=>qe(t,"DELETE",r,i,a,s,e)}}let{get:He,post:We,put:Ke,head:Fe,remove:Je}=Me("storage"),Ge=Me("vectors");var Ve=class{constructor(e,t={},r,s="storage"){this.shouldThrowOnError=!1,this.url=e,this.headers=function(e){let t={};for(let[r,s]of Object.entries(e))t[r.toLowerCase()]=s;return t}(t),this.fetch=(e=>e?(...t)=>e(...t):(...e)=>fetch(...e))(r),this.namespace=s}throwOnError(){return this.shouldThrowOnError=!0,this}setHeader(e,t){return this.headers=Ue(this.headers,e,t),this}async handleOperation(e){try{return{data:await e(),error:null}}catch(e){if(this.shouldThrowOnError)throw e;if(xe(e))return{data:null,error:e};throw e}}};let ze;ze=Symbol.toStringTag;var Ye=class{constructor(e,t){this.downloadFn=e,this.shouldThrowOnError=t,this[ze]="StreamDownloadBuilder",this.promise=null}then(e,t){return this.getPromise().then(e,t)}catch(e){return this.getPromise().catch(e)}finally(e){return this.getPromise().finally(e)}getPromise(){return this.promise||=this.execute(),this.promise}async execute(){try{return{data:(await this.downloadFn()).body,error:null}}catch(e){if(this.shouldThrowOnError)throw e;if(xe(e))return{data:null,error:e};throw e}}};let Xe;Xe=Symbol.toStringTag;var Qe=class{constructor(e,t){this.downloadFn=e,this.shouldThrowOnError=t,this[Xe]="BlobDownloadBuilder",this.promise=null}asStream(){return new Ye(this.downloadFn,this.shouldThrowOnError)}then(e,t){return this.getPromise().then(e,t)}catch(e){return this.getPromise().catch(e)}finally(e){return this.getPromise().finally(e)}getPromise(){return this.promise||=this.execute(),this.promise}async execute(){try{return{data:await(await this.downloadFn()).blob(),error:null}}catch(e){if(this.shouldThrowOnError)throw e;if(xe(e))return{data:null,error:e};throw e}}};let Ze={limit:100,offset:0,sortBy:{column:"name",order:"asc"}},et={cacheControl:"3600",contentType:"text/plain;charset=UTF-8",upsert:!1};var tt=class extends Ve{constructor(e,t={},r,s){super(e,t,s,"storage"),this.bucketId=r}async uploadOrUpdate(e,t,r,s){var i=this;return i.handleOperation(async()=>{let a,n=Ie(Ie({},et),s),o=Ie(Ie({},i.headers),"POST"===e&&{"x-upsert":String(n.upsert)}),l=n.metadata;if(typeof Blob<"u"&&r instanceof Blob?(a=new FormData,a.append("cacheControl",n.cacheControl),l&&a.append("metadata",i.encodeMetadata(l)),a.append("",r)):typeof FormData<"u"&&r instanceof FormData?(a=r,a.has("cacheControl")||a.append("cacheControl",n.cacheControl),l&&!a.has("metadata")&&a.append("metadata",i.encodeMetadata(l))):(a=r,o["cache-control"]=`max-age=${n.cacheControl}`,o["content-type"]=n.contentType,l&&(o["x-metadata"]=i.toBase64(i.encodeMetadata(l))),(typeof ReadableStream<"u"&&a instanceof ReadableStream||a&&"object"==typeof a&&"pipe"in a&&"function"==typeof a.pipe)&&!n.duplex&&(n.duplex="half")),s?.headers)for(let[e,t]of Object.entries(s.headers))o=Ue(o,e,t);let h=i._removeEmptyFolders(t),c=i._getFinalPath(h),u=await("PUT"==e?Ke:We)(i.fetch,`${i.url}/object/${c}`,a,Ie({headers:o},n?.duplex?{duplex:n.duplex}:{}));return{path:h,id:u.Id,fullPath:u.Key}})}async upload(e,t,r){return this.uploadOrUpdate("POST",e,t,r)}async uploadToSignedUrl(e,t,r,s){var i=this;let a=i._removeEmptyFolders(e),n=i._getFinalPath(a),o=new URL(i.url+`/object/upload/sign/${n}`);return o.searchParams.set("token",t),i.handleOperation(async()=>{let e,t=Ie(Ie({},et),s),n=Ie(Ie({},i.headers),{"x-upsert":String(t.upsert)}),l=t.metadata;if(typeof Blob<"u"&&r instanceof Blob?(e=new FormData,e.append("cacheControl",t.cacheControl),l&&e.append("metadata",i.encodeMetadata(l)),e.append("",r)):typeof FormData<"u"&&r instanceof FormData?(e=r,e.has("cacheControl")||e.append("cacheControl",t.cacheControl),l&&!e.has("metadata")&&e.append("metadata",i.encodeMetadata(l))):(e=r,n["cache-control"]=`max-age=${t.cacheControl}`,n["content-type"]=t.contentType,l&&(n["x-metadata"]=i.toBase64(i.encodeMetadata(l))),(typeof ReadableStream<"u"&&e instanceof ReadableStream||e&&"object"==typeof e&&"pipe"in e&&"function"==typeof e.pipe)&&!t.duplex&&(t.duplex="half")),s?.headers)for(let[e,t]of Object.entries(s.headers))n=Ue(n,e,t);return{path:a,fullPath:(await Ke(i.fetch,o.toString(),e,Ie({headers:n},t?.duplex?{duplex:t.duplex}:{}))).Key}})}async createSignedUploadUrl(e,t){var r=this;return r.handleOperation(async()=>{let s=r._getFinalPath(e),i=Ie({},r.headers);t?.upsert&&(i["x-upsert"]="true");let a=await We(r.fetch,`${r.url}/object/upload/sign/${s}`,{},{headers:i}),n=new URL(r.url+a.url),o=n.searchParams.get("token");if(!o)throw new $e("No token returned by API");return{signedUrl:n.toString(),path:e,token:o}})}async update(e,t,r){return this.uploadOrUpdate("PUT",e,t,r)}async move(e,t,r){var s=this;return s.handleOperation(async()=>await We(s.fetch,`${s.url}/object/move`,{bucketId:s.bucketId,sourceKey:e,destinationKey:t,destinationBucket:r?.destinationBucket},{headers:s.headers}))}async copy(e,t,r){var s=this;return s.handleOperation(async()=>({path:(await We(s.fetch,`${s.url}/object/copy`,{bucketId:s.bucketId,sourceKey:e,destinationKey:t,destinationBucket:r?.destinationBucket},{headers:s.headers})).Key}))}async createSignedUrl(e,t,r){var s=this;return s.handleOperation(async()=>{let i=s._getFinalPath(e),a="object"==typeof r?.transform&&null!==r.transform&&Object.keys(r.transform).length>0,n=await We(s.fetch,`${s.url}/object/sign/${i}`,Ie({expiresIn:t},a?{transform:r.transform}:{}),{headers:s.headers}),o=new URLSearchParams;r?.download&&o.set("download",!0===r.download?"":r.download),null!=r?.cacheNonce&&o.set("cacheNonce",String(r.cacheNonce));let l=o.toString();return{signedUrl:encodeURI(`${s.url}${n.signedURL}${l?`&${l}`:""}`)}})}async createSignedUrls(e,t,r){var s=this;return s.handleOperation(async()=>{let i=await We(s.fetch,`${s.url}/object/sign/${s.bucketId}`,{expiresIn:t,paths:e},{headers:s.headers}),a=new URLSearchParams;r?.download&&a.set("download",!0===r.download?"":r.download),null!=r?.cacheNonce&&a.set("cacheNonce",String(r.cacheNonce));let n=a.toString();return i.map(e=>Ie(Ie({},e),{},{signedUrl:e.signedURL?encodeURI(`${s.url}${e.signedURL}${n?`&${n}`:""}`):null}))})}download(e,t,r){let s="object"==typeof t?.transform&&null!==t.transform&&Object.keys(t.transform).length>0?"render/image/authenticated":"object",i=new URLSearchParams;t?.transform&&this.applyTransformOptsToQuery(i,t.transform),null!=t?.cacheNonce&&i.set("cacheNonce",String(t.cacheNonce));let a=i.toString(),n=this._getFinalPath(e);return new Qe(()=>He(this.fetch,`${this.url}/${s}/${n}${a?`?${a}`:""}`,{headers:this.headers,noResolveJson:!0},r),this.shouldThrowOnError)}async info(e){var t=this;let r=t._getFinalPath(e);return t.handleOperation(async()=>De(await He(t.fetch,`${t.url}/object/info/${r}`,{headers:t.headers})))}async exists(e){var t=this;let r=t._getFinalPath(e);try{return await Fe(t.fetch,`${t.url}/object/${r}`,{headers:t.headers}),{data:!0,error:null}}catch(e){if(t.shouldThrowOnError)throw e;if(xe(e)){let t=e instanceof Ne?e.status:e instanceof Le?e.originalError?.status:void 0;if(void 0!==t&&[400,404].includes(t))return{data:!1,error:e}}throw e}}getPublicUrl(e,t){let r=this._getFinalPath(e),s=new URLSearchParams;t?.download&&s.set("download",!0===t.download?"":t.download),t?.transform&&this.applyTransformOptsToQuery(s,t.transform),null!=t?.cacheNonce&&s.set("cacheNonce",String(t.cacheNonce));let i=s.toString(),a="object"==typeof t?.transform&&null!==t.transform&&Object.keys(t.transform).length>0?"render/image":"object";return{data:{publicUrl:encodeURI(`${this.url}/${a}/public/${r}`)+(i?`?${i}`:"")}}}async remove(e){var t=this;return t.handleOperation(async()=>await Je(t.fetch,`${t.url}/object/${t.bucketId}`,{prefixes:e},{headers:t.headers}))}async list(e,t,r){var s=this;return s.handleOperation(async()=>{let i=Ie(Ie(Ie({},Ze),t),{},{prefix:e||""});return await We(s.fetch,`${s.url}/object/list/${s.bucketId}`,i,{headers:s.headers},r)})}async listV2(e,t){var r=this;return r.handleOperation(async()=>{let s=Ie({},e);return await We(r.fetch,`${r.url}/object/list-v2/${r.bucketId}`,s,{headers:r.headers},t)})}encodeMetadata(e){return JSON.stringify(e)}toBase64(e){return typeof Buffer<"u"?Buffer.from(e).toString("base64"):btoa(e)}_getFinalPath(e){return`${this.bucketId}/${e.replace(/^\/+/,"")}`}_removeEmptyFolders(e){return e.replace(/^\/|\/$/g,"").replace(/\/+/g,"/")}applyTransformOptsToQuery(e,t){return t.width&&e.set("width",t.width.toString()),t.height&&e.set("height",t.height.toString()),t.resize&&e.set("resize",t.resize),t.format&&e.set("format",t.format),t.quality&&e.set("quality",t.quality.toString()),e}};let rt={"X-Client-Info":"storage-js/2.108.2"};var st=class extends Ve{constructor(e,t={},r,s){let i=new URL(e);s?.useNewHostname&&/supabase\.(co|in|red)$/.test(i.hostname)&&!i.hostname.includes("storage.supabase.")&&(i.hostname=i.hostname.replace("supabase.","storage.supabase.")),super(i.href.replace(/\/$/,""),Ie(Ie({},rt),t),r,"storage")}async listBuckets(e){var t=this;return t.handleOperation(async()=>{let r=t.listBucketOptionsToQueryString(e);return await He(t.fetch,`${t.url}/bucket${r}`,{headers:t.headers})})}async getBucket(e){var t=this;return t.handleOperation(async()=>await He(t.fetch,`${t.url}/bucket/${e}`,{headers:t.headers}))}async createBucket(e,t={public:!1}){var r=this;return r.handleOperation(async()=>await We(r.fetch,`${r.url}/bucket`,{id:e,name:e,type:t.type,public:t.public,file_size_limit:t.fileSizeLimit,allowed_mime_types:t.allowedMimeTypes},{headers:r.headers}))}async updateBucket(e,t){var r=this;return r.handleOperation(async()=>await Ke(r.fetch,`${r.url}/bucket/${e}`,{id:e,name:e,public:t.public,file_size_limit:t.fileSizeLimit,allowed_mime_types:t.allowedMimeTypes},{headers:r.headers}))}async emptyBucket(e){var t=this;return t.handleOperation(async()=>await We(t.fetch,`${t.url}/bucket/${e}/empty`,{},{headers:t.headers}))}async deleteBucket(e){var t=this;return t.handleOperation(async()=>await Je(t.fetch,`${t.url}/bucket/${e}`,{},{headers:t.headers}))}listBucketOptionsToQueryString(e){let t={};return e&&("limit"in e&&(t.limit=String(e.limit)),"offset"in e&&(t.offset=String(e.offset)),e.search&&(t.search=e.search),e.sortColumn&&(t.sortColumn=e.sortColumn),e.sortOrder&&(t.sortOrder=e.sortOrder)),Object.keys(t).length>0?"?"+new URLSearchParams(t).toString():""}},it=class extends Ve{constructor(e,t={},r){super(e.replace(/\/$/,""),Ie(Ie({},rt),t),r,"storage")}async createBucket(e){var t=this;return t.handleOperation(async()=>await We(t.fetch,`${t.url}/bucket`,{name:e},{headers:t.headers}))}async listBuckets(e){var t=this;return t.handleOperation(async()=>{let r=new URLSearchParams;void 0!==e?.limit&&r.set("limit",e.limit.toString()),void 0!==e?.offset&&r.set("offset",e.offset.toString()),e?.sortColumn&&r.set("sortColumn",e.sortColumn),e?.sortOrder&&r.set("sortOrder",e.sortOrder),e?.search&&r.set("search",e.search);let s=r.toString(),i=s?`${t.url}/bucket?${s}`:`${t.url}/bucket`;return await He(t.fetch,i,{headers:t.headers})})}async deleteBucket(e){var t=this;return t.handleOperation(async()=>await Je(t.fetch,`${t.url}/bucket/${e}`,{},{headers:t.headers}))}from(e){var t=this;if(!(e=>!(!e||"string"!=typeof e||0===e.length||e.length>100||e.trim()!==e||e.includes("/")||e.includes("\\"))&&/^[\w!.\*'() &$@=;:+,?-]+$/.test(e))(e))throw new $e("Invalid bucket name: File, folder, and bucket names must follow AWS object key naming guidelines and should avoid the use of any other characters.");let r=new Oe({baseUrl:this.url,catalogName:e,auth:{type:"custom",getHeaders:async()=>t.headers},fetch:this.fetch}),s=this.shouldThrowOnError;return new Proxy(r,{get(e,t){let r=e[t];return"function"==typeof r?async(...t)=>{try{return{data:await r.apply(e,t),error:null}}catch(e){if(s)throw e;return{data:null,error:e}}}:r}})}},at=class extends Ve{constructor(e,t={},r){super(e.replace(/\/$/,""),Ie(Ie({},rt),{},{"Content-Type":"application/json"},t),r,"vectors")}async createIndex(e){var t=this;return t.handleOperation(async()=>await Ge.post(t.fetch,`${t.url}/CreateIndex`,e,{headers:t.headers})||{})}async getIndex(e,t){var r=this;return r.handleOperation(async()=>await Ge.post(r.fetch,`${r.url}/GetIndex`,{vectorBucketName:e,indexName:t},{headers:r.headers}))}async listIndexes(e){var t=this;return t.handleOperation(async()=>await Ge.post(t.fetch,`${t.url}/ListIndexes`,e,{headers:t.headers}))}async deleteIndex(e,t){var r=this;return r.handleOperation(async()=>await Ge.post(r.fetch,`${r.url}/DeleteIndex`,{vectorBucketName:e,indexName:t},{headers:r.headers})||{})}},nt=class extends Ve{constructor(e,t={},r){super(e.replace(/\/$/,""),Ie(Ie({},rt),{},{"Content-Type":"application/json"},t),r,"vectors")}async putVectors(e){var t=this;if(e.vectors.length<1||e.vectors.length>500)throw Error("Vector batch size must be between 1 and 500 items");return t.handleOperation(async()=>await Ge.post(t.fetch,`${t.url}/PutVectors`,e,{headers:t.headers})||{})}async getVectors(e){var t=this;return t.handleOperation(async()=>await Ge.post(t.fetch,`${t.url}/GetVectors`,e,{headers:t.headers}))}async listVectors(e){var t=this;if(void 0!==e.segmentCount){if(e.segmentCount<1||e.segmentCount>16)throw Error("segmentCount must be between 1 and 16");if(void 0!==e.segmentIndex&&(e.segmentIndex<0||e.segmentIndex>=e.segmentCount))throw Error("segmentIndex must be between 0 and "+(e.segmentCount-1))}return t.handleOperation(async()=>await Ge.post(t.fetch,`${t.url}/ListVectors`,e,{headers:t.headers}))}async queryVectors(e){var t=this;return t.handleOperation(async()=>await Ge.post(t.fetch,`${t.url}/QueryVectors`,e,{headers:t.headers}))}async deleteVectors(e){var t=this;if(e.keys.length<1||e.keys.length>500)throw Error("Keys batch size must be between 1 and 500 items");return t.handleOperation(async()=>await Ge.post(t.fetch,`${t.url}/DeleteVectors`,e,{headers:t.headers})||{})}},ot=class extends Ve{constructor(e,t={},r){super(e.replace(/\/$/,""),Ie(Ie({},rt),{},{"Content-Type":"application/json"},t),r,"vectors")}async createBucket(e){var t=this;return t.handleOperation(async()=>await Ge.post(t.fetch,`${t.url}/CreateVectorBucket`,{vectorBucketName:e},{headers:t.headers})||{})}async getBucket(e){var t=this;return t.handleOperation(async()=>await Ge.post(t.fetch,`${t.url}/GetVectorBucket`,{vectorBucketName:e},{headers:t.headers}))}async listBuckets(e={}){var t=this;return t.handleOperation(async()=>await Ge.post(t.fetch,`${t.url}/ListVectorBuckets`,e,{headers:t.headers}))}async deleteBucket(e){var t=this;return t.handleOperation(async()=>await Ge.post(t.fetch,`${t.url}/DeleteVectorBucket`,{vectorBucketName:e},{headers:t.headers})||{})}},lt=class extends ot{constructor(e,t={}){super(e,t.headers||{},t.fetch)}from(e){return new ht(this.url,this.headers,e,this.fetch)}async createBucket(e){return(()=>super.createBucket)().call(this,e)}async getBucket(e){return(()=>super.getBucket)().call(this,e)}async listBuckets(e={}){return(()=>super.listBuckets)().call(this,e)}async deleteBucket(e){return(()=>super.deleteBucket)().call(this,e)}},ht=class extends at{constructor(e,t,r,s){super(e,t,s),this.vectorBucketName=r}async createIndex(e){return(()=>super.createIndex)().call(this,Ie(Ie({},e),{},{vectorBucketName:this.vectorBucketName}))}async listIndexes(e={}){return(()=>super.listIndexes)().call(this,Ie(Ie({},e),{},{vectorBucketName:this.vectorBucketName}))}async getIndex(e){return(()=>super.getIndex)().call(this,this.vectorBucketName,e)}async deleteIndex(e){return(()=>super.deleteIndex)().call(this,this.vectorBucketName,e)}index(e){return new ct(this.url,this.headers,this.vectorBucketName,e,this.fetch)}},ct=class extends nt{constructor(e,t,r,s,i){super(e,t,i),this.vectorBucketName=r,this.indexName=s}async putVectors(e){var t=this;return(()=>super.putVectors)().call(t,Ie(Ie({},e),{},{vectorBucketName:t.vectorBucketName,indexName:t.indexName}))}async getVectors(e){var t=this;return(()=>super.getVectors)().call(t,Ie(Ie({},e),{},{vectorBucketName:t.vectorBucketName,indexName:t.indexName}))}async listVectors(e={}){var t=this;return(()=>super.listVectors)().call(t,Ie(Ie({},e),{},{vectorBucketName:t.vectorBucketName,indexName:t.indexName}))}async queryVectors(e){var t=this;return(()=>super.queryVectors)().call(t,Ie(Ie({},e),{},{vectorBucketName:t.vectorBucketName,indexName:t.indexName}))}async deleteVectors(e){var t=this;return(()=>super.deleteVectors)().call(t,Ie(Ie({},e),{},{vectorBucketName:t.vectorBucketName,indexName:t.indexName}))}},ut=class extends st{constructor(e,t={},r,s){super(e,t,r,s)}from(e){return new tt(this.url,this.headers,e,this.fetch)}get vectors(){return new lt(this.url+"/vector",{headers:this.headers,fetch:this.fetch})}get analytics(){return new it(this.url+"/iceberg",this.headers,this.fetch)}};let dt,pt="";typeof Deno<"u"?(pt="deno",dt=Deno.version?.deno):typeof document<"u"?pt="web":typeof navigator<"u"&&"ReactNative"===navigator.product?pt="react-native":(pt="node",dt=typeof process<"u"?process.version?.replace(/^v/,""):void 0);let ft=[`runtime=${pt}`];dt&&ft.push(`runtime-version=${dt}`);let gt={headers:{"X-Client-Info":`supabase-js/2.108.2; ${ft.join("; ")}`}},mt={schema:"public"},yt={autoRefreshToken:!0,persistSession:!0,detectSessionInUrl:!0,flowType:"implicit"},wt={},bt={enabled:!1,respectSamplingDecision:!0},_t=null;function kt(){return r(this,void 0,void 0,function*(){try{let e=yield(null===_t&&(_t=import("@opentelemetry/api").catch(()=>null)),_t);if(!e||!e.propagation||!e.context)return null;let t={};e.propagation.inject(e.context.active(),t);let r=t.traceparent;return r?{traceparent:r,tracestate:t.tracestate,baggage:t.baggage}:null}catch{return null}})}function vt(e,t){if(t===e)return!0;if(t.startsWith("*.")){let r=t.slice(2);if(e.endsWith(r)&&(e===r||e.endsWith("."+r)))return!0}return!1}function St(e){return"boolean"==typeof e?{enabled:e}:e}let Et="2.108.2",Tt=3e4,Rt=3*Tt,At={"X-Client-Info":`gotrue-js/${Et}`},Ot="X-Supabase-Api-Version",Pt=Date.parse("2024-01-01T00:00:00.0Z"),Ct="2024-01-01",jt=/^([a-z0-9_-]{4})*($|[a-z0-9_-]{3}$|[a-z0-9_-]{2}$)$/i;var It=class extends Error{constructor(e,t,r){super(e),this.__isAuthError=!0,this.name="AuthError",this.status=t,this.code=r}toJSON(){return{name:this.name,message:this.message,status:this.status,code:this.code}}};function $t(e){return"object"==typeof e&&!!e&&"__isAuthError"in e}var xt=class extends It{constructor(e,t,r){super(e,t,r),this.name="AuthApiError",this.status=t,this.code=r}};function Nt(e){return $t(e)&&"AuthApiError"===e.name}var Lt=class extends It{constructor(e,t){super(e),this.name="AuthUnknownError",this.originalError=t}},Ut=class extends It{constructor(e,t,r,s){super(e,r,s),this.name=t,this.status=r}},Dt=class extends Ut{constructor(){super("Auth session missing!","AuthSessionMissingError",400,void 0)}};function Bt(e){return $t(e)&&"AuthSessionMissingError"===e.name}var qt=class extends Ut{constructor(){super("Auth session or user missing","AuthInvalidTokenResponseError",500,void 0)}},Mt=class extends Ut{constructor(e){super(e,"AuthInvalidCredentialsError",400,void 0)}},Ht=class extends Ut{constructor(e,t=null){super(e,"AuthImplicitGrantRedirectError",500,void 0),this.details=null,this.details=t}toJSON(){return Object.assign(Object.assign({},super.toJSON()),{details:this.details})}};function Wt(e){return $t(e)&&"AuthImplicitGrantRedirectError"===e.name}var Kt=class extends Ut{constructor(e,t=null){super(e,"AuthPKCEGrantCodeExchangeError",500,void 0),this.details=null,this.details=t}toJSON(){return Object.assign(Object.assign({},super.toJSON()),{details:this.details})}},Ft=class extends Ut{constructor(){super("PKCE code verifier not found in storage. This can happen if the auth flow was initiated in a different browser or device, or if the storage was cleared. For SSR frameworks (Next.js, SvelteKit, etc.), use @supabase/ssr on both the server and client to store the code verifier in cookies.","AuthPKCECodeVerifierMissingError",400,"pkce_code_verifier_not_found")}},Jt=class extends Ut{constructor(e,t){super(e,"AuthRetryableFetchError",t,void 0)}};function Gt(e){return $t(e)&&"AuthRetryableFetchError"===e.name}var Vt=class extends Ut{constructor(e="Refresh result discarded: session state changed mid-flight (e.g., concurrent signOut)"){super(e,"AuthRefreshDiscardedError",409,void 0)}};function zt(e){return $t(e)&&"AuthRefreshDiscardedError"===e.name}var Yt=class extends Ut{constructor(e,t,r){super(e,"AuthWeakPasswordError",t,"weak_password"),this.reasons=r}toJSON(){return Object.assign(Object.assign({},super.toJSON()),{reasons:this.reasons})}},Xt=class extends Ut{constructor(e){super(e,"AuthInvalidJwtError",400,"invalid_jwt")}};let Qt="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_".split(""),Zt=" \t\n\r=".split(""),er=(()=>{let e=Array(128);for(let t=0;t<e.length;t+=1)e[t]=-1;for(let t=0;t<Zt.length;t+=1)e[Zt[t].charCodeAt(0)]=-2;for(let t=0;t<Qt.length;t+=1)e[Qt[t].charCodeAt(0)]=t;return e})();function tr(e,t,r){if(null!==e)for(t.queue=t.queue<<8|e,t.queuedBits+=8;t.queuedBits>=6;)r(Qt[t.queue>>t.queuedBits-6&63]),t.queuedBits-=6;else if(t.queuedBits>0)for(t.queue<<=6-t.queuedBits,t.queuedBits=6;t.queuedBits>=6;)r(Qt[t.queue>>t.queuedBits-6&63]),t.queuedBits-=6}function rr(e,t,r){let s=er[e];if(!(s>-1)){if(-2===s)return;throw Error(`Invalid Base64-URL character "${String.fromCharCode(e)}"`)}for(t.queue=t.queue<<6|s,t.queuedBits+=6;t.queuedBits>=8;)r(t.queue>>t.queuedBits-8&255),t.queuedBits-=8}function sr(e){let t=[],r=e=>{t.push(String.fromCodePoint(e))},s={utf8seq:0,codepoint:0},i={queue:0,queuedBits:0},a=e=>{!function(e,t,r){if(0===t.utf8seq){if(e<=127)return void r(e);for(let r=1;r<6;r+=1)if(!(e>>7-r&1)){t.utf8seq=r;break}if(2===t.utf8seq)t.codepoint=31&e;else if(3===t.utf8seq)t.codepoint=15&e;else{if(4!==t.utf8seq)throw Error("Invalid UTF-8 sequence");t.codepoint=7&e}--t.utf8seq}else if(t.utf8seq>0){if(e<=127)throw Error("Invalid UTF-8 sequence");t.codepoint=t.codepoint<<6|63&e,--t.utf8seq,0===t.utf8seq&&r(t.codepoint)}}(e,s,r)};for(let t=0;t<e.length;t+=1)rr(e.charCodeAt(t),i,a);return t.join("")}function ir(e,t){if(!(e<=127)){if(e<=2047)return t(192|e>>6),void t(128|63&e);if(e<=65535)return t(224|e>>12),t(128|e>>6&63),void t(128|63&e);if(e<=1114111)return t(240|e>>18),t(128|e>>12&63),t(128|e>>6&63),void t(128|63&e);throw Error(`Unrecognized Unicode codepoint: ${e.toString(16)}`)}t(e)}function ar(e){let t=[],r={queue:0,queuedBits:0},s=e=>{t.push(e)};for(let t=0;t<e.length;t+=1)rr(e.charCodeAt(t),r,s);return new Uint8Array(t)}function nr(e){let t=[],r={queue:0,queuedBits:0},s=e=>{t.push(e)};return e.forEach(e=>tr(e,r,s)),tr(null,r,s),t.join("")}let or=()=>typeof window<"u"&&typeof document<"u",lr={tested:!1,writable:!1},hr=()=>{if(!or())return!1;try{if("object"!=typeof globalThis.localStorage)return!1}catch{return!1}if(lr.tested)return lr.writable;let e=`lswt-${Math.random()}${Math.random()}`;try{globalThis.localStorage.setItem(e,e),globalThis.localStorage.removeItem(e),lr.tested=!0,lr.writable=!0}catch{lr.tested=!0,lr.writable=!1}return lr.writable},cr=e=>e?(...t)=>e(...t):(...e)=>fetch(...e),ur=async(e,t,r)=>{await e.setItem(t,JSON.stringify(r))},dr=async(e,t)=>{let r=await e.getItem(t);if(!r)return null;try{return JSON.parse(r)}catch{return null}},pr=async(e,t)=>{await e.removeItem(t)};var fr=class e{constructor(){this.promise=new e.promiseConstructor((e,t)=>{this.resolve=e,this.reject=t})}};function gr(e){let t=e.split(".");if(3!==t.length)throw new Xt("Invalid JWT structure");for(let e=0;e<t.length;e++)if(!jt.test(t[e]))throw new Xt("JWT not in base64url format");return{header:JSON.parse(sr(t[0])),payload:JSON.parse(sr(t[1])),signature:ar(t[2]),raw:{header:t[0],payload:t[1]}}}function mr(e){return("0"+e.toString(16)).substr(-2)}async function yr(e,t,r=!1){let s=function(){let e=new Uint32Array(56);if(typeof crypto>"u"){let e="";for(let t=0;t<56;t++)e+="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-._~".charAt(Math.floor(66*Math.random()));return e}return crypto.getRandomValues(e),Array.from(e,mr).join("")}(),i=s;r&&(i+="/recovery"),await ur(e,`${t}-code-verifier`,i);let a=await async function(e){if(!(typeof crypto<"u"&&void 0!==crypto.subtle&&typeof TextEncoder<"u"))return console.warn("WebCrypto API is not supported. Code challenge method will default to use plain instead of sha256."),e;let t=await async function(e){let t=(new TextEncoder).encode(e),r=await crypto.subtle.digest("SHA-256",t),s=new Uint8Array(r);return Array.from(s).map(e=>String.fromCharCode(e)).join("")}(e);return btoa(t).replace(/\+/g,"-").replace(/\//g,"_").replace(/=+$/,"")}(s);return[a,s===a?"plain":"s256"]}fr.promiseConstructor=Promise;let wr=/^2[0-9]{3}-(0[1-9]|1[0-2])-(0[1-9]|1[0-9]|2[0-9]|3[0-1])$/i,br=/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/;function _r(e){if(!br.test(e))throw Error("@supabase/auth-js: Expected parameter to be UUID but is not")}function kr(e){if(!e.passkey)throw Error("@supabase/auth-js: the passkey API is experimental and disabled by default. Enable it by passing `auth: { experimental: { passkey: true } }` to createClient (or to the GoTrueClient constructor).")}function vr(){return new Proxy({},{get:(e,t)=>{if("__isUserNotAvailableProxy"===t)return!0;if("symbol"==typeof t){let e=t.toString();if("Symbol(Symbol.toPrimitive)"===e||"Symbol(Symbol.toStringTag)"===e||"Symbol(util.inspect.custom)"===e)return}throw Error(`@supabase/auth-js: client was created with userStorage option and there was no user stored in the user storage. Accessing the "${t}" property of the session object is not supported. Please use getUser() instead.`)},set:(e,t)=>{throw Error(`@supabase/auth-js: client was created with userStorage option and there was no user stored in the user storage. Setting the "${t}" property of the session object is not supported. Please use getUser() to fetch a user object you can manipulate.`)},deleteProperty:(e,t)=>{throw Error(`@supabase/auth-js: client was created with userStorage option and there was no user stored in the user storage. Deleting the "${t}" property of the session object is not supported. Please use getUser() to fetch a user object you can manipulate.`)}})}function Sr(e){return JSON.parse(JSON.stringify(e))}let Er=e=>{if("object"==typeof e&&e){let t=e;if("string"==typeof t.msg)return t.msg;if("string"==typeof t.message)return t.message;if("string"==typeof t.error_description)return t.error_description;if("string"==typeof t.error)return t.error}return JSON.stringify(e)},Tr=[500,501,502,503,504,520,521,522,523,524,525,526,527,528,529,530];async function Rr(e){if(!(e=>"object"==typeof e&&!!e&&"status"in e&&"ok"in e&&"json"in e&&"function"==typeof e.json)(e))throw new Jt(Er(e),0);if(Tr.includes(e.status))throw new Jt(Er(e),e.status);let t;try{t=await e.json()}catch(e){throw new Lt(Er(e),e)}let r,s=function(e){let t=e.headers.get(Ot);if(!t||!t.match(wr))return null;try{return new Date(`${t}T00:00:00.0Z`)}catch{return null}}(e);if(s&&s.getTime()>=Pt&&"object"==typeof t&&t&&"string"==typeof t.code?r=t.code:"object"==typeof t&&t&&"string"==typeof t.error_code&&(r=t.error_code),r){if("weak_password"===r)throw new Yt(Er(t),e.status,t.weak_password?.reasons||[]);if("session_not_found"===r)throw new Dt}else if("object"==typeof t&&t&&"object"==typeof t.weak_password&&t.weak_password&&Array.isArray(t.weak_password.reasons)&&t.weak_password.reasons.length&&t.weak_password.reasons.reduce((e,t)=>e&&"string"==typeof t,!0))throw new Yt(Er(t),e.status,t.weak_password.reasons);throw new xt(Er(t),e.status||500,r)}async function Ar(e,t,r,s){let i=Object.assign({},s?.headers);i[Ot]||(i[Ot]=Ct),s?.jwt&&(i.Authorization=`Bearer ${s.jwt}`);let a=s?.query??{};s?.redirectTo&&(a.redirect_to=s.redirectTo);let n=await async function(e,t,r,s,i,a){let n,o=((e,t,r,s)=>{let i={method:e,headers:t?.headers||{}};return"GET"===e?i:(i.headers=Object.assign({"Content-Type":"application/json;charset=UTF-8"},t?.headers),i.body=JSON.stringify(s),Object.assign(Object.assign({},i),{}))})(t,s,0,a);try{n=await e(r,Object.assign({},o))}catch(e){throw console.error(e),new Jt(Er(e),0)}if(n.ok||await Rr(n),s?.noResolveJson)return n;try{return await n.json()}catch(e){await Rr(e)}}(e,t,r+(Object.keys(a).length?"?"+new URLSearchParams(a).toString():""),{headers:i,noResolveJson:s?.noResolveJson},0,s?.body);return s?.xform?s?.xform(n):{data:Object.assign({},n),error:null}}function Or(e){let t=null;return function(e){return!!e.access_token&&!!e.refresh_token&&!!e.expires_in}(e)&&(t=Object.assign({},e),e.expires_at||(t.expires_at=function(e){return Math.round(Date.now()/1e3)+e}(e.expires_in))),{data:{session:t,user:e.user??("string"==typeof e?.id?e:null)},error:null}}function Pr(e){let t=Or(e);return!t.error&&e.weak_password&&"object"==typeof e.weak_password&&Array.isArray(e.weak_password.reasons)&&e.weak_password.reasons.length&&e.weak_password.message&&"string"==typeof e.weak_password.message&&e.weak_password.reasons.reduce((e,t)=>e&&"string"==typeof t,!0)&&(t.data.weak_password=e.weak_password),t}function Cr(e){return{data:{user:e.user??e},error:null}}function jr(e){return{data:e,error:null}}function Ir(e){let{action_link:r,email_otp:s,hashed_token:i,redirect_to:a,verification_type:n}=e,o=t(e,["action_link","email_otp","hashed_token","redirect_to","verification_type"]);return{data:{properties:{action_link:r,email_otp:s,hashed_token:i,redirect_to:a,verification_type:n},user:Object.assign({},o)},error:null}}function $r(e){return e}let xr=["global","local","others"];var Nr=class{constructor({url:e="",headers:t={},fetch:r,experimental:s}){this.url=e,this.headers=t,this.fetch=cr(r),this.experimental=s??{},this.mfa={listFactors:this._listFactors.bind(this),deleteFactor:this._deleteFactor.bind(this)},this.oauth={listClients:this._listOAuthClients.bind(this),createClient:this._createOAuthClient.bind(this),getClient:this._getOAuthClient.bind(this),updateClient:this._updateOAuthClient.bind(this),deleteClient:this._deleteOAuthClient.bind(this),regenerateClientSecret:this._regenerateOAuthClientSecret.bind(this)},this.customProviders={listProviders:this._listCustomProviders.bind(this),createProvider:this._createCustomProvider.bind(this),getProvider:this._getCustomProvider.bind(this),updateProvider:this._updateCustomProvider.bind(this),deleteProvider:this._deleteCustomProvider.bind(this)},this.passkey={listPasskeys:this._adminListPasskeys.bind(this),deletePasskey:this._adminDeletePasskey.bind(this)}}async signOut(e,t=xr[0]){if(xr.indexOf(t)<0)throw Error(`@supabase/auth-js: Parameter scope must be one of ${xr.join(", ")}`);try{return await Ar(this.fetch,"POST",`${this.url}/logout?scope=${t}`,{headers:this.headers,jwt:e,noResolveJson:!0}),{data:null,error:null}}catch(e){if($t(e))return{data:null,error:e};throw e}}async inviteUserByEmail(e,t={}){try{return await Ar(this.fetch,"POST",`${this.url}/invite`,{body:{email:e,data:t.data},headers:this.headers,redirectTo:t.redirectTo,xform:Cr})}catch(e){if($t(e))return{data:{user:null},error:e};throw e}}async generateLink(e){try{let{options:r}=e,s=t(e,["options"]),i=Object.assign(Object.assign({},s),r);return"newEmail"in s&&(i.new_email=s?.newEmail,delete i.newEmail),await Ar(this.fetch,"POST",`${this.url}/admin/generate_link`,{body:i,headers:this.headers,xform:Ir,redirectTo:r?.redirectTo})}catch(e){if($t(e))return{data:{properties:null,user:null},error:e};throw e}}async createUser(e){try{return await Ar(this.fetch,"POST",`${this.url}/admin/users`,{body:e,headers:this.headers,xform:Cr})}catch(e){if($t(e))return{data:{user:null},error:e};throw e}}async listUsers(e){try{let t={nextPage:null,lastPage:0,total:0},r=await Ar(this.fetch,"GET",`${this.url}/admin/users`,{headers:this.headers,noResolveJson:!0,query:{page:(e?.page)?.toString()??"",per_page:(e?.perPage)?.toString()??""},xform:$r});if(r.error)throw r.error;let s=await r.json(),i=r.headers.get("x-total-count")??0,a=r.headers.get("link")?.split(",")??[];return a.length>0&&(a.forEach(e=>{let r=parseInt(e.split(";")[0].split("=")[1].substring(0,1)),s=JSON.parse(e.split(";")[1].split("=")[1]);t[`${s}Page`]=r}),t.total=parseInt(i)),{data:Object.assign(Object.assign({},s),t),error:null}}catch(e){if($t(e))return{data:{users:[]},error:e};throw e}}async getUserById(e){_r(e);try{return await Ar(this.fetch,"GET",`${this.url}/admin/users/${e}`,{headers:this.headers,xform:Cr})}catch(e){if($t(e))return{data:{user:null},error:e};throw e}}async updateUserById(e,t){_r(e);try{return await Ar(this.fetch,"PUT",`${this.url}/admin/users/${e}`,{body:t,headers:this.headers,xform:Cr})}catch(e){if($t(e))return{data:{user:null},error:e};throw e}}async deleteUser(e,t=!1){_r(e);try{return await Ar(this.fetch,"DELETE",`${this.url}/admin/users/${e}`,{headers:this.headers,body:{should_soft_delete:t},xform:Cr})}catch(e){if($t(e))return{data:{user:null},error:e};throw e}}async _listFactors(e){_r(e.userId);try{let{data:t,error:r}=await Ar(this.fetch,"GET",`${this.url}/admin/users/${e.userId}/factors`,{headers:this.headers,xform:e=>({data:{factors:e},error:null})});return{data:t,error:r}}catch(e){if($t(e))return{data:null,error:e};throw e}}async _deleteFactor(e){_r(e.userId),_r(e.id);try{return{data:await Ar(this.fetch,"DELETE",`${this.url}/admin/users/${e.userId}/factors/${e.id}`,{headers:this.headers}),error:null}}catch(e){if($t(e))return{data:null,error:e};throw e}}async _listOAuthClients(e){try{let t={nextPage:null,lastPage:0,total:0},r=await Ar(this.fetch,"GET",`${this.url}/admin/oauth/clients`,{headers:this.headers,noResolveJson:!0,query:{page:(e?.page)?.toString()??"",per_page:(e?.perPage)?.toString()??""},xform:$r});if(r.error)throw r.error;let s=await r.json(),i=r.headers.get("x-total-count")??0,a=r.headers.get("link")?.split(",")??[];return a.length>0&&(a.forEach(e=>{let r=parseInt(e.split(";")[0].split("=")[1].substring(0,1)),s=JSON.parse(e.split(";")[1].split("=")[1]);t[`${s}Page`]=r}),t.total=parseInt(i)),{data:Object.assign(Object.assign({},s),t),error:null}}catch(e){if($t(e))return{data:{clients:[]},error:e};throw e}}async _createOAuthClient(e){try{return await Ar(this.fetch,"POST",`${this.url}/admin/oauth/clients`,{body:e,headers:this.headers,xform:e=>({data:e,error:null})})}catch(e){if($t(e))return{data:null,error:e};throw e}}async _getOAuthClient(e){try{return await Ar(this.fetch,"GET",`${this.url}/admin/oauth/clients/${e}`,{headers:this.headers,xform:e=>({data:e,error:null})})}catch(e){if($t(e))return{data:null,error:e};throw e}}async _updateOAuthClient(e,t){try{return await Ar(this.fetch,"PUT",`${this.url}/admin/oauth/clients/${e}`,{body:t,headers:this.headers,xform:e=>({data:e,error:null})})}catch(e){if($t(e))return{data:null,error:e};throw e}}async _deleteOAuthClient(e){try{return await Ar(this.fetch,"DELETE",`${this.url}/admin/oauth/clients/${e}`,{headers:this.headers,noResolveJson:!0}),{data:null,error:null}}catch(e){if($t(e))return{data:null,error:e};throw e}}async _regenerateOAuthClientSecret(e){try{return await Ar(this.fetch,"POST",`${this.url}/admin/oauth/clients/${e}/regenerate_secret`,{headers:this.headers,xform:e=>({data:e,error:null})})}catch(e){if($t(e))return{data:null,error:e};throw e}}async _listCustomProviders(e){try{let t={};return e?.type&&(t.type=e.type),await Ar(this.fetch,"GET",`${this.url}/admin/custom-providers`,{headers:this.headers,query:t,xform:e=>({data:{providers:e?.providers??[]},error:null})})}catch(e){if($t(e))return{data:{providers:[]},error:e};throw e}}async _createCustomProvider(e){try{return await Ar(this.fetch,"POST",`${this.url}/admin/custom-providers`,{body:e,headers:this.headers,xform:e=>({data:e,error:null})})}catch(e){if($t(e))return{data:null,error:e};throw e}}async _getCustomProvider(e){try{return await Ar(this.fetch,"GET",`${this.url}/admin/custom-providers/${e}`,{headers:this.headers,xform:e=>({data:e,error:null})})}catch(e){if($t(e))return{data:null,error:e};throw e}}async _updateCustomProvider(e,t){try{return await Ar(this.fetch,"PUT",`${this.url}/admin/custom-providers/${e}`,{body:t,headers:this.headers,xform:e=>({data:e,error:null})})}catch(e){if($t(e))return{data:null,error:e};throw e}}async _deleteCustomProvider(e){try{return await Ar(this.fetch,"DELETE",`${this.url}/admin/custom-providers/${e}`,{headers:this.headers,noResolveJson:!0}),{data:null,error:null}}catch(e){if($t(e))return{data:null,error:e};throw e}}async _adminListPasskeys(e){kr(this.experimental),_r(e.userId);try{return await Ar(this.fetch,"GET",`${this.url}/admin/users/${e.userId}/passkeys`,{headers:this.headers,xform:e=>({data:e,error:null})})}catch(e){if($t(e))return{data:null,error:e};throw e}}async _adminDeletePasskey(e){kr(this.experimental),_r(e.userId),_r(e.passkeyId);try{return await Ar(this.fetch,"DELETE",`${this.url}/admin/users/${e.userId}/passkeys/${e.passkeyId}`,{headers:this.headers,noResolveJson:!0}),{data:null,error:null}}catch(e){if($t(e))return{data:null,error:e};throw e}}};function Lr(e={}){return{getItem:t=>e[t]||null,setItem:(t,r)=>{e[t]=r},removeItem:t=>{delete e[t]}}}let Ur={debug:!!(globalThis&&hr()&&globalThis.localStorage&&"true"===globalThis.localStorage.getItem("supabase.gotrue-js.locks.debug"))};var Dr=class extends Error{constructor(e){super(e),this.isAcquireTimeout=!0}},Br=class extends Dr{},qr=class extends Dr{};let Mr={};function Hr(e){if(!/^0x[a-fA-F0-9]{40}$/.test(e))throw Error(`@supabase/auth-js: Address "${e}" is invalid.`);return e.toLowerCase()}function Wr(e){let t=(new TextEncoder).encode(e);return"0x"+Array.from(t,e=>e.toString(16).padStart(2,"0")).join("")}var Kr=class extends Error{constructor({message:e,code:t,cause:r,name:s}){super(e,{cause:r}),this.__isWebAuthnError=!0,this.name=s??(r instanceof Error?r.name:void 0)??"Unknown Error",this.code=t}toJSON(){return{name:this.name,message:this.message,code:this.code}}},Fr=class extends Kr{constructor(e,t){super({code:"ERROR_PASSTHROUGH_SEE_CAUSE_PROPERTY",cause:t,message:e}),this.name="WebAuthnUnknownError",this.originalError=t}};function Jr({error:e,options:t}){let{publicKey:r}=t;if(!r)throw Error("options was missing required publicKey property");if("AbortError"===e.name){if(t.signal instanceof AbortSignal)return new Kr({message:"Registration ceremony was sent an abort signal",code:"ERROR_CEREMONY_ABORTED",cause:e})}else if("ConstraintError"===e.name){if(!0===r.authenticatorSelection?.requireResidentKey)return new Kr({message:"Discoverable credentials were required but no available authenticator supported it",code:"ERROR_AUTHENTICATOR_MISSING_DISCOVERABLE_CREDENTIAL_SUPPORT",cause:e});if("conditional"===t.mediation&&"required"===r.authenticatorSelection?.userVerification)return new Kr({message:"User verification was required during automatic registration but it could not be performed",code:"ERROR_AUTO_REGISTER_USER_VERIFICATION_FAILURE",cause:e});if("required"===r.authenticatorSelection?.userVerification)return new Kr({message:"User verification was required but no available authenticator supported it",code:"ERROR_AUTHENTICATOR_MISSING_USER_VERIFICATION_SUPPORT",cause:e})}else{if("InvalidStateError"===e.name)return new Kr({message:"The authenticator was previously registered",code:"ERROR_AUTHENTICATOR_PREVIOUSLY_REGISTERED",cause:e});if("NotAllowedError"===e.name)return new Kr({message:e.message,code:"ERROR_PASSTHROUGH_SEE_CAUSE_PROPERTY",cause:e});if("NotSupportedError"===e.name)return 0===r.pubKeyCredParams.filter(e=>"public-key"===e.type).length?new Kr({message:'No entry in pubKeyCredParams was of type "public-key"',code:"ERROR_MALFORMED_PUBKEYCREDPARAMS",cause:e}):new Kr({message:"No available authenticator supported any of the specified pubKeyCredParams algorithms",code:"ERROR_AUTHENTICATOR_NO_SUPPORTED_PUBKEYCREDPARAMS_ALG",cause:e});if("SecurityError"===e.name){let t=window.location.hostname;if(!Zr(t))return new Kr({message:`${window.location.hostname} is an invalid domain`,code:"ERROR_INVALID_DOMAIN",cause:e});if(r.rp.id!==t)return new Kr({message:`The RP ID "${r.rp.id}" is invalid for this domain`,code:"ERROR_INVALID_RP_ID",cause:e})}else if("TypeError"===e.name){if(r.user.id.byteLength<1||r.user.id.byteLength>64)return new Kr({message:"User ID was not between 1 and 64 characters",code:"ERROR_INVALID_USER_ID_LENGTH",cause:e})}else if("UnknownError"===e.name)return new Kr({message:"The authenticator was unable to process the specified options, or could not create a new credential",code:"ERROR_AUTHENTICATOR_GENERAL_ERROR",cause:e})}return new Kr({message:"a Non-Webauthn related error has occurred",code:"ERROR_PASSTHROUGH_SEE_CAUSE_PROPERTY",cause:e})}function Gr({error:e,options:t}){let{publicKey:r}=t;if(!r)throw Error("options was missing required publicKey property");if("AbortError"===e.name){if(t.signal instanceof AbortSignal)return new Kr({message:"Authentication ceremony was sent an abort signal",code:"ERROR_CEREMONY_ABORTED",cause:e})}else{if("NotAllowedError"===e.name)return new Kr({message:e.message,code:"ERROR_PASSTHROUGH_SEE_CAUSE_PROPERTY",cause:e});if("SecurityError"===e.name){let t=window.location.hostname;if(!Zr(t))return new Kr({message:`${window.location.hostname} is an invalid domain`,code:"ERROR_INVALID_DOMAIN",cause:e});if(r.rpId!==t)return new Kr({message:`The RP ID "${r.rpId}" is invalid for this domain`,code:"ERROR_INVALID_RP_ID",cause:e})}else if("UnknownError"===e.name)return new Kr({message:"The authenticator was unable to process the specified options, or could not create a new assertion signature",code:"ERROR_AUTHENTICATOR_GENERAL_ERROR",cause:e})}return new Kr({message:"a Non-Webauthn related error has occurred",code:"ERROR_PASSTHROUGH_SEE_CAUSE_PROPERTY",cause:e})}let Vr=new class{createNewAbortSignal(){if(this.controller){let e=Error("Cancelling existing WebAuthn API call for new one");e.name="AbortError",this.controller.abort(e)}let e=new AbortController;return this.controller=e,e.signal}cancelCeremony(){if(this.controller){let e=Error("Manually cancelling existing WebAuthn API call");e.name="AbortError",this.controller.abort(e),this.controller=void 0}}};function zr(e){if(!e)throw Error("Credential creation options are required");if(typeof PublicKeyCredential<"u"&&"parseCreationOptionsFromJSON"in PublicKeyCredential&&"function"==typeof PublicKeyCredential.parseCreationOptionsFromJSON)return PublicKeyCredential.parseCreationOptionsFromJSON(e);let{challenge:r,user:s,excludeCredentials:i}=e,a=t(e,["challenge","user","excludeCredentials"]),n=ar(r).buffer,o=Object.assign(Object.assign({},s),{id:ar(s.id).buffer}),l=Object.assign(Object.assign({},a),{challenge:n,user:o});if(i&&i.length>0){l.excludeCredentials=Array(i.length);for(let e=0;e<i.length;e++){let t=i[e];l.excludeCredentials[e]=Object.assign(Object.assign({},t),{id:ar(t.id).buffer,type:t.type||"public-key",transports:t.transports})}}return l}function Yr(e){if(!e)throw Error("Credential request options are required");if(typeof PublicKeyCredential<"u"&&"parseRequestOptionsFromJSON"in PublicKeyCredential&&"function"==typeof PublicKeyCredential.parseRequestOptionsFromJSON)return PublicKeyCredential.parseRequestOptionsFromJSON(e);let{challenge:r,allowCredentials:s}=e,i=t(e,["challenge","allowCredentials"]),a=ar(r).buffer,n=Object.assign(Object.assign({},i),{challenge:a});if(s&&s.length>0){n.allowCredentials=Array(s.length);for(let e=0;e<s.length;e++){let t=s[e];n.allowCredentials[e]=Object.assign(Object.assign({},t),{id:ar(t.id).buffer,type:t.type||"public-key",transports:t.transports})}}return n}function Xr(e){if("toJSON"in e&&"function"==typeof e.toJSON)return e.toJSON();let t=e;return{id:e.id,rawId:e.id,response:{attestationObject:nr(new Uint8Array(e.response.attestationObject)),clientDataJSON:nr(new Uint8Array(e.response.clientDataJSON))},type:"public-key",clientExtensionResults:e.getClientExtensionResults(),authenticatorAttachment:t.authenticatorAttachment??void 0}}function Qr(e){if("toJSON"in e&&"function"==typeof e.toJSON)return e.toJSON();let t=e,r=e.getClientExtensionResults(),s=e.response;return{id:e.id,rawId:e.id,response:{authenticatorData:nr(new Uint8Array(s.authenticatorData)),clientDataJSON:nr(new Uint8Array(s.clientDataJSON)),signature:nr(new Uint8Array(s.signature)),userHandle:s.userHandle?nr(new Uint8Array(s.userHandle)):void 0},type:"public-key",clientExtensionResults:r,authenticatorAttachment:t.authenticatorAttachment??void 0}}function Zr(e){return"localhost"===e||/^([a-z0-9]+(-[a-z0-9]+)*\.)+[a-z]{2,}$/i.test(e)}function es(){return!!(or()&&"PublicKeyCredential"in window&&window.PublicKeyCredential&&"credentials"in navigator&&"function"==typeof(null==navigator?void 0:navigator.credentials)?.create&&"function"==typeof(null==navigator?void 0:navigator.credentials)?.get)}async function ts(e){try{let t=await navigator.credentials.create(e);return t?t instanceof PublicKeyCredential?{data:t,error:null}:{data:null,error:new Fr("Browser returned unexpected credential type",t)}:{data:null,error:new Fr("Empty credential response",t)}}catch(t){return{data:null,error:Jr({error:t,options:e})}}}async function rs(e){try{let t=await navigator.credentials.get(e);return t?t instanceof PublicKeyCredential?{data:t,error:null}:{data:null,error:new Fr("Browser returned unexpected credential type",t)}:{data:null,error:new Fr("Empty credential response",t)}}catch(t){return{data:null,error:Gr({error:t,options:e})}}}let ss={hints:["security-key"],authenticatorSelection:{authenticatorAttachment:"cross-platform",requireResidentKey:!1,userVerification:"preferred",residentKey:"discouraged"},attestation:"direct"},is={userVerification:"preferred",hints:["security-key"],attestation:"direct"};function as(...e){let t=e=>"object"==typeof e&&!!e&&!Array.isArray(e),r=e=>e instanceof ArrayBuffer||ArrayBuffer.isView(e),s={};for(let i of e)if(i)for(let e in i){let a=i[e];if(void 0!==a)if(Array.isArray(a))s[e]=a;else if(r(a))s[e]=a;else if(t(a)){let r=s[e];t(r)?s[e]=as(r,a):s[e]=as(a)}else s[e]=a}return s}function ns(e,t){return as(ss,e,t||{})}var os=class{constructor(e){this.client=e,this.enroll=this._enroll.bind(this),this.challenge=this._challenge.bind(this),this.verify=this._verify.bind(this),this.authenticate=this._authenticate.bind(this),this.register=this._register.bind(this)}async _enroll(e){return this.client.mfa.enroll(Object.assign(Object.assign({},e),{factorType:"webauthn"}))}async _challenge({factorId:e,webauthn:t,friendlyName:r,signal:s},i){try{let{data:a,error:n}=await this.client.mfa.challenge({factorId:e,webauthn:t});if(!a)return{data:null,error:n};let o=s??Vr.createNewAbortSignal();if("create"===a.webauthn.type){let{user:e}=a.webauthn.credential_options.publicKey;if(!e.name){let t=r;if(t)e.name=`${e.id}:${t}`;else{let t=(await this.client.getUser()).data.user,r=t?.user_metadata?.name||t?.email||t?.id||"User";e.name=`${e.id}:${r}`}}e.displayName||=e.name}switch(a.webauthn.type){case"create":{let{data:t,error:r}=await ts({publicKey:ns(a.webauthn.credential_options.publicKey,i?.create),signal:o});return t?{data:{factorId:e,challengeId:a.id,webauthn:{type:a.webauthn.type,credential_response:t}},error:null}:{data:null,error:r}}case"request":{let t=function(e,t){return as(is,e,t||{})}(a.webauthn.credential_options.publicKey,i?.request),{data:r,error:s}=await rs(Object.assign(Object.assign({},a.webauthn.credential_options),{publicKey:t,signal:o}));return r?{data:{factorId:e,challengeId:a.id,webauthn:{type:a.webauthn.type,credential_response:r}},error:null}:{data:null,error:s}}}}catch(e){return $t(e)?{data:null,error:e}:{data:null,error:new Lt("Unexpected error in challenge",e)}}}async _verify({challengeId:e,factorId:t,webauthn:r}){return this.client.mfa.verify({factorId:t,challengeId:e,webauthn:r})}async _authenticate({factorId:e,webauthn:{rpId:t=(typeof window<"u"?window.location.hostname:void 0),rpOrigins:r=(typeof window<"u"?[window.location.origin]:void 0),signal:s}={}},i){if(!t)return{data:null,error:new It("rpId is required for WebAuthn authentication")};try{if(!es())return{data:null,error:new Lt("Browser does not support WebAuthn",null)};let{data:a,error:n}=await this.challenge({factorId:e,webauthn:{rpId:t,rpOrigins:r},signal:s},{request:i});if(!a)return{data:null,error:n};let{webauthn:o}=a;return this._verify({factorId:e,challengeId:a.challengeId,webauthn:{type:o.type,rpId:t,rpOrigins:r,credential_response:o.credential_response}})}catch(e){return $t(e)?{data:null,error:e}:{data:null,error:new Lt("Unexpected error in authenticate",e)}}}async _register({friendlyName:e,webauthn:{rpId:t=(typeof window<"u"?window.location.hostname:void 0),rpOrigins:r=(typeof window<"u"?[window.location.origin]:void 0),signal:s}={}},i){if(!t)return{data:null,error:new It("rpId is required for WebAuthn registration")};try{if(!es())return{data:null,error:new Lt("Browser does not support WebAuthn",null)};let{data:a,error:n}=await this._enroll({friendlyName:e});if(!a)return await this.client.mfa.listFactors().then(t=>t.data?.all.find(t=>"webauthn"===t.factor_type&&t.friendly_name===e&&"unverified"!==t.status)).then(e=>e?this.client.mfa.unenroll({factorId:e?.id}):void 0),{data:null,error:n};let{data:o,error:l}=await this._challenge({factorId:a.id,friendlyName:a.friendly_name,webauthn:{rpId:t,rpOrigins:r},signal:s},{create:i});return o?this._verify({factorId:a.id,challengeId:o.challengeId,webauthn:{rpId:t,rpOrigins:r,type:o.webauthn.type,credential_response:o.webauthn.credential_response}}):{data:null,error:l}}catch(e){return $t(e)?{data:null,error:e}:{data:null,error:new Lt("Unexpected error in register",e)}}}};!function(){if("object"!=typeof globalThis)try{Object.defineProperty(Object.prototype,"__magic__",{get:function(){return this},configurable:!0}),__magic__.globalThis=__magic__,delete Object.prototype.__magic__}catch{typeof self<"u"&&(self.globalThis=self)}}();let ls={url:"http://localhost:9999",storageKey:"supabase.auth.token",autoRefreshToken:!0,persistSession:!0,detectSessionInUrl:!0,headers:At,flowType:"implicit",debug:!1,hasCustomAuthorizationHeader:!1,throwOnError:!1,lockAcquireTimeout:5e3,skipAutoInitialize:!1,experimental:{}},hs={};var cs=class e{get jwks(){return hs[this.storageKey]?.jwks??{keys:[]}}set jwks(e){hs[this.storageKey]=Object.assign(Object.assign({},hs[this.storageKey]),{jwks:e})}get jwks_cached_at(){return hs[this.storageKey]?.cachedAt??-(2**53-1)}set jwks_cached_at(e){hs[this.storageKey]=Object.assign(Object.assign({},hs[this.storageKey]),{cachedAt:e})}constructor(t){var r;this.userStorage=null,this.memoryStorage=null,this.stateChangeEmitters=new Map,this.autoRefreshTicker=null,this.autoRefreshTickTimeout=null,this.visibilityChangedCallback=null,this.refreshingDeferred=null,this.lastRefreshFailure=null,this._sessionRemovalEpoch=0,this.initializePromise=null,this.detectSessionInUrl=!0,this.hasCustomAuthorizationHeader=!1,this.suppressGetSessionWarning=!1,this.lock=null,this.lockAcquired=!1,this.pendingInLock=[],this.broadcastChannel=null,this.logger=console.log;let s=Object.assign(Object.assign({},ls),t);if(this.storageKey=s.storageKey,this.instanceID=e.nextInstanceID[this.storageKey]??0,e.nextInstanceID[this.storageKey]=this.instanceID+1,this.logDebugMessages=!!s.debug,"function"==typeof s.debug&&(this.logger=s.debug),this.instanceID>0&&or()){let e=`${this._logPrefix()} Multiple GoTrueClient instances detected in the same browser context. It is not an error, but this should be avoided as it may produce undefined behavior when used concurrently under the same storage key.`;console.warn(e),this.logDebugMessages&&console.trace(e)}if(this.persistSession=s.persistSession,this.autoRefreshToken=s.autoRefreshToken,this.experimental=s.experimental??{},this.admin=new Nr({url:s.url,headers:s.headers,fetch:s.fetch,experimental:this.experimental}),this.url=s.url,this.headers=s.headers,this.fetch=cr(s.fetch),this.detectSessionInUrl=s.detectSessionInUrl,this.flowType=s.flowType,this.hasCustomAuthorizationHeader=s.hasCustomAuthorizationHeader,this.throwOnError=s.throwOnError,this.lockAcquireTimeout=s.lockAcquireTimeout,null!=s.lock&&(this.lock=s.lock),this.jwks||(this.jwks={keys:[]},this.jwks_cached_at=-(2**53-1)),this.mfa={verify:this._verify.bind(this),enroll:this._enroll.bind(this),unenroll:this._unenroll.bind(this),challenge:this._challenge.bind(this),listFactors:this._listFactors.bind(this),challengeAndVerify:this._challengeAndVerify.bind(this),getAuthenticatorAssuranceLevel:this._getAuthenticatorAssuranceLevel.bind(this),webauthn:new os(this)},this.oauth={getAuthorizationDetails:this._getAuthorizationDetails.bind(this),approveAuthorization:this._approveAuthorization.bind(this),denyAuthorization:this._denyAuthorization.bind(this),listGrants:this._listOAuthGrants.bind(this),revokeGrant:this._revokeOAuthGrant.bind(this)},this.passkey={startRegistration:this._startPasskeyRegistration.bind(this),verifyRegistration:this._verifyPasskeyRegistration.bind(this),startAuthentication:this._startPasskeyAuthentication.bind(this),verifyAuthentication:this._verifyPasskeyAuthentication.bind(this),list:this._listPasskeys.bind(this),update:this._updatePasskey.bind(this),delete:this._deletePasskey.bind(this)},this.persistSession?(s.storage?this.storage=s.storage:hr()?this.storage=globalThis.localStorage:(this.memoryStorage={},this.storage=Lr(this.memoryStorage)),s.userStorage&&(this.userStorage=s.userStorage)):(this.memoryStorage={},this.storage=Lr(this.memoryStorage)),or()&&globalThis.BroadcastChannel&&this.persistSession&&this.storageKey){try{this.broadcastChannel=new globalThis.BroadcastChannel(this.storageKey)}catch(e){console.error("Failed to create a new BroadcastChannel, multi-tab state changes will not be available",e)}null==(r=this.broadcastChannel)||r.addEventListener("message",async e=>{this._debug("received broadcast notification from other tab or client",e),("TOKEN_REFRESHED"===e.data.event||"SIGNED_IN"===e.data.event)&&(this.lastRefreshFailure=null);try{await this._notifyAllSubscribers(e.data.event,e.data.session,!1)}catch(e){this._debug("#broadcastChannel","error",e)}})}s.skipAutoInitialize||this.initialize().catch(e=>{this._debug("#initialize()","error",e)})}isThrowOnErrorEnabled(){return this.throwOnError}_returnResult(e){if(this.throwOnError&&e&&e.error)throw e.error;return e}_logPrefix(){return`GoTrueClient@${this.storageKey}:${this.instanceID} (${Et}) ${(new Date).toISOString()}`}_debug(...e){return this.logDebugMessages&&this.logger(this._logPrefix(),...e),this}async initialize(){return this.initializePromise||=(async()=>null==this.lock?await this._initialize():await this._acquireLock(this.lockAcquireTimeout,async()=>await this._initialize()))(),await this.initializePromise}async _initialize(){try{let e={},t="none";if(or()&&(e=function(e){let t={},r=new URL(e);if(r.hash&&"#"===r.hash[0])try{new URLSearchParams(r.hash.substring(1)).forEach((e,r)=>{t[r]=e})}catch{}return r.searchParams.forEach((e,r)=>{t[r]=e}),t}(window.location.href),this._isImplicitGrantCallback(e)?t="implicit":await this._isPKCECallback(e)&&(t="pkce")),or()&&this.detectSessionInUrl&&"none"!==t){let{data:r,error:s}=await this._getSessionFromURL(e,t);if(s){if(this._debug("#_initialize()","error detecting session from URL",s),Wt(s)){let e=s.details?.code;if("identity_already_exists"===e||"identity_not_found"===e||"single_identity_not_deletable"===e)return{error:s}}return{error:s}}let{session:i,redirectType:a}=r;return this._debug("#_initialize()","detected session in URL",i,"redirect type",a),await this._saveSession(i),setTimeout(async()=>{"recovery"===a?await this._notifyAllSubscribers("PASSWORD_RECOVERY",i):await this._notifyAllSubscribers("SIGNED_IN",i)},0),{error:null}}return await this._recoverAndRefresh(),{error:null}}catch(e){return $t(e)?this._returnResult({error:e}):this._returnResult({error:new Lt("Unexpected error during initialization",e)})}finally{await this._handleVisibilityChange(),this._debug("#_initialize()","end")}}async signInAnonymously(e){try{let{data:t,error:r}=await Ar(this.fetch,"POST",`${this.url}/signup`,{headers:this.headers,body:{data:e?.options?.data??{},gotrue_meta_security:{captcha_token:e?.options?.captchaToken}},xform:Or});if(r||!t)return this._returnResult({data:{user:null,session:null},error:r});let s=t.session,i=t.user;return t.session&&(await this._saveSession(t.session),await this._notifyAllSubscribers("SIGNED_IN",s)),this._returnResult({data:{user:i,session:s},error:null})}catch(e){if($t(e))return this._returnResult({data:{user:null,session:null},error:e});throw e}}async signUp(e){try{let t;if("email"in e){let{email:r,password:s,options:i}=e,a=null,n=null;"pkce"===this.flowType&&([a,n]=await yr(this.storage,this.storageKey)),t=await Ar(this.fetch,"POST",`${this.url}/signup`,{headers:this.headers,redirectTo:i?.emailRedirectTo,body:{email:r,password:s,data:i?.data??{},gotrue_meta_security:{captcha_token:i?.captchaToken},code_challenge:a,code_challenge_method:n},xform:Or})}else{if(!("phone"in e))throw new Mt("You must provide either an email or phone number and a password");{let{phone:r,password:s,options:i}=e;t=await Ar(this.fetch,"POST",`${this.url}/signup`,{headers:this.headers,body:{phone:r,password:s,data:i?.data??{},channel:i?.channel??"sms",gotrue_meta_security:{captcha_token:i?.captchaToken}},xform:Or})}}let{data:r,error:s}=t;if(s||!r)return await pr(this.storage,`${this.storageKey}-code-verifier`),this._returnResult({data:{user:null,session:null},error:s});let i=r.session,a=r.user;return r.session&&(await this._saveSession(r.session),await this._notifyAllSubscribers("SIGNED_IN",i)),this._returnResult({data:{user:a,session:i},error:null})}catch(e){if(await pr(this.storage,`${this.storageKey}-code-verifier`),$t(e))return this._returnResult({data:{user:null,session:null},error:e});throw e}}async signInWithPassword(e){try{let t;if("email"in e){let{email:r,password:s,options:i}=e;t=await Ar(this.fetch,"POST",`${this.url}/token?grant_type=password`,{headers:this.headers,body:{email:r,password:s,gotrue_meta_security:{captcha_token:i?.captchaToken}},xform:Pr})}else{if(!("phone"in e))throw new Mt("You must provide either an email or phone number and a password");{let{phone:r,password:s,options:i}=e;t=await Ar(this.fetch,"POST",`${this.url}/token?grant_type=password`,{headers:this.headers,body:{phone:r,password:s,gotrue_meta_security:{captcha_token:i?.captchaToken}},xform:Pr})}}let{data:r,error:s}=t;if(s)return this._returnResult({data:{user:null,session:null},error:s});if(!r||!r.session||!r.user){let e=new qt;return this._returnResult({data:{user:null,session:null},error:e})}return r.session&&(await this._saveSession(r.session),await this._notifyAllSubscribers("SIGNED_IN",r.session)),this._returnResult({data:Object.assign({user:r.user,session:r.session},r.weak_password?{weakPassword:r.weak_password}:null),error:s})}catch(e){if($t(e))return this._returnResult({data:{user:null,session:null},error:e});throw e}}async signInWithOAuth(e){return await this._handleProviderSignIn(e.provider,{redirectTo:e.options?.redirectTo,scopes:e.options?.scopes,queryParams:e.options?.queryParams,skipBrowserRedirect:e.options?.skipBrowserRedirect})}async exchangeCodeForSession(e){return await this.initializePromise,null==this.lock?this._exchangeCodeForSession(e):this._acquireLock(this.lockAcquireTimeout,async()=>this._exchangeCodeForSession(e))}async signInWithWeb3(e){let{chain:t}=e;switch(t){case"ethereum":return await this.signInWithEthereum(e);case"solana":return await this.signInWithSolana(e);default:throw Error(`@supabase/auth-js: Unsupported chain "${t}"`)}}async signInWithEthereum(e){let t,r;if("message"in e)t=e.message,r=e.signature;else{let s,{chain:i,wallet:a,statement:n,options:o}=e;if(or())if("object"==typeof a)s=a;else{let e=window;if(!("ethereum"in e)||"object"!=typeof e.ethereum||!("request"in e.ethereum)||"function"!=typeof e.ethereum.request)throw Error("@supabase/auth-js: No compatible Ethereum wallet interface on the window object (window.ethereum) detected. Make sure the user already has a wallet installed and connected for this app. Prefer passing the wallet interface object directly to signInWithWeb3({ chain: 'ethereum', wallet: resolvedUserWallet }) instead.");s=e.ethereum}else{if("object"!=typeof a||!o?.url)throw Error("@supabase/auth-js: Both wallet and url must be specified in non-browser environments.");s=a}let l=new URL(o?.url??window.location.href),h=await s.request({method:"eth_requestAccounts"}).then(e=>e).catch(()=>{throw Error("@supabase/auth-js: Wallet method eth_requestAccounts is missing or invalid")});if(!h||0===h.length)throw Error("@supabase/auth-js: No accounts available. Please ensure the wallet is connected.");let c=Hr(h[0]),u=o?.signInWithEthereum?.chainId;u||=function(e){return parseInt(e,16)}(await s.request({method:"eth_chainId"})),t=function(e){let{chainId:t,domain:r,expirationTime:s,issuedAt:i=new Date,nonce:a,notBefore:n,requestId:o,resources:l,scheme:h,uri:c,version:u}=e;if(!Number.isInteger(t))throw Error(`@supabase/auth-js: Invalid SIWE message field "chainId". Chain ID must be a EIP-155 chain ID. Provided value: ${t}`);if(!r)throw Error('@supabase/auth-js: Invalid SIWE message field "domain". Domain must be provided.');if(a&&a.length<8)throw Error(`@supabase/auth-js: Invalid SIWE message field "nonce". Nonce must be at least 8 characters. Provided value: ${a}`);if(!c)throw Error('@supabase/auth-js: Invalid SIWE message field "uri". URI must be provided.');if("1"!==u)throw Error(`@supabase/auth-js: Invalid SIWE message field "version". Version must be '1'. Provided value: ${u}`);if(e.statement?.includes("\n"))throw Error(`@supabase/auth-js: Invalid SIWE message field "statement". Statement must not include '\\n'. Provided value: ${e.statement}`);let d=`${h?`${h}://${r}`:r} wants you to sign in with your Ethereum account:\n${Hr(e.address)}\n\n${e.statement?`${e.statement}\n`:""}`,p=`URI: ${c}\nVersion: ${u}\nChain ID: ${t}${a?`\nNonce: ${a}`:""}\nIssued At: ${i.toISOString()}`;if(s&&(p+=`\nExpiration Time: ${s.toISOString()}`),n&&(p+=`\nNot Before: ${n.toISOString()}`),o&&(p+=`\nRequest ID: ${o}`),l){let e="\nResources:";for(let t of l){if(!t||"string"!=typeof t)throw Error(`@supabase/auth-js: Invalid SIWE message field "resources". Every resource must be a valid string. Provided value: ${t}`);e+=`\n- ${t}`}p+=e}return`${d}\n${p}`}({domain:l.host,address:c,statement:n,uri:l.href,version:"1",chainId:u,nonce:o?.signInWithEthereum?.nonce,issuedAt:o?.signInWithEthereum?.issuedAt??new Date,expirationTime:o?.signInWithEthereum?.expirationTime,notBefore:o?.signInWithEthereum?.notBefore,requestId:o?.signInWithEthereum?.requestId,resources:o?.signInWithEthereum?.resources}),r=await s.request({method:"personal_sign",params:[Wr(t),c]})}try{let{data:s,error:i}=await Ar(this.fetch,"POST",`${this.url}/token?grant_type=web3`,{headers:this.headers,body:Object.assign({chain:"ethereum",message:t,signature:r},e.options?.captchaToken?{gotrue_meta_security:{captcha_token:e.options?.captchaToken}}:null),xform:Or});if(i)throw i;if(!s||!s.session||!s.user){let e=new qt;return this._returnResult({data:{user:null,session:null},error:e})}return s.session&&(await this._saveSession(s.session),await this._notifyAllSubscribers("SIGNED_IN",s.session)),this._returnResult({data:Object.assign({},s),error:i})}catch(e){if($t(e))return this._returnResult({data:{user:null,session:null},error:e});throw e}}async signInWithSolana(e){let t,r;if("message"in e)t=e.message,r=e.signature;else{let s,{chain:i,wallet:a,statement:n,options:o}=e;if(or())if("object"==typeof a)s=a;else{let e=window;if(!("solana"in e)||"object"!=typeof e.solana||!("signIn"in e.solana&&"function"==typeof e.solana.signIn||"signMessage"in e.solana&&"function"==typeof e.solana.signMessage))throw Error("@supabase/auth-js: No compatible Solana wallet interface on the window object (window.solana) detected. Make sure the user already has a wallet installed and connected for this app. Prefer passing the wallet interface object directly to signInWithWeb3({ chain: 'solana', wallet: resolvedUserWallet }) instead.");s=e.solana}else{if("object"!=typeof a||!o?.url)throw Error("@supabase/auth-js: Both wallet and url must be specified in non-browser environments.");s=a}let l=new URL(o?.url??window.location.href);if("signIn"in s&&s.signIn){let e,i=await s.signIn(Object.assign(Object.assign(Object.assign({issuedAt:(new Date).toISOString()},o?.signInWithSolana),{version:"1",domain:l.host,uri:l.href}),n?{statement:n}:null));if(Array.isArray(i)&&i[0]&&"object"==typeof i[0])e=i[0];else{if(!(i&&"object"==typeof i&&"signedMessage"in i&&"signature"in i))throw Error("@supabase/auth-js: Wallet method signIn() returned unrecognized value");e=i}if(!("signedMessage"in e&&"signature"in e&&("string"==typeof e.signedMessage||e.signedMessage instanceof Uint8Array)&&e.signature instanceof Uint8Array))throw Error("@supabase/auth-js: Wallet method signIn() API returned object without signedMessage and signature fields");t="string"==typeof e.signedMessage?e.signedMessage:(new TextDecoder).decode(e.signedMessage),r=e.signature}else{if(!("signMessage"in s&&"function"==typeof s.signMessage&&"publicKey"in s&&"object"==typeof s&&s.publicKey&&"toBase58"in s.publicKey&&"function"==typeof s.publicKey.toBase58))throw Error("@supabase/auth-js: Wallet does not have a compatible signMessage() and publicKey.toBase58() API");t=[`${l.host} wants you to sign in with your Solana account:`,s.publicKey.toBase58(),...n?["",n,""]:[""],"Version: 1",`URI: ${l.href}`,`Issued At: ${o?.signInWithSolana?.issuedAt??(new Date).toISOString()}`,...o?.signInWithSolana?.notBefore?[`Not Before: ${o.signInWithSolana.notBefore}`]:[],...o?.signInWithSolana?.expirationTime?[`Expiration Time: ${o.signInWithSolana.expirationTime}`]:[],...o?.signInWithSolana?.chainId?[`Chain ID: ${o.signInWithSolana.chainId}`]:[],...o?.signInWithSolana?.nonce?[`Nonce: ${o.signInWithSolana.nonce}`]:[],...o?.signInWithSolana?.requestId?[`Request ID: ${o.signInWithSolana.requestId}`]:[],...o?.signInWithSolana?.resources?.length?["Resources",...o.signInWithSolana.resources.map(e=>`- ${e}`)]:[]].join("\n");let e=await s.signMessage((new TextEncoder).encode(t),"utf8");if(!(e&&e instanceof Uint8Array))throw Error("@supabase/auth-js: Wallet signMessage() API returned an recognized value");r=e}}try{let{data:s,error:i}=await Ar(this.fetch,"POST",`${this.url}/token?grant_type=web3`,{headers:this.headers,body:Object.assign({chain:"solana",message:t,signature:nr(r)},e.options?.captchaToken?{gotrue_meta_security:{captcha_token:e.options?.captchaToken}}:null),xform:Or});if(i)throw i;if(!s||!s.session||!s.user){let e=new qt;return this._returnResult({data:{user:null,session:null},error:e})}return s.session&&(await this._saveSession(s.session),await this._notifyAllSubscribers("SIGNED_IN",s.session)),this._returnResult({data:Object.assign({},s),error:i})}catch(e){if($t(e))return this._returnResult({data:{user:null,session:null},error:e});throw e}}async _exchangeCodeForSession(e){let[t,r]=(await dr(this.storage,`${this.storageKey}-code-verifier`)??"").split("/");try{if(!t&&"pkce"===this.flowType)throw new Ft;let{data:s,error:i}=await Ar(this.fetch,"POST",`${this.url}/token?grant_type=pkce`,{headers:this.headers,body:{auth_code:e,code_verifier:t},xform:Or});if(await pr(this.storage,`${this.storageKey}-code-verifier`),i)throw i;if(!s||!s.session||!s.user){let e=new qt;return this._returnResult({data:{user:null,session:null,redirectType:null},error:e})}return s.session&&(await this._saveSession(s.session),await this._notifyAllSubscribers("recovery"===r?"PASSWORD_RECOVERY":"SIGNED_IN",s.session)),this._returnResult({data:Object.assign(Object.assign({},s),{redirectType:r??null}),error:i})}catch(e){if(await pr(this.storage,`${this.storageKey}-code-verifier`),$t(e))return this._returnResult({data:{user:null,session:null,redirectType:null},error:e});throw e}}async signInWithIdToken(e){try{let{options:t,provider:r,token:s,access_token:i,nonce:a}=e,{data:n,error:o}=await Ar(this.fetch,"POST",`${this.url}/token?grant_type=id_token`,{headers:this.headers,body:{provider:r,id_token:s,access_token:i,nonce:a,gotrue_meta_security:{captcha_token:t?.captchaToken}},xform:Or});if(o)return this._returnResult({data:{user:null,session:null},error:o});if(!n||!n.session||!n.user){let e=new qt;return this._returnResult({data:{user:null,session:null},error:e})}return n.session&&(await this._saveSession(n.session),await this._notifyAllSubscribers("SIGNED_IN",n.session)),this._returnResult({data:n,error:o})}catch(e){if($t(e))return this._returnResult({data:{user:null,session:null},error:e});throw e}}async signInWithOtp(e){try{if("email"in e){let{email:t,options:r}=e,s=null,i=null;"pkce"===this.flowType&&([s,i]=await yr(this.storage,this.storageKey));let{error:a}=await Ar(this.fetch,"POST",`${this.url}/otp`,{headers:this.headers,body:{email:t,data:r?.data??{},create_user:r?.shouldCreateUser??!0,gotrue_meta_security:{captcha_token:r?.captchaToken},code_challenge:s,code_challenge_method:i},redirectTo:r?.emailRedirectTo});return this._returnResult({data:{user:null,session:null},error:a})}if("phone"in e){let{phone:t,options:r}=e,{data:s,error:i}=await Ar(this.fetch,"POST",`${this.url}/otp`,{headers:this.headers,body:{phone:t,data:r?.data??{},create_user:r?.shouldCreateUser??!0,gotrue_meta_security:{captcha_token:r?.captchaToken},channel:r?.channel??"sms"}});return this._returnResult({data:{user:null,session:null,messageId:s?.message_id},error:i})}throw new Mt("You must provide either an email or phone number.")}catch(e){if(await pr(this.storage,`${this.storageKey}-code-verifier`),$t(e))return this._returnResult({data:{user:null,session:null},error:e});throw e}}async verifyOtp(e){try{let t,r;"options"in e&&(t=e.options?.redirectTo,r=e.options?.captchaToken);let{data:s,error:i}=await Ar(this.fetch,"POST",`${this.url}/verify`,{headers:this.headers,body:Object.assign(Object.assign({},e),{gotrue_meta_security:{captcha_token:r}}),redirectTo:t,xform:Or});if(i)throw i;if(!s)throw Error("An error occurred on token verification.");let a=s.session,n=s.user;return a?.access_token&&(await this._saveSession(a),await this._notifyAllSubscribers("recovery"==e.type?"PASSWORD_RECOVERY":"SIGNED_IN",a)),this._returnResult({data:{user:n,session:a},error:null})}catch(e){if($t(e))return this._returnResult({data:{user:null,session:null},error:e});throw e}}async signInWithSSO(e){try{let t=null,r=null;"pkce"===this.flowType&&([t,r]=await yr(this.storage,this.storageKey));let s=await Ar(this.fetch,"POST",`${this.url}/sso`,{body:Object.assign(Object.assign(Object.assign(Object.assign(Object.assign({},"providerId"in e?{provider_id:e.providerId}:null),"domain"in e?{domain:e.domain}:null),{redirect_to:e.options?.redirectTo??void 0}),e?.options?.captchaToken?{gotrue_meta_security:{captcha_token:e.options.captchaToken}}:null),{skip_http_redirect:!0,code_challenge:t,code_challenge_method:r}),headers:this.headers,xform:jr});return s.data?.url&&or()&&!e.options?.skipBrowserRedirect&&window.location.assign(s.data.url),this._returnResult(s)}catch(e){if(await pr(this.storage,`${this.storageKey}-code-verifier`),$t(e))return this._returnResult({data:null,error:e});throw e}}async reauthenticate(){return await this.initializePromise,null==this.lock?await this._reauthenticate():await this._acquireLock(this.lockAcquireTimeout,async()=>await this._reauthenticate())}async _reauthenticate(){try{return await this._useSession(async e=>{let{data:{session:t},error:r}=e;if(r)throw r;if(!t)throw new Dt;let{error:s}=await Ar(this.fetch,"GET",`${this.url}/reauthenticate`,{headers:this.headers,jwt:t.access_token});return this._returnResult({data:{user:null,session:null},error:s})})}catch(e){if($t(e))return this._returnResult({data:{user:null,session:null},error:e});throw e}}async resend(e){try{let t=`${this.url}/resend`;if("email"in e){let{email:r,type:s,options:i}=e,a=null,n=null;"pkce"===this.flowType&&([a,n]=await yr(this.storage,this.storageKey));let{error:o}=await Ar(this.fetch,"POST",t,{headers:this.headers,body:{email:r,type:s,gotrue_meta_security:{captcha_token:i?.captchaToken},code_challenge:a,code_challenge_method:n},redirectTo:i?.emailRedirectTo});return o&&await pr(this.storage,`${this.storageKey}-code-verifier`),this._returnResult({data:{user:null,session:null},error:o})}if("phone"in e){let{phone:r,type:s,options:i}=e,{data:a,error:n}=await Ar(this.fetch,"POST",t,{headers:this.headers,body:{phone:r,type:s,gotrue_meta_security:{captcha_token:i?.captchaToken}}});return this._returnResult({data:{user:null,session:null,messageId:a?.message_id},error:n})}throw new Mt("You must provide either an email or phone number and a type")}catch(e){if(await pr(this.storage,`${this.storageKey}-code-verifier`),$t(e))return this._returnResult({data:{user:null,session:null},error:e});throw e}}async getSession(){return await this.initializePromise,null==this.lock?await this._useSession(async e=>e):await this._acquireLock(this.lockAcquireTimeout,async()=>this._useSession(async e=>e))}async _acquireLock(e,t){this._debug("#_acquireLock","begin",e);try{if(this.lockAcquired){let e=this.pendingInLock.length?this.pendingInLock[this.pendingInLock.length-1]:Promise.resolve(),r=(async()=>(await e,await t()))();return this.pendingInLock.push((async()=>{try{await r}catch{}})()),r}return await this.lock(`lock:${this.storageKey}`,e,async()=>{this._debug("#_acquireLock","lock acquired for storage key",this.storageKey);try{this.lockAcquired=!0;let e=t();for(this.pendingInLock.push((async()=>{try{await e}catch{}})()),await e;this.pendingInLock.length;){let e=[...this.pendingInLock];await Promise.all(e),this.pendingInLock.splice(0,e.length)}return await e}finally{this._debug("#_acquireLock","lock released for storage key",this.storageKey),this.lockAcquired=!1}})}finally{this._debug("#_acquireLock","end")}}async _useSession(e){this._debug("#_useSession","begin");try{return await e(await this.__loadSession())}finally{this._debug("#_useSession","end")}}async __loadSession(){this._debug("#__loadSession()","begin"),null!=this.lock&&!this.lockAcquired&&this._debug("#__loadSession()","used outside of an acquired lock!",Error().stack);try{let e=null,t=await dr(this.storage,this.storageKey);if(this._debug("#getSession()","session from storage",t),null!==t&&(this._isValidSession(t)?e=t:(this._debug("#getSession()","session from storage is not valid"),await this._removeSession())),!e)return{data:{session:null},error:null};let r=!!e.expires_at&&1e3*e.expires_at-Date.now()<Rt;if(this._debug("#__loadSession()",`session has${r?"":" not"} expired`,"expires_at",e.expires_at),!r){if(this.userStorage){let t=await dr(this.userStorage,this.storageKey+"-user");e.user=t?.user?t.user:vr()}if(this.storage.isServer&&e.user&&!e.user.__isUserNotAvailableProxy){let t={value:this.suppressGetSessionWarning};e.user=function(e,t){return new Proxy(e,{get:(e,r,s)=>{if("__isInsecureUserWarningProxy"===r)return!0;if("symbol"==typeof r){let t=r.toString();if("Symbol(Symbol.toPrimitive)"===t||"Symbol(Symbol.toStringTag)"===t||"Symbol(util.inspect.custom)"===t||"Symbol(nodejs.util.inspect.custom)"===t)return Reflect.get(e,r,s)}return!t.value&&"string"==typeof r&&(console.warn("Using the user object as returned from supabase.auth.getSession() or from some supabase.auth.onAuthStateChange() events could be insecure! This value comes directly from the storage medium (usually cookies on the server) and may not be authentic. Use supabase.auth.getUser() instead which authenticates the data by contacting the Supabase Auth server."),t.value=!0),Reflect.get(e,r,s)}})}(e.user,t),t.value&&(this.suppressGetSessionWarning=!0)}return{data:{session:e},error:null}}let{data:s,error:i}=await this._callRefreshToken(e.refresh_token);if(i){if(e.expires_at&&1e3*e.expires_at>Date.now()){let t=await dr(this.storage,this.storageKey);if(t&&t.refresh_token===e.refresh_token)return this._returnResult({data:{session:e},error:null})}return this._returnResult({data:{session:null},error:i})}return this._returnResult({data:{session:s},error:null})}finally{this._debug("#__loadSession()","end")}}async getUser(e){if(e)return await this._getUser(e);let t;return await this.initializePromise,t=null==this.lock?await this._getUser():await this._acquireLock(this.lockAcquireTimeout,async()=>await this._getUser()),t.data.user&&(this.suppressGetSessionWarning=!0),t}async _getUser(e){try{return e?await Ar(this.fetch,"GET",`${this.url}/user`,{headers:this.headers,jwt:e,xform:Cr}):await this._useSession(async e=>{let{data:t,error:r}=e;if(r)throw r;return t.session?.access_token||this.hasCustomAuthorizationHeader?await Ar(this.fetch,"GET",`${this.url}/user`,{headers:this.headers,jwt:t.session?.access_token??void 0,xform:Cr}):{data:{user:null},error:new Dt}})}catch(e){if($t(e))return Bt(e)&&(await this._removeSession(),await pr(this.storage,`${this.storageKey}-code-verifier`)),this._returnResult({data:{user:null},error:e});throw e}}async updateUser(e,t={}){return await this.initializePromise,null==this.lock?await this._updateUser(e,t):await this._acquireLock(this.lockAcquireTimeout,async()=>await this._updateUser(e,t))}async _updateUser(e,t={}){try{return await this._useSession(async r=>{let{data:s,error:i}=r;if(i)throw i;if(!s.session)throw new Dt;let a=s.session,n=null,o=null;"pkce"===this.flowType&&null!=e.email&&([n,o]=await yr(this.storage,this.storageKey));let{data:l,error:h}=await Ar(this.fetch,"PUT",`${this.url}/user`,{headers:this.headers,redirectTo:t?.emailRedirectTo,body:Object.assign(Object.assign({},e),{code_challenge:n,code_challenge_method:o}),jwt:a.access_token,xform:Cr});if(h)throw h;return a.user=l.user,await this._saveSession(a),await this._notifyAllSubscribers("USER_UPDATED",a),this._returnResult({data:{user:a.user},error:null})})}catch(e){if(await pr(this.storage,`${this.storageKey}-code-verifier`),$t(e))return this._returnResult({data:{user:null},error:e});throw e}}async setSession(e){return await this.initializePromise,null==this.lock?await this._setSession(e):await this._acquireLock(this.lockAcquireTimeout,async()=>await this._setSession(e))}async _setSession(e){try{if(!e.access_token||!e.refresh_token)throw new Dt;let t=Date.now()/1e3,r=t,s=!0,i=null,{payload:a}=gr(e.access_token);if(a.exp&&(r=a.exp,s=r<=t),s){let{data:t,error:r}=await this._callRefreshToken(e.refresh_token);if(r)return this._returnResult({data:{user:null,session:null},error:r});if(!t)return{data:{user:null,session:null},error:null};i=t}else{let{data:s,error:a}=await this._getUser(e.access_token);if(a)return this._returnResult({data:{user:null,session:null},error:a});i={access_token:e.access_token,refresh_token:e.refresh_token,user:s.user,token_type:"bearer",expires_in:r-t,expires_at:r},await this._saveSession(i),await this._notifyAllSubscribers("SIGNED_IN",i)}return this._returnResult({data:{user:i.user,session:i},error:null})}catch(e){if($t(e))return this._returnResult({data:{session:null,user:null},error:e});throw e}}async refreshSession(e){return await this.initializePromise,null==this.lock?await this._refreshSession(e):await this._acquireLock(this.lockAcquireTimeout,async()=>await this._refreshSession(e))}async _refreshSession(e){try{return await this._useSession(async t=>{if(!e){let{data:r,error:s}=t;if(s)throw s;e=r.session??void 0}if(!e?.refresh_token)throw new Dt;let{data:r,error:s}=await this._callRefreshToken(e.refresh_token);return s?this._returnResult({data:{user:null,session:null},error:s}):r?this._returnResult({data:{user:r.user,session:r},error:null}):this._returnResult({data:{user:null,session:null},error:null})})}catch(e){if($t(e))return this._returnResult({data:{user:null,session:null},error:e});throw e}}async _getSessionFromURL(e,t){try{if(!or())throw new Ht("No browser detected.");if(e.error||e.error_description||e.error_code)throw new Ht(e.error_description||"Error in URL with unspecified error_description",{error:e.error||"unspecified_error",code:e.error_code||"unspecified_code"});switch(t){case"implicit":if("pkce"===this.flowType)throw new Kt("Not a valid PKCE flow url.");break;case"pkce":if("implicit"===this.flowType)throw new Ht("Not a valid implicit grant flow url.")}if("pkce"===t){if(this._debug("#_initialize()","begin","is PKCE flow",!0),!e.code)throw new Kt("No code detected.");let{data:t,error:r}=await this._exchangeCodeForSession(e.code);if(r)throw r;let s=new URL(window.location.href);return s.searchParams.delete("code"),window.history.replaceState(window.history.state,"",s.toString()),{data:{session:t.session,redirectType:t.redirectType??null},error:null}}let{provider_token:r,provider_refresh_token:s,access_token:i,refresh_token:a,expires_in:n,expires_at:o,token_type:l}=e;if(!(i&&n&&a&&l))throw new Ht("No session defined in URL");let h=Math.round(Date.now()/1e3),c=parseInt(n),u=h+c;o&&(u=parseInt(o));let d=u-h;1e3*d<=Tt&&console.warn(`@supabase/gotrue-js: Session as retrieved from URL expires in ${d}s, should have been closer to ${c}s`);let p=u-c;h-p>=120?console.warn("@supabase/gotrue-js: Session as retrieved from URL was issued over 120s ago, URL could be stale",p,u,h):h-p<0&&console.warn("@supabase/gotrue-js: Session as retrieved from URL was issued in the future? Check the device clock for skew",p,u,h);let{data:f,error:g}=await this._getUser(i);if(g)throw g;let m={provider_token:r,provider_refresh_token:s,access_token:i,expires_in:c,expires_at:u,refresh_token:a,token_type:l,user:f.user};return window.location.hash="",this._debug("#_getSessionFromURL()","clearing window.location.hash"),this._returnResult({data:{session:m,redirectType:e.type},error:null})}catch(e){if($t(e))return this._returnResult({data:{session:null,redirectType:null},error:e});throw e}}_isImplicitGrantCallback(e){return"function"==typeof this.detectSessionInUrl?this.detectSessionInUrl(new URL(window.location.href),e):!!(e.access_token||e.error||e.error_description||e.error_code)}async _isPKCECallback(e){let t=await dr(this.storage,`${this.storageKey}-code-verifier`);return!(!e.code||!t)}async signOut(e={scope:"global"}){return await this.initializePromise,null==this.lock?await this._signOut(e):await this._acquireLock(this.lockAcquireTimeout,async()=>await this._signOut(e))}async _signOut({scope:e}={scope:"global"}){return await this._useSession(async t=>{let{data:r,error:s}=t;if(s&&!Bt(s))return this._returnResult({error:s});let i=r.session?.access_token;if(i){let{error:t}=await this.admin.signOut(i,e);if(t&&(!Nt(t)||404!==t.status&&401!==t.status&&403!==t.status)&&!Bt(t))return this._returnResult({error:t})}return"others"!==e&&(await this._removeSession(),await pr(this.storage,`${this.storageKey}-code-verifier`)),this._returnResult({error:null})})}onAuthStateChange(e){let t=Symbol("auth-callback"),r={id:t,callback:e,unsubscribe:()=>{this._debug("#unsubscribe()","state change callback with id removed",t),this.stateChangeEmitters.delete(t)}};return this._debug("#onAuthStateChange()","registered callback with id",t),this.stateChangeEmitters.set(t,r),(async()=>{await this.initializePromise,null==this.lock?await this._emitInitialSession(t):await this._acquireLock(this.lockAcquireTimeout,async()=>{this._emitInitialSession(t)})})(),{data:{subscription:r}}}async _emitInitialSession(e){return await this._useSession(async t=>{try{let{data:{session:r},error:s}=t;if(s)throw s;await(this.stateChangeEmitters.get(e)?.callback("INITIAL_SESSION",r)),this._debug("INITIAL_SESSION","callback id",e,"session",r)}catch(t){await(this.stateChangeEmitters.get(e)?.callback("INITIAL_SESSION",null)),this._debug("INITIAL_SESSION","callback id",e,"error",t),Bt(t)?console.warn(t):console.error(t)}})}async resetPasswordForEmail(e,t={}){let r=null,s=null;"pkce"===this.flowType&&([r,s]=await yr(this.storage,this.storageKey,!0));try{return await Ar(this.fetch,"POST",`${this.url}/recover`,{body:{email:e,code_challenge:r,code_challenge_method:s,gotrue_meta_security:{captcha_token:t.captchaToken}},headers:this.headers,redirectTo:t.redirectTo})}catch(e){if(await pr(this.storage,`${this.storageKey}-code-verifier`),$t(e))return this._returnResult({data:null,error:e});throw e}}async getUserIdentities(){try{let{data:e,error:t}=await this.getUser();if(t)throw t;return this._returnResult({data:{identities:e.user.identities??[]},error:null})}catch(e){if($t(e))return this._returnResult({data:null,error:e});throw e}}async linkIdentity(e){return"token"in e?this.linkIdentityIdToken(e):this.linkIdentityOAuth(e)}async linkIdentityOAuth(e){try{let{data:t,error:r}=await this._useSession(async t=>{let{data:r,error:s}=t;if(s)throw s;let i=await this._getUrlForProvider(`${this.url}/user/identities/authorize`,e.provider,{redirectTo:e.options?.redirectTo,scopes:e.options?.scopes,queryParams:e.options?.queryParams,skipBrowserRedirect:!0});return await Ar(this.fetch,"GET",i,{headers:this.headers,jwt:r.session?.access_token??void 0})});if(r)throw r;return or()&&!e.options?.skipBrowserRedirect&&window.location.assign(t?.url),this._returnResult({data:{provider:e.provider,url:t?.url},error:null})}catch(t){if($t(t))return this._returnResult({data:{provider:e.provider,url:null},error:t});throw t}}async linkIdentityIdToken(e){return await this._useSession(async t=>{try{let{error:r,data:{session:s}}=t;if(r)throw r;let{options:i,provider:a,token:n,access_token:o,nonce:l}=e,{data:h,error:c}=await Ar(this.fetch,"POST",`${this.url}/token?grant_type=id_token`,{headers:this.headers,jwt:s?.access_token??void 0,body:{provider:a,id_token:n,access_token:o,nonce:l,link_identity:!0,gotrue_meta_security:{captcha_token:i?.captchaToken}},xform:Or});return c?this._returnResult({data:{user:null,session:null},error:c}):h&&h.session&&h.user?(h.session&&(await this._saveSession(h.session),await this._notifyAllSubscribers("USER_UPDATED",h.session)),this._returnResult({data:h,error:c})):this._returnResult({data:{user:null,session:null},error:new qt})}catch(e){if(await pr(this.storage,`${this.storageKey}-code-verifier`),$t(e))return this._returnResult({data:{user:null,session:null},error:e});throw e}})}async unlinkIdentity(e){try{return await this._useSession(async t=>{let{data:r,error:s}=t;if(s)throw s;return await Ar(this.fetch,"DELETE",`${this.url}/user/identities/${e.identity_id}`,{headers:this.headers,jwt:r.session?.access_token??void 0})})}catch(e){if($t(e))return this._returnResult({data:null,error:e});throw e}}async _refreshAccessToken(e){let t="#_refreshAccessToken()";this._debug(t,"begin");try{let r=Date.now();return await function(e,t){return new Promise((r,s)=>{(async()=>{for(let i=0;i<1/0;i++)try{let s=await e(i);if(!t(i,null))return void r(s)}catch(e){if(!t(i,e))return void s(e)}})()})}(async r=>(r>0&&await async function(e){return await new Promise(t=>{setTimeout(()=>t(null),e)})}(200*2**(r-1)),this._debug(t,"refreshing attempt",r),await Ar(this.fetch,"POST",`${this.url}/token?grant_type=refresh_token`,{body:{refresh_token:e},headers:this.headers,xform:Or})),(e,t)=>{let s=200*2**e;return t&&Gt(t)&&Date.now()+s-r<Tt})}catch(e){if(this._debug(t,"error",e),$t(e))return this._returnResult({data:{session:null,user:null},error:e});throw e}finally{this._debug(t,"end")}}_isValidSession(e){return"object"==typeof e&&!!e&&"access_token"in e&&"refresh_token"in e&&"expires_at"in e}async _handleProviderSignIn(e,t){let r=await this._getUrlForProvider(`${this.url}/authorize`,e,{redirectTo:t.redirectTo,scopes:t.scopes,queryParams:t.queryParams});return this._debug("#_handleProviderSignIn()","provider",e,"options",t,"url",r),or()&&!t.skipBrowserRedirect&&window.location.assign(r),{data:{provider:e,url:r},error:null}}async _recoverAndRefresh(){let e="#_recoverAndRefresh()";this._debug(e,"begin");try{let t=await dr(this.storage,this.storageKey);if(t&&this.userStorage){let e=await dr(this.userStorage,this.storageKey+"-user");!this.storage.isServer&&Object.is(this.storage,this.userStorage)&&!e&&(e={user:t.user},await ur(this.userStorage,this.storageKey+"-user",e)),t.user=e?.user??vr()}else if(t&&!t.user&&!t.user){let e=await dr(this.storage,this.storageKey+"-user");e&&e?.user?(t.user=e.user,await pr(this.storage,this.storageKey+"-user"),await ur(this.storage,this.storageKey,t)):t.user=vr()}if(this._debug(e,"session from storage",t),!this._isValidSession(t))return this._debug(e,"session is not valid"),void(null!==t&&await this._removeSession());let r=1e3*(t.expires_at??1/0)-Date.now()<Rt;if(this._debug(e,`session has${r?"":" not"} expired with margin of 90000s`),r){if(this.autoRefreshToken&&t.refresh_token){let{error:r}=await this._callRefreshToken(t.refresh_token);r&&(zt(r)?this._debug(e,"refresh discarded by commit guard",r):this._debug(e,"refresh failed",r))}}else if(t.user&&!0===t.user.__isUserNotAvailableProxy)try{let{data:r,error:s}=await this._getUser(t.access_token);!s&&r?.user?(t.user=r.user,await this._saveSession(t),await this._notifyAllSubscribers("SIGNED_IN",t)):this._debug(e,"could not get user data, skipping SIGNED_IN notification")}catch(t){console.error("Error getting user data:",t),this._debug(e,"error getting user data, skipping SIGNED_IN notification",t)}else await this._notifyAllSubscribers("SIGNED_IN",t)}catch(t){return this._debug(e,"error",t),void console.error(t)}finally{this._debug(e,"end")}}async _callRefreshToken(e){var t,r;if(!e)throw new Dt;if(this.refreshingDeferred)return this.refreshingDeferred.promise;if(this.lastRefreshFailure&&this.lastRefreshFailure.refreshToken===e&&Date.now()<this.lastRefreshFailure.expiresAt)return this._debug("#_callRefreshToken()","returning cached failure (cooldown active)"),this.lastRefreshFailure.result;let s="#_callRefreshToken()";this._debug(s,"begin");try{this.refreshingDeferred=new fr;let t=await dr(this.storage,this.storageKey),{data:r,error:i}=await this._refreshAccessToken(e);if(i)throw i;if(!r.session)throw new Dt;let a=await dr(this.storage,this.storageKey);if(null!==t&&(null===a||a.refresh_token!==t.refresh_token)){this._debug(s,"commit guard: storage changed since refresh started, discarding rotated tokens",{startedWith:"present",nowHolds:a?"replaced":"cleared"});let e={data:null,error:new Vt};return this.refreshingDeferred.resolve(e),e}let n=this._sessionRemovalEpoch;if(await this._saveSession(r.session),this._sessionRemovalEpoch!==n){this._debug(s,"commit guard (post-save): _removeSession ran during _saveSession, undoing write"),await pr(this.storage,this.storageKey),this.userStorage&&await pr(this.userStorage,this.storageKey+"-user");let e={data:null,error:new Vt};return this.refreshingDeferred.resolve(e),e}await this._notifyAllSubscribers("TOKEN_REFRESHED",r.session);let o={data:r.session,error:null};return this.lastRefreshFailure=null,this.refreshingDeferred.resolve(o),o}catch(i){if(this._debug(s,"error",i),$t(i)){let r={data:null,error:i};if(!Gt(i)){let e=await dr(this.storage,this.storageKey);e?.expires_at&&1e3*e.expires_at>Date.now()?this._debug(s,"proactive refresh failed, access token still valid — preserving session"):await this._removeSession()}return this.lastRefreshFailure={refreshToken:e,result:r,expiresAt:Date.now()+6e4},null==(t=this.refreshingDeferred)||t.resolve(r),r}throw null==(r=this.refreshingDeferred)||r.reject(i),i}finally{this.refreshingDeferred=null,this._debug(s,"end")}}async _notifyAllSubscribers(e,t,r=!0){let s=`#_notifyAllSubscribers(${e})`;this._debug(s,"begin",t,`broadcast = ${r}`);try{this.broadcastChannel&&r&&this.broadcastChannel.postMessage({event:e,session:t});let s=[],i=Array.from(this.stateChangeEmitters.values()).map(async r=>{try{await r.callback(e,t)}catch(e){s.push(e)}});if(await Promise.all(i),s.length>0){for(let e=0;e<s.length;e+=1)console.error(s[e]);throw s[0]}}finally{this._debug(s,"end")}}async _saveSession(e){this._debug("#_saveSession()",e),this.suppressGetSessionWarning=!0,await pr(this.storage,`${this.storageKey}-code-verifier`);let t=Object.assign({},e),r=t.user&&!0===t.user.__isUserNotAvailableProxy;if(this.userStorage){!r&&t.user&&await ur(this.userStorage,this.storageKey+"-user",{user:t.user});let e=Object.assign({},t);delete e.user;let s=Sr(e);await ur(this.storage,this.storageKey,s)}else{let e=Sr(t);await ur(this.storage,this.storageKey,e)}}async _removeSession(){this._sessionRemovalEpoch+=1,this._debug("#_removeSession()"),this.lastRefreshFailure=null,this.suppressGetSessionWarning=!1,await pr(this.storage,this.storageKey),await pr(this.storage,this.storageKey+"-code-verifier"),await pr(this.storage,this.storageKey+"-user"),this.userStorage&&await pr(this.userStorage,this.storageKey+"-user"),await this._notifyAllSubscribers("SIGNED_OUT",null)}_removeVisibilityChangedCallback(){this._debug("#_removeVisibilityChangedCallback()");let e=this.visibilityChangedCallback;this.visibilityChangedCallback=null;try{e&&or()&&null!=window&&window.removeEventListener&&window.removeEventListener("visibilitychange",e)}catch(e){console.error("removing visibilitychange callback failed",e)}}async _startAutoRefresh(){await this._stopAutoRefresh(),this._debug("#_startAutoRefresh()");let e=setInterval(()=>this._autoRefreshTokenTick(),Tt);this.autoRefreshTicker=e,e&&"object"==typeof e&&"function"==typeof e.unref?e.unref():typeof Deno<"u"&&"function"==typeof Deno.unrefTimer&&Deno.unrefTimer(e);let t=setTimeout(async()=>{await this.initializePromise,await this._autoRefreshTokenTick()},0);this.autoRefreshTickTimeout=t,t&&"object"==typeof t&&"function"==typeof t.unref?t.unref():typeof Deno<"u"&&"function"==typeof Deno.unrefTimer&&Deno.unrefTimer(t)}async _stopAutoRefresh(){this._debug("#_stopAutoRefresh()");let e=this.autoRefreshTicker;this.autoRefreshTicker=null,e&&clearInterval(e);let t=this.autoRefreshTickTimeout;this.autoRefreshTickTimeout=null,t&&clearTimeout(t)}async startAutoRefresh(){this._removeVisibilityChangedCallback(),await this._startAutoRefresh()}async stopAutoRefresh(){this._removeVisibilityChangedCallback(),await this._stopAutoRefresh()}async dispose(){var e;this._removeVisibilityChangedCallback(),await this._stopAutoRefresh(),null==(e=this.broadcastChannel)||e.close(),this.broadcastChannel=null,this.stateChangeEmitters.clear()}async _autoRefreshTokenTick(){if(this._debug("#_autoRefreshTokenTick()","begin"),null==this.lock)if(null===this.refreshingDeferred)try{let e=Date.now();try{await this._useSession(async t=>{let{data:{session:r}}=t;if(!r||!r.refresh_token||!r.expires_at)return void this._debug("#_autoRefreshTokenTick()","no session");let s=Math.floor((1e3*r.expires_at-e)/Tt);this._debug("#_autoRefreshTokenTick()",`access token expires in ${s} ticks, a tick lasts ${Tt}ms, refresh threshold is 3 ticks`),s<=3&&await this._callRefreshToken(r.refresh_token)})}catch(e){console.error("Auto refresh tick failed with error. This is likely a transient error.",e)}}finally{this._debug("#_autoRefreshTokenTick()","end")}else this._debug("#_autoRefreshTokenTick()","refresh already in flight, skipping");else try{await this._acquireLock(0,async()=>{try{let e=Date.now();try{return await this._useSession(async t=>{let{data:{session:r}}=t;if(!r||!r.refresh_token||!r.expires_at)return void this._debug("#_autoRefreshTokenTick()","no session");let s=Math.floor((1e3*r.expires_at-e)/Tt);this._debug("#_autoRefreshTokenTick()",`access token expires in ${s} ticks, a tick lasts ${Tt}ms, refresh threshold is 3 ticks`),s<=3&&await this._callRefreshToken(r.refresh_token)})}catch(e){console.error("Auto refresh tick failed with error. This is likely a transient error.",e)}}finally{this._debug("#_autoRefreshTokenTick()","end")}})}catch(e){if(!(e instanceof Dr))throw e;this._debug("auto refresh token tick lock not available")}}async _handleVisibilityChange(){if(this._debug("#_handleVisibilityChange()"),!or()||null==window||!window.addEventListener)return this.autoRefreshToken&&this.startAutoRefresh(),!1;try{this.visibilityChangedCallback=async()=>{try{await this._onVisibilityChanged(!1)}catch(e){this._debug("#visibilityChangedCallback","error",e)}},null==window||window.addEventListener("visibilitychange",this.visibilityChangedCallback),await this._onVisibilityChanged(!0)}catch(e){console.error("_handleVisibilityChange",e)}}async _onVisibilityChanged(e){let t=`#_onVisibilityChanged(${e})`;if(this._debug(t,"visibilityState",document.visibilityState),"visible"===document.visibilityState){if(this.autoRefreshToken&&this._startAutoRefresh(),!e)if(await this.initializePromise,null!=this.lock)await this._acquireLock(this.lockAcquireTimeout,async()=>{"visible"===document.visibilityState?await this._recoverAndRefresh():this._debug(t,"acquired the lock to recover the session, but the browser visibilityState is no longer visible, aborting")});else{if("visible"!==document.visibilityState)return void this._debug(t,"visibilityState is no longer visible, skipping recovery");await this._recoverAndRefresh()}}else"hidden"===document.visibilityState&&this.autoRefreshToken&&this._stopAutoRefresh()}async _getUrlForProvider(e,t,r){let s=[`provider=${encodeURIComponent(t)}`];if(r?.redirectTo&&s.push(`redirect_to=${encodeURIComponent(r.redirectTo)}`),r?.scopes&&s.push(`scopes=${encodeURIComponent(r.scopes)}`),"pkce"===this.flowType){let[e,t]=await yr(this.storage,this.storageKey),r=new URLSearchParams({code_challenge:`${encodeURIComponent(e)}`,code_challenge_method:`${encodeURIComponent(t)}`});s.push(r.toString())}if(r?.queryParams){let e=new URLSearchParams(r.queryParams);s.push(e.toString())}return r?.skipBrowserRedirect&&s.push(`skip_http_redirect=${r.skipBrowserRedirect}`),`${e}?${s.join("&")}`}async _unenroll(e){try{return await this._useSession(async t=>{let{data:r,error:s}=t;return s?this._returnResult({data:null,error:s}):await Ar(this.fetch,"DELETE",`${this.url}/factors/${e.factorId}`,{headers:this.headers,jwt:r?.session?.access_token})})}catch(e){if($t(e))return this._returnResult({data:null,error:e});throw e}}async _enroll(e){try{return await this._useSession(async t=>{let{data:r,error:s}=t;if(s)return this._returnResult({data:null,error:s});let i=Object.assign({friendly_name:e.friendlyName,factor_type:e.factorType},"phone"===e.factorType?{phone:e.phone}:"totp"===e.factorType?{issuer:e.issuer}:{}),{data:a,error:n}=await Ar(this.fetch,"POST",`${this.url}/factors`,{body:i,headers:this.headers,jwt:r?.session?.access_token});return n?this._returnResult({data:null,error:n}):("totp"===e.factorType&&"totp"===a.type&&a?.totp?.qr_code&&(a.totp.qr_code=`data:image/svg+xml;utf-8,${a.totp.qr_code}`),this._returnResult({data:a,error:null}))})}catch(e){if($t(e))return this._returnResult({data:null,error:e});throw e}}async _verify(e){let t=async()=>{try{return await this._useSession(async t=>{let{data:r,error:s}=t;if(s)return this._returnResult({data:null,error:s});let i=Object.assign({challenge_id:e.challengeId},"webauthn"in e?{webauthn:Object.assign(Object.assign({},e.webauthn),{credential_response:"create"===e.webauthn.type?Xr(e.webauthn.credential_response):Qr(e.webauthn.credential_response)})}:{code:e.code}),{data:a,error:n}=await Ar(this.fetch,"POST",`${this.url}/factors/${e.factorId}/verify`,{body:i,headers:this.headers,jwt:r?.session?.access_token});return n?this._returnResult({data:null,error:n}):(await this._saveSession(Object.assign({expires_at:Math.round(Date.now()/1e3)+a.expires_in},a)),await this._notifyAllSubscribers("MFA_CHALLENGE_VERIFIED",a),this._returnResult({data:a,error:n}))})}catch(e){if($t(e))return this._returnResult({data:null,error:e});throw e}};return null==this.lock?t():this._acquireLock(this.lockAcquireTimeout,t)}async _challenge(e){let t=async()=>{try{return await this._useSession(async t=>{let{data:r,error:s}=t;if(s)return this._returnResult({data:null,error:s});let i=await Ar(this.fetch,"POST",`${this.url}/factors/${e.factorId}/challenge`,{body:e,headers:this.headers,jwt:r?.session?.access_token});if(i.error)return i;let{data:a}=i;if("webauthn"!==a.type)return{data:a,error:null};switch(a.webauthn.type){case"create":return{data:Object.assign(Object.assign({},a),{webauthn:Object.assign(Object.assign({},a.webauthn),{credential_options:Object.assign(Object.assign({},a.webauthn.credential_options),{publicKey:zr(a.webauthn.credential_options.publicKey)})})}),error:null};case"request":return{data:Object.assign(Object.assign({},a),{webauthn:Object.assign(Object.assign({},a.webauthn),{credential_options:Object.assign(Object.assign({},a.webauthn.credential_options),{publicKey:Yr(a.webauthn.credential_options.publicKey)})})}),error:null}}})}catch(e){if($t(e))return this._returnResult({data:null,error:e});throw e}};return null==this.lock?t():this._acquireLock(this.lockAcquireTimeout,t)}async _challengeAndVerify(e){let{data:t,error:r}=await this._challenge({factorId:e.factorId});return r?this._returnResult({data:null,error:r}):await this._verify({factorId:e.factorId,challengeId:t.id,code:e.code})}async _listFactors(){let{data:{user:e},error:t}=await this.getUser();if(t)return{data:null,error:t};let r={all:[],phone:[],totp:[],webauthn:[]};for(let t of e?.factors??[])r.all.push(t),"verified"===t.status&&r[t.factor_type].push(t);return{data:r,error:null}}async _getAuthenticatorAssuranceLevel(e){if(e)try{let{payload:t}=gr(e),r=null;t.aal&&(r=t.aal);let s=r,{data:{user:i},error:a}=await this.getUser(e);return a?this._returnResult({data:null,error:a}):(((i?.factors)?.filter(e=>"verified"===e.status)??[]).length>0&&(s="aal2"),{data:{currentLevel:r,nextLevel:s,currentAuthenticationMethods:t.amr||[]},error:null})}catch(e){if($t(e))return this._returnResult({data:null,error:e});throw e}let{data:{session:t},error:r}=await this.getSession();if(r)return this._returnResult({data:null,error:r});if(!t)return{data:{currentLevel:null,nextLevel:null,currentAuthenticationMethods:[]},error:null};let{payload:s}=gr(t.access_token),i=null;s.aal&&(i=s.aal);let a=i;return(t.user.factors?.filter(e=>"verified"===e.status)??[]).length>0&&(a="aal2"),{data:{currentLevel:i,nextLevel:a,currentAuthenticationMethods:s.amr||[]},error:null}}async _getAuthorizationDetails(e){try{return await this._useSession(async t=>{let{data:{session:r},error:s}=t;return s?this._returnResult({data:null,error:s}):r?await Ar(this.fetch,"GET",`${this.url}/oauth/authorizations/${e}`,{headers:this.headers,jwt:r.access_token,xform:e=>({data:e,error:null})}):this._returnResult({data:null,error:new Dt})})}catch(e){if($t(e))return this._returnResult({data:null,error:e});throw e}}async _approveAuthorization(e,t){try{return await this._useSession(async r=>{let{data:{session:s},error:i}=r;if(i)return this._returnResult({data:null,error:i});if(!s)return this._returnResult({data:null,error:new Dt});let a=await Ar(this.fetch,"POST",`${this.url}/oauth/authorizations/${e}/consent`,{headers:this.headers,jwt:s.access_token,body:{action:"approve"},xform:e=>({data:e,error:null})});return a.data&&a.data.redirect_url&&or()&&!t?.skipBrowserRedirect&&window.location.assign(a.data.redirect_url),a})}catch(e){if($t(e))return this._returnResult({data:null,error:e});throw e}}async _denyAuthorization(e,t){try{return await this._useSession(async r=>{let{data:{session:s},error:i}=r;if(i)return this._returnResult({data:null,error:i});if(!s)return this._returnResult({data:null,error:new Dt});let a=await Ar(this.fetch,"POST",`${this.url}/oauth/authorizations/${e}/consent`,{headers:this.headers,jwt:s.access_token,body:{action:"deny"},xform:e=>({data:e,error:null})});return a.data&&a.data.redirect_url&&or()&&!t?.skipBrowserRedirect&&window.location.assign(a.data.redirect_url),a})}catch(e){if($t(e))return this._returnResult({data:null,error:e});throw e}}async _listOAuthGrants(){try{return await this._useSession(async e=>{let{data:{session:t},error:r}=e;return r?this._returnResult({data:null,error:r}):t?await Ar(this.fetch,"GET",`${this.url}/user/oauth/grants`,{headers:this.headers,jwt:t.access_token,xform:e=>({data:e,error:null})}):this._returnResult({data:null,error:new Dt})})}catch(e){if($t(e))return this._returnResult({data:null,error:e});throw e}}async _revokeOAuthGrant(e){try{return await this._useSession(async t=>{let{data:{session:r},error:s}=t;return s?this._returnResult({data:null,error:s}):r?(await Ar(this.fetch,"DELETE",`${this.url}/user/oauth/grants`,{headers:this.headers,jwt:r.access_token,query:{client_id:e.clientId},noResolveJson:!0}),{data:{},error:null}):this._returnResult({data:null,error:new Dt})})}catch(e){if($t(e))return this._returnResult({data:null,error:e});throw e}}async fetchJwk(e,t={keys:[]}){let r=t.keys.find(t=>t.kid===e);if(r)return r;let s=Date.now();if(r=this.jwks.keys.find(t=>t.kid===e),r&&this.jwks_cached_at+6e5>s)return r;let{data:i,error:a}=await Ar(this.fetch,"GET",`${this.url}/.well-known/jwks.json`,{headers:this.headers});if(a)throw a;return i.keys&&0!==i.keys.length&&(this.jwks=i,this.jwks_cached_at=s,r=i.keys.find(t=>t.kid===e),r)?r:null}async getClaims(e,t={}){try{let r=e;if(!r){let{data:e,error:t}=await this.getSession();if(t||!e.session)return this._returnResult({data:null,error:t});r=e.session.access_token}let{header:s,payload:i,signature:a,raw:{header:n,payload:o}}=gr(r);if(!t?.allowExpired)try{!function(e){if(!e)throw Error("Missing exp claim");if(e<=Math.floor(Date.now()/1e3))throw Error("JWT has expired")}(i.exp)}catch(e){throw new Xt(e instanceof Error?e.message:"JWT validation failed")}let l=s.alg&&!s.alg.startsWith("HS")&&s.kid&&"crypto"in globalThis&&"subtle"in globalThis.crypto?await this.fetchJwk(s.kid,t?.keys?{keys:t.keys}:t?.jwks):null;if(!l){let{error:e}=await this.getUser(r);if(e)throw e;return{data:{claims:i,header:s,signature:a},error:null}}let h=function(e){switch(e){case"RS256":return{name:"RSASSA-PKCS1-v1_5",hash:{name:"SHA-256"}};case"ES256":return{name:"ECDSA",namedCurve:"P-256",hash:{name:"SHA-256"}};default:throw Error("Invalid alg claim")}}(s.alg),c=await crypto.subtle.importKey("jwk",l,h,!0,["verify"]);if(!await crypto.subtle.verify(h,c,a,function(e){let t=[];return function(e,t){for(let r=0;r<e.length;r+=1){let s=e.charCodeAt(r);if(s>55295&&s<=56319){let t=1024*(s-55296)&65535;s=65536+(e.charCodeAt(r+1)-56320&65535|t),r+=1}ir(s,t)}}(e,e=>t.push(e)),new Uint8Array(t)}(`${n}.${o}`)))throw new Xt("Invalid JWT signature");return{data:{claims:i,header:s,signature:a},error:null}}catch(e){if($t(e))return this._returnResult({data:null,error:e});throw e}}async signInWithPasskey(e){kr(this.experimental);try{if(!es())return this._returnResult({data:null,error:new Lt("Browser does not support WebAuthn",null)});let{data:t,error:r}=await this._startPasskeyAuthentication({options:{captchaToken:e?.options?.captchaToken}});if(r||!t)return this._returnResult({data:null,error:r});let{data:s,error:i}=await rs({publicKey:Yr(t.options),signal:e?.options?.signal??Vr.createNewAbortSignal()});if(i||!s)return this._returnResult({data:null,error:i??new Lt("WebAuthn ceremony failed",null)});let a=Qr(s);return this._verifyPasskeyAuthentication({challengeId:t.challenge_id,credential:a})}catch(e){if($t(e))return this._returnResult({data:null,error:e});throw e}}async registerPasskey(e){kr(this.experimental);try{if(!es())return this._returnResult({data:null,error:new Lt("Browser does not support WebAuthn",null)});let{data:t,error:r}=await this._startPasskeyRegistration();if(r||!t)return this._returnResult({data:null,error:r});let{data:s,error:i}=await ts({publicKey:zr(t.options),signal:e?.options?.signal??Vr.createNewAbortSignal()});if(i||!s)return this._returnResult({data:null,error:i??new Lt("WebAuthn ceremony failed",null)});let a=Xr(s);return this._verifyPasskeyRegistration({challengeId:t.challenge_id,credential:a})}catch(e){if($t(e))return this._returnResult({data:null,error:e});throw e}}async _startPasskeyRegistration(){kr(this.experimental);try{return await this._useSession(async e=>{let{data:{session:t},error:r}=e;if(r)return this._returnResult({data:null,error:r});if(!t)return this._returnResult({data:null,error:new Dt});let{data:s,error:i}=await Ar(this.fetch,"POST",`${this.url}/passkeys/registration/options`,{headers:this.headers,jwt:t.access_token,body:{}});return i?this._returnResult({data:null,error:i}):this._returnResult({data:s,error:null})})}catch(e){if($t(e))return this._returnResult({data:null,error:e});throw e}}async _verifyPasskeyRegistration(e){kr(this.experimental);try{return await this._useSession(async t=>{let{data:{session:r},error:s}=t;if(s)return this._returnResult({data:null,error:s});if(!r)return this._returnResult({data:null,error:new Dt});let{data:i,error:a}=await Ar(this.fetch,"POST",`${this.url}/passkeys/registration/verify`,{headers:this.headers,jwt:r.access_token,body:{challenge_id:e.challengeId,credential:e.credential}});return a?this._returnResult({data:null,error:a}):this._returnResult({data:i,error:null})})}catch(e){if($t(e))return this._returnResult({data:null,error:e});throw e}}async _startPasskeyAuthentication(e){kr(this.experimental);try{let{data:t,error:r}=await Ar(this.fetch,"POST",`${this.url}/passkeys/authentication/options`,{headers:this.headers,body:{gotrue_meta_security:{captcha_token:e?.options?.captchaToken}}});return r?this._returnResult({data:null,error:r}):this._returnResult({data:t,error:null})}catch(e){if($t(e))return this._returnResult({data:null,error:e});throw e}}async _verifyPasskeyAuthentication(e){kr(this.experimental);try{let{data:t,error:r}=await Ar(this.fetch,"POST",`${this.url}/passkeys/authentication/verify`,{headers:this.headers,body:{challenge_id:e.challengeId,credential:e.credential},xform:Or});return r?this._returnResult({data:null,error:r}):(t.session&&(await this._saveSession(t.session),await this._notifyAllSubscribers("SIGNED_IN",t.session)),this._returnResult({data:t,error:null}))}catch(e){if($t(e))return this._returnResult({data:null,error:e});throw e}}async _listPasskeys(){kr(this.experimental);try{return await this._useSession(async e=>{let{data:{session:t},error:r}=e;if(r)return this._returnResult({data:null,error:r});if(!t)return this._returnResult({data:null,error:new Dt});let{data:s,error:i}=await Ar(this.fetch,"GET",`${this.url}/passkeys`,{headers:this.headers,jwt:t.access_token,xform:e=>({data:e,error:null})});return i?this._returnResult({data:null,error:i}):this._returnResult({data:s,error:null})})}catch(e){if($t(e))return this._returnResult({data:null,error:e});throw e}}async _updatePasskey(e){kr(this.experimental);try{return await this._useSession(async t=>{let{data:{session:r},error:s}=t;if(s)return this._returnResult({data:null,error:s});if(!r)return this._returnResult({data:null,error:new Dt});let{data:i,error:a}=await Ar(this.fetch,"PATCH",`${this.url}/passkeys/${e.passkeyId}`,{headers:this.headers,jwt:r.access_token,body:{friendly_name:e.friendlyName}});return a?this._returnResult({data:null,error:a}):this._returnResult({data:i,error:null})})}catch(e){if($t(e))return this._returnResult({data:null,error:e});throw e}}async _deletePasskey(e){kr(this.experimental);try{return await this._useSession(async t=>{let{data:{session:r},error:s}=t;if(s)return this._returnResult({data:null,error:s});if(!r)return this._returnResult({data:null,error:new Dt});let{error:i}=await Ar(this.fetch,"DELETE",`${this.url}/passkeys/${e.passkeyId}`,{headers:this.headers,jwt:r.access_token,noResolveJson:!0});return i?this._returnResult({data:null,error:i}):this._returnResult({data:null,error:null})})}catch(e){if($t(e))return this._returnResult({data:null,error:e});throw e}}};cs.nextInstanceID={};var us=cs,ds=Nr,ps=us,fs=class extends ps{constructor(e){super(e)}},gs=class{constructor(e,t,r){this.supabaseUrl=e,this.supabaseKey=t;let s=function(e){let t=e?.trim();if(!t)throw Error("supabaseUrl is required.");if(!t.match(/^https?:\/\//i))throw Error("Invalid supabaseUrl: Must be a valid HTTP or HTTPS URL.");try{return new URL(function(e){return e.endsWith("/")?e:e+"/"}(t))}catch{throw Error("Invalid supabaseUrl: Provided URL is malformed.")}}(e);if(!t)throw Error("supabaseKey is required.");this.realtimeUrl=new URL("realtime/v1",s),this.realtimeUrl.protocol=this.realtimeUrl.protocol.replace("http","ws"),this.authUrl=new URL("auth/v1",s),this.storageUrl=new URL("storage/v1",s),this.functionsUrl=new URL("functions/v1",s);let i=`sb-${s.hostname.split(".")[0]}-auth-token`,a=function(e,t){let{db:r,auth:s,realtime:i,global:a}=e,{db:n,auth:o,realtime:l,global:h}=t,c=St(e.tracePropagation),u=St(t.tracePropagation),d={db:{...n,...r},auth:{...o,...s},realtime:{...l,...i},storage:{},global:{...h,...a,headers:{...h?.headers??{},...a?.headers??{}}},tracePropagation:{enabled:c?.enabled??u?.enabled??!1,respectSamplingDecision:c?.respectSamplingDecision??u?.respectSamplingDecision??!0},accessToken:async()=>""};return e.accessToken?d.accessToken=e.accessToken:delete d.accessToken,d}(r??{},{db:mt,realtime:wt,auth:{...yt,storageKey:i},global:gt,tracePropagation:bt});this.settings=a,this.storageKey=a.auth.storageKey??"",this.headers=a.global.headers??{},a.accessToken?(this.accessToken=a.accessToken,this.auth=new Proxy({},{get:(e,t)=>{throw Error(`@supabase/supabase-js: Supabase Client is configured with the accessToken option, accessing supabase.auth.${String(t)} is not possible`)}})):this.auth=this._initSupabaseAuthClient(a.auth??{},this.headers,a.global.fetch),this.fetch=((e,t,r,s,i)=>{let a=(e=>e?(...t)=>e(...t):(...e)=>fetch(...e))(s),n=Headers,o=!0===i?.enabled,l=!1!==i?.respectSamplingDecision,h=o?function(e){let t=[];try{let r=new URL(e);t.push(r.hostname)}catch{}return t.push("*.supabase.co","*.supabase.in"),t.push("localhost","127.0.0.1","[::1]"),t}(t):null;return async(t,s)=>{let i=await r()??e,o=new n(s?.headers);if(o.has("apikey")||o.set("apikey",e),o.has("Authorization")||o.set("Authorization",`Bearer ${i}`),h){let e=await async function(e,t,r){if(!function(e,t){if(!e||!t||0===t.length)return!1;let r;if(e instanceof URL)r=e;else try{r=new URL(e)}catch{return!1}for(let e of t)try{if("string"==typeof e){if(vt(r.hostname,e))return!0}else if(e instanceof RegExp){if(e.test(r.hostname))return!0}else if("function"==typeof e&&e(r))return!0}catch{continue}return!1}("string"==typeof e||e instanceof URL?e:e.url,t))return null;let s=await kt();if(!s||!s.traceparent)return null;if(r){let e=function(e){if(!e||"string"!=typeof e)return null;let t=e.split("-");if(4!==t.length)return null;let[r,s,i,a]=t;if(2!==r.length||32!==s.length||16!==i.length||2!==a.length)return null;let n=/^[0-9a-f]+$/i;return n.test(r)&&n.test(s)&&n.test(i)&&n.test(a)&&"00000000000000000000000000000000"!==s&&"0000000000000000"!==i?{version:r,traceId:s,parentId:i,traceFlags:a,isSampled:!(1&~parseInt(a,16))}:null}(s.traceparent);if(e&&!e.isSampled)return null}return s}(t,h,l);e&&(e.traceparent&&!o.has("traceparent")&&o.set("traceparent",e.traceparent),e.tracestate&&!o.has("tracestate")&&o.set("tracestate",e.tracestate),e.baggage&&!o.has("baggage")&&o.set("baggage",e.baggage))}return a(t,{...s,headers:o})}})(t,e,this._getAccessToken.bind(this),a.global.fetch,a.tracePropagation),this.realtime=this._initRealtimeClient({headers:this.headers,accessToken:this._getAccessToken.bind(this),fetch:this.fetch,...a.realtime}),this.accessToken&&Promise.resolve(this.accessToken()).then(e=>this.realtime.setAuth(e)).catch(e=>console.warn("Failed to set initial Realtime auth token:",e)),this.rest=new E(new URL("rest/v1",s).href,{headers:this.headers,schema:a.db.schema,fetch:this.fetch,timeout:a.db.timeout,urlLengthLimit:a.db.urlLengthLimit}),this.storage=new ut(this.storageUrl.href,this.headers,this.fetch,r?.storage),a.accessToken||this._listenForAuthEvents()}get functions(){return new l(this.functionsUrl.href,{headers:this.headers,customFetch:this.fetch})}from(e){return this.rest.from(e)}schema(e){return this.rest.schema(e)}rpc(e,t={},r={head:!1,get:!1,count:void 0}){return this.rest.rpc(e,t,r)}channel(e,t={config:{}}){return this.realtime.channel(e,t)}getChannels(){return this.realtime.getChannels()}removeChannel(e){return this.realtime.removeChannel(e)}removeAllChannels(){return this.realtime.removeAllChannels()}async _getAccessToken(){if(this.accessToken)return await this.accessToken();let{data:e}=await this.auth.getSession();return e.session?.access_token??this.supabaseKey}_initSupabaseAuthClient({autoRefreshToken:e,persistSession:t,detectSessionInUrl:r,storage:s,userStorage:i,storageKey:a,flowType:n,lock:o,debug:l,throwOnError:h,experimental:c,lockAcquireTimeout:u,skipAutoInitialize:d},p,f){let g={Authorization:`Bearer ${this.supabaseKey}`,apikey:`${this.supabaseKey}`};return new fs({url:this.authUrl.href,headers:{...g,...p},storageKey:a,autoRefreshToken:e,persistSession:t,detectSessionInUrl:r,storage:s,userStorage:i,flowType:n,lock:o,debug:l,throwOnError:h,experimental:c,fetch:f,lockAcquireTimeout:u,skipAutoInitialize:d,hasCustomAuthorizationHeader:Object.keys(this.headers).some(e=>"authorization"===e.toLowerCase())})}_initRealtimeClient(e){return new ve(this.realtimeUrl.href,{...e,params:{apikey:this.supabaseKey,...e?.params}})}_listenForAuthEvents(){return this.auth.onAuthStateChange((e,t)=>{this._handleTokenChanged(e,"CLIENT",t?.access_token)})}_handleTokenChanged(e,t,r){"TOKEN_REFRESHED"!==e&&"SIGNED_IN"!==e||this.changedAccessToken===r?"SIGNED_OUT"===e&&(this.realtime.setAuth(),"STORAGE"==t&&this.auth.signOut(),this.changedAccessToken=void 0):(this.changedAccessToken=r,this.realtime.setAuth(r))}};return function(){if(typeof window<"u")return!1;let e=globalThis.process;if(!e)return!1;let t=e.version;if(null==t)return!1;let r=t.match(/^v(\d+)\./);return!!r&&parseInt(r[1],10)<=18}()&&console.warn("⚠️  Node.js 18 and below are deprecated and will no longer be supported in future versions of @supabase/supabase-js. Please upgrade to Node.js 20 or later. For more information, visit: https://github.com/orgs/supabase/discussions/37217"),e.AuthAdminApi=ds,e.AuthApiError=xt,e.AuthClient=ps,e.AuthError=It,e.AuthImplicitGrantRedirectError=Ht,e.AuthInvalidCredentialsError=Mt,e.AuthInvalidJwtError=Xt,e.AuthInvalidTokenResponseError=qt,e.AuthPKCECodeVerifierMissingError=Ft,e.AuthPKCEGrantCodeExchangeError=Kt,e.AuthRefreshDiscardedError=Vt,e.AuthRetryableFetchError=Jt,e.AuthSessionMissingError=Dt,e.AuthUnknownError=Lt,e.AuthWeakPasswordError=Yt,e.CustomAuthError=Ut,Object.defineProperty(e,"FunctionRegion",{enumerable:!0,get:function(){return s}}),e.FunctionsError=i,e.FunctionsFetchError=a,e.FunctionsHttpError=o,e.FunctionsRelayError=n,e.GoTrueAdminApi=Nr,e.GoTrueClient=us,e.NavigatorLockAcquireTimeoutError=Br,e.PostgrestError=d,e.REALTIME_CHANNEL_STATES=we,Object.defineProperty(e,"REALTIME_LISTEN_TYPES",{enumerable:!0,get:function(){return fe}}),Object.defineProperty(e,"REALTIME_POSTGRES_CHANGES_LISTEN_EVENT",{enumerable:!0,get:function(){return pe}}),Object.defineProperty(e,"REALTIME_PRESENCE_LISTEN_EVENTS",{enumerable:!0,get:function(){return q}}),Object.defineProperty(e,"REALTIME_SUBSCRIBE_STATES",{enumerable:!0,get:function(){return ge}}),e.RealtimeChannel=be,e.RealtimeClient=ve,e.RealtimePresence=me,e.SIGN_OUT_SCOPES=xr,e.StorageApiError=Ne,e.SupabaseClient=gs,e.WebSocketFactory=T,e.createClient=(e,t,r)=>new gs(e,t,r),e.isAuthApiError=Nt,e.isAuthError=$t,e.isAuthImplicitGrantRedirectError=Wt,e.isAuthPKCECodeVerifierMissingError=function(e){return $t(e)&&"AuthPKCECodeVerifierMissingError"===e.name},e.isAuthRefreshDiscardedError=zt,e.isAuthRetryableFetchError=Gt,e.isAuthSessionMissingError=Bt,e.isAuthWeakPasswordError=function(e){return $t(e)&&"AuthWeakPasswordError"===e.name},e.lockInternals=Ur,e.navigatorLock=async function(e,t,r){Ur.debug&&console.log("@supabase/gotrue-js: navigatorLock: acquire lock",e,t);let s,i=new globalThis.AbortController;t>0&&(s=setTimeout(()=>{i.abort(),Ur.debug&&console.log("@supabase/gotrue-js: navigatorLock acquire timed out",e)},t)),await Promise.resolve();try{return await globalThis.navigator.locks.request(e,0===t?{mode:"exclusive",ifAvailable:!0}:{mode:"exclusive",signal:i.signal},async i=>{if(!i){if(0===t)throw Ur.debug&&console.log("@supabase/gotrue-js: navigatorLock: not immediately available",e),new Br(`Acquiring an exclusive Navigator LockManager lock "${e}" immediately failed`);if(Ur.debug)try{let e=await globalThis.navigator.locks.query();console.log("@supabase/gotrue-js: Navigator LockManager state",JSON.stringify(e,null,"  "))}catch(e){console.warn("@supabase/gotrue-js: Error when querying Navigator LockManager state",e)}return console.warn("@supabase/gotrue-js: Navigator LockManager returned a null lock when using #request without ifAvailable set to true, it appears this browser is not following the LockManager spec https://developer.mozilla.org/en-US/docs/Web/API/LockManager/request"),clearTimeout(s),await r()}clearTimeout(s),Ur.debug&&console.log("@supabase/gotrue-js: navigatorLock: acquired",e,i.name);try{return await r()}finally{Ur.debug&&console.log("@supabase/gotrue-js: navigatorLock: released",e,i.name)}})}catch(a){if(t>0&&clearTimeout(s),"object"==typeof a&&a&&"name"in a&&"AbortError"===a.name&&t>0){if(i.signal.aborted)return Ur.debug&&console.log("@supabase/gotrue-js: navigatorLock: acquire timeout, recovering by stealing lock",e),console.warn(`@supabase/gotrue-js: Lock "${e}" was not released within ${t}ms. This may indicate an orphaned lock from a component unmount (e.g., React Strict Mode). Forcefully acquiring the lock to recover.`),await Promise.resolve().then(()=>globalThis.navigator.locks.request(e,{mode:"exclusive",steal:!0},async t=>{if(!t)return console.warn("@supabase/gotrue-js: Navigator LockManager returned null lock even with steal: true"),await r();Ur.debug&&console.log("@supabase/gotrue-js: navigatorLock: recovered (stolen)",e,t.name);try{return await r()}finally{Ur.debug&&console.log("@supabase/gotrue-js: navigatorLock: released (stolen)",e,t.name)}}));throw Ur.debug&&console.log("@supabase/gotrue-js: navigatorLock: lock was stolen by another request",e),new Br(`Lock "${e}" was released because another request stole it`)}throw a}},e.processLock=async function(e,t,r){let s=Mr[e]??Promise.resolve(),i=(async()=>{try{return await s,null}catch{return null}})(),a=(async()=>{let s=null;try{let r=t>=0?new Promise((r,i)=>{s=setTimeout(()=>{console.warn(`@supabase/gotrue-js: Lock "${e}" acquisition timed out after ${t}ms. This may be caused by another operation holding the lock. Consider increasing lockAcquireTimeout or checking for stuck operations.`),i(new qr(`Acquiring process lock with name "${e}" timed out`))},t)}):null;await Promise.race([i,r].filter(e=>e)),null!==s&&clearTimeout(s)}catch(e){if(null!==s&&clearTimeout(s),e instanceof Dr)throw e}return await r()})();return Mr[e]=(async()=>{try{return await a}catch(e){if(e instanceof Dr){try{await s}catch{}return null}throw e}})(),await a},e}({});</script>
+<link rel="dns-prefetch" href="https://fonts.googleapis.com">
+<link rel="dns-prefetch" href="https://fonts.gstatic.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<title>Sabat Store | سبات ستور</title>
+
+<style>
+
+/* Fonts - system fallbacks for speed */
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&family=Inter:wght@300;400;500;600;700&display=swap&font-display=swap');
+
+/* ═══════════════════════════════════════════════════════
+   DESIGN TOKENS — SABAT STORE PREMIUM SYSTEM
+═══════════════════════════════════════════════════════ */
+:root {
+  --gold: #C9A84C;
+  --gold-light: #E8C97B;
+  --gold-dark: #8B6914;
+  --gold-glow: rgba(201, 168, 76, 0.15);
+  --black: #000000;
+  --gray-950: #0A0A0A;
+  --gray-900: #111111;
+  --gray-850: #161616;
+  --gray-800: #1C1C1E;
+  --gray-700: #2C2C2E;
+  --gray-600: #3A3A3C;
+  --gray-500: #48484A;
+  --gray-400: #636366;
+  --gray-300: #8E8E93;
+  --gray-200: #AEAEB2;
+  --gray-100: #C7C7CC;
+  --gray-50: #E5E5EA;
+  --white: #FFFFFF;
+  --blue: #0A84FF;
+  --green: #30D158;
+  --red: #FF453A;
+  --orange: #FF9F0A;
+  --whatsapp: #25D366;
+  --radius-xs: 6px;
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+  --radius-full: 9999px;
+  --font-arabic: 'Tajawal', 'SF Pro Display', sans-serif;
+  --font-latin: 'Inter', 'SF Pro Display', sans-serif;
+  --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  --spring: 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+[data-theme="dark"] {
+  --bg: var(--black);
+  --bg-secondary: var(--gray-950);
+  --bg-tertiary: var(--gray-900);
+  --bg-card: var(--gray-850);
+  --bg-card-hover: var(--gray-800);
+  --bg-elevated: var(--gray-800);
+  --border: rgba(255,255,255,0.08);
+  --border-strong: rgba(255,255,255,0.16);
+  --border-gold: rgba(201,168,76,0.3);
+  --text-primary: var(--white);
+  --text-secondary: var(--gray-200);
+  --text-muted: var(--gray-400);
+  --glass: rgba(255,255,255,0.04);
+  --glass-border: rgba(255,255,255,0.1);
+  --overlay: rgba(0,0,0,0.8);
+}
+
+[data-theme="light"] {
+  --bg: #F2F2F7;
+  --bg-secondary: #FFFFFF;
+  --bg-tertiary: #F2F2F7;
+  --bg-card: #FFFFFF;
+  --bg-card-hover: #F8F8FB;
+  --bg-elevated: #FFFFFF;
+  --border: rgba(0,0,0,0.08);
+  --border-strong: rgba(0,0,0,0.14);
+  --border-gold: rgba(201,168,76,0.4);
+  --text-primary: #1C1C1E;
+  --text-secondary: #3A3A3C;
+  --text-muted: #8E8E93;
+  --glass: rgba(255,255,255,0.7);
+  --glass-border: rgba(0,0,0,0.1);
+  --overlay: rgba(0,0,0,0.6);
+}
+
+/* ═══════════════════════════════════════════════════════
+   RESET & BASE
+═══════════════════════════════════════════════════════ */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; font-size: 16px; }
+
+body {
+  font-family: var(--font-arabic);
+  background: var(--bg);
+  color: var(--text-primary);
+  line-height: 1.6;
+  min-height: 100vh;
+  overflow-x: hidden;
+  transition: background var(--transition), color var(--transition);
+}
+
+[data-lang="en"] body { font-family: var(--font-latin); }
+[data-lang="en"] { direction: ltr; }
+[data-lang="ar"] { direction: rtl; }
+
+img { max-width: 100%; display: block; }
+button { cursor: pointer; font-family: inherit; border: none; background: none; }
+a { text-decoration: none; color: inherit; }
+input, textarea, select { font-family: inherit; }
+
+/* ═══════════════════════════════════════════════════════
+   SCROLLBAR
+═══════════════════════════════════════════════════════ */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--gray-600); border-radius: var(--radius-full); }
+::-webkit-scrollbar-thumb:hover { background: var(--gold); }
+
+/* ═══════════════════════════════════════════════════════
+   LOADING SCREEN
+═══════════════════════════════════════════════════════ */
+#loading-screen {
+  position: fixed; inset: 0; z-index: 10000;
+  background: var(--black);
+  display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 32px;
+  transition: opacity 0.6s ease, visibility 0.6s ease;
+}
+
+#loading-screen.hidden { opacity: 0; visibility: hidden; pointer-events: none; }
+
+.loading-logo {
+  display: flex; align-items: center; gap: 4px;
+  font-size: 36px; font-weight: 700; color: var(--white); letter-spacing: -1px;
+}
+
+.loading-progress {
+  width: 200px; height: 2px;
+  background: var(--gray-800);
+  border-radius: var(--radius-full); overflow: hidden;
+}
+
+.loading-bar {
+  height: 100%; width: 0%;
+  background: linear-gradient(90deg, var(--gold-dark), var(--gold), var(--gold-light));
+  border-radius: var(--radius-full);
+  animation: loadBar 1.8s ease forwards;
+}
+
+@keyframes loadBar {
+  0% { width: 0%; }
+  60% { width: 80%; }
+  100% { width: 100%; }
+}
+
+.loading-text {
+  font-size: 13px; color: var(--gray-400); letter-spacing: 0.1em;
+}
+
+/* ═══════════════════════════════════════════════════════
+   NAVBAR
+═══════════════════════════════════════════════════════ */
+#navbar {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+  height: 64px;
+  display: flex; align-items: center;
+  padding: 0 24px;
+  background: transparent;
+  transition: all var(--transition);
+}
+
+#navbar.scrolled {
+  background: rgba(0,0,0,0.85);
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  border-bottom: 1px solid var(--border);
+}
+
+[data-theme="light"] #navbar.scrolled {
+  background: rgba(242,242,247,0.85);
+}
+
+.nav-inner {
+  max-width: 1400px; margin: 0 auto; width: 100%;
+  display: flex; align-items: center; justify-content: space-between;
+}
+
+.nav-logo {
+  display: flex; align-items: center; gap: 10px;
+  font-size: 22px; font-weight: 700; color: var(--text-primary);
+  letter-spacing: -0.5px;
+}
+
+.nav-logo-icon {
+  display: inline-flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+
+.apple-svg { fill: var(--gold); display: block; }
+
+.nav-links {
+  display: flex; align-items: center; gap: 32px;
+  list-style: none;
+}
+
+.nav-links a {
+  font-size: 14px; font-weight: 500;
+  color: var(--text-secondary);
+  transition: color var(--transition);
+  position: relative;
+}
+
+.nav-links a::after {
+  content: ''; position: absolute; bottom: -4px; left: 0; right: 0;
+  height: 1.5px; background: var(--gold);
+  transform: scaleX(0); transition: transform var(--transition);
+}
+
+.nav-links a:hover { color: var(--text-primary); }
+.nav-links a:hover::after { transform: scaleX(1); }
+
+.nav-actions {
+  display: flex; align-items: center; gap: 12px;
+}
+
+.nav-btn-lang {
+  font-size: 13px; font-weight: 600;
+  color: var(--text-secondary);
+  padding: 6px 14px;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-full);
+  transition: all var(--transition);
+}
+
+.nav-btn-lang:hover {
+  color: var(--text-primary);
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
+.nav-btn-theme {
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  border: 1px solid var(--border-strong);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 16px;
+  transition: all var(--transition);
+  color: var(--text-secondary);
+}
+
+.nav-btn-theme:hover { border-color: var(--gold); color: var(--gold); }
+
+.nav-btn-admin {
+  font-size: 13px; font-weight: 600;
+  color: var(--gold);
+  padding: 8px 18px;
+  border: 1.5px solid var(--gold);
+  border-radius: var(--radius-full);
+  transition: all var(--transition);
+}
+
+.nav-btn-admin:hover {
+  background: var(--gold);
+  color: var(--black);
+}
+
+.nav-mobile-toggle {
+  display: none;
+  font-size: 22px; color: var(--text-primary);
+  width: 40px; height: 40px;
+  align-items: center; justify-content: center;
+}
+
+/* ═══════════════════════════════════════════════════════
+   HERO SECTION
+═══════════════════════════════════════════════════════ */
+#hero {
+  min-height: 100vh;
+  display: flex; align-items: center; justify-content: center;
+  position: relative; overflow: hidden;
+  padding: 120px 24px 80px;
+  background: var(--bg);
+}
+
+.hero-bg {
+  position: absolute; inset: 0; pointer-events: none; overflow: hidden;
+}
+
+.hero-orb {
+  position: absolute; border-radius: 50%;
+  filter: blur(100px); opacity: 0.4;
+}
+
+.hero-orb-1 {
+  width: 600px; height: 600px;
+  top: -200px; right: -200px;
+  background: radial-gradient(circle, rgba(201,168,76,0.3) 0%, transparent 70%);
+  animation: orbFloat1 8s ease-in-out infinite;
+}
+
+.hero-orb-2 {
+  width: 500px; height: 500px;
+  bottom: -150px; left: -150px;
+  background: radial-gradient(circle, rgba(10,132,255,0.2) 0%, transparent 70%);
+  animation: orbFloat2 10s ease-in-out infinite;
+}
+
+.hero-grid {
+  position: absolute; inset: 0;
+  background-image: 
+    linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
+  mask-image: radial-gradient(ellipse 80% 60% at 50% 50%, black 0%, transparent 100%);
+}
+
+[data-theme="light"] .hero-grid {
+  background-image:
+    linear-gradient(rgba(0,0,0,0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,0,0,0.05) 1px, transparent 1px);
+}
+
+@keyframes orbFloat1 {
+  0%, 100% { transform: translate(0,0) scale(1); }
+  50% { transform: translate(-30px, 30px) scale(1.1); }
+}
+
+@keyframes orbFloat2 {
+  0%, 100% { transform: translate(0,0) scale(1); }
+  50% { transform: translate(20px, -20px) scale(0.95); }
+}
+
+.hero-content {
+  max-width: 900px; margin: 0 auto; text-align: center;
+  position: relative; z-index: 2;
+}
+
+.hero-eyebrow {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 12px; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase;
+  color: var(--gold);
+  padding: 8px 18px;
+  border: 1px solid var(--border-gold);
+  border-radius: var(--radius-full);
+  background: var(--gold-glow);
+  margin-bottom: 32px;
+  opacity: 0; animation: fadeUp 0.8s ease 0.2s forwards;
+}
+
+.hero-eyebrow span { width: 5px; height: 5px; background: var(--gold); border-radius: 50%; }
+
+.hero-title {
+  font-size: clamp(42px, 7vw, 96px);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -2px;
+  color: var(--text-primary);
+  margin-bottom: 24px;
+  opacity: 0; animation: fadeUp 0.8s ease 0.4s forwards;
+}
+
+.hero-title .gold { color: var(--gold); }
+.hero-title .outline {
+  -webkit-text-stroke: 1.5px var(--text-primary);
+  color: transparent;
+}
+
+.hero-subtitle {
+  font-size: clamp(16px, 2vw, 22px);
+  font-weight: 400; line-height: 1.6;
+  color: var(--text-muted);
+  max-width: 600px; margin: 0 auto 48px;
+  opacity: 0; animation: fadeUp 0.8s ease 0.6s forwards;
+}
+
+.hero-cta {
+  display: flex; align-items: center; justify-content: center; gap: 16px;
+  flex-wrap: wrap;
+  opacity: 0; animation: fadeUp 0.8s ease 0.8s forwards;
+}
+
+.btn-primary {
+  display: inline-flex; align-items: center; gap: 10px;
+  font-size: 15px; font-weight: 600;
+  color: var(--black);
+  background: linear-gradient(135deg, var(--gold-light), var(--gold), var(--gold-dark));
+  padding: 16px 36px;
+  border-radius: var(--radius-full);
+  transition: all var(--spring);
+  box-shadow: 0 0 40px rgba(201,168,76,0.3);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 0 60px rgba(201,168,76,0.5);
+}
+
+.btn-primary:active { transform: scale(0.98); }
+
+.btn-secondary {
+  display: inline-flex; align-items: center; gap: 10px;
+  font-size: 15px; font-weight: 600;
+  color: var(--text-primary);
+  padding: 16px 36px;
+  border-radius: var(--radius-full);
+  border: 1.5px solid var(--border-strong);
+  transition: all var(--transition);
+}
+
+.btn-secondary:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+  background: var(--gold-glow);
+}
+
+.hero-stats {
+  display: flex; align-items: center; justify-content: center; gap: 48px;
+  margin-top: 80px; padding-top: 48px;
+  border-top: 1px solid var(--border);
+  opacity: 0; animation: fadeUp 0.8s ease 1s forwards;
+  flex-wrap: wrap; gap: 32px;
+}
+
+.hero-stat-item { text-align: center; }
+.hero-stat-num {
+  font-size: 36px; font-weight: 700;
+  color: var(--text-primary); letter-spacing: -1px;
+  display: block;
+}
+.hero-stat-label {
+  font-size: 13px; color: var(--text-muted); margin-top: 4px;
+}
+
+.hero-stat-divider {
+  width: 1px; height: 40px; background: var(--border);
+}
+
+/* ═══════════════════════════════════════════════════════
+   SECTION STYLES
+═══════════════════════════════════════════════════════ */
+section { padding: 100px 24px; }
+
+.section-inner { max-width: 1400px; margin: 0 auto; }
+
+.section-label {
+  font-size: 11px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 16px;
+  display: flex; align-items: center; gap: 8px;
+}
+
+.section-label::before {
+  content: ''; width: 24px; height: 1.5px;
+  background: var(--gold);
+}
+
+.section-title {
+  font-size: clamp(28px, 4vw, 48px);
+  font-weight: 700; letter-spacing: -1px; line-height: 1.15;
+  color: var(--text-primary);
+  margin-bottom: 16px;
+}
+
+.section-subtitle {
+  font-size: 17px; color: var(--text-muted); line-height: 1.7;
+  max-width: 560px;
+}
+
+.section-header {
+  display: flex; align-items: flex-end; justify-content: space-between;
+  margin-bottom: 56px; gap: 24px; flex-wrap: wrap;
+}
+
+/* ═══════════════════════════════════════════════════════
+   FEATURES SECTION
+═══════════════════════════════════════════════════════ */
+#features { background: var(--bg-secondary); }
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.feature-card {
+  padding: 32px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  transition: all var(--transition);
+  cursor: default;
+  position: relative; overflow: hidden;
+}
+
+.feature-card::before {
+  content: ''; position: absolute;
+  inset: 0; border-radius: inherit;
+  background: linear-gradient(135deg, var(--gold-glow), transparent);
+  opacity: 0; transition: opacity var(--transition);
+}
+
+.feature-card:hover::before { opacity: 1; }
+
+.feature-card:hover {
+  border-color: var(--border-gold);
+  transform: translateY(-4px);
+}
+
+.feature-icon {
+  width: 52px; height: 52px;
+  background: var(--gold-glow);
+  border: 1px solid var(--border-gold);
+  border-radius: var(--radius-md);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 24px; margin-bottom: 24px;
+}
+
+.feature-title {
+  font-size: 18px; font-weight: 600; color: var(--text-primary);
+  margin-bottom: 10px;
+}
+
+.feature-desc {
+  font-size: 14px; color: var(--text-muted); line-height: 1.7;
+}
+
+/* ═══════════════════════════════════════════════════════
+   PRODUCTS SECTION
+═══════════════════════════════════════════════════════ */
+#products { background: var(--bg); }
+
+.filters-bar {
+  display: flex; align-items: center; gap: 12px;
+  margin-bottom: 40px; flex-wrap: wrap;
+}
+
+.filter-search {
+  flex: 1; min-width: 240px;
+  display: flex; align-items: center; gap: 12px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 12px 18px;
+  transition: border-color var(--transition);
+}
+
+.filter-search:focus-within { border-color: var(--gold); }
+
+.filter-search input {
+  flex: 1; background: none; border: none; outline: none;
+  font-size: 14px; color: var(--text-primary);
+}
+
+.filter-search input::placeholder { color: var(--text-muted); }
+
+.filter-search-icon { font-size: 18px; color: var(--text-muted); }
+
+.filter-select {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 12px 18px;
+  font-size: 14px; color: var(--text-primary);
+  outline: none; cursor: pointer;
+  transition: border-color var(--transition);
+  appearance: none;
+  padding-left: 36px;
+}
+
+[data-lang="ar"] .filter-select { padding-right: 36px; padding-left: 18px; }
+
+.filter-select:focus { border-color: var(--gold); }
+
+.filter-wrapper {
+  position: relative;
+}
+
+.filter-wrapper::after {
+  content: '⌄';
+  position: absolute; top: 50%; transform: translateY(-50%);
+  left: 14px; font-size: 14px; color: var(--text-muted);
+  pointer-events: none;
+}
+
+[data-lang="ar"] .filter-wrapper::after { right: 14px; left: auto; }
+
+.active-filters {
+  display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 24px;
+}
+
+.active-filter-tag {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 12px; font-weight: 600; color: var(--gold);
+  background: var(--gold-glow);
+  border: 1px solid var(--border-gold);
+  border-radius: var(--radius-full);
+  padding: 5px 12px;
+}
+
+.active-filter-tag button {
+  font-size: 14px; line-height: 1; color: var(--gold); opacity: 0.7;
+  transition: opacity var(--transition);
+}
+
+.active-filter-tag button:hover { opacity: 1; }
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+/* ═══════════════════════════════════════════════════════
+   PRODUCT CARD
+═══════════════════════════════════════════════════════ */
+.product-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  transition: all var(--spring);
+  cursor: pointer;
+  position: relative;
+}
+
+.product-card:hover {
+  border-color: var(--border-gold);
+  transform: translateY(-8px);
+  box-shadow: 0 24px 60px rgba(0,0,0,0.3), 0 0 0 1px var(--border-gold);
+}
+
+[data-theme="light"] .product-card:hover {
+  box-shadow: 0 24px 60px rgba(0,0,0,0.1), 0 0 0 1px var(--border-gold);
+}
+
+.product-card-img {
+  aspect-ratio: 4/3;
+  background: var(--bg-tertiary);
+  position: relative; overflow: hidden;
+  display: flex; align-items: center; justify-content: center;
+}
+
+.product-card-img img {
+  width: 100%; height: 100%; object-fit: contain;
+  transition: transform 0.5s ease;
+  padding: 16px;
+}
+
+.product-card:hover .product-card-img img {
+  transform: scale(1.08);
+}
+
+.product-img-placeholder {
+  font-size: 72px; opacity: 0.15;
+  transition: transform 0.5s ease, opacity 0.3s ease;
+}
+
+.product-card:hover .product-img-placeholder {
+  transform: scale(1.1); opacity: 0.2;
+}
+
+.product-badge {
+  position: absolute; top: 14px;
+  font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
+  padding: 5px 12px;
+  border-radius: var(--radius-full);
+  z-index: 2;
+}
+
+[data-lang="ar"] .product-badge { right: 14px; }
+[data-lang="en"] .product-badge { left: 14px; }
+
+.badge-new { background: var(--blue); color: white; }
+.badge-excellent { background: var(--green); color: white; }
+.badge-good { background: var(--orange); color: white; }
+.badge-sold {
+  background: rgba(255,69,58,0.15);
+  color: var(--red);
+  border: 1px solid rgba(255,69,58,0.3);
+}
+
+.product-card-body { padding: 20px; }
+
+.product-model {
+  font-size: 18px; font-weight: 700;
+  color: var(--text-primary); margin-bottom: 12px; line-height: 1.3;
+}
+
+.product-specs {
+  display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px;
+}
+
+.spec-chip {
+  font-size: 11px; font-weight: 600;
+  color: var(--text-secondary);
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full);
+  padding: 4px 10px;
+}
+
+.product-battery {
+  display: flex; align-items: center; gap: 8px;
+  margin-bottom: 16px;
+}
+
+.battery-bar {
+  flex: 1; height: 4px; background: var(--border);
+  border-radius: var(--radius-full); overflow: hidden;
+}
+
+.battery-fill {
+  height: 100%; border-radius: var(--radius-full);
+  transition: width 0.8s ease;
+}
+
+.battery-fill.high { background: var(--green); }
+.battery-fill.medium { background: var(--orange); }
+.battery-fill.low { background: var(--red); }
+
+.battery-label {
+  font-size: 12px; font-weight: 600;
+  min-width: 40px; text-align: right;
+}
+
+.product-card-footer {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 16px 20px;
+  border-top: 1px solid var(--border);
+  gap: 12px;
+}
+
+.product-price {
+  font-size: 24px; font-weight: 700;
+  color: var(--text-primary); letter-spacing: -0.5px;
+}
+
+.product-price small {
+  font-size: 13px; font-weight: 500;
+  color: var(--text-muted); margin-inline-start: 4px;
+}
+
+.product-card-actions {
+  display: flex; gap: 8px;
+}
+
+.btn-whatsapp {
+  display: flex; align-items: center; justify-content: center;
+  width: 40px; height: 40px;
+  background: var(--whatsapp);
+  border-radius: var(--radius-md);
+  color: white; font-size: 18px;
+  transition: all var(--spring);
+}
+
+.btn-whatsapp:hover { transform: scale(1.1); filter: brightness(1.1); }
+
+.btn-view {
+  display: flex; align-items: center; justify-content: center;
+  padding: 0 16px; height: 40px;
+  background: var(--gold-glow);
+  border: 1px solid var(--border-gold);
+  border-radius: var(--radius-md);
+  color: var(--gold); font-size: 13px; font-weight: 600;
+  transition: all var(--spring);
+}
+
+.btn-view:hover {
+  background: var(--gold);
+  color: var(--black);
+  transform: scale(1.02);
+}
+
+/* ═══════════════════════════════════════════════════════
+   SKELETON LOADING
+═══════════════════════════════════════════════════════ */
+.skeleton {
+  background: linear-gradient(90deg, var(--bg-card) 25%, var(--bg-card-hover) 50%, var(--bg-card) 75%);
+  background-size: 200% 100%;
+  animation: skeleton-shine 1.5s infinite;
+  border-radius: 6px;
+}
+
+@keyframes skeleton-shine {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+.product-card-skeleton {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+}
+
+.skeleton-img { aspect-ratio: 4/3; }
+.skeleton-body { padding: 20px; }
+.skeleton-line { height: 14px; margin-bottom: 10px; }
+.skeleton-line.short { width: 60%; }
+.skeleton-footer {
+  padding: 16px 20px;
+  border-top: 1px solid var(--border);
+  display: flex; justify-content: space-between; align-items: center;
+}
+
+/* ═══════════════════════════════════════════════════════
+   PRODUCT MODAL
+═══════════════════════════════════════════════════════ */
+#product-modal {
+  position: fixed; inset: 0; z-index: 5000;
+  display: flex; align-items: center; justify-content: center;
+  padding: 24px;
+  background: var(--overlay);
+  backdrop-filter: blur(12px);
+  opacity: 0; visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+#product-modal.open { opacity: 1; visibility: visible; }
+
+.modal-inner {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  max-width: 960px; width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  transform: scale(0.95) translateY(20px);
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  position: relative;
+}
+
+#product-modal.open .modal-inner {
+  transform: scale(1) translateY(0);
+}
+
+.modal-close {
+  position: absolute; top: 20px; z-index: 10;
+  width: 36px; height: 36px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 18px; color: var(--text-muted);
+  transition: all var(--transition);
+}
+
+[data-lang="ar"] .modal-close { left: 20px; }
+[data-lang="en"] .modal-close { right: 20px; }
+
+.modal-close:hover { background: var(--red); color: white; border-color: transparent; }
+
+.modal-grid {
+  display: grid; grid-template-columns: 1fr 1fr;
+}
+
+@media (max-width: 680px) { .modal-grid { grid-template-columns: 1fr; } }
+
+.modal-gallery {
+  position: relative;
+  background: var(--bg-tertiary);
+  border-radius: var(--radius-xl) 0 0 var(--radius-xl);
+  overflow: hidden; min-height: 400px;
+  display: flex; flex-direction: column;
+}
+
+[data-lang="en"] .modal-gallery {
+  border-radius: 0 var(--radius-xl) var(--radius-xl) 0;
+}
+
+.gallery-main {
+  flex: 1; display: flex; align-items: center; justify-content: center;
+  padding: 32px; min-height: 320px;
+}
+
+.gallery-main img {
+  max-height: 280px; width: auto; max-width: 100%;
+  object-fit: contain;
+  transition: transform 0.4s ease;
+}
+
+.gallery-main img:hover { transform: scale(1.05); }
+
+.gallery-main-placeholder {
+  font-size: 100px; opacity: 0.1;
+}
+
+.gallery-thumbs {
+  display: flex; gap: 8px; padding: 16px;
+  overflow-x: auto;
+}
+
+.gallery-thumb {
+  width: 60px; height: 60px;
+  border-radius: var(--radius-sm);
+  background: var(--bg-card);
+  border: 2px solid var(--border);
+  overflow: hidden; flex-shrink: 0; cursor: pointer;
+  transition: border-color var(--transition);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 24px;
+}
+
+.gallery-thumb.active { border-color: var(--gold); }
+
+.gallery-thumb img {
+  width: 100%; height: 100%; object-fit: cover;
+}
+
+.modal-details {
+  padding: 40px 36px;
+  overflow-y: auto;
+}
+
+.modal-model-name {
+  font-size: 26px; font-weight: 700; color: var(--text-primary);
+  letter-spacing: -0.5px; margin-bottom: 8px; line-height: 1.25;
+}
+
+.modal-condition-badge {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 12px; font-weight: 700;
+  margin-bottom: 24px;
+  padding: 6px 14px; border-radius: var(--radius-full);
+}
+
+.modal-price-block {
+  margin-bottom: 28px;
+  padding: 20px;
+  background: var(--bg-tertiary);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-gold);
+}
+
+.modal-price-label {
+  font-size: 12px; color: var(--text-muted); margin-bottom: 6px;
+  text-transform: uppercase; letter-spacing: 0.1em; font-weight: 600;
+}
+
+.modal-price-value {
+  font-size: 40px; font-weight: 700; color: var(--gold);
+  letter-spacing: -1px; line-height: 1;
+}
+
+.modal-price-value small { font-size: 18px; font-weight: 500; color: var(--text-muted); }
+
+.modal-specs-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 28px;
+}
+
+.modal-spec-item {
+  background: var(--bg-tertiary);
+  border-radius: var(--radius-md); padding: 14px 16px;
+  border: 1px solid var(--border);
+}
+
+.modal-spec-key {
+  font-size: 11px; color: var(--text-muted); margin-bottom: 5px;
+  text-transform: uppercase; letter-spacing: 0.1em; font-weight: 600;
+}
+
+.modal-spec-val {
+  font-size: 15px; font-weight: 600; color: var(--text-primary);
+}
+
+.modal-notes {
+  background: var(--gold-glow);
+  border: 1px solid var(--border-gold);
+  border-radius: var(--radius-md);
+  padding: 16px; margin-bottom: 24px;
+  font-size: 13px; color: var(--text-secondary); line-height: 1.6;
+}
+
+.modal-actions {
+  display: flex; gap: 12px; flex-wrap: wrap;
+}
+
+.btn-whatsapp-modal {
+  flex: 1;
+  display: flex; align-items: center; justify-content: center; gap: 10px;
+  font-size: 15px; font-weight: 700;
+  color: white; background: var(--whatsapp);
+  padding: 16px 24px;
+  border-radius: var(--radius-md);
+  transition: all var(--spring);
+}
+
+.btn-whatsapp-modal:hover {
+  transform: scale(1.02);
+  filter: brightness(1.05);
+}
+
+.btn-reserve {
+  flex: 1;
+  display: flex; align-items: center; justify-content: center; gap: 10px;
+  font-size: 15px; font-weight: 700;
+  color: var(--black);
+  background: linear-gradient(135deg, var(--gold-light), var(--gold));
+  padding: 16px 24px;
+  border-radius: var(--radius-md);
+  transition: all var(--spring);
+}
+
+.btn-reserve:hover { transform: scale(1.02); filter: brightness(1.05); }
+
+/* ═══════════════════════════════════════════════════════
+   TESTIMONIALS
+═══════════════════════════════════════════════════════ */
+#testimonials { background: var(--bg-secondary); }
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.testimonial-card {
+  padding: 28px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  transition: all var(--transition);
+}
+
+.testimonial-card:hover {
+  border-color: var(--border-gold);
+  transform: translateY(-4px);
+}
+
+.testimonial-stars {
+  display: flex; gap: 4px; margin-bottom: 16px;
+}
+
+.star { color: var(--gold); font-size: 16px; }
+
+.testimonial-text {
+  font-size: 15px; line-height: 1.7;
+  color: var(--text-secondary); margin-bottom: 20px;
+  font-style: italic;
+}
+
+.testimonial-author {
+  display: flex; align-items: center; gap: 12px;
+}
+
+.testimonial-avatar {
+  width: 44px; height: 44px; border-radius: 50%;
+  background: var(--gold-glow);
+  border: 2px solid var(--border-gold);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 18px; font-weight: 700; color: var(--gold);
+}
+
+.testimonial-name {
+  font-size: 15px; font-weight: 600; color: var(--text-primary);
+}
+
+.testimonial-info {
+  font-size: 12px; color: var(--text-muted); margin-top: 2px;
+}
+
+/* ═══════════════════════════════════════════════════════
+   WHY US
+═══════════════════════════════════════════════════════ */
+#why-us { background: var(--bg); }
+
+.why-us-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px; align-items: center;
+}
+
+@media (max-width: 768px) { .why-us-grid { grid-template-columns: 1fr; } }
+
+.why-us-visual {
+  position: relative; border-radius: var(--radius-xl);
+  background: var(--bg-card);
+  border: 1px solid var(--border-gold);
+  padding: 40px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.why-us-visual-glow {
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse at center, var(--gold-glow) 0%, transparent 70%);
+}
+
+.why-us-big-number {
+  font-size: 96px; font-weight: 800;
+  color: var(--gold); letter-spacing: -4px; line-height: 1;
+  margin-bottom: 8px; position: relative;
+}
+
+.why-us-big-label {
+  font-size: 17px; color: var(--text-muted); position: relative;
+}
+
+.why-us-points { display: flex; flex-direction: column; gap: 20px; }
+
+.why-point {
+  display: flex; gap: 16px; align-items: flex-start;
+  padding: 20px; border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  transition: all var(--transition);
+}
+
+.why-point:hover { border-color: var(--border-gold); }
+
+.why-point-icon {
+  width: 44px; height: 44px; flex-shrink: 0;
+  background: var(--gold-glow);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-gold);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 20px;
+}
+
+.why-point-title {
+  font-size: 16px; font-weight: 600; color: var(--text-primary); margin-bottom: 4px;
+}
+
+.why-point-desc { font-size: 13px; color: var(--text-muted); line-height: 1.6; }
+
+/* ═══════════════════════════════════════════════════════
+   FOOTER
+═══════════════════════════════════════════════════════ */
+footer {
+  background: var(--bg-secondary);
+  border-top: 1px solid var(--border);
+  padding: 60px 24px 32px;
+}
+
+.footer-inner {
+  max-width: 1400px; margin: 0 auto;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 48px; margin-bottom: 48px;
+}
+
+@media (max-width: 768px) {
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
+}
+
+@media (max-width: 480px) {
+  .footer-grid { grid-template-columns: 1fr; }
+}
+
+.footer-brand { }
+
+.footer-logo {
+  display: flex; align-items: center; gap: 10px;
+  font-size: 20px; font-weight: 700; color: var(--text-primary);
+  margin-bottom: 16px;
+}
+
+.footer-tagline {
+  font-size: 14px; color: var(--text-muted); line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.footer-socials {
+  display: flex; gap: 12px;
+}
+
+.footer-social {
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 16px; color: var(--text-muted);
+  transition: all var(--transition);
+}
+
+.footer-social:hover {
+  border-color: var(--gold); color: var(--gold);
+  transform: translateY(-2px);
+}
+
+.footer-col-title {
+  font-size: 13px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--text-primary); margin-bottom: 20px;
+}
+
+.footer-links { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+
+.footer-links a {
+  font-size: 14px; color: var(--text-muted);
+  transition: color var(--transition);
+}
+
+.footer-links a:hover { color: var(--gold); }
+
+.footer-bottom {
+  border-top: 1px solid var(--border);
+  padding-top: 24px;
+  display: flex; align-items: center; justify-content: space-between;
+  flex-wrap: wrap; gap: 16px;
+}
+
+.footer-copy { font-size: 13px; color: var(--text-muted); }
+.footer-copy a { color: var(--gold); }
+
+/* ═══════════════════════════════════════════════════════
+   ADMIN PANEL
+═══════════════════════════════════════════════════════ */
+#admin-panel {
+  position: fixed; inset: 0; z-index: 6000;
+  background: var(--bg);
+  display: none; flex-direction: column;
+  overflow: hidden;
+}
+
+#admin-panel.open { display: flex; }
+
+.admin-sidebar {
+  position: fixed; top: 0; bottom: 0;
+  width: 260px; background: var(--bg-secondary);
+  border-inline-end: 1px solid var(--border);
+  display: flex; flex-direction: column;
+  z-index: 10;
+}
+
+[data-lang="ar"] .admin-sidebar { right: 0; }
+[data-lang="en"] .admin-sidebar { left: 0; }
+
+.admin-sidebar-header {
+  padding: 24px 20px;
+  border-bottom: 1px solid var(--border);
+}
+
+.admin-logo {
+  display: flex; align-items: center; gap: 10px;
+  font-size: 18px; font-weight: 700; color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.admin-logo-sub { font-size: 12px; color: var(--text-muted); }
+
+.admin-nav { flex: 1; padding: 16px 12px; overflow-y: auto; }
+
+.admin-nav-item {
+  display: flex; align-items: center; gap: 12px;
+  font-size: 14px; font-weight: 500; color: var(--text-muted);
+  padding: 10px 12px; border-radius: var(--radius-md);
+  cursor: pointer; transition: all var(--transition);
+  margin-bottom: 4px;
+}
+
+.admin-nav-item:hover {
+  background: var(--bg-tertiary);
+  color: var(--text-primary);
+}
+
+.admin-nav-item.active {
+  background: var(--gold-glow);
+  color: var(--gold);
+  border: 1px solid var(--border-gold);
+}
+
+.admin-nav-icon { font-size: 18px; }
+
+.admin-main {
+  flex: 1; overflow-y: auto;
+  padding: 32px;
+}
+
+[data-lang="ar"] .admin-main { margin-right: 260px; }
+[data-lang="en"] .admin-main { margin-left: 260px; }
+
+.admin-header {
+  display: flex; align-items: center; justify-content: space-between;
+  margin-bottom: 32px;
+}
+
+.admin-header-title { font-size: 24px; font-weight: 700; color: var(--text-primary); }
+
+.admin-close-btn {
+  display: flex; align-items: center; gap: 8px;
+  font-size: 14px; font-weight: 600; color: var(--text-muted);
+  padding: 10px 18px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  transition: all var(--transition);
+}
+
+.admin-close-btn:hover { border-color: var(--red); color: var(--red); }
+
+/* Admin Stats */
+.admin-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 16px; margin-bottom: 32px;
+}
+
+.admin-stat {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg); padding: 20px;
+}
+
+.admin-stat-num {
+  font-size: 32px; font-weight: 700; letter-spacing: -1px;
+  color: var(--text-primary); margin-bottom: 4px;
+}
+
+.admin-stat-label { font-size: 13px; color: var(--text-muted); }
+
+.admin-stat.gold-stat { border-color: var(--border-gold); background: var(--gold-glow); }
+.admin-stat.gold-stat .admin-stat-num { color: var(--gold); }
+
+/* Admin Phone List */
+.admin-phone-table {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.admin-table-header {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 20px 24px;
+  border-bottom: 1px solid var(--border);
+}
+
+.admin-table-title { font-size: 17px; font-weight: 600; color: var(--text-primary); }
+
+.btn-add-phone {
+  display: flex; align-items: center; gap: 8px;
+  font-size: 14px; font-weight: 600;
+  color: var(--black);
+  background: linear-gradient(135deg, var(--gold-light), var(--gold));
+  padding: 10px 20px;
+  border-radius: var(--radius-md);
+  transition: all var(--spring);
+}
+
+.btn-add-phone:hover { transform: scale(1.02); filter: brightness(1.05); }
+
+.admin-table { width: 100%; border-collapse: collapse; }
+
+.admin-table th {
+  text-align: start;
+  font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em;
+  color: var(--text-muted);
+  padding: 12px 20px;
+  border-bottom: 1px solid var(--border);
+  background: var(--bg-tertiary);
+}
+
+.admin-table td {
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--border);
+  font-size: 14px; color: var(--text-primary);
+  vertical-align: middle;
+}
+
+.admin-table tr:last-child td { border-bottom: none; }
+
+.admin-table tr:hover td { background: var(--bg-tertiary); }
+
+.admin-row-actions { display: flex; gap: 8px; }
+
+.admin-btn-sm {
+  display: flex; align-items: center; justify-content: center;
+  width: 32px; height: 32px;
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+  transition: all var(--transition);
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+}
+
+.admin-btn-sm:hover.edit-btn { border-color: var(--blue); color: var(--blue); }
+.admin-btn-sm:hover.delete-btn { border-color: var(--red); color: var(--red); background: rgba(255,69,58,0.1); }
+.admin-btn-sm:hover.duplicate-btn { border-color: var(--green); color: var(--green); }
+.admin-btn-sm:hover.sold-btn { border-color: var(--orange); color: var(--orange); }
+
+/* Admin Form */
+.admin-form-overlay {
+  position: fixed; inset: 0; z-index: 6500;
+  background: var(--overlay);
+  backdrop-filter: blur(12px);
+  display: flex; align-items: center; justify-content: center;
+  padding: 24px;
+  opacity: 0; visibility: hidden; transition: all 0.3s ease;
+}
+
+.admin-form-overlay.open { opacity: 1; visibility: visible; }
+
+.admin-form-box {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  width: 100%; max-width: 680px;
+  max-height: 90vh; overflow-y: auto;
+  transform: scale(0.96) translateY(20px);
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.admin-form-overlay.open .admin-form-box {
+  transform: scale(1) translateY(0);
+}
+
+.admin-form-header {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 24px 28px;
+  border-bottom: 1px solid var(--border);
+}
+
+.admin-form-title { font-size: 20px; font-weight: 700; color: var(--text-primary); }
+
+.admin-form-close {
+  width: 32px; height: 32px;
+  border-radius: 50%;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 16px; color: var(--text-muted);
+  transition: all var(--transition);
+}
+
+.admin-form-close:hover { background: var(--red); color: white; border-color: transparent; }
+
+.admin-form-body { padding: 28px; }
+
+.form-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 18px;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 480px) { .form-grid { grid-template-columns: 1fr; } }
+
+.form-group { display: flex; flex-direction: column; gap: 8px; }
+.form-group.full { grid-column: 1 / -1; }
+
+.form-label {
+  font-size: 12px; font-weight: 700; color: var(--text-secondary);
+  text-transform: uppercase; letter-spacing: 0.08em;
+}
+
+.form-input, .form-select, .form-textarea {
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 12px 16px;
+  font-size: 14px; color: var(--text-primary);
+  outline: none; transition: border-color var(--transition);
+  width: 100%;
+}
+
+.form-input:focus, .form-select:focus, .form-textarea:focus {
+  border-color: var(--gold);
+  box-shadow: 0 0 0 3px var(--gold-glow);
+}
+
+.form-textarea { resize: vertical; min-height: 80px; }
+
+.form-select { cursor: pointer; }
+
+/* Image Upload */
+.upload-zone {
+  border: 2px dashed var(--border);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  text-align: center;
+  cursor: pointer;
+  transition: all var(--transition);
+  background: var(--bg-tertiary);
+  margin-bottom: 16px;
+}
+
+.upload-zone:hover, .upload-zone.dragover {
+  border-color: var(--gold);
+  background: var(--gold-glow);
+}
+
+.upload-icon { font-size: 32px; margin-bottom: 12px; }
+.upload-text { font-size: 14px; color: var(--text-secondary); line-height: 1.6; }
+.upload-text strong { color: var(--gold); }
+
+.upload-previews {
+  display: flex; gap: 10px; flex-wrap: wrap;
+}
+
+.upload-preview {
+  width: 80px; height: 80px;
+  border-radius: var(--radius-md);
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  overflow: hidden; position: relative;
+  flex-shrink: 0;
+}
+
+.upload-preview img {
+  width: 100%; height: 100%; object-fit: cover;
+}
+
+.upload-preview-remove {
+  position: absolute; top: 4px; right: 4px;
+  width: 20px; height: 20px;
+  background: var(--red); color: white;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 11px; font-weight: 700;
+  transition: transform var(--transition);
+}
+
+.upload-preview-remove:hover { transform: scale(1.1); }
+
+.form-submit-row {
+  display: flex; gap: 12px; justify-content: flex-end; padding-top: 20px;
+  border-top: 1px solid var(--border); margin-top: 20px;
+}
+
+.btn-cancel {
+  padding: 12px 24px;
+  font-size: 14px; font-weight: 600;
+  color: var(--text-muted);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  transition: all var(--transition);
+}
+
+.btn-cancel:hover { border-color: var(--border-strong); color: var(--text-primary); }
+
+.btn-save {
+  padding: 12px 32px;
+  font-size: 14px; font-weight: 700;
+  color: var(--black);
+  background: linear-gradient(135deg, var(--gold-light), var(--gold));
+  border-radius: var(--radius-md);
+  transition: all var(--spring);
+}
+
+.btn-save:hover { transform: scale(1.02); filter: brightness(1.05); }
+
+/* ═══════════════════════════════════════════════════════
+   TOAST NOTIFICATIONS
+═══════════════════════════════════════════════════════ */
+#toast-container {
+  position: fixed; bottom: 24px; z-index: 9999;
+  display: flex; flex-direction: column; gap: 10px;
+  pointer-events: none;
+}
+
+[data-lang="ar"] #toast-container { right: 24px; }
+[data-lang="en"] #toast-container { left: 24px; }
+
+.toast {
+  display: flex; align-items: center; gap: 12px;
+  padding: 14px 20px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+  min-width: 280px; max-width: 360px;
+  pointer-events: all;
+  animation: toastSlideIn 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+[data-lang="ar"] .toast { animation-name: toastSlideInAr; }
+
+@keyframes toastSlideIn {
+  from { opacity: 0; transform: translateX(-40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes toastSlideInAr {
+  from { opacity: 0; transform: translateX(40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+.toast.removing {
+  animation: toastSlideOut 0.3s ease forwards;
+}
+
+@keyframes toastSlideOut {
+  to { opacity: 0; transform: translateX(-20px); height: 0; margin: 0; padding: 0; }
+}
+
+.toast-icon { font-size: 20px; flex-shrink: 0; }
+.toast-text { font-size: 14px; font-weight: 500; color: var(--text-primary); flex: 1; }
+.toast.success { border-color: rgba(48,209,88,0.3); }
+.toast.success .toast-icon::before { content: '✓'; color: var(--green); }
+.toast.error { border-color: rgba(255,69,58,0.3); }
+.toast.error .toast-icon::before { content: '✕'; color: var(--red); }
+.toast.info { border-color: var(--border-gold); }
+.toast.info .toast-icon::before { content: 'ℹ'; color: var(--gold); }
+
+/* ═══════════════════════════════════════════════════════
+   CONFIRM DIALOG
+═══════════════════════════════════════════════════════ */
+#confirm-dialog {
+  position: fixed; inset: 0; z-index: 9000;
+  background: var(--overlay);
+  backdrop-filter: blur(8px);
+  display: flex; align-items: center; justify-content: center;
+  opacity: 0; visibility: hidden; transition: all 0.2s ease;
+}
+
+#confirm-dialog.open { opacity: 1; visibility: visible; }
+
+.confirm-box {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  padding: 32px; max-width: 400px; width: 90%; text-align: center;
+  transform: scale(0.9); transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+#confirm-dialog.open .confirm-box { transform: scale(1); }
+
+.confirm-icon { font-size: 44px; margin-bottom: 16px; }
+.confirm-title { font-size: 20px; font-weight: 700; color: var(--text-primary); margin-bottom: 10px; }
+.confirm-msg { font-size: 14px; color: var(--text-muted); line-height: 1.6; margin-bottom: 28px; }
+
+.confirm-actions { display: flex; gap: 12px; }
+
+.confirm-cancel {
+  flex: 1; padding: 13px;
+  font-size: 14px; font-weight: 600; color: var(--text-muted);
+  border: 1px solid var(--border); border-radius: var(--radius-md);
+  transition: all var(--transition);
+}
+
+.confirm-cancel:hover { border-color: var(--border-strong); color: var(--text-primary); }
+
+.confirm-ok {
+  flex: 1; padding: 13px;
+  font-size: 14px; font-weight: 700; color: white;
+  background: var(--red); border-radius: var(--radius-md);
+  transition: all var(--transition);
+}
+
+.confirm-ok:hover { filter: brightness(1.1); }
+
+/* ═══════════════════════════════════════════════════════
+   EMPTY STATE
+═══════════════════════════════════════════════════════ */
+.empty-state {
+  grid-column: 1 / -1;
+  text-align: center; padding: 80px 24px;
+}
+
+.empty-state-icon { font-size: 64px; opacity: 0.15; margin-bottom: 24px; }
+.empty-state-title {
+  font-size: 22px; font-weight: 700; color: var(--text-primary); margin-bottom: 10px;
+}
+.empty-state-text { font-size: 15px; color: var(--text-muted); margin-bottom: 28px; }
+
+/* ═══════════════════════════════════════════════════════
+   ANIMATIONS
+═══════════════════════════════════════════════════════ */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.reveal {
+  opacity: 0; transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.visible { opacity: 1; transform: translateY(0); }
+
+/* ═══════════════════════════════════════════════════════
+   RESPONSIVE
+═══════════════════════════════════════════════════════ */
+@media (max-width: 768px) {
+  .nav-links, .nav-btn-admin { display: none; }
+  .nav-mobile-toggle { display: flex; }
+
+  .hero-stats { gap: 20px; }
+  .hero-stat-divider { display: none; }
+
+  section { padding: 60px 20px; }
+
+  .section-header { margin-bottom: 36px; }
+  .section-header .btn-secondary { display: none; }
+
+  .why-us-visual { display: none; }
+
+  .admin-sidebar {
+    width: 220px;
+  }
+
+  [data-lang="ar"] .admin-main { margin-right: 220px; }
+  [data-lang="en"] .admin-main { margin-left: 220px; }
+
+  .admin-main { padding: 20px; }
+
+  .admin-stats-grid { grid-template-columns: 1fr 1fr; }
+
+  .modal-gallery { border-radius: var(--radius-xl) var(--radius-xl) 0 0; }
+  [data-lang="en"] .modal-gallery { border-radius: var(--radius-xl) var(--radius-xl) 0 0; }
+
+  .admin-table th:nth-child(n+4),
+  .admin-table td:nth-child(n+4) { display: none; }
+}
+
+@media (max-width: 480px) {
+  .admin-sidebar { width: 100%; height: auto; position: relative; }
+  [data-lang="ar"] .admin-main,
+  [data-lang="en"] .admin-main { margin: 0; }
+
+  #admin-panel { overflow-y: auto; }
+
+  .filters-bar { flex-direction: column; }
+  .filter-search { width: 100%; }
+
+  .modal-actions { flex-direction: column; }
+}
+
+/* ═══════════════════════════════════════════════════════
+   SOLD OVERLAY
+═══════════════════════════════════════════════════════ */
+.product-card.sold .product-card-img::after {
+  content: '';
+  position: absolute; inset: 0;
+  background: rgba(0,0,0,0.5);
+  backdrop-filter: blur(2px);
+}
+
+.product-card.sold .product-card-img::before {
+  content: attr(data-sold-label);
+  position: absolute; top: 50%; left: 50%;
+  transform: translate(-50%, -50%) rotate(-15deg);
+  z-index: 2;
+  font-size: 22px; font-weight: 900; letter-spacing: 0.1em;
+  color: var(--red);
+  border: 3px solid var(--red);
+  padding: 8px 20px;
+  border-radius: 8px;
+  text-transform: uppercase;
+}
+
+/* Admin tabs */
+.admin-tabs {
+  display: flex; gap: 4px;
+  background: var(--bg-tertiary);
+  border-radius: var(--radius-md);
+  padding: 4px; margin-bottom: 28px;
+  width: fit-content;
+}
+
+.admin-tab {
+  font-size: 13px; font-weight: 600;
+  color: var(--text-muted);
+  padding: 8px 20px; border-radius: var(--radius-sm);
+  cursor: pointer; transition: all var(--transition);
+}
+
+.admin-tab.active {
+  background: var(--bg-card);
+  color: var(--text-primary);
+  box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+}
+
+.admin-content-section { display: none; }
+.admin-content-section.active { display: block; }
+
+/* Analytics */
+.analytics-grid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 20px; margin-top: 24px;
+}
+
+@media (max-width: 600px) { .analytics-grid { grid-template-columns: 1fr; } }
+
+.analytics-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg); padding: 24px;
+}
+
+.analytics-card-title {
+  font-size: 13px; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.1em; color: var(--text-muted); margin-bottom: 16px;
+}
+
+.mini-bar-chart { display: flex; align-items: flex-end; gap: 8px; height: 80px; }
+
+.mini-bar {
+  flex: 1; border-radius: 4px 4px 0 0;
+  background: linear-gradient(to top, var(--gold-dark), var(--gold));
+  position: relative; transition: height 0.8s ease;
+  min-width: 0;
+}
+
+.mini-bar-label {
+  font-size: 10px; color: var(--text-muted);
+  text-align: center; margin-top: 6px;
+}
+
+/* Mobile nav menu */
+#mobile-menu {
+  display: none;
+  position: fixed; top: 64px; left: 0; right: 0;
+  background: var(--bg-card);
+  border-bottom: 1px solid var(--border);
+  padding: 16px 24px;
+  z-index: 999;
+  flex-direction: column; gap: 8px;
+}
+
+#mobile-menu.open { display: flex; }
+
+.mobile-nav-link {
+  font-size: 16px; font-weight: 500; color: var(--text-secondary);
+  padding: 12px 16px; border-radius: var(--radius-md);
+  transition: all var(--transition);
+}
+
+.mobile-nav-link:hover { background: var(--bg-tertiary); color: var(--text-primary); }
+
+/* ═══════════════════════════════════════════════════════
+   SCROLL TO TOP
+═══════════════════════════════════════════════════════ */
+#scroll-top {
+  position: fixed; bottom: 32px; z-index: 900;
+  width: 44px; height: 44px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-gold);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 18px; color: var(--gold);
+  cursor: pointer; opacity: 0; pointer-events: none;
+  transition: all var(--transition); box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+
+[data-lang="ar"] #scroll-top { left: 32px; }
+[data-lang="en"] #scroll-top { right: 32px; }
+
+#scroll-top.visible { opacity: 1; pointer-events: all; }
+#scroll-top:hover { transform: translateY(-3px); background: var(--gold); color: var(--black); }
+
+@keyframes shake {
+  0%,100% { transform: scale(1) translateY(0); }
+  20% { transform: scale(1) translateX(-8px); }
+  40% { transform: scale(1) translateX(8px); }
+  60% { transform: scale(1) translateX(-5px); }
+  80% { transform: scale(1) translateX(5px); }
+}
+
+/* ═══════════════════════════════════════════════════════
+   PWA INSTALL BANNER
+═══════════════════════════════════════════════════════ */
+#pwa-banner {
+  position: fixed; bottom: 24px; z-index: 900;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-gold);
+  border-radius: var(--radius-lg);
+  padding: 16px 20px;
+  display: flex; align-items: center; gap: 16px;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.3);
+  transform: translateY(120%); transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  max-width: 360px;
+}
+
+[data-lang="ar"] #pwa-banner { right: 80px; }
+[data-lang="en"] #pwa-banner { left: 80px; }
+
+#pwa-banner.show { transform: translateY(0); }
+
+.pwa-icon { font-size: 32px; }
+.pwa-text strong { display: block; font-size: 14px; font-weight: 700; color: var(--text-primary); margin-bottom: 2px; }
+.pwa-text span { font-size: 12px; color: var(--text-muted); }
+
+.pwa-install-btn {
+  font-size: 13px; font-weight: 700;
+  color: var(--black);
+  background: var(--gold);
+  padding: 8px 16px; border-radius: var(--radius-md);
+  white-space: nowrap;
+  transition: all var(--transition);
+}
+
+.pwa-install-btn:hover { filter: brightness(1.1); }
+
+.pwa-close { font-size: 18px; color: var(--text-muted); margin-inline-start: 4px; transition: color var(--transition); }
+.pwa-close:hover { color: var(--text-primary); }
+
+/* ═══ USER AUTH & ACCOUNT SYSTEM ═══ */
+.nav-user-btn{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:600;color:var(--text-secondary);padding:7px 16px;border:1px solid var(--border-strong);border-radius:var(--radius-full);transition:all var(--transition);}
+.nav-user-btn:hover{border-color:var(--gold);color:var(--gold);}
+.nav-user-avatar{width:26px;height:26px;border-radius:50%;background:linear-gradient(135deg,var(--gold-dark),var(--gold));display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;color:var(--black);flex-shrink:0;}
+#user-auth-modal{position:fixed;inset:0;z-index:8000;background:rgba(0,0,0,0.92);backdrop-filter:blur(24px);display:none;align-items:center;justify-content:center;padding:24px;opacity:0;transition:opacity 0.3s ease;}
+#user-auth-modal.show{display:flex;}
+#user-auth-modal.visible{opacity:1;}
+.auth-modal-box{background:var(--bg-card);border:1px solid var(--border-gold);border-radius:var(--radius-xl);width:100%;max-width:420px;overflow:hidden;transform:scale(0.94) translateY(16px);transition:transform 0.35s cubic-bezier(0.34,1.56,0.64,1);position:relative;}
+#user-auth-modal.visible .auth-modal-box{transform:scale(1) translateY(0);}
+.auth-modal-header{padding:32px 32px 0;text-align:center;}
+.auth-modal-logo{display:flex;align-items:center;justify-content:center;gap:8px;font-size:20px;font-weight:700;color:var(--text-primary);margin-bottom:24px;}
+.auth-tabs{display:flex;border-bottom:1px solid var(--border);}
+.auth-tab{flex:1;padding:14px;text-align:center;font-size:14px;font-weight:600;color:var(--text-muted);cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-1px;transition:all var(--transition);}
+.auth-tab.active{color:var(--gold);border-bottom-color:var(--gold);}
+.auth-modal-body{padding:28px 32px 32px;}
+.auth-form-group{margin-bottom:16px;}
+.auth-form-label{display:block;font-size:11px;font-weight:700;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:8px;}
+.auth-form-input{width:100%;background:var(--bg-tertiary);border:1px solid var(--border);border-radius:var(--radius-md);padding:13px 16px;font-size:14px;color:var(--text-primary);outline:none;font-family:inherit;transition:border-color var(--transition);}
+.auth-form-input:focus{border-color:var(--gold);box-shadow:0 0 0 3px var(--gold-glow);}
+.auth-submit-btn{width:100%;padding:15px;font-size:15px;font-weight:700;color:var(--black);background:linear-gradient(135deg,var(--gold-light),var(--gold));border:none;border-radius:var(--radius-md);cursor:pointer;font-family:inherit;transition:all var(--spring);margin-top:8px;}
+.auth-submit-btn:hover{transform:scale(1.02);filter:brightness(1.05);}
+.auth-submit-btn:disabled{opacity:0.6;cursor:not-allowed;transform:none;}
+.auth-divider{display:flex;align-items:center;gap:12px;margin:20px 0;color:var(--text-muted);font-size:12px;}
+.auth-divider::before,.auth-divider::after{content:'';flex:1;height:1px;background:var(--border);}
+.auth-google-btn{width:100%;padding:13px;font-size:14px;font-weight:600;color:var(--text-primary);background:var(--bg-tertiary);border:1px solid var(--border-strong);border-radius:var(--radius-md);cursor:pointer;font-family:inherit;display:flex;align-items:center;justify-content:center;gap:10px;transition:all var(--transition);}
+.auth-google-btn:hover{border-color:var(--gold);background:var(--gold-glow);}
+.auth-error{background:rgba(255,69,58,0.1);border:1px solid rgba(255,69,58,0.3);border-radius:var(--radius-md);padding:12px 14px;font-size:13px;color:var(--red);margin-bottom:16px;display:none;}
+.auth-success{background:rgba(48,209,88,0.1);border:1px solid rgba(48,209,88,0.3);border-radius:var(--radius-md);padding:12px 14px;font-size:13px;color:var(--green);margin-bottom:16px;display:none;}
+.auth-close-btn{position:absolute;top:16px;width:32px;height:32px;border-radius:50%;background:var(--bg-elevated);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:15px;color:var(--text-muted);cursor:pointer;transition:all var(--transition);z-index:2;}
+[data-lang="ar"] .auth-close-btn{left:16px;}
+[data-lang="en"] .auth-close-btn{right:16px;}
+.auth-close-btn:hover{background:var(--red);color:white;border-color:transparent;}
+#customer-dashboard{position:fixed;inset:0;z-index:7500;background:var(--bg);display:none;flex-direction:column;overflow:hidden;}
+#customer-dashboard.open{display:flex;}
+.customer-dash-header{background:var(--bg-secondary);border-bottom:1px solid var(--border);padding:20px 32px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;}
+.customer-dash-title{font-size:20px;font-weight:700;color:var(--text-primary);}
+.customer-dash-body{flex:1;overflow-y:auto;padding:32px;max-width:1000px;width:100%;margin:0 auto;}
+.customer-profile-card{background:var(--bg-card);border:1px solid var(--border-gold);border-radius:var(--radius-xl);padding:28px;margin-bottom:28px;display:flex;align-items:center;gap:20px;flex-wrap:wrap;}
+.customer-avatar-big{width:72px;height:72px;border-radius:50%;background:linear-gradient(135deg,var(--gold-dark),var(--gold));display:flex;align-items:center;justify-content:center;font-size:28px;font-weight:800;color:var(--black);flex-shrink:0;}
+.customer-info-name{font-size:22px;font-weight:700;color:var(--text-primary);margin-bottom:4px;}
+.customer-info-email{font-size:14px;color:var(--text-muted);}
+.customer-info-badge{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;margin-top:8px;padding:4px 12px;border-radius:var(--radius-full);}
+.badge-customer{background:rgba(10,132,255,0.15);color:var(--blue);border:1px solid rgba(10,132,255,0.3);}
+.badge-staff{background:rgba(201,168,76,0.15);color:var(--gold);border:1px solid var(--border-gold);}
+.badge-admin-r{background:rgba(48,209,88,0.15);color:var(--green);border:1px solid rgba(48,209,88,0.3);}
+.customer-section-title{font-size:18px;font-weight:700;color:var(--text-primary);margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid var(--border);}
+.reservation-card{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-lg);padding:20px;margin-bottom:12px;display:flex;align-items:center;gap:16px;transition:all var(--transition);flex-wrap:wrap;}
+.reservation-card:hover{border-color:var(--border-gold);}
+.reservation-phone-icon{width:52px;height:52px;border-radius:var(--radius-md);background:var(--bg-tertiary);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:24px;flex-shrink:0;}
+.reservation-model{font-size:16px;font-weight:700;color:var(--text-primary);margin-bottom:4px;}
+.reservation-specs{font-size:13px;color:var(--text-muted);}
+.reservation-price{font-size:18px;font-weight:700;color:var(--gold);white-space:nowrap;}
+.reservation-status{font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;padding:4px 10px;border-radius:var(--radius-full);}
+.res-pending{background:rgba(255,159,10,0.15);color:var(--orange);border:1px solid rgba(255,159,10,0.3);}
+.res-confirmed{background:rgba(48,209,88,0.15);color:var(--green);border:1px solid rgba(48,209,88,0.3);}
+.res-cancelled{background:rgba(255,69,58,0.15);color:var(--red);border:1px solid rgba(255,69,58,0.3);}
+.empty-reservations{text-align:center;padding:60px 24px;color:var(--text-muted);}
+.empty-reservations-icon{font-size:48px;margin-bottom:16px;opacity:0.3;}
+.empty-reservations-text{font-size:16px;font-weight:500;margin-bottom:8px;color:var(--text-secondary);}
+
+</style>
+</head>
+
+<body>
+
+<!-- LOADING SCREEN -->
+<div id="loading-screen">
+  <div class="loading-logo">
+    <span>Sab</span><svg class="apple-svg" width="38" height="38" viewBox="0 0 814 1000" xmlns="http://www.w3.org/2000/svg"><path d="M788.1 340.9c-5.8 4.5-108.2 62.2-108.2 190.5 0 148.4 130.3 200.9 134.2 202.2-.6 3.2-20.7 71.9-68.7 141.9-42.8 61.6-87.5 123.1-155.5 123.1s-85.5-39.5-164-39.5c-76 0-103.7 40.8-165.9 40.8s-105-57.8-155.5-127.4C46 790.7 0 663 0 541.8c0-207.5 135.4-317.3 269-317.3 70.1 0 128.4 46.4 172.5 46.4 42.8 0 109.6-49 192.5-49 31 0 110.6 2.6 168.4 83.1zm-126.8-85.5c-5.8-22.7-16.9-48.7-32.4-69.4-20.1-27.3-54.7-48.7-85.5-48.7-3.9 0-7.7.6-11 1.3 0 25.4 9.7 50.1 26.6 70.7 14.9 18.2 47.2 41.6 102.3 46.1z"/></svg><span>t Store</span>
+  </div>
+  <div style="text-align:center">
+    <div class="loading-progress"><div class="loading-bar"></div></div>
+    <div class="loading-text" id="loading-text-el">سبات ستور — جاري التحميل</div>
+  </div>
+</div>
+
+<!-- NAVBAR -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <div class="nav-logo" onclick="scrollToSection('hero')" style="cursor:pointer">
+      <svg class="apple-svg" width="22" height="22" viewBox="0 0 814 1000" xmlns="http://www.w3.org/2000/svg"><path d="M788.1 340.9c-5.8 4.5-108.2 62.2-108.2 190.5 0 148.4 130.3 200.9 134.2 202.2-.6 3.2-20.7 71.9-68.7 141.9-42.8 61.6-87.5 123.1-155.5 123.1s-85.5-39.5-164-39.5c-76 0-103.7 40.8-165.9 40.8s-105-57.8-155.5-127.4C46 790.7 0 663 0 541.8c0-207.5 135.4-317.3 269-317.3 70.1 0 128.4 46.4 172.5 46.4 42.8 0 109.6-49 192.5-49 31 0 110.6 2.6 168.4 83.1zm-126.8-85.5c-5.8-22.7-16.9-48.7-32.4-69.4-20.1-27.3-54.7-48.7-85.5-48.7-3.9 0-7.7.6-11 1.3 0 25.4 9.7 50.1 26.6 70.7 14.9 18.2 47.2 41.6 102.3 46.1z"/></svg>
+      <span id="nav-brand-text">Sabat Store</span>
+    </div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#" onclick="scrollToSection('products')" id="nav-link-products">المنتجات</a></li>
+      <li><a href="#" onclick="scrollToSection('features')" id="nav-link-features">مميزاتنا</a></li>
+      <li><a href="#" onclick="scrollToSection('testimonials')" id="nav-link-reviews">آراء العملاء</a></li>
+      <li><a href="#" onclick="scrollToSection('why-us')" id="nav-link-why">لماذا سبات</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="nav-btn-lang" onclick="toggleLang()" id="lang-btn">EN</button>
+      <button class="nav-btn-theme" onclick="toggleTheme()" id="theme-btn">🌙</button>
+      <button class="nav-user-btn" onclick="handleUserBtn()" id="nav-user-btn">
+        <span id="nav-user-label">تسجيل الدخول</span>
+      </button>
+      <button class="nav-btn-admin" onclick="openAdmin()" id="nav-admin-btn">لوحة التحكم</button>
+      <button class="nav-mobile-toggle" onclick="toggleMobileMenu()" id="mobile-toggle">☰</button>
+    </div>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div id="mobile-menu">
+  <a class="mobile-nav-link" href="#" onclick="scrollToSection('products')" id="mob-products">المنتجات</a>
+  <a class="mobile-nav-link" href="#" onclick="scrollToSection('features')" id="mob-features">مميزاتنا</a>
+  <a class="mobile-nav-link" href="#" onclick="scrollToSection('testimonials')" id="mob-reviews">آراء العملاء</a>
+  <a class="mobile-nav-link" href="#" onclick="openAdmin()" id="mob-admin">لوحة التحكم</a>
+</div>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg">
+    <div class="hero-orb hero-orb-1"></div>
+    <div class="hero-orb hero-orb-2"></div>
+    <div class="hero-grid"></div>
+  </div>
+  <div class="hero-content">
+    <h1 class="hero-title">
+      <span id="hero-title-1">يتلحقوني </span><span class="gold" id="hero-title-2">يتسامحوني</span>
+    </h1>
+    <p class="hero-subtitle" id="hero-subtitle">
+      مش بنبيع بس — بنضمن. كل جهاز بيتفحص بدقة، والسعر عادل، وبعد البيع موجودين معاك.
+    </p>
+    <div class="hero-cta">
+      <a class="btn-primary" href="#" onclick="scrollToSection('products')">
+        <span id="hero-cta-browse">🔍 تصفح الأجهزة</span>
+      </a>
+      <a class="btn-secondary" href="#" onclick="contactWhatsApp()">
+        <span id="hero-cta-contact">💬 تواصل معنا</span>
+      </a>
+    </div>
+    <div class="hero-stats">
+      <div class="hero-stat-item">
+        <span class="hero-stat-num" id="counter-phones">0</span>
+        <div class="hero-stat-label" id="stat-label-phones">جهاز متاح</div>
+      </div>
+      <div class="hero-stat-divider"></div>
+      <div class="hero-stat-item">
+        <span class="hero-stat-num" id="counter-sold">0</span>
+        <div class="hero-stat-label" id="stat-label-sold">جهاز تم بيعه</div>
+      </div>
+      <div class="hero-stat-divider"></div>
+      <div class="hero-stat-item">
+        <span class="hero-stat-num">100%</span>
+        <div class="hero-stat-label" id="stat-label-quality">ضمان الجودة</div>
+      </div>
+      <div class="hero-stat-divider"></div>
+      <div class="hero-stat-item">
+        <span class="hero-stat-num" id="counter-years">3+</span>
+        <div class="hero-stat-label" id="stat-label-exp">سنوات خبرة</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section id="features">
+  <div class="section-inner">
+    <div class="section-header reveal">
+      <div>
+        <div class="section-label" id="features-label">لماذا نحن</div>
+        <h2 class="section-title" id="features-title">مميزات تجعلنا<br>الخيار الأول</h2>
+        <p class="section-subtitle" id="features-subtitle">نلتزم بتقديم أفضل تجربة شراء لجهاز آيفون مستعمل في مصر</p>
+      </div>
+    </div>
+    <div class="features-grid" id="features-grid"></div>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section id="products">
+  <div class="section-inner">
+    <div class="section-header reveal">
+      <div>
+        <div class="section-label" id="products-label">المخزون</div>
+        <h2 class="section-title" id="products-title">الأجهزة المتاحة</h2>
+        <p class="section-subtitle" id="products-subtitle">تصفح مخزوننا المحدث يومياً من أجهزة آيفون المجددة</p>
+      </div>
+    </div>
+
+    <!-- FILTERS -->
+    <div class="filters-bar">
+      <div class="filter-search">
+        <span class="filter-search-icon">🔍</span>
+        <input type="text" id="search-input" placeholder="ابحث عن موديل..." oninput="applyFilters()">
+      </div>
+      <div class="filter-wrapper">
+        <select class="filter-select" id="filter-storage" onchange="applyFilters()">
+          <option value="">كل التخزين</option>
+          <option value="64">64 GB</option>
+          <option value="128">128 GB</option>
+          <option value="256">256 GB</option>
+          <option value="512">512 GB</option>
+          <option value="1TB">1 TB</option>
+        </select>
+      </div>
+      <div class="filter-wrapper">
+        <select class="filter-select" id="filter-condition" onchange="applyFilters()">
+          <option value="">كل الحالات</option>
+          <option value="new">جديد</option>
+          <option value="excellent">ممتاز</option>
+          <option value="good">جيد جداً</option>
+          <option value="fair">جيد</option>
+        </select>
+      </div>
+      <div class="filter-wrapper">
+        <select class="filter-select" id="filter-price" onchange="applyFilters()">
+          <option value="">كل الأسعار</option>
+          <option value="0-10000">أقل من 10,000</option>
+          <option value="10000-20000">10,000 - 20,000</option>
+          <option value="20000-35000">20,000 - 35,000</option>
+          <option value="35000-">أكثر من 35,000</option>
+        </select>
+      </div>
+      <div class="filter-wrapper">
+        <select class="filter-select" id="filter-status" onchange="applyFilters()">
+          <option value="">كل الحالات</option>
+          <option value="available">متاح</option>
+          <option value="sold">مباع</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="active-filters" id="active-filters"></div>
+    <div class="products-grid" id="products-grid"></div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials" style="display:none">
+  <div class="section-inner">
+    <div class="section-header reveal">
+      <div>
+        <div class="section-label" id="testimonials-label">آراء العملاء</div>
+        <h2 class="section-title" id="testimonials-title">ماذا يقول<br>عملاؤنا</h2>
+      </div>
+      <button class="btn-secondary" onclick="openAdmin();switchAdminTab('reviews')" style="display:none" id="add-review-btn">+ إضافة رأي</button>
+    </div>
+    <div class="testimonials-grid" id="testimonials-grid"></div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section id="why-us">
+  <div class="section-inner">
+    <div class="section-header reveal">
+      <div>
+        <div class="section-label" style="font-family:'Inter',sans-serif;letter-spacing:0.2em">WHY SABAT STORE</div>
+        <h2 class="section-title" style="font-family:'Inter',sans-serif" id="why-us-title">What Sets Us Apart</h2>
+        <p class="section-subtitle" style="font-family:'Inter',sans-serif" id="why-us-subtitle">We don't just sell iPhones — we deliver trust, transparency, and a premium experience every single time.</p>
+      </div>
+    </div>
+    <div class="why-us-grid reveal">
+      <div class="why-us-points" id="why-points"></div>
+      <div class="why-us-visual">
+        <div class="why-us-visual-glow"></div>
+        <div class="why-us-big-number" id="why-big-num">500+</div>
+        <div class="why-us-big-label" id="why-big-label">جهاز تم بيعه بنجاح</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <svg class="apple-svg" width="22" height="22" viewBox="0 0 814 1000" xmlns="http://www.w3.org/2000/svg"><path d="M788.1 340.9c-5.8 4.5-108.2 62.2-108.2 190.5 0 148.4 130.3 200.9 134.2 202.2-.6 3.2-20.7 71.9-68.7 141.9-42.8 61.6-87.5 123.1-155.5 123.1s-85.5-39.5-164-39.5c-76 0-103.7 40.8-165.9 40.8s-105-57.8-155.5-127.4C46 790.7 0 663 0 541.8c0-207.5 135.4-317.3 269-317.3 70.1 0 128.4 46.4 172.5 46.4 42.8 0 109.6-49 192.5-49 31 0 110.6 2.6 168.4 83.1zm-126.8-85.5c-5.8-22.7-16.9-48.7-32.4-69.4-20.1-27.3-54.7-48.7-85.5-48.7-3.9 0-7.7.6-11 1.3 0 25.4 9.7 50.1 26.6 70.7 14.9 18.2 47.2 41.6 102.3 46.1z"/></svg>
+          <span>Sabat Store</span>
+        </div>
+        <p class="footer-tagline" id="footer-tagline">
+          متجرك الأول لآيفون المجدد والمستعمل في مصر. جودة عالمية بسعر يناسبك.
+        </p>
+        <div class="footer-socials">
+          <a class="footer-social" href="#" title="Instagram">📷</a>
+          <a class="footer-social" href="#" title="Facebook">📘</a>
+          <a class="footer-social" href="#" title="WhatsApp" onclick="contactWhatsApp()">💬</a>
+          <a class="footer-social" href="#" title="TikTok">🎵</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title" id="footer-quick">روابط سريعة</div>
+        <ul class="footer-links">
+          <li><a href="#" onclick="scrollToSection('products')" id="fl-products">المنتجات</a></li>
+          <li><a href="#" onclick="scrollToSection('features')" id="fl-features">مميزاتنا</a></li>
+          <li><a href="#" onclick="scrollToSection('testimonials')" id="fl-reviews">آراء العملاء</a></li>
+          <li><a href="#" onclick="contactWhatsApp()" id="fl-contact">تواصل معنا</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title" id="footer-models">الموديلات</div>
+        <ul class="footer-links">
+          <li><a href="#">iPhone 16 Pro</a></li>
+          <li><a href="#">iPhone 15 Pro</a></li>
+          <li><a href="#">iPhone 14 Pro</a></li>
+          <li><a href="#">iPhone 13 Pro</a></li>
+          <li><a href="#">iPhone 12</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title" id="footer-contact-title">تواصل معنا</div>
+        <ul class="footer-links">
+          <li><a href="#" onclick="contactWhatsApp()">📞 WhatsApp</a></li>
+          <li><a href="#">📍 القاهرة، مصر</a></li>
+          <li><a href="#">⏰ 10ص - 10م يومياً</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy" id="footer-copy">
+        © 2025 Sabat Store — جميع الحقوق محفوظة
+      </p>
+      <p class="footer-copy">صُنع بـ ❤️ في مصر</p>
+    </div>
+  </div>
+</footer>
+
+<!-- PRODUCT MODAL -->
+<div id="product-modal" onclick="closeModal(event)">
+  <div class="modal-inner">
+    <button class="modal-close" onclick="closeProductModal()">✕</button>
+    <div class="modal-grid" id="modal-content"></div>
+  </div>
+</div>
+
+<!-- USER AUTH MODAL -->
+<div id="user-auth-modal">
+  <div class="auth-modal-box">
+    <button class="auth-close-btn" onclick="closeUserAuthModal()">✕</button>
+    <div class="auth-modal-header">
+      <div class="auth-modal-logo">
+        <svg class="apple-svg" width="22" height="22" viewBox="0 0 814 1000" xmlns="http://www.w3.org/2000/svg"><path d="M788.1 340.9c-5.8 4.5-108.2 62.2-108.2 190.5 0 148.4 130.3 200.9 134.2 202.2-.6 3.2-20.7 71.9-68.7 141.9-42.8 61.6-87.5 123.1-155.5 123.1s-85.5-39.5-164-39.5c-76 0-103.7 40.8-165.9 40.8s-105-57.8-155.5-127.4C46 790.7 0 663 0 541.8c0-207.5 135.4-317.3 269-317.3 70.1 0 128.4 46.4 172.5 46.4 42.8 0 109.6-49 192.5-49 31 0 110.6 2.6 168.4 83.1zm-126.8-85.5c-5.8-22.7-16.9-48.7-32.4-69.4-20.1-27.3-54.7-48.7-85.5-48.7-3.9 0-7.7.6-11 1.3 0 25.4 9.7 50.1 26.6 70.7 14.9 18.2 47.2 41.6 102.3 46.1z"/></svg>
+        <span>Sabat Store</span>
+      </div>
+      <div class="auth-tabs">
+        <div class="auth-tab active" onclick="switchAuthTab('login')" id="auth-tab-login">تسجيل الدخول</div>
+        <div class="auth-tab" onclick="switchAuthTab('signup')" id="auth-tab-signup">حساب جديد</div>
+      </div>
+    </div>
+    <div class="auth-modal-body">
+      <div id="auth-msg-error" class="auth-error"></div>
+      <div id="auth-msg-success" class="auth-success"></div>
+
+      <!-- LOGIN FORM -->
+      <div id="auth-login-form">
+        <div class="auth-form-group">
+          <label class="auth-form-label">البريد الإلكتروني</label>
+          <input type="email" class="auth-form-input" id="user-login-email" placeholder="example@gmail.com" onkeydown="if(event.key==='Enter')submitLogin()">
+        </div>
+        <div class="auth-form-group">
+          <label class="auth-form-label">كلمة المرور</label>
+          <input type="password" class="auth-form-input" id="user-login-pass" placeholder="••••••••" onkeydown="if(event.key==='Enter')submitLogin()">
+        </div>
+        <button class="auth-submit-btn" onclick="submitLogin()" id="login-submit-btn">دخول →</button>
+        <div class="auth-divider">أو</div>
+        <button class="auth-google-btn" onclick="submitGoogle()">
+          <svg width="18" height="18" viewBox="0 0 48 48"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.18 1.48-4.97 2.35-8.16 2.35-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
+          المتابعة بـ Google
+        </button>
+      </div>
+
+      <!-- SIGNUP FORM -->
+      <div id="auth-signup-form" style="display:none">
+        <div class="auth-form-group">
+          <label class="auth-form-label">الاسم الكامل</label>
+          <input type="text" class="auth-form-input" id="user-signup-name" placeholder="محمد أحمد">
+        </div>
+        <div class="auth-form-group">
+          <label class="auth-form-label">البريد الإلكتروني</label>
+          <input type="email" class="auth-form-input" id="user-signup-email" placeholder="example@gmail.com">
+        </div>
+        <div class="auth-form-group">
+          <label class="auth-form-label">رقم الموبايل (اختياري)</label>
+          <input type="tel" class="auth-form-input" id="user-signup-phone" placeholder="01012345678">
+        </div>
+        <div class="auth-form-group">
+          <label class="auth-form-label">كلمة المرور</label>
+          <input type="password" class="auth-form-input" id="user-signup-pass" placeholder="8 أحرف على الأقل">
+        </div>
+        <button class="auth-submit-btn" onclick="submitSignup()" id="signup-submit-btn">إنشاء الحساب ✓</button>
+        <div class="auth-divider">أو</div>
+        <button class="auth-google-btn" onclick="submitGoogle()">
+          <svg width="18" height="18" viewBox="0 0 48 48"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.18 1.48-4.97 2.35-8.16 2.35-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
+          المتابعة بـ Google
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CUSTOMER DASHBOARD -->
+<div id="customer-dashboard">
+  <div class="customer-dash-header">
+    <div style="display:flex;align-items:center;gap:14px">
+      <svg class="apple-svg" width="22" height="22" viewBox="0 0 814 1000" xmlns="http://www.w3.org/2000/svg"><path d="M788.1 340.9c-5.8 4.5-108.2 62.2-108.2 190.5 0 148.4 130.3 200.9 134.2 202.2-.6 3.2-20.7 71.9-68.7 141.9-42.8 61.6-87.5 123.1-155.5 123.1s-85.5-39.5-164-39.5c-76 0-103.7 40.8-165.9 40.8s-105-57.8-155.5-127.4C46 790.7 0 663 0 541.8c0-207.5 135.4-317.3 269-317.3 70.1 0 128.4 46.4 172.5 46.4 42.8 0 109.6-49 192.5-49 31 0 110.6 2.6 168.4 83.1zm-126.8-85.5c-5.8-22.7-16.9-48.7-32.4-69.4-20.1-27.3-54.7-48.7-85.5-48.7-3.9 0-7.7.6-11 1.3 0 25.4 9.7 50.1 26.6 70.7 14.9 18.2 47.2 41.6 102.3 46.1z"/></svg>
+      <div class="customer-dash-title" id="customer-dash-title">حسابي</div>
+    </div>
+    <div style="display:flex;gap:10px;align-items:center">
+      <button onclick="scrollToSection('products');closeCustomerDash()" style="font-size:13px;font-weight:600;color:var(--gold);padding:9px 18px;border:1px solid var(--border-gold);border-radius:var(--radius-md);background:var(--gold-glow);cursor:pointer">🔍 تصفح الأجهزة</button>
+      <button onclick="signOutUser()" style="font-size:13px;font-weight:600;color:var(--red);padding:9px 18px;border:1px solid rgba(255,69,58,0.3);border-radius:var(--radius-md);background:rgba(255,69,58,0.08);cursor:pointer" id="signout-btn">تسجيل خروج</button>
+      <button onclick="closeCustomerDash()" style="font-size:18px;color:var(--text-muted);padding:8px;cursor:pointer">✕</button>
+    </div>
+  </div>
+  <div class="customer-dash-body">
+    <div class="customer-profile-card" id="customer-profile-card">
+      <div class="customer-avatar-big" id="cust-avatar">؟</div>
+      <div>
+        <div class="customer-info-name" id="cust-name">—</div>
+        <div class="customer-info-email" id="cust-email">—</div>
+        <div class="customer-info-badge badge-customer" id="cust-role-badge">🙍 عميل</div>
+      </div>
+    </div>
+
+    <div class="customer-section-title">📱 الأجهزة المحجوزة</div>
+    <div id="customer-reservations"></div>
+
+    <div class="customer-section-title" style="margin-top:32px">⚙️ إعدادات الحساب</div>
+    <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-lg);padding:24px;max-width:480px">
+      <div class="auth-form-group">
+        <label class="auth-form-label">الاسم</label>
+        <input type="text" class="auth-form-input" id="profile-name-input" placeholder="اسمك">
+      </div>
+      <div class="auth-form-group">
+        <label class="auth-form-label">رقم الموبايل</label>
+        <input type="tel" class="auth-form-input" id="profile-phone-input" placeholder="01012345678">
+      </div>
+      <button onclick="updateProfile()" style="padding:12px 28px;font-size:14px;font-weight:700;color:var(--black);background:linear-gradient(135deg,var(--gold-light),var(--gold));border:none;border-radius:var(--radius-md);cursor:pointer;font-family:inherit;">💾 حفظ التغييرات</button>
+    </div>
+  </div>
+</div>
+
+<!-- ADMIN AUTH MODAL -->
+<div id="admin-auth-modal" style="
+  position:fixed;inset:0;z-index:7000;
+  background:rgba(0,0,0,0.9);backdrop-filter:blur(20px);
+  display:none;align-items:center;justify-content:center;padding:24px;
+  opacity:0;transition:opacity 0.3s ease;
+">
+  <div style="
+    background:var(--bg-card);border:1px solid var(--border-gold);
+    border-radius:var(--radius-xl);padding:40px;
+    max-width:400px;width:100%;text-align:center;
+    transform:scale(0.9) translateY(20px);
+    transition:transform 0.3s cubic-bezier(0.34,1.56,0.64,1);
+  " id="auth-box">
+    <div style="margin-bottom:20px">
+      <svg class="apple-svg" width="36" height="36" viewBox="0 0 814 1000" xmlns="http://www.w3.org/2000/svg" style="margin:0 auto 12px"><path d="M788.1 340.9c-5.8 4.5-108.2 62.2-108.2 190.5 0 148.4 130.3 200.9 134.2 202.2-.6 3.2-20.7 71.9-68.7 141.9-42.8 61.6-87.5 123.1-155.5 123.1s-85.5-39.5-164-39.5c-76 0-103.7 40.8-165.9 40.8s-105-57.8-155.5-127.4C46 790.7 0 663 0 541.8c0-207.5 135.4-317.3 269-317.3 70.1 0 128.4 46.4 172.5 46.4 42.8 0 109.6-49 192.5-49 31 0 110.6 2.6 168.4 83.1zm-126.8-85.5c-5.8-22.7-16.9-48.7-32.4-69.4-20.1-27.3-54.7-48.7-85.5-48.7-3.9 0-7.7.6-11 1.3 0 25.4 9.7 50.1 26.6 70.7 14.9 18.2 47.2 41.6 102.3 46.1z"/></svg>
+      <div id="auth-title" style="font-size:22px;font-weight:700;color:var(--text-primary);margin-bottom:6px">لوحة التحكم</div>
+      <div id="auth-subtitle" style="font-size:14px;color:var(--text-muted)">Sabat Store Admin</div>
+    </div>
+
+    <!-- SET PASSWORD STATE -->
+    <div id="auth-set-state" style="display:none">
+      <div style="background:var(--gold-glow);border:1px solid var(--border-gold);border-radius:var(--radius-md);padding:14px 16px;margin-bottom:24px;font-size:13px;color:var(--gold);line-height:1.6" id="auth-set-msg">
+        🔑 أول مرة تفتح اللوحة — اختار باسورد خاص بيك
+      </div>
+      <div style="margin-bottom:14px;text-align:start">
+        <div style="font-size:11px;font-weight:700;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:8px" id="auth-label-new">الباسورد الجديد</div>
+        <input type="password" id="auth-new-pass" class="form-input" placeholder="اختار باسورد قوي..." style="text-align:center;letter-spacing:0.2em;font-size:18px">
+      </div>
+      <div style="margin-bottom:24px;text-align:start">
+        <div style="font-size:11px;font-weight:700;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:8px" id="auth-label-confirm">تأكيد الباسورد</div>
+        <input type="password" id="auth-confirm-pass" class="form-input" placeholder="اكتب الباسورد تاني..." style="text-align:center;letter-spacing:0.2em;font-size:18px">
+      </div>
+      <button onclick="setAdminPassword()" style="
+        width:100%;padding:15px;font-size:15px;font-weight:700;
+        color:var(--black);background:linear-gradient(135deg,var(--gold-light),var(--gold));
+        border-radius:var(--radius-md);border:none;cursor:pointer;
+        transition:all 0.3s ease;
+      " id="auth-set-btn">✓ تأكيد الباسورد</button>
+    </div>
+
+    <!-- LOGIN STATE -->
+    <div id="auth-login-state" style="display:none">
+      <div style="margin-bottom:24px;text-align:start">
+        <div style="font-size:11px;font-weight:700;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:8px" id="auth-label-pass">الباسورد</div>
+        <input type="password" id="auth-pass-input" class="form-input" placeholder="••••••••" style="text-align:center;letter-spacing:0.3em;font-size:20px" onkeydown="if(event.key==='Enter')loginAdmin()">
+      </div>
+      <div id="auth-error" style="color:var(--red);font-size:13px;margin-bottom:16px;display:none;min-height:20px">❌ باسورد غلط — حاول تاني</div>
+      <button onclick="loginAdmin()" style="
+        width:100%;padding:15px;font-size:15px;font-weight:700;
+        color:var(--black);background:linear-gradient(135deg,var(--gold-light),var(--gold));
+        border-radius:var(--radius-md);border:none;cursor:pointer;
+        transition:all 0.3s ease;
+      " id="auth-login-btn">دخول →</button>
+      <button onclick="closeAuthModal()" style="
+        width:100%;padding:12px;margin-top:10px;font-size:14px;
+        color:var(--text-muted);border:1px solid var(--border);
+        border-radius:var(--radius-md);background:none;cursor:pointer;
+      " id="auth-cancel-btn">إلغاء</button>
+    </div>
+  </div>
+</div>
+
+<!-- ADMIN PANEL -->
+<div id="admin-panel">
+  <div class="admin-sidebar">
+    <div class="admin-sidebar-header">
+      <div class="admin-logo">
+        <svg class="apple-svg" width="20" height="20" viewBox="0 0 814 1000" xmlns="http://www.w3.org/2000/svg"><path d="M788.1 340.9c-5.8 4.5-108.2 62.2-108.2 190.5 0 148.4 130.3 200.9 134.2 202.2-.6 3.2-20.7 71.9-68.7 141.9-42.8 61.6-87.5 123.1-155.5 123.1s-85.5-39.5-164-39.5c-76 0-103.7 40.8-165.9 40.8s-105-57.8-155.5-127.4C46 790.7 0 663 0 541.8c0-207.5 135.4-317.3 269-317.3 70.1 0 128.4 46.4 172.5 46.4 42.8 0 109.6-49 192.5-49 31 0 110.6 2.6 168.4 83.1zm-126.8-85.5c-5.8-22.7-16.9-48.7-32.4-69.4-20.1-27.3-54.7-48.7-85.5-48.7-3.9 0-7.7.6-11 1.3 0 25.4 9.7 50.1 26.6 70.7 14.9 18.2 47.2 41.6 102.3 46.1z"/></svg>
+        <span id="admin-brand">Sabat Store</span>
+      </div>
+      <div class="admin-logo-sub" id="admin-sub">لوحة التحكم</div>
+    </div>
+    <nav class="admin-nav">
+      <div class="admin-nav-item active" onclick="switchAdminTab('overview')" id="nav-overview">
+        <span class="admin-nav-icon">📊</span>
+        <span id="tab-overview">نظرة عامة</span>
+      </div>
+      <div class="admin-nav-item" onclick="switchAdminTab('phones')" id="nav-phones">
+        <span class="admin-nav-icon">📱</span>
+        <span id="tab-phones">الأجهزة</span>
+      </div>
+      <div class="admin-nav-item" onclick="switchAdminTab('analytics')" id="nav-analytics">
+        <span class="admin-nav-icon">📈</span>
+        <span id="tab-analytics">التحليلات</span>
+      </div>
+      <div class="admin-nav-item" onclick="switchAdminTab('users')" id="nav-users">
+        <span class="admin-nav-icon">👥</span>
+        <span id="tab-users">المستخدمين</span>
+      </div>
+      <div class="admin-nav-item" onclick="switchAdminTab('reviews')" id="nav-reviews">
+        <span class="admin-nav-icon">⭐</span>
+        <span id="tab-reviews">آراء العملاء</span>
+      </div>
+      <div class="admin-nav-item" onclick="switchAdminTab('settings')" id="nav-settings">
+        <span class="admin-nav-icon">⚙️</span>
+        <span id="tab-settings">الإعدادات</span>
+      </div>
+    </nav>
+  </div>
+
+  <div class="admin-main">
+    <div class="admin-header">
+      <div class="admin-header-title" id="admin-page-title">نظرة عامة</div>
+      <button class="admin-close-btn" onclick="closeAdmin()">
+        ✕ <span id="close-admin-text">إغلاق</span>
+      </button>
+    </div>
+
+    <!-- OVERVIEW TAB -->
+    <div class="admin-content-section active" id="tab-content-overview">
+      <div class="admin-stats-grid" id="admin-stats-grid"></div>
+      <div class="admin-phone-table">
+        <div class="admin-table-header">
+          <div class="admin-table-title" id="recent-title">أحدث الأجهزة</div>
+        </div>
+        <div style="overflow-x:auto">
+          <table class="admin-table" id="recent-table">
+            <thead>
+              <tr>
+                <th id="th-model">الموديل</th>
+                <th id="th-storage">التخزين</th>
+                <th id="th-battery">البطارية</th>
+                <th id="th-price">السعر</th>
+                <th id="th-status">الحالة</th>
+              </tr>
+            </thead>
+            <tbody id="recent-table-body"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- PHONES TAB -->
+    <div class="admin-content-section" id="tab-content-phones">
+      <div class="admin-phone-table">
+        <div class="admin-table-header">
+          <div class="admin-table-title" id="all-phones-title">جميع الأجهزة</div>
+          <button class="btn-add-phone" onclick="openPhoneForm()">
+            ＋ <span id="add-btn-text">إضافة جهاز</span>
+          </button>
+        </div>
+        <div style="overflow-x:auto">
+          <table class="admin-table" id="phones-table">
+            <thead>
+              <tr>
+                <th id="th-model2">الموديل</th>
+                <th id="th-color">اللون</th>
+                <th id="th-storage2">التخزين</th>
+                <th id="th-battery2">البطارية</th>
+                <th id="th-price2">السعر</th>
+                <th id="th-status2">الحالة</th>
+                <th id="th-actions">إجراءات</th>
+              </tr>
+            </thead>
+            <tbody id="phones-table-body"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- ANALYTICS TAB -->
+    <div class="admin-content-section" id="tab-content-analytics">
+      <div class="admin-stats-grid" id="analytics-stats"></div>
+      <div class="analytics-grid" id="analytics-content"></div>
+    </div>
+
+    <!-- USERS TAB -->
+    <div class="admin-content-section" id="tab-content-users">
+      <div class="admin-phone-table">
+        <div class="admin-table-header">
+          <div class="admin-table-title">المستخدمين المسجلين</div>
+          <div id="users-count-badge" style="font-size:13px;color:var(--text-muted)"></div>
+        </div>
+        <div id="users-admin-list" style="padding:0 0 8px"></div>
+      </div>
+    </div>
+
+    <!-- REVIEWS TAB -->
+    <div class="admin-content-section" id="tab-content-reviews">
+      <div class="admin-phone-table">
+        <div class="admin-table-header">
+          <div class="admin-table-title">آراء العملاء</div>
+          <button class="btn-add-phone" onclick="openReviewForm()">＋ إضافة رأي</button>
+        </div>
+        <div id="reviews-admin-list" style="padding:16px 24px"></div>
+      </div>
+    </div>
+
+    <!-- SETTINGS TAB -->
+    <div class="admin-content-section" id="tab-content-settings">
+      <div class="admin-phone-table" style="padding: 28px; max-width: 560px;">
+        <h3 style="font-size:18px;font-weight:700;color:var(--text-primary);margin-bottom:24px" id="settings-title">إعدادات المتجر</h3>
+        <div class="form-group" style="margin-bottom:18px">
+          <label class="form-label" id="settings-whatsapp-label">رقم واتساب</label>
+          <input type="tel" class="form-input" id="settings-whatsapp" placeholder="+201234567890">
+        </div>
+        <div class="form-group" style="margin-bottom:18px">
+          <label class="form-label" id="settings-store-name-label">اسم المتجر</label>
+          <input type="text" class="form-input" id="settings-store-name" placeholder="Sabat Store">
+        </div>
+        <div class="form-group" style="margin-bottom:28px">
+          <label class="form-label" id="settings-currency-label">العملة</label>
+          <select class="form-select" id="settings-currency">
+            <option value="EGP">جنيه مصري (EGP)</option>
+            <option value="USD">دولار ($)</option>
+          </select>
+        </div>
+        <button class="btn-save" onclick="saveSettings()" id="settings-save-btn">💾 حفظ الإعدادات</button>
+
+        <div style="margin-top:32px;padding-top:24px;border-top:1px solid var(--border)">
+          <h4 style="font-size:15px;font-weight:700;color:var(--text-primary);margin-bottom:16px">🔑 تغيير الباسورد</h4>
+          <div class="form-group" style="margin-bottom:14px">
+            <label class="form-label">الباسورد الحالي</label>
+            <input type="password" class="form-input" id="chg-old-pass" placeholder="••••••••">
+          </div>
+          <div class="form-group" style="margin-bottom:14px">
+            <label class="form-label">الباسورد الجديد</label>
+            <input type="password" class="form-input" id="chg-new-pass" placeholder="••••••••">
+          </div>
+          <div class="form-group" style="margin-bottom:20px">
+            <label class="form-label">تأكيد الباسورد الجديد</label>
+            <input type="password" class="form-input" id="chg-confirm-pass" placeholder="••••••••">
+          </div>
+          <button class="btn-save" onclick="changePassword()" style="background:linear-gradient(135deg,var(--gray-700),var(--gray-600));color:var(--white)">🔒 تغيير الباسورد</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PHONE FORM OVERLAY -->
+<div class="admin-form-overlay" id="phone-form-overlay">
+  <div class="admin-form-box">
+    <div class="admin-form-header">
+      <div class="admin-form-title" id="form-title">إضافة جهاز جديد</div>
+      <button class="admin-form-close" onclick="closePhoneForm()">✕</button>
+    </div>
+    <div class="admin-form-body">
+      <div class="upload-zone" id="upload-zone" onclick="document.getElementById('img-input').click()" ondragover="handleDragOver(event)" ondrop="handleDrop(event)">
+        <div class="upload-icon">📷</div>
+        <div class="upload-text" id="upload-text">
+          <strong>انقر أو اسحب الصور هنا</strong><br>
+          يمكنك رفع عدة صور — PNG, JPG, WEBP
+        </div>
+      </div>
+      <input type="file" id="img-input" accept="image/*" multiple style="display:none" onchange="handleImages(event)">
+      <div class="upload-previews" id="upload-previews"></div>
+
+      <div class="form-grid" style="margin-top:20px">
+        <div class="form-group">
+          <label class="form-label" id="label-model">الموديل</label>
+          <input type="text" class="form-input" id="f-model" placeholder="iPhone 15 Pro Max">
+        </div>
+        <div class="form-group">
+          <label class="form-label" id="label-color">اللون</label>
+          <input type="text" class="form-input" id="f-color" placeholder="Natural Titanium">
+        </div>
+        <div class="form-group">
+          <label class="form-label" id="label-storage">التخزين</label>
+          <select class="form-select" id="f-storage">
+            <option value="64">64 GB</option>
+            <option value="128" selected>128 GB</option>
+            <option value="256">256 GB</option>
+            <option value="512">512 GB</option>
+            <option value="1TB">1 TB</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label" id="label-battery">صحة البطارية %</label>
+          <input type="number" class="form-input" id="f-battery" placeholder="90" min="1" max="100">
+        </div>
+        <div class="form-group">
+          <label class="form-label" id="label-condition">الحالة</label>
+          <select class="form-select" id="f-condition">
+            <option value="new">جديد</option>
+            <option value="excellent" selected>ممتاز</option>
+            <option value="good">جيد جداً</option>
+            <option value="fair">جيد</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label" id="label-price">السعر (جنيه)</label>
+          <input type="number" class="form-input" id="f-price" placeholder="25000">
+        </div>
+        <div class="form-group full">
+          <label class="form-label" id="label-notes">ملاحظات</label>
+          <textarea class="form-textarea" id="f-notes" placeholder="أي ملاحظات إضافية..."></textarea>
+        </div>
+      </div>
+
+      <div class="form-submit-row">
+        <button class="btn-cancel" onclick="closePhoneForm()" id="btn-cancel-form">إلغاء</button>
+        <button class="btn-save" onclick="savePhone()" id="btn-save-form">💾 حفظ الجهاز</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- REVIEW FORM OVERLAY -->
+<div class="admin-form-overlay" id="review-form-overlay">
+  <div class="admin-form-box" style="max-width:480px">
+    <div class="admin-form-header">
+      <div class="admin-form-title" id="review-form-title">إضافة رأي عميل</div>
+      <button class="admin-form-close" onclick="closeReviewForm()">✕</button>
+    </div>
+    <div class="admin-form-body">
+      <div class="form-grid" style="grid-template-columns:1fr">
+        <div class="form-group">
+          <label class="form-label">اسم العميل</label>
+          <input type="text" class="form-input" id="r-name" placeholder="أحمد محمد">
+        </div>
+        <div class="form-group">
+          <label class="form-label">الجهاز المشتري</label>
+          <input type="text" class="form-input" id="r-device" placeholder="iPhone 15 Pro — القاهرة">
+        </div>
+        <div class="form-group">
+          <label class="form-label">التقييم</label>
+          <div style="display:flex;gap:8px;margin-top:4px" id="star-picker">
+            <span data-star="1" onclick="setStars(1)" style="font-size:28px;cursor:pointer;transition:transform 0.2s">⭐</span>
+            <span data-star="2" onclick="setStars(2)" style="font-size:28px;cursor:pointer;transition:transform 0.2s">⭐</span>
+            <span data-star="3" onclick="setStars(3)" style="font-size:28px;cursor:pointer;transition:transform 0.2s">⭐</span>
+            <span data-star="4" onclick="setStars(4)" style="font-size:28px;cursor:pointer;transition:transform 0.2s">⭐</span>
+            <span data-star="5" onclick="setStars(5)" style="font-size:28px;cursor:pointer;transition:transform 0.2s">⭐</span>
+          </div>
+          <input type="hidden" id="r-stars" value="5">
+        </div>
+        <div class="form-group">
+          <label class="form-label">نص الرأي</label>
+          <textarea class="form-textarea" id="r-text" placeholder="اكتب رأي العميل هنا..." style="min-height:100px"></textarea>
+        </div>
+      </div>
+      <div class="form-submit-row">
+        <button class="btn-cancel" onclick="closeReviewForm()">إلغاء</button>
+        <button class="btn-save" onclick="saveReview()">💾 حفظ الرأي</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- TOAST CONTAINER -->
+<div id="toast-container"></div>
+
+<!-- CONFIRM DIALOG -->
+<div id="confirm-dialog">
+  <div class="confirm-box">
+    <div class="confirm-icon">⚠️</div>
+    <div class="confirm-title" id="confirm-title">هل أنت متأكد؟</div>
+    <div class="confirm-msg" id="confirm-msg">هذا الإجراء لا يمكن التراجع عنه</div>
+    <div class="confirm-actions">
+      <button class="confirm-cancel" onclick="closeConfirm()" id="confirm-cancel-btn">إلغاء</button>
+      <button class="confirm-ok" id="confirm-ok-btn">حذف</button>
+    </div>
+  </div>
+</div>
+
+<!-- SCROLL TO TOP -->
+<button id="scroll-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<!-- PWA BANNER -->
+<div id="pwa-banner">
+  <div class="pwa-icon">📲</div>
+  <div class="pwa-text">
+    <strong id="pwa-title">ثبّت التطبيق</strong>
+    <span id="pwa-desc">الوصول السريع من هاتفك</span>
+  </div>
+  <button class="pwa-install-btn" onclick="installPWA()" id="pwa-btn-install">تثبيت</button>
+  <button class="pwa-close" onclick="closePWA()">✕</button>
+</div>
+
+<script>
+/* ═══════════════════════════════════════════════════════
+   STATE & STORAGE
+═══════════════════════════════════════════════════════ */
+/* ═══════════════════════════════════════════════════════
+   SUPABASE CONFIG — ضع بياناتك هنا
+═══════════════════════════════════════════════════════ */
+const SUPABASE_URL = 'YOUR_SUPABASE_URL';
+const SUPABASE_ANON_KEY = 'YOUR_SUPABASE_ANON_KEY';
+
+let _supabase = null;
+function getSupabase() {
+  if (!_supabase && typeof supabase !== 'undefined') {
+    _supabase = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+  }
+  return _supabase;
+}
+function isSupabaseReady() {
+  return SUPABASE_URL !== 'YOUR_SUPABASE_URL' && typeof supabase !== 'undefined';
+}
+
+/* ═══════════════════════════════════════════════════════
+   LOCAL STORAGE FALLBACK KEYS
+═══════════════════════════════════════════════════════ */
+const STORAGE_KEY = 'sabat_phones_v2';
+const SETTINGS_KEY = 'sabat_settings_v1';
+const REVIEWS_KEY = 'sabat_reviews_v1';
+const ADMIN_PASS_KEY = 'sabat_admin_pass_v1';
+const ADMIN_SESSION_KEY = 'sabat_admin_session';
+
+/* ═══════════════════════════════════════════════════════
+   STATE
+═══════════════════════════════════════════════════════ */
+let phones = [];
+let filteredPhones = [];
+let editingId = null;
+let editingReviewId = null;
+let uploadedImages = [];
+let confirmCallback = null;
+let deferredPrompt = null;
+let reviewStars = 5;
+let adminAuthenticated = false;
+
+// Current logged-in user (Supabase)
+let currentUser = null;
+let currentUserProfile = null;
+let userReservations = [];
+
+const defaultSettings = {
+  whatsapp: '+201234567890',
+  storeName: 'Sabat Store',
+  currency: 'EGP'
+};
+let settings = { ...defaultSettings };
+let reviews = [];
+
+function loadData() {
+  try {
+    const raw = localStorage.getItem(STORAGE_KEY);
+    if (raw) phones = JSON.parse(raw);
+    const rawS = localStorage.getItem(SETTINGS_KEY);
+    if (rawS) settings = { ...defaultSettings, ...JSON.parse(rawS) };
+    const rawR = localStorage.getItem(REVIEWS_KEY);
+    if (rawR) reviews = JSON.parse(rawR);
+  } catch(e) { phones = []; reviews = []; }
+}
+
+function saveData() { localStorage.setItem(STORAGE_KEY, JSON.stringify(phones)); }
+function saveSettingsData() { localStorage.setItem(SETTINGS_KEY, JSON.stringify(settings)); }
+function saveReviewsData() { localStorage.setItem(REVIEWS_KEY, JSON.stringify(reviews)); }
+
+function genId() {
+  return Date.now().toString(36) + Math.random().toString(36).slice(2);
+}
+
+/* ═══════════════════════════════════════════════════════
+   TRANSLATIONS
+═══════════════════════════════════════════════════════ */
+const T = {
+  ar: {
+    navProducts: 'المنتجات', navFeatures: 'مميزاتنا', navReviews: 'آراء العملاء',
+    navWhy: 'لماذا سبات', navAdmin: 'لوحة التحكم', langSwitch: 'EN',
+    heroEyebrow: 'سبات ستور',
+    heroTitle1: 'يتلحقوني ', heroTitle2: 'يتسامحوني', heroTitle3: '',
+    heroSub: 'مش بنبيع بس — بنضمن. كل جهاز بيتفحص بدقة، والسعر عادل، وبعد البيع موجودين معاك.',
+    heroCTABrowse: '🔍 تصفح الأجهزة', heroCTAContact: '💬 تواصل معنا',
+    statPhones: 'جهاز متاح', statSold: 'جهاز تم بيعه', statQuality: 'ضمان الجودة', statExp: 'سنوات خبرة',
+    featuresLabel: 'لماذا نحن', featuresTitle: 'مميزات تجعلنا\nالخيار الأول',
+    featuresSub: 'نلتزم بتقديم أفضل تجربة شراء لجهاز آيفون مستعمل في مصر',
+    productsLabel: 'المخزون', productsTitle: 'الأجهزة المتاحة',
+    productsSub: 'تصفح مخزوننا المحدث يومياً من أجهزة آيفون المجددة',
+    testimonialsLabel: 'آراء العملاء', testimonialsTitle: 'ماذا يقول\nعملاؤنا',
+    searchPlaceholder: 'ابحث عن موديل...',
+    filterStorage: 'كل التخزين', filterCondition: 'كل الحالات', filterPrice: 'كل الأسعار', filterStatus: 'كل الحالات',
+    allStorage: 'كل التخزين', allConditions: 'كل الحالات', allPrices: 'كل الأسعار',
+    condNew: 'جديد', condExcellent: 'ممتاز', condGood: 'جيد جداً', condFair: 'جيد',
+    statusAvailable: 'متاح', statusSold: 'مباع',
+    priceRange1: 'أقل من 10,000', priceRange2: '10,000 - 20,000', priceRange3: '20,000 - 35,000', priceRange4: 'أكثر من 35,000',
+    viewBtn: 'عرض', contactWA: '💬 واتساب', reserveBtn: '🔒 احجز الآن',
+    soldLabel: 'مباع', availLabel: 'متاح',
+    battery: 'البطارية', storage: 'التخزين', color: 'اللون', condition: 'الحالة', model: 'الموديل',
+    price: 'السعر', notes: 'ملاحظات',
+    emptyTitle: 'لا توجد أجهزة', emptyText: 'لم يتم العثور على أجهزة بهذا الفلتر',
+    addPhone: 'إضافة جهاز',
+    adminOverview: 'نظرة عامة', adminPhones: 'الأجهزة', adminAnalytics: 'التحليلات', adminSettings: 'الإعدادات',
+    closeAdmin: 'إغلاق',
+    totalPhones: 'إجمالي الأجهزة', availablePhones: 'متاح', soldPhones: 'مباع', totalValue: 'القيمة الإجمالية',
+    recentTitle: 'أحدث الأجهزة', allPhonesTitle: 'جميع الأجهزة',
+    thModel: 'الموديل', thStorage: 'التخزين', thBattery: 'البطارية', thPrice: 'السعر',
+    thStatus: 'الحالة', thColor: 'اللون', thActions: 'إجراءات',
+    formTitle: 'إضافة جهاز جديد', formEditTitle: 'تعديل الجهاز',
+    uploadText: '<strong>انقر أو اسحب الصور هنا</strong><br>يمكنك رفع عدة صور — PNG, JPG, WEBP',
+    labelModel: 'الموديل', labelColor: 'اللون', labelStorage: 'التخزين',
+    labelBattery: 'صحة البطارية %', labelCondition: 'الحالة', labelPrice: 'السعر (جنيه)', labelNotes: 'ملاحظات',
+    cancelForm: 'إلغاء', saveForm: '💾 حفظ الجهاز',
+    saveSuccess: '✅ تم حفظ الجهاز بنجاح', deleteSuccess: '🗑️ تم الحذف', soldSuccess: '🎉 تم تحديد الجهاز كمباع',
+    availableSuccess: '✅ تم تحديد الجهاز كمتاح', duplicateSuccess: '📋 تم نسخ الجهاز',
+    confirmDelete: 'هل تريد حذف هذا الجهاز؟', confirmDeleteMsg: 'هذا الإجراء لا يمكن التراجع عنه',
+    confirmOk: 'حذف', confirmCancel: 'إلغاء',
+    settingsTitle: 'إعدادات المتجر', settingsWA: 'رقم واتساب', settingsName: 'اسم المتجر',
+    settingsCurrency: 'العملة', settingsSave: '💾 حفظ الإعدادات', settingsSaved: '✅ تم حفظ الإعدادات',
+    pwaTitle: 'ثبّت التطبيق', pwaDesc: 'الوصول السريع من هاتفك', pwaInstall: 'تثبيت',
+    waMessage: 'مرحباً، أريد الاستفسار عن جهاز آيفون من متجر سبات',
+    waMessagePhone: 'مرحباً، أريد الاستفسار عن جهاز: ',
+    footerTagline: 'متجرك الأول لآيفون المجدد والمستعمل في مصر. جودة عالمية بسعر يناسبك.',
+    footerQuick: 'روابط سريعة', footerModels: 'الموديلات', footerContactTitle: 'تواصل معنا',
+    adminSub: 'لوحة التحكم',
+    analyticsViews: 'مشاهدات', analyticsContacts: 'تواصل', analyticsConversion: 'معدل التحويل',
+    loadingText: 'سبات ستور — جاري التحميل',
+    markSold: 'تحديد كمباع', markAvail: 'إتاحة',
+    whyBigLabel: 'جهاز تم بيعه بنجاح'
+  },
+  en: {
+    navProducts: 'Products', navFeatures: 'Features', navReviews: 'Reviews',
+    navWhy: 'Why Us', navAdmin: 'Dashboard', langSwitch: 'عر',
+    heroEyebrow: "Egypt's #1 Refurbished iPhone Store",
+    heroTitle1: 'iPhone Quality ', heroTitle2: 'World-Class', heroTitle3: 'Priced for Egypt',
+    heroSub: 'Shop the best used and refurbished iPhones in Egypt with quality guarantee and premium after-sales service.',
+    heroCTABrowse: '🔍 Browse Devices', heroCTAContact: '💬 Contact Us',
+    statPhones: 'Available Devices', statSold: 'Sold Devices', statQuality: 'Quality Guarantee', statExp: 'Years Experience',
+    featuresLabel: 'Why Us', featuresTitle: 'Features That Make\nUs #1',
+    featuresSub: 'We are committed to delivering the best iPhone buying experience in Egypt.',
+    productsLabel: 'Inventory', productsTitle: 'Available Devices',
+    productsSub: 'Browse our daily-updated inventory of refurbished iPhones.',
+    testimonialsLabel: 'Reviews', testimonialsTitle: 'What Our\nClients Say',
+    searchPlaceholder: 'Search a model...',
+    filterStorage: 'All Storage', filterCondition: 'All Conditions', filterPrice: 'All Prices', filterStatus: 'All Statuses',
+    allStorage: 'All Storage', allConditions: 'All Conditions', allPrices: 'All Prices',
+    condNew: 'New', condExcellent: 'Excellent', condGood: 'Very Good', condFair: 'Good',
+    statusAvailable: 'Available', statusSold: 'Sold',
+    priceRange1: 'Under 10,000', priceRange2: '10,000 - 20,000', priceRange3: '20,000 - 35,000', priceRange4: 'Over 35,000',
+    viewBtn: 'View', contactWA: '💬 WhatsApp', reserveBtn: '🔒 Reserve Now',
+    soldLabel: 'Sold', availLabel: 'Available',
+    battery: 'Battery', storage: 'Storage', color: 'Color', condition: 'Condition', model: 'Model',
+    price: 'Price', notes: 'Notes',
+    emptyTitle: 'No Devices Found', emptyText: 'No devices match your current filters.',
+    addPhone: 'Add Device',
+    adminOverview: 'Overview', adminPhones: 'Devices', adminAnalytics: 'Analytics', adminSettings: 'Settings',
+    closeAdmin: 'Close',
+    totalPhones: 'Total Devices', availablePhones: 'Available', soldPhones: 'Sold', totalValue: 'Total Value',
+    recentTitle: 'Recent Devices', allPhonesTitle: 'All Devices',
+    thModel: 'Model', thStorage: 'Storage', thBattery: 'Battery', thPrice: 'Price',
+    thStatus: 'Status', thColor: 'Color', thActions: 'Actions',
+    formTitle: 'Add New Device', formEditTitle: 'Edit Device',
+    uploadText: '<strong>Click or drag images here</strong><br>Upload multiple images — PNG, JPG, WEBP',
+    labelModel: 'Model', labelColor: 'Color', labelStorage: 'Storage',
+    labelBattery: 'Battery Health %', labelCondition: 'Condition', labelPrice: 'Price (EGP)', labelNotes: 'Notes',
+    cancelForm: 'Cancel', saveForm: '💾 Save Device',
+    saveSuccess: '✅ Device saved successfully', deleteSuccess: '🗑️ Device deleted', soldSuccess: '🎉 Marked as sold',
+    availableSuccess: '✅ Marked as available', duplicateSuccess: '📋 Device duplicated',
+    confirmDelete: 'Delete this device?', confirmDeleteMsg: 'This action cannot be undone.',
+    confirmOk: 'Delete', confirmCancel: 'Cancel',
+    settingsTitle: 'Store Settings', settingsWA: 'WhatsApp Number', settingsName: 'Store Name',
+    settingsCurrency: 'Currency', settingsSave: '💾 Save Settings', settingsSaved: '✅ Settings saved',
+    pwaTitle: 'Install App', pwaDesc: 'Quick access from your phone', pwaInstall: 'Install',
+    waMessage: 'Hello, I want to ask about an iPhone from Sabat Store.',
+    waMessagePhone: 'Hello, I want to ask about: ',
+    footerTagline: 'Your #1 store for refurbished and used iPhones in Egypt. World-class quality at fair prices.',
+    footerQuick: 'Quick Links', footerModels: 'Models', footerContactTitle: 'Contact Us',
+    adminSub: 'Admin Dashboard',
+    analyticsViews: 'Views', analyticsContacts: 'Contacts', analyticsConversion: 'Conversion Rate',
+    loadingText: 'Sabat Store — Loading',
+    markSold: 'Mark as Sold', markAvail: 'Mark as Available',
+    whyBigLabel: 'Devices Sold Successfully'
+  }
+};
+
+let lang = 'ar';
+function t(key) { return (T[lang] && T[lang][key]) || T.ar[key] || key; }
+
+/* ═══════════════════════════════════════════════════════
+   FEATURES DATA
+═══════════════════════════════════════════════════════ */
+const featuresData = {
+  ar: [
+    { icon: '🔋', title: 'فحص شامل للبطارية', desc: 'نقدم صحة البطارية الحقيقية لكل جهاز بدون تضليل' },
+    { icon: '✅', title: 'ضمان الجودة', desc: 'كل جهاز يمر بفحص دقيق من 50 نقطة قبل البيع' },
+    { icon: '💰', title: 'أسعار تنافسية', desc: 'أفضل الأسعار في السوق مع أعلى مستوى من الجودة' },
+    { icon: '⚡', title: 'تحديث فوري', desc: 'المخزون يتحدث لحظياً — لا انتظار ولا PDFs' },
+    { icon: '🛡️', title: 'أمان الشراء', desc: 'فترة فحص للمشتري مع خدمة ما بعد البيع المميزة' },
+    { icon: '🚀', title: 'شحن سريع', desc: 'خدمة توصيل لجميع أنحاء مصر بأسرع وقت' },
+  ],
+  en: [
+    { icon: '🔋', title: 'Full Battery Check', desc: 'We show the real battery health for every device, no misleading info.' },
+    { icon: '✅', title: 'Quality Guarantee', desc: 'Every device passes a 50-point inspection before sale.' },
+    { icon: '💰', title: 'Best Prices', desc: 'The best prices on the market with the highest quality.' },
+    { icon: '⚡', title: 'Live Inventory', desc: 'Stock updates instantly — no waiting, no PDFs.' },
+    { icon: '🛡️', title: 'Safe Purchase', desc: 'Inspection period for buyers with premium after-sales service.' },
+    { icon: '🚀', title: 'Fast Delivery', desc: 'Delivery service across Egypt in record time.' },
+  ]
+};
+
+const whyData = [
+  { icon: '🎯', title: 'Full Transparency', desc: 'We list every detail — battery health, cosmetic condition, and notes — no surprises after purchase.' },
+  { icon: '💎', title: 'Verified Quality', desc: 'Every device goes through a strict multi-point inspection before it reaches our inventory.' },
+  { icon: '📱', title: 'Always Fresh Stock', desc: 'Our inventory updates in real-time. The moment a device is added, you see it live on the site.' },
+  { icon: '⭐', title: '3+ Years of Experience', desc: 'Deep market expertise means we source better devices and give you a fairer deal.' },
+  { icon: '🤝', title: 'After-Sales Support', desc: 'We stand behind every sale. Our team is reachable on WhatsApp seven days a week.' },
+];
+
+
+/* ═══════════════════════════════════════════════════════
+   DEMO DATA
+═══════════════════════════════════════════════════════ */
+function seedDemoData() {
+  if (phones.length > 0) return;
+  phones = [
+    { id: genId(), model: 'iPhone 16 Pro Max', color: 'Desert Titanium', storage: '256', battery: 98, condition: 'excellent', price: 48000, notes: 'وارد الخارج — حالة مثالية', images: [], sold: false, createdAt: Date.now() - 86400000 },
+    { id: genId(), model: 'iPhone 15 Pro', color: 'Natural Titanium', storage: '128', battery: 94, condition: 'excellent', price: 38000, notes: 'شاشة ممتازة — لا خدوش', images: [], sold: false, createdAt: Date.now() - 172800000 },
+    { id: genId(), model: 'iPhone 15', color: 'Pink', storage: '256', battery: 91, condition: 'excellent', price: 31000, notes: '', images: [], sold: false, createdAt: Date.now() - 259200000 },
+    { id: genId(), model: 'iPhone 14 Pro Max', color: 'Space Black', storage: '256', battery: 87, condition: 'excellent', price: 34000, notes: 'مع أكسسوارات أصلية', images: [], sold: false, createdAt: Date.now() - 345600000 },
+    { id: genId(), model: 'iPhone 14', color: 'Midnight', storage: '128', battery: 84, condition: 'good', price: 24000, notes: '', images: [], sold: false, createdAt: Date.now() - 432000000 },
+    { id: genId(), model: 'iPhone 13 Pro', color: 'Sierra Blue', storage: '256', battery: 80, condition: 'good', price: 26000, notes: 'استعمال خفيف جداً', images: [], sold: false, createdAt: Date.now() - 518400000 },
+    { id: genId(), model: 'iPhone 13', color: 'Starlight', storage: '128', battery: 78, condition: 'good', price: 18000, notes: '', images: [], sold: true, createdAt: Date.now() - 604800000 },
+    { id: genId(), model: 'iPhone 12 Pro', color: 'Pacific Blue', storage: '128', battery: 76, condition: 'fair', price: 16500, notes: 'حالة جيدة جداً', images: [], sold: false, createdAt: Date.now() - 691200000 },
+  ];
+  saveData();
+}
+
+/* ═══════════════════════════════════════════════════════
+   RENDER HELPERS
+═══════════════════════════════════════════════════════ */
+function conditionLabel(c) {
+  const map = { new: t('condNew'), excellent: t('condExcellent'), good: t('condGood'), fair: t('condFair') };
+  return map[c] || c;
+}
+
+function conditionBadgeClass(c) {
+  const map = { new: 'badge-new', excellent: 'badge-excellent', good: 'badge-good', fair: 'badge-good' };
+  return map[c] || 'badge-good';
+}
+
+function batteryClass(b) {
+  if (b >= 85) return 'high';
+  if (b >= 75) return 'medium';
+  return 'low';
+}
+
+function formatPrice(p) {
+  return Number(p).toLocaleString('ar-EG') + ' ' + (settings.currency === 'USD' ? '$' : 'جنيه');
+}
+
+function getPhoneEmoji() { return '📱'; }
+
+function renderPhoneImage(phone) {
+  if (phone.images && phone.images.length > 0) {
+    return `<img src="${phone.images[0]}" alt="${phone.model}" loading="lazy">`;
+  }
+  return `<div class="product-img-placeholder">${getPhoneEmoji()}</div>`;
+}
+
+/* ═══════════════════════════════════════════════════════
+   FEATURES RENDER
+═══════════════════════════════════════════════════════ */
+function renderFeatures() {
+  const data = featuresData[lang] || featuresData.ar;
+  document.getElementById('features-grid').innerHTML = data.map(f => `
+    <div class="feature-card reveal">
+      <div class="feature-icon">${f.icon}</div>
+      <div class="feature-title">${f.title}</div>
+      <div class="feature-desc">${f.desc}</div>
+    </div>
+  `).join('');
+  observeReveal();
+}
+
+/* ═══════════════════════════════════════════════════════
+   PRODUCTS RENDER
+═══════════════════════════════════════════════════════ */
+function renderProducts() {
+  const grid = document.getElementById('products-grid');
+  if (!filteredPhones.length) {
+    grid.innerHTML = `
+      <div class="empty-state">
+        <div class="empty-state-icon">📭</div>
+        <div class="empty-state-title">${t('emptyTitle')}</div>
+        <div class="empty-state-text">${t('emptyText')}</div>
+      </div>`;
+    return;
+  }
+
+  grid.innerHTML = filteredPhones.map(p => `
+    <div class="product-card${p.sold ? ' sold' : ''}" onclick="openProductModal('${p.id}')">
+      <div class="product-card-img" data-sold-label="${t('soldLabel')}">
+        ${renderPhoneImage(p)}
+        <div class="product-badge ${conditionBadgeClass(p.condition)}">${conditionLabel(p.condition)}</div>
+        ${p.sold ? `<div class="product-badge badge-sold" style="${lang==='ar'?'left:14px;right:auto':'right:14px;left:auto'}">${t('soldLabel')}</div>` : ''}
+      </div>
+      <div class="product-card-body">
+        <div class="product-model">${p.model}</div>
+        <div class="product-specs">
+          <span class="spec-chip">${p.storage} GB</span>
+          <span class="spec-chip">${p.color}</span>
+        </div>
+        <div class="product-battery">
+          <span style="font-size:12px;color:var(--text-muted)">${t('battery')}</span>
+          <div class="battery-bar">
+            <div class="battery-fill ${batteryClass(p.battery)}" style="width:${p.battery}%"></div>
+          </div>
+          <span class="battery-label" style="color:var(--${batteryClass(p.battery)==='high'?'green':batteryClass(p.battery)==='medium'?'orange':'red'})">${p.battery}%</span>
+        </div>
+      </div>
+      <div class="product-card-footer">
+        <div class="product-price">${formatPrice(p.price)}</div>
+        <div class="product-card-actions">
+          ${!p.sold ? `<button class="btn-whatsapp" onclick="event.stopPropagation();waPhone('${p.id}')" title="WhatsApp">💬</button>` : ''}
+          <button class="btn-view" onclick="event.stopPropagation();openProductModal('${p.id}')">${t('viewBtn')}</button>
+        </div>
+      </div>
+    </div>
+  `).join('');
+
+  // Update hero counters
+  updateHeroCounters();
+}
+
+/* ═══════════════════════════════════════════════════════
+   FILTERS
+═══════════════════════════════════════════════════════ */
+function applyFilters() {
+  const search = document.getElementById('search-input').value.toLowerCase();
+  const storage = document.getElementById('filter-storage').value;
+  const condition = document.getElementById('filter-condition').value;
+  const price = document.getElementById('filter-price').value;
+  const status = document.getElementById('filter-status').value;
+
+  filteredPhones = phones.filter(p => {
+    if (search && !p.model.toLowerCase().includes(search) && !p.color.toLowerCase().includes(search)) return false;
+    if (storage && p.storage !== storage) return false;
+    if (condition && p.condition !== condition) return false;
+    if (price) {
+      const [min, max] = price.split('-').map(x => x === '' ? Infinity : Number(x));
+      if (p.price < min || p.price > (max || Infinity)) return false;
+    }
+    if (status === 'available' && p.sold) return false;
+    if (status === 'sold' && !p.sold) return false;
+    return true;
+  });
+
+  renderProducts();
+  renderActiveFilters(search, storage, condition, price, status);
+}
+
+function renderActiveFilters(search, storage, condition, price, status) {
+  const container = document.getElementById('active-filters');
+  const tags = [];
+  if (search) tags.push({ label: `🔍 ${search}`, clear: () => { document.getElementById('search-input').value = ''; applyFilters(); }});
+  if (storage) tags.push({ label: `💾 ${storage} GB`, clear: () => { document.getElementById('filter-storage').value = ''; applyFilters(); }});
+  if (condition) tags.push({ label: `📊 ${conditionLabel(condition)}`, clear: () => { document.getElementById('filter-condition').value = ''; applyFilters(); }});
+  if (status) tags.push({ label: status === 'available' ? `✅ ${t('statusAvailable')}` : `🔴 ${t('statusSold')}`, clear: () => { document.getElementById('filter-status').value = ''; applyFilters(); }});
+  container.innerHTML = tags.map((tag, i) => `
+    <span class="active-filter-tag">
+      ${tag.label}
+      <button onclick="clearFilter(${i})">✕</button>
+    </span>
+  `).join('');
+  window._filterClears = tags.map(t => t.clear);
+}
+
+function clearFilter(i) {
+  if (window._filterClears && window._filterClears[i]) window._filterClears[i]();
+}
+
+/* ═══════════════════════════════════════════════════════
+   PRODUCT MODAL
+═══════════════════════════════════════════════════════ */
+let currentModalPhone = null;
+let currentGalleryIdx = 0;
+
+function openProductModal(id) {
+  const phone = phones.find(p => p.id === id);
+  if (!phone) return;
+  currentModalPhone = phone;
+  currentGalleryIdx = 0;
+
+  const hasSold = phone.sold;
+  const hasImages = phone.images && phone.images.length > 0;
+  const battColor = batteryClass(phone.battery) === 'high' ? 'var(--green)' : batteryClass(phone.battery) === 'medium' ? 'var(--orange)' : 'var(--red)';
+
+  const galleryMain = hasImages
+    ? `<img src="${phone.images[0]}" id="gallery-main-img" alt="${phone.model}">`
+    : `<div class="gallery-main-placeholder">📱</div>`;
+
+  const thumbs = hasImages ? phone.images.map((img, i) => `
+    <div class="gallery-thumb ${i === 0 ? 'active' : ''}" onclick="changeGallery(${i})">
+      <img src="${img}" alt="">
+    </div>`).join('') : '';
+
+  const specs = [
+    { key: t('model'), val: phone.model },
+    { key: t('storage'), val: phone.storage + ' GB' },
+    { key: t('battery'), val: `<span style="color:${battColor};font-weight:700">${phone.battery}%</span>` },
+    { key: t('color'), val: phone.color },
+    { key: t('condition'), val: conditionLabel(phone.condition) },
+  ];
+
+  document.getElementById('modal-content').innerHTML = `
+    <div class="modal-gallery">
+      <div class="gallery-main">${galleryMain}</div>
+      ${thumbs ? `<div class="gallery-thumbs">${thumbs}</div>` : ''}
+    </div>
+    <div class="modal-details">
+      <div class="modal-model-name">${phone.model}</div>
+      <div class="modal-condition-badge ${conditionBadgeClass(phone.condition)}"
+        style="background:${phone.condition==='excellent'?'rgba(48,209,88,0.15)':phone.condition==='new'?'rgba(10,132,255,0.15)':'rgba(255,159,10,0.15)'};
+               color:${phone.condition==='excellent'?'var(--green)':phone.condition==='new'?'var(--blue)':'var(--orange)'}">
+        ● ${conditionLabel(phone.condition)}${hasSold ? ' — ' + t('soldLabel') : ''}
+      </div>
+
+      <div class="modal-price-block">
+        <div class="modal-price-label">${t('price')}</div>
+        <div class="modal-price-value">${Number(phone.price).toLocaleString('ar-EG')} <small>${settings.currency === 'USD' ? 'USD' : 'جنيه'}</small></div>
+      </div>
+
+      <div class="modal-specs-grid">
+        ${specs.map(s => `
+          <div class="modal-spec-item">
+            <div class="modal-spec-key">${s.key}</div>
+            <div class="modal-spec-val">${s.val}</div>
+          </div>
+        `).join('')}
+      </div>
+
+      ${phone.notes ? `<div class="modal-notes">📝 ${phone.notes}</div>` : ''}
+
+      <div class="modal-actions">
+        ${!hasSold ? `
+          <a class="btn-whatsapp-modal" href="https://wa.me/${settings.whatsapp.replace(/\D/g,'')}?text=${encodeURIComponent(t('waMessagePhone') + phone.model + ' - ' + phone.storage + 'GB - ' + formatPrice(phone.price))}" target="_blank">
+            💬 ${t('contactWA')}
+          </a>
+          <button class="btn-reserve" onclick="reservePhoneDB('${phone.id}')">
+            ${t('reserveBtn')}
+          </button>
+        ` : `<div style="color:var(--red);font-weight:700;font-size:16px;padding:16px">🔴 ${t('soldLabel')}</div>`}
+      </div>
+    </div>
+  `;
+
+  document.getElementById('product-modal').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function changeGallery(idx) {
+  if (!currentModalPhone || !currentModalPhone.images) return;
+  currentGalleryIdx = idx;
+  const mainImg = document.getElementById('gallery-main-img');
+  if (mainImg) mainImg.src = currentModalPhone.images[idx];
+  document.querySelectorAll('.gallery-thumb').forEach((t, i) => {
+    t.classList.toggle('active', i === idx);
+  });
+}
+
+function closeModal(e) {
+  if (e.target === document.getElementById('product-modal')) closeProductModal();
+}
+
+function closeProductModal() {
+  document.getElementById('product-modal').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+function reservePhone(id) {
+  const phone = phones.find(p => p.id === id);
+  if (!phone) return;
+  const msg = t('waMessagePhone') + phone.model + ' (' + t('reserveBtn') + ')';
+  window.open(`https://wa.me/${settings.whatsapp.replace(/\D/g,'')}?text=${encodeURIComponent(msg)}`, '_blank');
+}
+
+/* ═══════════════════════════════════════════════════════
+   TESTIMONIALS & WHY US RENDER
+═══════════════════════════════════════════════════════ */
+function renderTestimonials() {
+  const grid = document.getElementById('testimonials-grid');
+  const section = document.getElementById('testimonials');
+  if (!reviews.length) {
+    section.style.display = 'none';
+    return;
+  }
+  section.style.display = '';
+  grid.innerHTML = reviews.map(r => `
+    <div class="testimonial-card reveal">
+      <div class="testimonial-stars">
+        ${'<span class="star">★</span>'.repeat(r.stars)}${'<span style="color:var(--border)">★</span>'.repeat(5 - r.stars)}
+      </div>
+      <div class="testimonial-text">"${r.text}"</div>
+      <div class="testimonial-author">
+        <div class="testimonial-avatar">${r.name.charAt(0).toUpperCase()}</div>
+        <div>
+          <div class="testimonial-name">${r.name}</div>
+          <div class="testimonial-info">${r.device}</div>
+        </div>
+      </div>
+    </div>
+  `).join('');
+  observeReveal();
+}
+
+function renderWhyUs() {
+  document.getElementById('why-points').innerHTML = whyData.map(w => `
+    <div class="why-point reveal">
+      <div class="why-point-icon">${w.icon}</div>
+      <div>
+        <div class="why-point-title">${w.title}</div>
+        <div class="why-point-desc">${w.desc}</div>
+      </div>
+    </div>
+  `).join('');
+  document.getElementById('why-big-label').textContent = t('whyBigLabel');
+  observeReveal();
+}
+
+/* ═══════════════════════════════════════════════════════
+   HERO COUNTERS
+═══════════════════════════════════════════════════════ */
+function animateCounter(el, target, suffix = '') {
+  if (!el) return;
+  let current = 0;
+  const step = Math.ceil(target / 40);
+  const timer = setInterval(() => {
+    current = Math.min(current + step, target);
+    el.textContent = current.toLocaleString('ar-EG') + suffix;
+    if (current >= target) clearInterval(timer);
+  }, 30);
+}
+
+function updateHeroCounters() {
+  const available = phones.filter(p => !p.sold).length;
+  const sold = phones.filter(p => p.sold).length;
+  const totalSold = sold + 500; // includes pre-app sales
+
+  animateCounter(document.getElementById('counter-phones'), available);
+  animateCounter(document.getElementById('counter-sold'), totalSold);
+
+  // Update why-us big number
+  const bigEl = document.getElementById('why-us-big-number') || document.querySelector('.why-us-big-number');
+  if (bigEl) bigEl.textContent = (totalSold > 0 ? totalSold : 500) + '+';
+}
+
+/* ═══════════════════════════════════════════════════════
+   ADMIN AUTH
+═══════════════════════════════════════════════════════ */
+function hashPass(str) {
+  // Simple but effective: SHA-like hash using btoa + custom fold
+  let h = 0;
+  for (let i = 0; i < str.length; i++) {
+    h = (Math.imul(31, h) + str.charCodeAt(i)) | 0;
+  }
+  return btoa(str.split('').reverse().join('') + h.toString(36) + str.length);
+}
+
+function openAdmin() {
+  // Check session
+  const sessionPass = sessionStorage.getItem(ADMIN_SESSION_KEY);
+  const storedPass = localStorage.getItem(ADMIN_PASS_KEY);
+  if (sessionPass && storedPass && sessionPass === storedPass) {
+    adminAuthenticated = true;
+    showAdminPanel();
+    return;
+  }
+  showAuthModal();
+}
+
+function showAuthModal() {
+  const modal = document.getElementById('admin-auth-modal');
+  const storedPass = localStorage.getItem(ADMIN_PASS_KEY);
+  modal.style.display = 'flex';
+  setTimeout(() => {
+    modal.style.opacity = '1';
+    document.getElementById('auth-box').style.transform = 'scale(1) translateY(0)';
+  }, 10);
+
+  if (!storedPass) {
+    // First time — set password
+    document.getElementById('auth-set-state').style.display = 'block';
+    document.getElementById('auth-login-state').style.display = 'none';
+    document.getElementById('auth-title').textContent = 'إنشاء باسورد';
+    document.getElementById('auth-subtitle').textContent = 'أول مرة — اختار باسورد خاص بيك';
+    setTimeout(() => document.getElementById('auth-new-pass').focus(), 300);
+  } else {
+    document.getElementById('auth-set-state').style.display = 'none';
+    document.getElementById('auth-login-state').style.display = 'block';
+    document.getElementById('auth-title').textContent = 'لوحة التحكم';
+    document.getElementById('auth-subtitle').textContent = 'Sabat Store Admin';
+    setTimeout(() => document.getElementById('auth-pass-input').focus(), 300);
+  }
+  closeMobileMenu();
+}
+
+function closeAuthModal() {
+  const modal = document.getElementById('admin-auth-modal');
+  modal.style.opacity = '0';
+  document.getElementById('auth-box').style.transform = 'scale(0.9) translateY(20px)';
+  setTimeout(() => { modal.style.display = 'none'; }, 300);
+  document.getElementById('auth-pass-input').value = '';
+  document.getElementById('auth-error').style.display = 'none';
+}
+
+function setAdminPassword() {
+  const newPass = document.getElementById('auth-new-pass').value;
+  const confirmPass = document.getElementById('auth-confirm-pass').value;
+  if (!newPass || newPass.length < 4) {
+    showToast('الباسورد لازم يكون 4 حروف على الأقل', 'error'); return;
+  }
+  if (newPass !== confirmPass) {
+    showToast('الباسوردين مش متطابقين', 'error'); return;
+  }
+  const hashed = hashPass(newPass);
+  localStorage.setItem(ADMIN_PASS_KEY, hashed);
+  sessionStorage.setItem(ADMIN_SESSION_KEY, hashed);
+  adminAuthenticated = true;
+  closeAuthModal();
+  showToast('✅ تم إنشاء الباسورد بنجاح', 'success');
+  setTimeout(() => showAdminPanel(), 400);
+}
+
+function loginAdmin() {
+  const pass = document.getElementById('auth-pass-input').value;
+  const stored = localStorage.getItem(ADMIN_PASS_KEY);
+  const errEl = document.getElementById('auth-error');
+  const btn = document.getElementById('auth-login-btn');
+
+  if (!pass) return;
+  if (hashPass(pass) === stored) {
+    errEl.style.display = 'none';
+    btn.textContent = '✓ تم الدخول';
+    sessionStorage.setItem(ADMIN_SESSION_KEY, stored);
+    adminAuthenticated = true;
+    setTimeout(() => {
+      closeAuthModal();
+      setTimeout(() => showAdminPanel(), 400);
+    }, 400);
+  } else {
+    errEl.style.display = 'block';
+    document.getElementById('auth-pass-input').value = '';
+    document.getElementById('auth-pass-input').focus();
+    document.getElementById('auth-box').style.animation = 'shake 0.4s ease';
+    setTimeout(() => document.getElementById('auth-box').style.animation = '', 400);
+  }
+}
+
+function showAdminPanel() {
+  document.getElementById('admin-panel').classList.add('open');
+  document.body.style.overflow = 'hidden';
+  renderAdminStats();
+  renderAdminRecentTable();
+  renderAdminPhonesTable();
+  renderAdminReviews();
+  loadSettings();
+}
+
+/* ═══════════════════════════════════════════════════════
+   REVIEWS CRUD
+═══════════════════════════════════════════════════════ */
+function openReviewForm(id = null) {
+  editingReviewId = id;
+  reviewStars = 5;
+  document.getElementById('r-name').value = '';
+  document.getElementById('r-device').value = '';
+  document.getElementById('r-text').value = '';
+  document.getElementById('r-stars').value = '5';
+  if (id) {
+    const r = reviews.find(x => x.id === id);
+    if (r) {
+      document.getElementById('r-name').value = r.name;
+      document.getElementById('r-device').value = r.device;
+      document.getElementById('r-text').value = r.text;
+      reviewStars = r.stars;
+      document.getElementById('r-stars').value = r.stars;
+    }
+  }
+  setStars(reviewStars);
+  document.getElementById('review-form-overlay').classList.add('open');
+}
+
+function closeReviewForm() {
+  document.getElementById('review-form-overlay').classList.remove('open');
+  editingReviewId = null;
+}
+
+function setStars(n) {
+  reviewStars = n;
+  document.getElementById('r-stars').value = n;
+  const stars = document.querySelectorAll('#star-picker span');
+  stars.forEach((s, i) => {
+    s.style.opacity = i < n ? '1' : '0.3';
+    s.style.transform = i < n ? 'scale(1.1)' : 'scale(1)';
+  });
+}
+
+function saveReview() {
+  const name = document.getElementById('r-name').value.trim();
+  const device = document.getElementById('r-device').value.trim();
+  const text = document.getElementById('r-text').value.trim();
+  const stars = parseInt(document.getElementById('r-stars').value) || 5;
+  if (!name || !text) { showToast('يرجى ملء الاسم والنص', 'error'); return; }
+  let savedReview;
+  if (editingReviewId) {
+    const idx = reviews.findIndex(r => r.id === editingReviewId);
+    if (idx > -1) { reviews[idx] = { ...reviews[idx], name, device, text, stars }; savedReview = reviews[idx]; }
+  } else {
+    savedReview = { id: genId(), name, device, text, stars, createdAt: Date.now() };
+    reviews.push(savedReview);
+  }
+  saveReviewsData();
+  if (savedReview) saveReviewToSupabase(savedReview);
+  renderTestimonials();
+  renderAdminReviews();
+  closeReviewForm();
+  showToast('✅ تم حفظ الرأي', 'success');
+}
+
+function deleteReview(id) {
+  showConfirm('حذف الرأي؟', 'هذا الإجراء لا يمكن التراجع عنه', 'حذف', () => {
+    reviews = reviews.filter(r => r.id !== id);
+    saveReviewsData();
+    deleteReviewFromSupabase(id);
+    renderTestimonials();
+    renderAdminReviews();
+    showToast('🗑️ تم حذف الرأي', 'info');
+  });
+}
+
+function renderAdminReviews() {
+  const container = document.getElementById('reviews-admin-list');
+  if (!container) return;
+  if (!reviews.length) {
+    container.innerHTML = `<div style="text-align:center;padding:40px;color:var(--text-muted)">
+      <div style="font-size:40px;margin-bottom:12px">⭐</div>
+      <div style="font-size:15px">لم تضف أي آراء بعد</div>
+      <div style="font-size:13px;margin-top:6px;opacity:0.7">اضغط "إضافة رأي" لإضافة أول رأي عميل</div>
+    </div>`;
+    return;
+  }
+  container.innerHTML = reviews.map(r => `
+    <div style="display:flex;align-items:flex-start;gap:16px;padding:16px 0;border-bottom:1px solid var(--border)">
+      <div style="width:44px;height:44px;border-radius:50%;background:var(--gold-glow);border:1px solid var(--border-gold);display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:700;color:var(--gold);flex-shrink:0">${r.name.charAt(0).toUpperCase()}</div>
+      <div style="flex:1;min-width:0">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px;flex-wrap:wrap">
+          <span style="font-size:15px;font-weight:700;color:var(--text-primary)">${r.name}</span>
+          <span style="font-size:12px;color:var(--text-muted)">${r.device || ''}</span>
+          <span style="color:var(--gold);font-size:13px">${'★'.repeat(r.stars)}</span>
+        </div>
+        <div style="font-size:13px;color:var(--text-secondary);line-height:1.6">"${r.text}"</div>
+      </div>
+      <div style="display:flex;gap:6px;flex-shrink:0">
+        <button class="admin-btn-sm edit-btn" onclick="openReviewForm('${r.id}')" title="تعديل">✏️</button>
+        <button class="admin-btn-sm delete-btn" onclick="deleteReview('${r.id}')" title="حذف">🗑️</button>
+      </div>
+    </div>
+  `).join('');
+}
+
+/* ═══════════════════════════════════════════════════════
+   ADMIN PANEL
+═══════════════════════════════════════════════════════ */
+
+function switchAdminTab(tab) {
+  document.querySelectorAll('.admin-content-section').forEach(s => s.classList.remove('active'));
+  document.querySelectorAll('.admin-nav-item').forEach(n => n.classList.remove('active'));
+
+  document.getElementById('tab-content-' + tab).classList.add('active');
+  document.getElementById('nav-' + tab).classList.add('active');
+
+  const titles = { overview: t('adminOverview'), phones: t('adminPhones'), analytics: t('adminAnalytics'), reviews: 'آراء العملاء', users: 'المستخدمين', settings: t('settingsTitle') };
+  document.getElementById('admin-page-title').textContent = titles[tab] || '';
+
+  if (tab === 'analytics') renderAnalytics();
+  if (tab === 'phones') renderAdminPhonesTable();
+  if (tab === 'reviews') renderAdminReviews();
+  if (tab === 'users') renderAdminUsers();
+}
+
+function closeAdmin() {
+  document.getElementById('admin-panel').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+function renderAdminStats() {
+  const available = phones.filter(p => !p.sold).length;
+  const sold = phones.filter(p => p.sold).length;
+  const value = phones.filter(p => !p.sold).reduce((s, p) => s + p.price, 0);
+
+  document.getElementById('admin-stats-grid').innerHTML = `
+    <div class="admin-stat">
+      <div class="admin-stat-num">${phones.length}</div>
+      <div class="admin-stat-label">${t('totalPhones')}</div>
+    </div>
+    <div class="admin-stat" style="border-color:rgba(48,209,88,0.3)">
+      <div class="admin-stat-num" style="color:var(--green)">${available}</div>
+      <div class="admin-stat-label">${t('availablePhones')}</div>
+    </div>
+    <div class="admin-stat" style="border-color:rgba(255,69,58,0.3)">
+      <div class="admin-stat-num" style="color:var(--red)">${sold}</div>
+      <div class="admin-stat-label">${t('soldPhones')}</div>
+    </div>
+    <div class="admin-stat gold-stat">
+      <div class="admin-stat-num">${Number(value).toLocaleString('ar-EG')}</div>
+      <div class="admin-stat-label">${t('totalValue')}</div>
+    </div>
+  `;
+}
+
+function renderAdminRecentTable() {
+  const recent = [...phones].sort((a, b) => b.createdAt - a.createdAt).slice(0, 5);
+  document.getElementById('recent-table-body').innerHTML = recent.map(p => `
+    <tr>
+      <td><strong>${p.model}</strong></td>
+      <td>${p.storage} GB</td>
+      <td style="color:${batteryClass(p.battery)==='high'?'var(--green)':batteryClass(p.battery)==='medium'?'var(--orange)':'var(--red)'}">${p.battery}%</td>
+      <td>${Number(p.price).toLocaleString('ar-EG')}</td>
+      <td><span style="color:${p.sold?'var(--red)':'var(--green)'}">${p.sold ? t('soldLabel') : t('statusAvailable')}</span></td>
+    </tr>
+  `).join('') || `<tr><td colspan="5" style="text-align:center;color:var(--text-muted);padding:32px">${t('emptyTitle')}</td></tr>`;
+}
+
+function renderAdminPhonesTable() {
+  document.getElementById('phones-table-body').innerHTML = phones.map(p => `
+    <tr>
+      <td><strong>${p.model}</strong></td>
+      <td>${p.color}</td>
+      <td>${p.storage} GB</td>
+      <td style="color:${batteryClass(p.battery)==='high'?'var(--green)':batteryClass(p.battery)==='medium'?'var(--orange)':'var(--red)'}">${p.battery}%</td>
+      <td>${Number(p.price).toLocaleString('ar-EG')}</td>
+      <td><span style="color:${p.sold?'var(--red)':'var(--green)'}">${p.sold ? t('soldLabel') : t('statusAvailable')}</span></td>
+      <td>
+        <div class="admin-row-actions">
+          <button class="admin-btn-sm edit-btn" onclick="editPhone('${p.id}')" title="Edit">✏️</button>
+          <button class="admin-btn-sm duplicate-btn" onclick="duplicatePhone('${p.id}')" title="Duplicate">📋</button>
+          <button class="admin-btn-sm sold-btn" onclick="toggleSold('${p.id}')" title="${p.sold ? t('markAvail') : t('markSold')}">${p.sold ? '✅' : '🔴'}</button>
+          <button class="admin-btn-sm delete-btn" onclick="deletePhone('${p.id}')" title="Delete">🗑️</button>
+        </div>
+      </td>
+    </tr>
+  `).join('') || `<tr><td colspan="7" style="text-align:center;color:var(--text-muted);padding:32px">${t('emptyTitle')}</td></tr>`;
+}
+
+/* ═══════════════════════════════════════════════════════
+   ANALYTICS
+═══════════════════════════════════════════════════════ */
+function renderAnalytics() {
+  const available = phones.filter(p => !p.sold).length;
+  const sold = phones.filter(p => p.sold).length;
+  const totalValue = phones.filter(p => !p.sold).reduce((s, p) => s + p.price, 0);
+  const avgBattery = phones.length ? Math.round(phones.reduce((s, p) => s + p.battery, 0) / phones.length) : 0;
+
+  document.getElementById('analytics-stats').innerHTML = `
+    <div class="admin-stat">
+      <div class="admin-stat-num">${phones.length}</div>
+      <div class="admin-stat-label">${t('totalPhones')}</div>
+    </div>
+    <div class="admin-stat gold-stat">
+      <div class="admin-stat-num">${Number(totalValue).toLocaleString('ar-EG')}</div>
+      <div class="admin-stat-label">${t('totalValue')}</div>
+    </div>
+    <div class="admin-stat" style="border-color:rgba(48,209,88,0.3)">
+      <div class="admin-stat-num" style="color:var(--green)">${avgBattery}%</div>
+      <div class="admin-stat-label">متوسط البطارية</div>
+    </div>
+    <div class="admin-stat">
+      <div class="admin-stat-num">${sold > 0 && phones.length > 0 ? Math.round(sold/phones.length*100) : 0}%</div>
+      <div class="admin-stat-label">معدل البيع</div>
+    </div>
+  `;
+
+  // Condition breakdown
+  const condMap = {};
+  phones.forEach(p => { condMap[p.condition] = (condMap[p.condition] || 0) + 1; });
+
+  // Storage breakdown
+  const storMap = {};
+  phones.forEach(p => { storMap[p.storage] = (storMap[p.storage] || 0) + 1; });
+
+  const maxCond = Math.max(...Object.values(condMap), 1);
+  const maxStor = Math.max(...Object.values(storMap), 1);
+
+  document.getElementById('analytics-content').innerHTML = `
+    <div class="analytics-card">
+      <div class="analytics-card-title">توزيع الحالات</div>
+      ${Object.entries(condMap).map(([k, v]) => `
+        <div style="margin-bottom:12px">
+          <div style="display:flex;justify-content:space-between;font-size:13px;color:var(--text-secondary);margin-bottom:6px">
+            <span>${conditionLabel(k)}</span><span>${v}</span>
+          </div>
+          <div style="height:6px;background:var(--border);border-radius:99px;overflow:hidden">
+            <div style="height:100%;width:${Math.round(v/maxCond*100)}%;background:linear-gradient(90deg,var(--gold-dark),var(--gold));border-radius:99px;transition:width 0.8s ease"></div>
+          </div>
+        </div>
+      `).join('') || '<div style="color:var(--text-muted);font-size:13px">لا توجد بيانات</div>'}
+    </div>
+
+    <div class="analytics-card">
+      <div class="analytics-card-title">توزيع التخزين</div>
+      ${Object.entries(storMap).map(([k, v]) => `
+        <div style="margin-bottom:12px">
+          <div style="display:flex;justify-content:space-between;font-size:13px;color:var(--text-secondary);margin-bottom:6px">
+            <span>${k} GB</span><span>${v}</span>
+          </div>
+          <div style="height:6px;background:var(--border);border-radius:99px;overflow:hidden">
+            <div style="height:100%;width:${Math.round(v/maxStor*100)}%;background:linear-gradient(90deg,var(--blue),rgba(10,132,255,0.5));border-radius:99px;transition:width 0.8s ease"></div>
+          </div>
+        </div>
+      `).join('') || '<div style="color:var(--text-muted);font-size:13px">لا توجد بيانات</div>'}
+    </div>
+
+    <div class="analytics-card">
+      <div class="analytics-card-title">الحالة العامة</div>
+      <div style="display:flex;gap:24px;align-items:center;justify-content:center;height:100px">
+        <div style="text-align:center">
+          <div style="font-size:40px;font-weight:800;color:var(--green)">${available}</div>
+          <div style="font-size:12px;color:var(--text-muted)">${t('statusAvailable')}</div>
+        </div>
+        <div style="width:1px;height:60px;background:var(--border)"></div>
+        <div style="text-align:center">
+          <div style="font-size:40px;font-weight:800;color:var(--red)">${sold}</div>
+          <div style="font-size:12px;color:var(--text-muted)">${t('soldLabel')}</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="analytics-card">
+      <div class="analytics-card-title">نطاقات الأسعار</div>
+      ${[
+        ['< 10,000', phones.filter(p => p.price < 10000).length],
+        ['10k-20k', phones.filter(p => p.price >= 10000 && p.price < 20000).length],
+        ['20k-35k', phones.filter(p => p.price >= 20000 && p.price < 35000).length],
+        ['> 35,000', phones.filter(p => p.price >= 35000).length],
+      ].map(([k, v]) => `
+        <div style="margin-bottom:10px">
+          <div style="display:flex;justify-content:space-between;font-size:13px;color:var(--text-secondary);margin-bottom:5px">
+            <span>${k}</span><span>${v}</span>
+          </div>
+          <div style="height:5px;background:var(--border);border-radius:99px;overflow:hidden">
+            <div style="height:100%;width:${phones.length ? Math.round(v/phones.length*100) : 0}%;background:var(--gold);border-radius:99px"></div>
+          </div>
+        </div>
+      `).join('')}
+    </div>
+  `;
+}
+
+/* ═══════════════════════════════════════════════════════
+   PHONE CRUD
+═══════════════════════════════════════════════════════ */
+function openPhoneForm(id = null) {
+  editingId = id;
+  uploadedImages = [];
+  document.getElementById('upload-previews').innerHTML = '';
+  document.getElementById('form-title').textContent = id ? t('formEditTitle') : t('formTitle');
+
+  if (id) {
+    const p = phones.find(x => x.id === id);
+    if (p) {
+      document.getElementById('f-model').value = p.model;
+      document.getElementById('f-color').value = p.color;
+      document.getElementById('f-storage').value = p.storage;
+      document.getElementById('f-battery').value = p.battery;
+      document.getElementById('f-condition').value = p.condition;
+      document.getElementById('f-price').value = p.price;
+      document.getElementById('f-notes').value = p.notes || '';
+      uploadedImages = p.images ? [...p.images] : [];
+      renderImagePreviews();
+    }
+  } else {
+    document.getElementById('f-model').value = '';
+    document.getElementById('f-color').value = '';
+    document.getElementById('f-battery').value = '';
+    document.getElementById('f-price').value = '';
+    document.getElementById('f-notes').value = '';
+    document.getElementById('f-storage').value = '128';
+    document.getElementById('f-condition').value = 'excellent';
+  }
+
+  document.getElementById('phone-form-overlay').classList.add('open');
+}
+
+function closePhoneForm() {
+  document.getElementById('phone-form-overlay').classList.remove('open');
+  editingId = null;
+  uploadedImages = [];
+}
+
+async function savePhone() {
+  const model = document.getElementById('f-model').value.trim();
+  const color = document.getElementById('f-color').value.trim();
+  const storage = document.getElementById('f-storage').value;
+  const battery = parseInt(document.getElementById('f-battery').value);
+  const condition = document.getElementById('f-condition').value;
+  const price = parseInt(document.getElementById('f-price').value);
+  const notes = document.getElementById('f-notes').value.trim();
+
+  if (!model || !battery || !price) {
+    showToast(lang === 'ar' ? 'يرجى ملء الحقول المطلوبة' : 'Please fill required fields', 'error');
+    return;
+  }
+
+  let savedPhone;
+  if (editingId) {
+    const idx = phones.findIndex(p => p.id === editingId);
+    if (idx > -1) {
+      phones[idx] = { ...phones[idx], model, color, storage, battery, condition, price, notes, images: uploadedImages };
+      savedPhone = phones[idx];
+    }
+  } else {
+    savedPhone = { id: genId(), model, color, storage, battery, condition, price, notes, images: uploadedImages, sold: false, createdAt: Date.now() };
+    phones.unshift(savedPhone);
+  }
+
+  saveData();
+  if (savedPhone) savePhoneToSupabase(savedPhone);
+  filteredPhones = [...phones];
+  renderProducts();
+  renderAdminStats();
+  renderAdminRecentTable();
+  renderAdminPhonesTable();
+  closePhoneForm();
+  showToast(t('saveSuccess'), 'success');
+}
+
+function editPhone(id) { openPhoneForm(id); }
+
+function deletePhone(id) {
+  showConfirm(t('confirmDelete'), t('confirmDeleteMsg'), t('confirmOk'), () => {
+    phones = phones.filter(p => p.id !== id);
+    saveData();
+    deletePhoneFromSupabase(id);
+    filteredPhones = [...phones];
+    renderProducts();
+    renderAdminStats();
+    renderAdminRecentTable();
+    renderAdminPhonesTable();
+    showToast(t('deleteSuccess'), 'info');
+  });
+}
+
+function toggleSold(id) {
+  const phone = phones.find(p => p.id === id);
+  if (!phone) return;
+  phone.sold = !phone.sold;
+  saveData();
+  savePhoneToSupabase(phone);
+  filteredPhones = [...phones];
+  renderProducts();
+  renderAdminStats();
+  renderAdminRecentTable();
+  renderAdminPhonesTable();
+  showToast(phone.sold ? t('soldSuccess') : t('availableSuccess'), 'success');
+}
+
+function duplicatePhone(id) {
+  const phone = phones.find(p => p.id === id);
+  if (!phone) return;
+  const copy = { ...phone, id: genId(), createdAt: Date.now(), sold: false };
+  phones.unshift(copy);
+  saveData();
+  filteredPhones = [...phones];
+  renderProducts();
+  renderAdminPhonesTable();
+  renderAdminStats();
+  renderAdminRecentTable();
+  showToast(t('duplicateSuccess'), 'success');
+}
+
+/* ═══════════════════════════════════════════════════════
+   IMAGE HANDLING
+═══════════════════════════════════════════════════════ */
+function handleImages(e) {
+  const files = Array.from(e.target.files);
+  convertImages(files);
+}
+
+function handleDragOver(e) {
+  e.preventDefault();
+  document.getElementById('upload-zone').classList.add('dragover');
+}
+
+function handleDrop(e) {
+  e.preventDefault();
+  document.getElementById('upload-zone').classList.remove('dragover');
+  const files = Array.from(e.dataTransfer.files).filter(f => f.type.startsWith('image/'));
+  convertImages(files);
+}
+
+function convertImages(files) {
+  files.forEach(file => {
+    const reader = new FileReader();
+    reader.onload = (ev) => {
+      uploadedImages.push(ev.target.result);
+      renderImagePreviews();
+    };
+    reader.readAsDataURL(file);
+  });
+}
+
+function renderImagePreviews() {
+  document.getElementById('upload-previews').innerHTML = uploadedImages.map((img, i) => `
+    <div class="upload-preview">
+      <img src="${img}" alt="">
+      <button class="upload-preview-remove" onclick="removeImage(${i})">✕</button>
+    </div>
+  `).join('');
+}
+
+function removeImage(i) {
+  uploadedImages.splice(i, 1);
+  renderImagePreviews();
+}
+
+/* ═══════════════════════════════════════════════════════
+   SETTINGS
+═══════════════════════════════════════════════════════ */
+function loadSettings() {
+  document.getElementById('settings-whatsapp').value = settings.whatsapp || '';
+  document.getElementById('settings-store-name').value = settings.storeName || '';
+  document.getElementById('settings-currency').value = settings.currency || 'EGP';
+}
+
+function saveSettings() {
+  settings.whatsapp = document.getElementById('settings-whatsapp').value.trim() || defaultSettings.whatsapp;
+  settings.storeName = document.getElementById('settings-store-name').value.trim() || defaultSettings.storeName;
+  settings.currency = document.getElementById('settings-currency').value;
+  saveSettingsData();
+  showToast(t('settingsSaved'), 'success');
+}
+
+function changePassword() {
+  const oldPass = document.getElementById('chg-old-pass').value;
+  const newPass = document.getElementById('chg-new-pass').value;
+  const confirmPass = document.getElementById('chg-confirm-pass').value;
+  const stored = localStorage.getItem(ADMIN_PASS_KEY);
+
+  if (!stored) { showToast('لا يوجد باسورد محفوظ', 'error'); return; }
+  if (hashPass(oldPass) !== stored) { showToast('❌ الباسورد الحالي غلط', 'error'); return; }
+  if (!newPass || newPass.length < 4) { showToast('الباسورد الجديد لازم يكون 4 حروف على الأقل', 'error'); return; }
+  if (newPass !== confirmPass) { showToast('❌ الباسوردين الجديدين مش متطابقين', 'error'); return; }
+
+  const hashed = hashPass(newPass);
+  localStorage.setItem(ADMIN_PASS_KEY, hashed);
+  sessionStorage.setItem(ADMIN_SESSION_KEY, hashed);
+  document.getElementById('chg-old-pass').value = '';
+  document.getElementById('chg-new-pass').value = '';
+  document.getElementById('chg-confirm-pass').value = '';
+  showToast('✅ تم تغيير الباسورد بنجاح', 'success');
+}
+
+/* ═══════════════════════════════════════════════════════
+   WHATSAPP
+═══════════════════════════════════════════════════════ */
+function contactWhatsApp() {
+  window.open(`https://wa.me/${settings.whatsapp.replace(/\D/g,'')}?text=${encodeURIComponent(t('waMessage'))}`, '_blank');
+}
+
+function waPhone(id) {
+  const phone = phones.find(p => p.id === id);
+  if (!phone) return;
+  const msg = t('waMessagePhone') + phone.model + ' - ' + phone.storage + 'GB - ' + formatPrice(phone.price);
+  window.open(`https://wa.me/${settings.whatsapp.replace(/\D/g,'')}?text=${encodeURIComponent(msg)}`, '_blank');
+}
+
+/* ═══════════════════════════════════════════════════════
+   TOAST
+═══════════════════════════════════════════════════════ */
+function showToast(text, type = 'info') {
+  const container = document.getElementById('toast-container');
+  const toast = document.createElement('div');
+  toast.className = `toast ${type}`;
+  toast.innerHTML = `<span class="toast-icon"></span><span class="toast-text">${text}</span>`;
+  container.appendChild(toast);
+  setTimeout(() => {
+    toast.classList.add('removing');
+    setTimeout(() => toast.remove(), 400);
+  }, 3500);
+}
+
+/* ═══════════════════════════════════════════════════════
+   CONFIRM
+═══════════════════════════════════════════════════════ */
+function showConfirm(title, msg, okLabel, cb) {
+  document.getElementById('confirm-title').textContent = title;
+  document.getElementById('confirm-msg').textContent = msg;
+  document.getElementById('confirm-ok-btn').textContent = okLabel;
+  document.getElementById('confirm-cancel-btn').textContent = t('confirmCancel');
+  confirmCallback = cb;
+  document.getElementById('confirm-dialog').classList.add('open');
+  document.getElementById('confirm-ok-btn').onclick = () => { closeConfirm(); if (cb) cb(); };
+}
+
+function closeConfirm() {
+  document.getElementById('confirm-dialog').classList.remove('open');
+}
+
+/* ═══════════════════════════════════════════════════════
+   THEME & LANG
+═══════════════════════════════════════════════════════ */
+function toggleTheme() {
+  const html = document.documentElement;
+  const isDark = html.getAttribute('data-theme') === 'dark';
+  html.setAttribute('data-theme', isDark ? 'light' : 'dark');
+  document.getElementById('theme-btn').textContent = isDark ? '🌙' : '☀️';
+  localStorage.setItem('sabat_theme', isDark ? 'light' : 'dark');
+}
+
+function toggleLang() {
+  lang = lang === 'ar' ? 'en' : 'ar';
+  document.documentElement.setAttribute('data-lang', lang);
+  document.documentElement.setAttribute('lang', lang);
+  document.documentElement.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
+  localStorage.setItem('sabat_lang', lang);
+  applyTranslations();
+  renderFeatures();
+  renderTestimonials();
+  renderWhyUs();
+  filteredPhones = [...phones];
+  renderProducts();
+}
+
+function applyTranslations() {
+  const setT = (id, key) => {
+    const el = document.getElementById(id);
+    if (el) el.textContent = t(key);
+  };
+  const setH = (id, key) => {
+    const el = document.getElementById(id);
+    if (el) el.innerHTML = t(key);
+  };
+
+  setT('lang-btn', 'langSwitch');
+  setT('nav-link-products', 'navProducts');
+  setT('nav-link-features', 'navFeatures');
+  setT('nav-link-reviews', 'navReviews');
+  setT('nav-link-why', 'navWhy');
+  setT('nav-admin-btn', 'navAdmin');
+  setT('mob-products', 'navProducts');
+  setT('mob-features', 'navFeatures');
+  setT('mob-reviews', 'navReviews');
+  setT('mob-admin', 'navAdmin');
+  setT('hero-eyebrow-text', 'heroEyebrow');
+  setT('hero-title-1', 'heroTitle1');
+  setT('hero-title-2', 'heroTitle2');
+  setT('hero-title-3', 'heroTitle3');
+  setT('hero-subtitle', 'heroSub');
+  setT('hero-cta-browse', 'heroCTABrowse');
+  setT('hero-cta-contact', 'heroCTAContact');
+  setT('stat-label-phones', 'statPhones');
+  setT('stat-label-sold', 'statSold');
+  setT('stat-label-quality', 'statQuality');
+  setT('stat-label-exp', 'statExp');
+  setT('features-label', 'featuresLabel');
+  setT('features-subtitle', 'featuresSub');
+  setT('products-label', 'productsLabel');
+  setT('products-title', 'productsTitle');
+  setT('products-subtitle', 'productsSub');
+  setT('testimonials-label', 'testimonialsLabel');
+  setT('search-input', 'searchPlaceholder'); // placeholder
+  const si = document.getElementById('search-input');
+  if (si) si.placeholder = t('searchPlaceholder');
+  setT('admin-sub', 'adminSub');
+  setT('add-btn-text', 'addPhone');
+  setT('tab-overview', 'adminOverview');
+  setT('tab-phones', 'adminPhones');
+  setT('tab-analytics', 'adminAnalytics');
+  setT('tab-settings', 'adminSettings');
+  setT('close-admin-text', 'closeAdmin');
+  setT('recent-title', 'recentTitle');
+  setT('all-phones-title', 'allPhonesTitle');
+  setT('th-model', 'thModel'); setT('th-storage', 'thStorage');
+  setT('th-battery', 'thBattery'); setT('th-price', 'thPrice'); setT('th-status', 'thStatus');
+  setT('th-model2', 'thModel'); setT('th-color', 'thColor');
+  setT('th-storage2', 'thStorage'); setT('th-battery2', 'thBattery');
+  setT('th-price2', 'thPrice'); setT('th-status2', 'thStatus'); setT('th-actions', 'thActions');
+  setT('label-model', 'labelModel'); setT('label-color', 'labelColor');
+  setT('label-storage', 'labelStorage'); setT('label-battery', 'labelBattery');
+  setT('label-condition', 'labelCondition'); setT('label-price', 'labelPrice');
+  setT('label-notes', 'labelNotes');
+  setT('btn-cancel-form', 'cancelForm'); setT('btn-save-form', 'saveForm');
+  setH('upload-text', 'uploadText');
+  setT('settings-title', 'settingsTitle'); setT('settings-whatsapp-label', 'settingsWA');
+  setT('settings-store-name-label', 'settingsName'); setT('settings-currency-label', 'settingsCurrency');
+  setT('settings-save-btn', 'settingsSave');
+  setT('pwa-title', 'pwaTitle'); setT('pwa-desc', 'pwaDesc'); setT('pwa-btn-install', 'pwaInstall');
+  setT('footer-tagline', 'footerTagline'); setT('footer-quick', 'footerQuick');
+  setT('footer-models', 'footerModels'); setT('footer-contact-title', 'footerContactTitle');
+  setT('features-title', 'featuresTitle');
+  const tl = document.getElementById('testimonials-title');
+  if (tl) tl.innerHTML = t('testimonialsTitle').replace('\n', '<br>');
+}
+
+/* ═══════════════════════════════════════════════════════
+   MOBILE MENU
+═══════════════════════════════════════════════════════ */
+function toggleMobileMenu() {
+  const menu = document.getElementById('mobile-menu');
+  menu.classList.toggle('open');
+}
+
+function closeMobileMenu() {
+  document.getElementById('mobile-menu').classList.remove('open');
+}
+
+/* ═══════════════════════════════════════════════════════
+   SCROLL EVENTS
+═══════════════════════════════════════════════════════ */
+window.addEventListener('scroll', () => {
+  const y = window.scrollY;
+  document.getElementById('navbar').classList.toggle('scrolled', y > 20);
+  document.getElementById('scroll-top').classList.toggle('visible', y > 400);
+});
+
+function scrollToSection(id) {
+  document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+  closeMobileMenu();
+  return false;
+}
+
+/* ═══════════════════════════════════════════════════════
+   INTERSECTION OBSERVER (REVEAL)
+═══════════════════════════════════════════════════════ */
+let revealObserver;
+
+function observeReveal() {
+  if (revealObserver) revealObserver.disconnect();
+  revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        revealObserver.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+  document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+}
+
+/* ═══════════════════════════════════════════════════════
+   PWA
+═══════════════════════════════════════════════════════ */
+window.addEventListener('beforeinstallprompt', (e) => {
+  e.preventDefault();
+  deferredPrompt = e;
+  setTimeout(() => {
+    document.getElementById('pwa-banner').classList.add('show');
+  }, 5000);
+});
+
+function installPWA() {
+  closePWA();
+  if (deferredPrompt) {
+    deferredPrompt.prompt();
+    deferredPrompt.userChoice.then(() => { deferredPrompt = null; });
+  }
+}
+
+function closePWA() {
+  document.getElementById('pwa-banner').classList.remove('show');
+}
+
+/* ═══════════════════════════════════════════════════════
+   INIT
+═══════════════════════════════════════════════════════ */
+/* ═══════════════════════════════════════════════════════
+   SUPABASE — PHONES (sync if configured)
+═══════════════════════════════════════════════════════ */
+async function loadPhonesFromSupabase() {
+  if (!isSupabaseReady()) return;
+  try {
+    const sb = getSupabase();
+    const { data, error } = await sb.from('phones').select('*').order('created_at', { ascending: false });
+    if (error) throw error;
+    if (data && data.length) {
+      phones = data.map(p => ({
+        id: p.id, model: p.model, color: p.color || '',
+        storage: p.storage, battery: p.battery, condition: p.condition,
+        price: p.price, notes: p.notes || '', images: p.images || [],
+        sold: p.sold || false, createdAt: new Date(p.created_at).getTime()
+      }));
+      filteredPhones = [...phones];
+      renderProducts();
+      updateHeroCounters();
+    }
+  } catch(e) { console.warn('Supabase phones load:', e.message); }
+}
+
+async function savePhoneToSupabase(phone) {
+  if (!isSupabaseReady()) return false;
+  try {
+    const sb = getSupabase();
+    const row = { id: phone.id, model: phone.model, color: phone.color, storage: phone.storage, battery: phone.battery, condition: phone.condition, price: phone.price, notes: phone.notes, images: phone.images, sold: phone.sold };
+    const { error } = await sb.from('phones').upsert(row);
+    if (error) throw error;
+    return true;
+  } catch(e) { console.warn('Supabase save phone:', e.message); return false; }
+}
+
+async function deletePhoneFromSupabase(id) {
+  if (!isSupabaseReady()) return;
+  try { await getSupabase().from('phones').delete().eq('id', id); } catch(e) {}
+}
+
+async function loadReviewsFromSupabase() {
+  if (!isSupabaseReady()) return;
+  try {
+    const sb = getSupabase();
+    const { data, error } = await sb.from('reviews').select('*').order('created_at', { ascending: false });
+    if (error) throw error;
+    if (data) {
+      reviews = data.map(r => ({ id: r.id, name: r.name, device: r.device || '', text: r.text, stars: r.stars, createdAt: new Date(r.created_at).getTime() }));
+      renderTestimonials();
+    }
+  } catch(e) { console.warn('Supabase reviews load:', e.message); }
+}
+
+async function saveReviewToSupabase(review) {
+  if (!isSupabaseReady()) return false;
+  try {
+    const sb = getSupabase();
+    const { error } = await sb.from('reviews').upsert({ id: review.id, name: review.name, device: review.device, text: review.text, stars: review.stars });
+    if (error) throw error;
+    return true;
+  } catch(e) { return false; }
+}
+
+async function deleteReviewFromSupabase(id) {
+  if (!isSupabaseReady()) return;
+  try { await getSupabase().from('reviews').delete().eq('id', id); } catch(e) {}
+}
+
+/* ═══════════════════════════════════════════════════════
+   USER AUTH — SUPABASE
+═══════════════════════════════════════════════════════ */
+async function initSupabaseAuth() {
+  if (!isSupabaseReady()) {
+    showSupabaseNotice();
+    return;
+  }
+  const sb = getSupabase();
+  // Listen for auth state changes
+  sb.auth.onAuthStateChange(async (event, session) => {
+    if (session && session.user) {
+      currentUser = session.user;
+      await loadUserProfile(session.user);
+      updateNavForUser();
+      renderCustomerReservations();
+    } else {
+      currentUser = null;
+      currentUserProfile = null;
+      updateNavForGuest();
+    }
+  });
+  // Check existing session
+  const { data: { session } } = await sb.auth.getSession();
+  if (session && session.user) {
+    currentUser = session.user;
+    await loadUserProfile(session.user);
+    updateNavForUser();
+  }
+}
+
+async function loadUserProfile(user) {
+  if (!isSupabaseReady()) return;
+  try {
+    const sb = getSupabase();
+    const { data } = await sb.from('profiles').select('*').eq('id', user.id).single();
+    if (data) {
+      currentUserProfile = data;
+    } else {
+      // Create profile
+      const name = user.user_metadata?.full_name || user.email.split('@')[0];
+      const newProfile = { id: user.id, email: user.email, name, role: 'customer', phone: '' };
+      await sb.from('profiles').insert(newProfile);
+      currentUserProfile = newProfile;
+    }
+  } catch(e) { currentUserProfile = { id: user.id, email: user.email, name: user.email.split('@')[0], role: 'customer', phone: '' }; }
+}
+
+function updateNavForUser() {
+  const btn = document.getElementById('nav-user-btn');
+  const label = document.getElementById('nav-user-label');
+  if (!btn || !currentUser) return;
+  const name = currentUserProfile?.name || currentUser.email.split('@')[0];
+  const initial = name.charAt(0).toUpperCase();
+  btn.innerHTML = `<div class="nav-user-avatar">${initial}</div><span>${name.split(' ')[0]}</span>`;
+  btn.title = currentUser.email;
+
+  // Show/hide admin button based on role
+  const adminBtn = document.getElementById('nav-admin-btn');
+  if (adminBtn) {
+    const role = currentUserProfile?.role;
+    adminBtn.style.display = (role === 'admin' || role === 'staff') ? '' : 'none';
+  }
+}
+
+function updateNavForGuest() {
+  const btn = document.getElementById('nav-user-btn');
+  if (btn) btn.innerHTML = `<span id="nav-user-label">تسجيل الدخول</span>`;
+  const adminBtn = document.getElementById('nav-admin-btn');
+  if (adminBtn) adminBtn.style.display = '';
+}
+
+function handleUserBtn() {
+  if (currentUser) {
+    openCustomerDash();
+  } else {
+    openUserAuthModal();
+  }
+}
+
+function openUserAuthModal(tab = 'login') {
+  const modal = document.getElementById('user-auth-modal');
+  modal.classList.add('show');
+  document.body.style.overflow = 'hidden';
+  requestAnimationFrame(() => modal.classList.add('visible'));
+  switchAuthTab(tab);
+  clearAuthMessages();
+}
+
+function closeUserAuthModal() {
+  const modal = document.getElementById('user-auth-modal');
+  modal.classList.remove('visible');
+  setTimeout(() => { modal.classList.remove('show'); document.body.style.overflow = ''; }, 320);
+}
+
+function switchAuthTab(tab) {
+  document.getElementById('auth-login-form').style.display = tab === 'login' ? '' : 'none';
+  document.getElementById('auth-signup-form').style.display = tab === 'signup' ? '' : 'none';
+  document.getElementById('auth-tab-login').classList.toggle('active', tab === 'login');
+  document.getElementById('auth-tab-signup').classList.toggle('active', tab === 'signup');
+  clearAuthMessages();
+}
+
+function clearAuthMessages() {
+  const err = document.getElementById('auth-msg-error');
+  const suc = document.getElementById('auth-msg-success');
+  if (err) { err.style.display = 'none'; err.textContent = ''; }
+  if (suc) { suc.style.display = 'none'; suc.textContent = ''; }
+}
+
+function showAuthError(msg) {
+  const el = document.getElementById('auth-msg-error');
+  if (el) { el.textContent = msg; el.style.display = 'block'; }
+}
+
+function showAuthSuccess(msg) {
+  const el = document.getElementById('auth-msg-success');
+  if (el) { el.textContent = msg; el.style.display = 'block'; }
+}
+
+async function submitLogin() {
+  if (!isSupabaseReady()) { showAuthError('يرجى إعداد Supabase أولاً — راجع ملف SETUP.md'); return; }
+  const email = document.getElementById('user-login-email').value.trim();
+  const pass = document.getElementById('user-login-pass').value;
+  if (!email || !pass) { showAuthError('يرجى ملء البريد الإلكتروني وكلمة المرور'); return; }
+  const btn = document.getElementById('login-submit-btn');
+  btn.disabled = true; btn.textContent = 'جاري الدخول...';
+  clearAuthMessages();
+  try {
+    const { data, error } = await getSupabase().auth.signInWithPassword({ email, password: pass });
+    if (error) throw error;
+    showAuthSuccess('✅ تم الدخول بنجاح');
+    setTimeout(() => { closeUserAuthModal(); setTimeout(openCustomerDash, 300); }, 800);
+  } catch(e) {
+    showAuthError('❌ ' + (e.message.includes('Invalid') ? 'بريد إلكتروني أو كلمة مرور غلط' : e.message));
+  } finally { btn.disabled = false; btn.textContent = 'دخول →'; }
+}
+
+async function submitSignup() {
+  if (!isSupabaseReady()) { showAuthError('يرجى إعداد Supabase أولاً — راجع ملف SETUP.md'); return; }
+  const name = document.getElementById('user-signup-name').value.trim();
+  const email = document.getElementById('user-signup-email').value.trim();
+  const phone = document.getElementById('user-signup-phone').value.trim();
+  const pass = document.getElementById('user-signup-pass').value;
+  if (!name || !email || !pass) { showAuthError('يرجى ملء الاسم والبريد وكلمة المرور'); return; }
+  if (pass.length < 8) { showAuthError('كلمة المرور لازم تكون 8 أحرف على الأقل'); return; }
+  const btn = document.getElementById('signup-submit-btn');
+  btn.disabled = true; btn.textContent = 'جاري الإنشاء...';
+  clearAuthMessages();
+  try {
+    const { data, error } = await getSupabase().auth.signUp({
+      email, password: pass,
+      options: { data: { full_name: name, phone } }
+    });
+    if (error) throw error;
+    showAuthSuccess('✅ تم إنشاء الحساب! تفقد بريدك الإلكتروني للتأكيد.');
+  } catch(e) {
+    showAuthError('❌ ' + (e.message.includes('already') ? 'هذا البريد مسجل بالفعل' : e.message));
+  } finally { btn.disabled = false; btn.textContent = 'إنشاء الحساب ✓'; }
+}
+
+async function submitGoogle() {
+  if (!isSupabaseReady()) { showAuthError('يرجى إعداد Supabase أولاً'); return; }
+  try {
+    const { error } = await getSupabase().auth.signInWithOAuth({
+      provider: 'google',
+      options: { redirectTo: window.location.href }
+    });
+    if (error) throw error;
+  } catch(e) { showAuthError('❌ ' + e.message); }
+}
+
+async function signOutUser() {
+  if (isSupabaseReady()) await getSupabase().auth.signOut();
+  currentUser = null; currentUserProfile = null; userReservations = [];
+  updateNavForGuest();
+  closeCustomerDash();
+  showToast('تم تسجيل الخروج', 'info');
+}
+
+/* ═══════════════════════════════════════════════════════
+   CUSTOMER DASHBOARD
+═══════════════════════════════════════════════════════ */
+function openCustomerDash() {
+  if (!currentUser) { openUserAuthModal(); return; }
+  const dash = document.getElementById('customer-dashboard');
+  dash.classList.add('open');
+  document.body.style.overflow = 'hidden';
+  const name = currentUserProfile?.name || currentUser.email.split('@')[0];
+  const email = currentUser.email;
+  const role = currentUserProfile?.role || 'customer';
+  document.getElementById('cust-avatar').textContent = name.charAt(0).toUpperCase();
+  document.getElementById('cust-name').textContent = name;
+  document.getElementById('cust-email').textContent = email;
+  document.getElementById('profile-name-input').value = name;
+  document.getElementById('profile-phone-input').value = currentUserProfile?.phone || '';
+  const roleBadge = document.getElementById('cust-role-badge');
+  roleBadge.className = 'customer-info-badge ' + (role === 'admin' ? 'badge-admin-r' : role === 'staff' ? 'badge-staff' : 'badge-customer');
+  roleBadge.textContent = role === 'admin' ? '👑 أدمن' : role === 'staff' ? '⚙️ موظف' : '🙍 عميل';
+  loadUserReservations();
+}
+
+function closeCustomerDash() {
+  document.getElementById('customer-dashboard').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+async function loadUserReservations() {
+  const container = document.getElementById('customer-reservations');
+  if (!isSupabaseReady() || !currentUser) {
+    container.innerHTML = '<div class="empty-reservations"><div class="empty-reservations-icon">📭</div><div class="empty-reservations-text">لا توجد حجوزات بعد</div><div class="empty-reservations-sub">تصفح الأجهزة واضغط "احجز الآن"</div></div>';
+    return;
+  }
+  container.innerHTML = '<div style="text-align:center;padding:32px;color:var(--text-muted)">⏳ جاري التحميل...</div>';
+  try {
+    const { data, error } = await getSupabase()
+      .from('reservations')
+      .select('*, phones(model, storage, color, price, images)')
+      .eq('user_id', currentUser.id)
+      .order('created_at', { ascending: false });
+    if (error) throw error;
+    userReservations = data || [];
+    renderCustomerReservations();
+  } catch(e) {
+    container.innerHTML = '<div class="empty-reservations"><div class="empty-reservations-icon">⚠️</div><div class="empty-reservations-text">تعذر تحميل الحجوزات</div></div>';
+  }
+}
+
+function renderCustomerReservations() {
+  const container = document.getElementById('customer-reservations');
+  if (!container) return;
+  if (!userReservations.length) {
+    container.innerHTML = '<div class="empty-reservations"><div class="empty-reservations-icon">📭</div><div class="empty-reservations-text">لا توجد حجوزات بعد</div><div class="empty-reservations-sub">تصفح الأجهزة واضغط "احجز الآن"</div></div>';
+    return;
+  }
+  container.innerHTML = userReservations.map(r => {
+    const phone = r.phones || {};
+    const statusClass = r.status === 'confirmed' ? 'res-confirmed' : r.status === 'cancelled' ? 'res-cancelled' : 'res-pending';
+    const statusLabel = r.status === 'confirmed' ? '✅ مؤكد' : r.status === 'cancelled' ? '❌ ملغي' : '⏳ قيد المراجعة';
+    const img = phone.images && phone.images[0];
+    return `<div class="reservation-card">
+      <div class="reservation-phone-icon">${img ? `<img src="${img}" style="width:100%;height:100%;object-fit:contain;border-radius:8px">` : '📱'}</div>
+      <div style="flex:1;min-width:0">
+        <div class="reservation-model">${phone.model || 'جهاز'}</div>
+        <div class="reservation-specs">${phone.storage || ''}GB · ${phone.color || ''}</div>
+      </div>
+      <div style="display:flex;flex-direction:column;align-items:flex-end;gap:8px">
+        <div class="reservation-price">${phone.price ? Number(phone.price).toLocaleString('ar-EG') + ' جنيه' : ''}</div>
+        <div class="reservation-status ${statusClass}">${statusLabel}</div>
+        ${r.status === 'pending' ? `<button onclick="cancelReservation('${r.id}')" style="font-size:11px;color:var(--red);border:1px solid rgba(255,69,58,0.3);border-radius:6px;padding:3px 10px;background:rgba(255,69,58,0.08);cursor:pointer">إلغاء</button>` : ''}
+      </div>
+    </div>`;
+  }).join('');
+}
+
+async function cancelReservation(id) {
+  if (!isSupabaseReady()) return;
+  showConfirm('إلغاء الحجز؟', 'هل تريد إلغاء هذا الحجز؟', 'إلغاء الحجز', async () => {
+    try {
+      await getSupabase().from('reservations').update({ status: 'cancelled' }).eq('id', id);
+      userReservations = userReservations.map(r => r.id === id ? { ...r, status: 'cancelled' } : r);
+      renderCustomerReservations();
+      showToast('تم إلغاء الحجز', 'info');
+    } catch(e) { showToast('فشل الإلغاء', 'error'); }
+  });
+}
+
+async function reservePhoneDB(phoneId) {
+  if (!currentUser) { openUserAuthModal(); return; }
+  if (!isSupabaseReady()) {
+    const phone = phones.find(p => p.id === phoneId);
+    if (phone) { const msg = t('waMessagePhone') + phone.model; window.open(`https://wa.me/${settings.whatsapp.replace(/\D/g,'')}?text=${encodeURIComponent(msg)}`, '_blank'); }
+    return;
+  }
+  try {
+    const { error } = await getSupabase().from('reservations').insert({ phone_id: phoneId, user_id: currentUser.id, status: 'pending' });
+    if (error) throw error;
+    showToast('✅ تم إرسال طلب الحجز! سنتواصل معك قريباً', 'success');
+    closeProductModal();
+  } catch(e) {
+    if (e.message.includes('duplicate')) showToast('أنت حجزت هذا الجهاز بالفعل', 'info');
+    else showToast('❌ ' + e.message, 'error');
+  }
+}
+
+async function updateProfile() {
+  const name = document.getElementById('profile-name-input').value.trim();
+  const phone = document.getElementById('profile-phone-input').value.trim();
+  if (!name) { showToast('يرجى إدخال الاسم', 'error'); return; }
+  if (!isSupabaseReady() || !currentUser) { showToast('يرجى إعداد Supabase', 'error'); return; }
+  try {
+    await getSupabase().from('profiles').update({ name, phone }).eq('id', currentUser.id);
+    if (currentUserProfile) { currentUserProfile.name = name; currentUserProfile.phone = phone; }
+    document.getElementById('cust-name').textContent = name;
+    document.getElementById('cust-avatar').textContent = name.charAt(0).toUpperCase();
+    updateNavForUser();
+    showToast('✅ تم حفظ التغييرات', 'success');
+  } catch(e) { showToast('❌ ' + e.message, 'error'); }
+}
+
+/* ═══════════════════════════════════════════════════════
+   ADMIN — USERS MANAGEMENT
+═══════════════════════════════════════════════════════ */
+async function renderAdminUsers() {
+  const container = document.getElementById('users-admin-list');
+  if (!container) return;
+  if (!isSupabaseReady()) {
+    container.innerHTML = `<div style="padding:32px;text-align:center">
+      <div style="font-size:32px;margin-bottom:12px">🔗</div>
+      <div style="font-size:15px;font-weight:600;color:var(--text-primary);margin-bottom:8px">اربط Supabase أولاً</div>
+      <div style="font-size:13px;color:var(--text-muted)">راجع ملف SETUP.md لإعداد قاعدة البيانات</div>
+    </div>`;
+    return;
+  }
+  container.innerHTML = '<div style="padding:24px;text-align:center;color:var(--text-muted)">⏳ جاري التحميل...</div>';
+  try {
+    const { data, error } = await getSupabase().from('profiles').select('*').order('created_at', { ascending: false });
+    if (error) throw error;
+    const users = data || [];
+    document.getElementById('users-count-badge').textContent = users.length + ' مستخدم';
+    if (!users.length) {
+      container.innerHTML = '<div style="padding:40px;text-align:center;color:var(--text-muted)"><div style="font-size:40px;margin-bottom:12px">👥</div><div>لا يوجد مستخدمون مسجلون بعد</div></div>';
+      return;
+    }
+    container.innerHTML = `<table class="admin-table">
+      <thead><tr>
+        <th>الاسم</th><th>البريد</th><th>الموبايل</th><th>الدور</th><th>إجراءات</th>
+      </tr></thead>
+      <tbody>${users.map(u => `<tr>
+        <td><strong>${u.name || '—'}</strong></td>
+        <td style="color:var(--text-muted);font-size:13px">${u.email}</td>
+        <td style="color:var(--text-muted);font-size:13px">${u.phone || '—'}</td>
+        <td>
+          <select onchange="changeUserRole('${u.id}', this.value)" style="background:var(--bg-tertiary);border:1px solid var(--border);border-radius:6px;padding:5px 10px;font-size:12px;color:var(--text-primary);font-family:inherit;cursor:pointer">
+            <option value="customer" ${u.role==='customer'?'selected':''}>🙍 عميل</option>
+            <option value="staff" ${u.role==='staff'?'selected':''}>⚙️ موظف</option>
+            <option value="admin" ${u.role==='admin'?'selected':''}>👑 أدمن</option>
+          </select>
+        </td>
+        <td>
+          <div style="display:flex;gap:6px">
+            <button class="admin-btn-sm" onclick="viewUserReservations('${u.id}','${u.name||u.email}')" title="الحجوزات" style="border-color:var(--blue);color:var(--blue)">📋</button>
+          </div>
+        </td>
+      </tr>`).join('')}</tbody>
+    </table>`;
+  } catch(e) { container.innerHTML = `<div style="padding:24px;color:var(--red)">خطأ: ${e.message}</div>`; }
+}
+
+async function changeUserRole(userId, newRole) {
+  if (!isSupabaseReady()) return;
+  try {
+    await getSupabase().from('profiles').update({ role: newRole }).eq('id', userId);
+    showToast('✅ تم تغيير الدور', 'success');
+  } catch(e) { showToast('❌ ' + e.message, 'error'); }
+}
+
+async function viewUserReservations(userId, userName) {
+  if (!isSupabaseReady()) return;
+  try {
+    const { data } = await getSupabase().from('reservations').select('*, phones(model, storage, price)').eq('user_id', userId).order('created_at', { ascending: false });
+    const items = data || [];
+    const text = items.length
+      ? items.map(r => `• ${r.phones?.model || 'جهاز'} (${r.status === 'confirmed' ? 'مؤكد' : r.status === 'cancelled' ? 'ملغي' : 'قيد المراجعة'})`).join('\n')
+      : 'لا توجد حجوزات';
+    showToast(`حجوزات ${userName}: ${items.length}`, 'info');
+  } catch(e) { showToast('❌ ' + e.message, 'error'); }
+}
+
+/* ═══════════════════════════════════════════════════════
+   SUPABASE NOTICE (when not configured)
+═══════════════════════════════════════════════════════ */
+function showSupabaseNotice() {
+  // Only show once per session
+  if (sessionStorage.getItem('sb_notice_shown')) return;
+  sessionStorage.setItem('sb_notice_shown', '1');
+  const div = document.createElement('div');
+  div.className = 'supabase-notice';
+  div.innerHTML = `⚙️ لتفعيل الحسابات: أضف بيانات <strong>Supabase</strong> في الملف — راجع <strong>SETUP.md</strong>
+    <button onclick="this.parentElement.remove()" style="display:block;margin:10px auto 0;font-size:12px;color:var(--gold);background:none;border:none;cursor:pointer;font-family:inherit">حسناً، فهمت ✓</button>`;
+  document.body.appendChild(div);
+  setTimeout(() => div.remove(), 8000);
+}
+
+function init() {
+  loadData();
+  seedDemoData();
+
+  // Supabase init
+  initSupabaseAuth().then(() => {
+    loadPhonesFromSupabase();
+    loadReviewsFromSupabase();
+  });
+
+  // Load saved preferences
+  const savedTheme = localStorage.getItem('sabat_theme') || 'dark';
+  const savedLang = localStorage.getItem('sabat_lang') || 'ar';
+  document.documentElement.setAttribute('data-theme', savedTheme);
+  document.getElementById('theme-btn').textContent = savedTheme === 'dark' ? '🌙' : '☀️';
+  lang = savedLang;
+  document.documentElement.setAttribute('data-lang', lang);
+  document.documentElement.setAttribute('lang', lang);
+  document.documentElement.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
+
+  filteredPhones = [...phones];
+
+  // Render all
+  applyTranslations();
+  renderFeatures();
+  renderProducts();
+  renderTestimonials();
+  renderWhyUs();
+
+  // Start reveal observer
+  observeReveal();
+
+  // Hide loading screen
+  setTimeout(() => {
+    document.getElementById('loading-screen').classList.add('hidden');
+  }, 2000);
+
+  // Keyboard ESC close modals
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      closeProductModal();
+      closeConfirm();
+      closePhoneForm();
+    }
+  });
+}
+
+// Wait for DOM
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', init);
+} else {
+  init();
+}
+</script>
+</body>
+</html>
+
